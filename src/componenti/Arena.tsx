@@ -177,8 +177,8 @@ export function Arena({
   );
 }
 
-/** Fumetto con il grido di chi attacca: compare insieme al suono e se ne va piano dopo un secondo e mezzo
-    (è come il suono: dura quanto il grido; i messaggi da leggere restano tutti fino ad "Avanti"). */
+/** Fumetto con il grido di chi attacca: compare con la mossa e se ne va piano dopo un secondo e mezzo
+    (è un effetto come gli oggetti che volano; i messaggi da leggere restano tutti fino ad "Avanti"). */
 function Urlo({ testo, x, y, lato }: { testo: string; x: number; y: number; lato: Lato }) {
   return (
     <div className={`effetto urlo urlo-${lato}`} style={{ left: x, top: y }}>

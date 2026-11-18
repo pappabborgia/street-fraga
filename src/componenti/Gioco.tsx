@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { T } from "@/testi";
 import { BRANI_TORNEO, audio } from "@/gioco/audio";
-import { urloDi, voceDi } from "@/gioco/urli";
+import { urloDi } from "@/gioco/urli";
 import { leggi, voceItaliana, zitto } from "@/gioco/voce";
 import { type Impostazioni, PREDEFINITE, SCALA, carica, salva } from "@/gioco/impostazioni";
 import { PERSONAGGI, type Personaggio, specialeDi, trovaPersonaggio } from "@/gioco/personaggi";
@@ -202,7 +202,6 @@ export default function Gioco() {
     const giusteDiFila = giusta ? partita.giusteDiFila + 1 : 0;
     const sbagliateDiFila = giusta ? 0 : partita.sbagliateDiFila + 1;
     if (giusta) audio.giusto(); else audio.sbagliato();
-    audio.urlo(voceDi(me.id), 0.05, r.esito.speciale);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
     else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(me, partita.giocatore).stile]);
     else audio.manca();
@@ -237,7 +236,6 @@ export default function Gioco() {
     const sbagliateDiFila = partita.sbagliateDiFila + 1;
     audio.sbagliato();
     const stile = stileMossa(lui, partita.computer);
-    audio.urlo(voceDi(lui.id), 0.05);
     audio.colpo(MOMENTO_COLPO[stile.stile]);
     setPartita({
       ...partita,
@@ -256,7 +254,6 @@ export default function Gioco() {
     if (partita.computer.energia === 0 || partita.giocatore.energia === 0) return finePartita();
     const giusta = rng.current() < BRAVURA_COMPUTER[livelloScelto];
     const r = applicaRisposta(partita.computer, partita.giocatore, giusta, livelloScelto);
-    audio.urlo(voceDi(lui.id), 0.05, r.esito.speciale);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
     else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(lui, partita.computer).stile]);
     else audio.manca();
