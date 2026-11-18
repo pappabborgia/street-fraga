@@ -27,14 +27,14 @@ function sposta(d: Domanda): Domanda {
   return { ...d, risposte: ordine.map((i) => d.risposte[i]), corretta: ordine.indexOf(d.corretta) };
 }
 
-// ---- Matematica: 90 domande (36 facili, 36 medie, 18 difficili) ----
+// ---- Matematica: 99 domande (40 facili, 40 medie, 19 difficili) ----
 const visti = new Set<string>();
 const mat: Domanda[] = [];
-for (const [livello, quante] of [[1, 36], [2, 36], [3, 18]] as [Livello, number][]) {
+for (const [livello, quante] of [[1, 40], [2, 40], [3, 19]] as [Livello, number][]) {
   for (let i = 0; i < quante; i++) mat.push(unica(visti, () => generaDomanda(rng, { livello })));
 }
 const matematica = mat.filter((d) => d.materia === "matematica");
-if (matematica.length !== 90) throw new Error("Modelli di livello 1 producono domande di tempo: separare");
+if (matematica.length !== 99) throw new Error("Modelli di livello 1 producono domande di tempo: separare");
 matematica.forEach((d, i) => { d.id = `MAT-${String(i + 1).padStart(3, "0")}`; });
 
 // ---- Tempo: 40 domande (16 facili, 16 medie, 8 difficili) ----

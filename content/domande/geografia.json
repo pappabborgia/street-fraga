@@ -1,1 +1,527 @@
-[]
+[
+  {
+    "id": "GEO-001",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale provincia si trova Fragagnano?",
+    "risposte": [
+      "Lecce",
+      "Taranto",
+      "Bari"
+    ],
+    "corretta": 1,
+    "spiegazione": "Fragagnano è in provincia di Taranto, a due passi dal mare.",
+    "fatto_id": "G01",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-002",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano è un paese della Puglia. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Siamo nel cuore della Puglia, terra di ulivi.",
+    "fatto_id": "G01",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-003",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale regione si trova Fragagnano?",
+    "risposte": [
+      "Calabria",
+      "Puglia",
+      "Basilicata"
+    ],
+    "corretta": 1,
+    "spiegazione": "La Puglia è il tacco dello stivale d'Italia!",
+    "fatto_id": "G01",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-004",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano ha circa 5.000 abitanti. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Un paese di circa 5.000 fragagnanesi.",
+    "fatto_id": "G02",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-005",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Più o meno, quanti abitanti ha Fragagnano?",
+    "risposte": [
+      "Circa 500",
+      "Circa 50.000",
+      "Circa 5.000"
+    ],
+    "corretta": 2,
+    "spiegazione": "Circa 5.000: ci si conosce un po' tutti!",
+    "fatto_id": "G02",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-006",
+    "materia": "geografia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Più o meno, quanto è grande il territorio del comune?",
+    "risposte": [
+      "Circa 2 chilometri quadrati",
+      "Circa 22 chilometri quadrati",
+      "Circa 90 chilometri quadrati",
+      "Circa 220 chilometri quadrati"
+    ],
+    "corretta": 1,
+    "spiegazione": "Circa 22 chilometri quadrati, tra paese e campagne.",
+    "fatto_id": "G03",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-007",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il codice postale di Fragagnano?",
+    "risposte": [
+      "74100",
+      "74022",
+      "73100"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il codice postale è 74022: utile per le cartoline!",
+    "fatto_id": "G05",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-008",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il prefisso telefonico di Fragagnano?",
+    "risposte": [
+      "080",
+      "0832",
+      "099"
+    ],
+    "corretta": 2,
+    "spiegazione": "È lo 099, lo stesso di Taranto.",
+    "fatto_id": "G05",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-009",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiamano gli abitanti di Fragagnano?",
+    "risposte": [
+      "Fragagnanesi",
+      "Fragagnoti",
+      "Fragagnini"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si chiamano fragagnanesi. Bel nome, vero?",
+    "fatto_id": "G06",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-010",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Una persona nata a Fragagnano come si chiama?",
+    "risposte": [
+      "Fragagnota",
+      "Fragagnina",
+      "Fragagnanese"
+    ],
+    "corretta": 2,
+    "spiegazione": "Fragagnanese, con orgoglio!",
+    "fatto_id": "G06",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-011",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "In dialetto Fragagnano si chiama Fragnànu. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! In dialetto si dice Fragnànu.",
+    "fatto_id": "G07",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-012",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Più o meno, quanti chilometri ci sono fino a Taranto?",
+    "risposte": [
+      "Circa 80",
+      "Circa 5",
+      "Circa 20"
+    ],
+    "corretta": 2,
+    "spiegazione": "Taranto è a circa 20 chilometri: vicina vicina.",
+    "fatto_id": "G08",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-013",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il capoluogo della provincia di Fragagnano?",
+    "risposte": [
+      "Brindisi",
+      "Matera",
+      "Taranto"
+    ],
+    "corretta": 2,
+    "spiegazione": "È Taranto, la città dei due mari.",
+    "fatto_id": "G08",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-014",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi paesi confina con Fragagnano?",
+    "risposte": [
+      "Ostuni",
+      "Martina Franca",
+      "Lizzano"
+    ],
+    "corretta": 2,
+    "spiegazione": "Lizzano confina con Fragagnano, verso il mare.",
+    "fatto_id": "G09",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-015",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi paesi confina con Fragagnano?",
+    "risposte": [
+      "Sava",
+      "Castellaneta",
+      "Ginosa"
+    ],
+    "corretta": 0,
+    "spiegazione": "Sava confina con Fragagnano. Vicini di casa!",
+    "fatto_id": "G09",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-016",
+    "materia": "geografia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi paesi confina con Fragagnano?",
+    "risposte": [
+      "Massafra",
+      "Laterza",
+      "Mottola",
+      "Grottaglie"
+    ],
+    "corretta": 3,
+    "spiegazione": "Grottaglie confina con Fragagnano: è famosa per le ceramiche.",
+    "fatto_id": "G09",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-017",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il paese più vicino a Fragagnano?",
+    "risposte": [
+      "Manduria",
+      "San Marzano",
+      "Martina Franca"
+    ],
+    "corretta": 1,
+    "spiegazione": "San Marzano di San Giuseppe è a circa 4 chilometri.",
+    "fatto_id": "G10",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-018",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Più o meno, quanto dista San Marzano da Fragagnano?",
+    "risposte": [
+      "Circa 4 chilometri",
+      "Circa 15 chilometri",
+      "Circa 40 chilometri"
+    ],
+    "corretta": 0,
+    "spiegazione": "Circa 4 chilometri: si arriva anche a piedi!",
+    "fatto_id": "G10",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-019",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove sorge il paese di Fragagnano?",
+    "risposte": [
+      "In riva al mare",
+      "In una valle profonda",
+      "Su una dolce altura"
+    ],
+    "corretta": 2,
+    "spiegazione": "Sorge sul crinale di una dolce altura.",
+    "fatto_id": "G11",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-020",
+    "materia": "geografia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Fragagnano sorge su un'altura di quale zona?",
+    "risposte": [
+      "Il Gargano",
+      "La Murgia tarantina",
+      "Il Pollino",
+      "La Sila"
+    ],
+    "corretta": 1,
+    "spiegazione": "La Murgia tarantina: colline basse e campagne verdi.",
+    "fatto_id": "G11",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-021",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale via si trova il municipio?",
+    "risposte": [
+      "Via Dante",
+      "Via Mazzini",
+      "Via Cesare Battisti"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il municipio è in via Cesare Battisti, al numero 1.",
+    "fatto_id": "G12",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-022",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano fa parte delle 'Terre del Mare e del Sole'. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! È un'unione di comuni della zona.",
+    "fatto_id": "G13",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-023",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa c'è sullo stemma di Fragagnano?",
+    "risposte": [
+      "Nave e ancora",
+      "Spiga e grappolo",
+      "Leone e torre"
+    ],
+    "corretta": 1,
+    "spiegazione": "Spiga di grano e grappolo d'uva: pane e vino!",
+    "fatto_id": "G14",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-024",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Di che colore è la spiga dello stemma?",
+    "risposte": [
+      "Rossa",
+      "Oro",
+      "Azzurra"
+    ],
+    "corretta": 1,
+    "spiegazione": "La spiga è d'oro, come il grano maturo.",
+    "fatto_id": "G14",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-025",
+    "materia": "geografia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nello stemma, di che colore è il fondo dietro la spiga?",
+    "risposte": [
+      "Rosso",
+      "Nero",
+      "Blu",
+      "Verde"
+    ],
+    "corretta": 3,
+    "spiegazione": "La spiga d'oro sta su un fondo verde.",
+    "fatto_id": "G14",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-026",
+    "materia": "geografia",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano è in una zona con poco rischio di terremoti. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! È in zona 4, la più tranquilla.",
+    "fatto_id": "G16",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-027",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale antica strada romana passava vicino a Fragagnano?",
+    "risposte": [
+      "La via Appia",
+      "La via Aurelia",
+      "La via Emilia"
+    ],
+    "corretta": 0,
+    "spiegazione": "La via Appia andava da Roma fino a Brindisi.",
+    "fatto_id": "G18",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-028",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Più o meno, quanto è lontano il mare?",
+    "risposte": [
+      "Una decina di chilometri",
+      "Mezzo chilometro",
+      "Un centinaio di chilometri"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il mare è a una decina di chilometri, in linea d'aria.",
+    "fatto_id": "G19",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "GEO-029",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con che cosa sono divisi i campi intorno al paese?",
+    "risposte": [
+      "Muretti a secco",
+      "Recinti di ferro",
+      "Siepi di bambù"
+    ],
+    "corretta": 0,
+    "spiegazione": "I muretti a secco sono fatti di sole pietre.",
+    "fatto_id": "G20",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "GEO-030",
+    "materia": "geografia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa si coltiva soprattutto nelle campagne di Fragagnano?",
+    "risposte": [
+      "Vigne e ulivi",
+      "Mele e pere",
+      "Riso e mais"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vigne e ulivi: da qui vengono vino e olio.",
+    "fatto_id": "E08",
+    "stato": "attiva"
+  },
+  {
+    "id": "GEO-031",
+    "materia": "geografia",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano è vicina a Taranto. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Sono circa 20 chilometri.",
+    "fatto_id": "G08",
+    "stato": "attiva"
+  }
+]

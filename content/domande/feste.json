@@ -1,1 +1,806 @@
-[]
+[
+  {
+    "id": "FES-001",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi è il santo patrono di Fragagnano?",
+    "risposte": [
+      "San Nicola",
+      "Sant'Antonio",
+      "San Cataldo"
+    ],
+    "corretta": 1,
+    "spiegazione": "È Sant'Antonio di Padova, amatissimo in paese.",
+    "fatto_id": "T01",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-002",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale giorno è Sant'Antonio sul calendario?",
+    "risposte": [
+      "13 giugno",
+      "8 dicembre",
+      "19 marzo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il 13 giugno è il giorno di Sant'Antonio.",
+    "fatto_id": "T01",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-003",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale mese si fa la festa grande del patrono?",
+    "risposte": [
+      "Maggio",
+      "Ottobre",
+      "Agosto"
+    ],
+    "corretta": 2,
+    "spiegazione": "In agosto, quando il paese è pieno di gente.",
+    "fatto_id": "T02",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-004",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "La festa grande di Sant'Antonio si fa d'estate. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Si fa in agosto.",
+    "fatto_id": "T02",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-005",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Perché la festa grande fu portata in agosto?",
+    "risposte": [
+      "Per gli emigrati",
+      "Per il caldo",
+      "Per la vendemmia"
+    ],
+    "corretta": 0,
+    "spiegazione": "In agosto tornavano in paese gli emigrati.",
+    "fatto_id": "T03",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-006",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come viene chiamata anche la festa patronale di agosto?",
+    "risposte": [
+      "Festa del raccolto",
+      "Festa del vino",
+      "Festa dell'emigrante",
+      "Festa del mare"
+    ],
+    "corretta": 2,
+    "spiegazione": "È la festa dell'emigrante: si torna a casa!",
+    "fatto_id": "T03",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-007",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "A quale santo è legato il Rito dei Santi?",
+    "risposte": [
+      "San Giuseppe",
+      "San Rocco",
+      "San Pietro"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il Rito dei Santi è in onore di San Giuseppe.",
+    "fatto_id": "T04",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-008",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale mese si fa il Rito dei Santi?",
+    "risposte": [
+      "Marzo",
+      "Novembre",
+      "Luglio"
+    ],
+    "corretta": 0,
+    "spiegazione": "In marzo, vicino alla festa di San Giuseppe.",
+    "fatto_id": "T04",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-009",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi organizza il Rito dei Santi?",
+    "risposte": [
+      "La banda",
+      "La Pro Loco",
+      "La scuola"
+    ],
+    "corretta": 1,
+    "spiegazione": "Lo organizza la Pro Loco di Fragagnano.",
+    "fatto_id": "T04",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-010",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Rito dei Santi, quante persone siedono a tavola?",
+    "risposte": [
+      "Sempre un numero dispari",
+      "Solo 2 persone",
+      "Sempre 20 persone"
+    ],
+    "corretta": 0,
+    "spiegazione": "Sempre in numero dispari, da 3 a 13.",
+    "fatto_id": "T05",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-011",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa ricorda il numero dispari di persone a tavola?",
+    "risposte": [
+      "I mesi dell'anno",
+      "I giorni della settimana",
+      "Le stelle del cielo",
+      "L'Ultima Cena"
+    ],
+    "corretta": 3,
+    "spiegazione": "Ricorda l'Ultima Cena di Gesù.",
+    "fatto_id": "T05",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-012",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Rito dei Santi, al massimo quante persone siedono a tavola?",
+    "risposte": [
+      "21",
+      "13",
+      "30",
+      "7"
+    ],
+    "corretta": 1,
+    "spiegazione": "Da 3 fino a 13 persone, sempre in numero dispari.",
+    "fatto_id": "T05",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-013",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Rito dei Santi, chi siede a capotavola?",
+    "risposte": [
+      "Gesù Bambino",
+      "La Madonna",
+      "San Giuseppe"
+    ],
+    "corretta": 2,
+    "spiegazione": "San Giuseppe siede a capotavola.",
+    "fatto_id": "T06",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-014",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa ha San Giuseppe nel Rito dei Santi?",
+    "risposte": [
+      "Una corona d'oro",
+      "Un bastone fiorito",
+      "Una lunga spada"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il suo posto è segnato da un bastone fiorito.",
+    "fatto_id": "T06",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-015",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi siede alla destra di San Giuseppe?",
+    "risposte": [
+      "Gesù Bambino",
+      "San Pietro",
+      "Sant'Antonio",
+      "La Madonna"
+    ],
+    "corretta": 3,
+    "spiegazione": "La Madonna a destra, Gesù Bambino a sinistra.",
+    "fatto_id": "T06",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-016",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quante sono le pietanze del Rito dei Santi?",
+    "risposte": [
+      "7",
+      "13",
+      "10"
+    ],
+    "corretta": 1,
+    "spiegazione": "Sono 13 pietanze: un pranzo da re!",
+    "fatto_id": "T07",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-017",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Nel Rito dei Santi è San Giuseppe a iniziare il pranzo. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Dà il via al pranzo con il suo bastone.",
+    "fatto_id": "T07",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-018",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi cibi c'è nel Rito dei Santi?",
+    "risposte": [
+      "Il panettone",
+      "Il baccalà",
+      "La pizza"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il baccalà è una delle 13 pietanze.",
+    "fatto_id": "T08",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-019",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale frutto si mangia nel Rito dei Santi?",
+    "risposte": [
+      "Le fragole",
+      "Le banane",
+      "Le arance"
+    ],
+    "corretta": 2,
+    "spiegazione": "Le arance di marzo, dolci e succose!",
+    "fatto_id": "T08",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-020",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con che cosa si condiscono i bucatini del Rito?",
+    "risposte": [
+      "Mollica di pane",
+      "Panna e funghi",
+      "Burro e salvia"
+    ],
+    "corretta": 0,
+    "spiegazione": "Bucatini con la mollica: semplici e buonissimi.",
+    "fatto_id": "T08",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-021",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Rito dei Santi, il pane diviso è simbolo di che cosa?",
+    "risposte": [
+      "Del raccolto",
+      "Della ricchezza",
+      "Della comunità"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il pane diviso tra tutti unisce la comunità.",
+    "fatto_id": "T08B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-022",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con che cosa comincia il Rito dei Santi?",
+    "risposte": [
+      "Il lavaggio delle mani",
+      "Un ballo in piazza",
+      "Un brindisi",
+      "Il suono delle campane"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si comincia lavandosi le mani, segno di purezza.",
+    "fatto_id": "T08C",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-023",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiamano anche le tavolate di San Giuseppe?",
+    "risposte": [
+      "Tavolini",
+      "Banchetti",
+      "Mattere",
+      "Credenze"
+    ],
+    "corretta": 2,
+    "spiegazione": "Le tavolate di San Giuseppe sono dette anche mattere.",
+    "fatto_id": "T08D",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-024",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa racconta la Passio Christi?",
+    "risposte": [
+      "La Passione di Gesù",
+      "La vita di Sant'Antonio",
+      "La nascita di Gesù"
+    ],
+    "corretta": 0,
+    "spiegazione": "La Passio Christi racconta la Passione di Gesù.",
+    "fatto_id": "T09",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-025",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che periodo si fa la Passio Christi?",
+    "risposte": [
+      "Prima di Pasqua",
+      "A Natale",
+      "A Ferragosto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si fa una domenica poco prima di Pasqua.",
+    "fatto_id": "T09",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-026",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel 2019 la Passio Christi era a quale edizione?",
+    "risposte": [
+      "3ª",
+      "50ª",
+      "10ª",
+      "25ª"
+    ],
+    "corretta": 2,
+    "spiegazione": "Nel 2019 era la 10ª edizione.",
+    "fatto_id": "T09",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-027",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale associazione organizza la Passio Christi?",
+    "risposte": [
+      "Cielo Azzurro",
+      "Mare Nostro",
+      "Terra Nostra"
+    ],
+    "corretta": 2,
+    "spiegazione": "La organizza l'associazione Terra Nostra.",
+    "fatto_id": "T09B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-028",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove si conclude il percorso della Passio Christi?",
+    "risposte": [
+      "Al Monte Santa Sofia",
+      "Alla stazione",
+      "Al campo sportivo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si conclude al Monte Santa Sofia, luogo antichissimo.",
+    "fatto_id": "T10",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-029",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti attori partecipano oggi alla Passio Christi?",
+    "risposte": [
+      "Circa 20",
+      "Oltre 200",
+      "Circa 5",
+      "Oltre 5.000"
+    ],
+    "corretta": 1,
+    "spiegazione": "Erano circa 20 all'inizio, oggi sono più di 200!",
+    "fatto_id": "T10B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-030",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa illumina la Via Crucis della Passio Christi?",
+    "risposte": [
+      "Le luminarie",
+      "Le torce",
+      "I fuochi d'artificio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Le torce rendono la sera ancora più suggestiva.",
+    "fatto_id": "T10C",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-031",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Transito di Sant'Antonio, chi tira il carretto?",
+    "risposte": [
+      "Un trattore",
+      "Un cavallo bianco",
+      "Un asinello"
+    ],
+    "corretta": 2,
+    "spiegazione": "Un asinello tira il carretto di legno del Santo.",
+    "fatto_id": "T11",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-032",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi organizza il Transito di Sant'Antonio?",
+    "risposte": [
+      "La Pro Loco",
+      "La banda",
+      "Terra Nostra"
+    ],
+    "corretta": 2,
+    "spiegazione": "Lo organizza l'associazione Terra Nostra.",
+    "fatto_id": "T11B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-033",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti sono i rioni del Torneo dei Rioni?",
+    "risposte": [
+      "4",
+      "2",
+      "10"
+    ],
+    "corretta": 0,
+    "spiegazione": "I rioni sono 4, ognuno con i suoi colori.",
+    "fatto_id": "T12",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-034",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi è un rione del Torneo?",
+    "risposte": [
+      "Ventus Fortis",
+      "Luna Nova",
+      "Mare Altum",
+      "Sol Ardens"
+    ],
+    "corretta": 3,
+    "spiegazione": "Sol Ardens vuol dire Sole ardente.",
+    "fatto_id": "T12",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-035",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno è nato il Torneo dei Rioni?",
+    "risposte": [
+      "2015",
+      "1985",
+      "1955"
+    ],
+    "corretta": 0,
+    "spiegazione": "La prima edizione fu nel 2015.",
+    "fatto_id": "T12",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-036",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale gioco si fa nel Torneo dei Rioni?",
+    "risposte": [
+      "Gli scacchi",
+      "Il biliardo",
+      "Il tiro alla fune"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il tiro alla fune: forza e squadra!",
+    "fatto_id": "T12B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-037",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale gioco c'è nel Torneo dei Rioni?",
+    "risposte": [
+      "La gara di tango",
+      "La partita a golf",
+      "L'albero della cuccagna"
+    ],
+    "corretta": 2,
+    "spiegazione": "L'albero della cuccagna: chi arriva in cima vince!",
+    "fatto_id": "T12B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-038",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa vuol dire Castrum, nome di un rione?",
+    "risposte": [
+      "Campo",
+      "Castello",
+      "Chiesa"
+    ],
+    "corretta": 1,
+    "spiegazione": "Castrum in latino vuol dire castello.",
+    "fatto_id": "T12C",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-039",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa si fa a Natale nel centro storico?",
+    "risposte": [
+      "La Passio Christi",
+      "Il Presepe Vivente",
+      "Il Torneo dei Rioni"
+    ],
+    "corretta": 1,
+    "spiegazione": "A Natale il centro storico diventa un presepe vivente.",
+    "fatto_id": "T13",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-040",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Per chi è la Notte Bianca organizzata dalla Pro Loco?",
+    "risposte": [
+      "Per i musicisti",
+      "Per i nonni",
+      "Per i bambini"
+    ],
+    "corretta": 2,
+    "spiegazione": "È la Notte Bianca dei Bambini: festa per i più piccoli!",
+    "fatto_id": "T14",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-041",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che giorno c'è la processione della Madonna del Carmine?",
+    "risposte": [
+      "25 dicembre",
+      "16 luglio",
+      "2 febbraio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il 16 luglio si festeggia la Madonna del Carmine.",
+    "fatto_id": "T15",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-042",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quando c'è la processione alla Cappella del Favore?",
+    "risposte": [
+      "La notte di Natale",
+      "Il primo agosto",
+      "L'ultima domenica di maggio"
+    ],
+    "corretta": 2,
+    "spiegazione": "L'ultima domenica di maggio i fedeli vanno alla cappella.",
+    "fatto_id": "C06B",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-043",
+    "materia": "feste",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "A Fragagnano si fanno i mercatini di Natale. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Nel 2018 erano già alla 3ª edizione.",
+    "fatto_id": "T18",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-044",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Tra quali alberi da frutto passeggia la Pro Loco?",
+    "risposte": [
+      "Castagni",
+      "Melograni",
+      "Ciliegi"
+    ],
+    "corretta": 1,
+    "spiegazione": "Una bella passeggiata tra i melograni, con assaggio!",
+    "fatto_id": "T19",
+    "stato": "attiva"
+  },
+  {
+    "id": "FES-045",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Per San Giuseppe, a marzo, che fiera si tiene?",
+    "risposte": [
+      "Una fiera dei libri",
+      "Una fiera del pesce",
+      "Una fiera agricola"
+    ],
+    "corretta": 2,
+    "spiegazione": "Una fiera agricola con attrezzi e prodotti locali.",
+    "fatto_id": "T16",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "FES-046",
+    "materia": "feste",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale processione si fa il Venerdì Santo?",
+    "risposte": [
+      "Dei Misteri",
+      "Dei fiori",
+      "Delle luminarie"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il Venerdì Santo passa la processione dei Misteri.",
+    "fatto_id": "T17",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "FES-047",
+    "materia": "feste",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "A giugno c'è una festa piccola per Sant'Antonio. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! La festa grande invece è in agosto.",
+    "fatto_id": "T02C",
+    "stato": "da_rivedere"
+  }
+]

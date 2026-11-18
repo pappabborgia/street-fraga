@@ -1030,5 +1030,160 @@
     "spiegazione": "Blu, tra tanti altri colori: un giardino allegrissimo!",
     "fatto_id": null,
     "stato": "attiva"
+  },
+  {
+    "id": "MEM-061",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia prepara la merenda. Porta in giardino latte, biscotti e miele.",
+    "domanda": "Che cosa porta Zia Lucia in giardino?",
+    "risposte": [
+      "Tè, pane e marmellata",
+      "Latte, biscotti e miele",
+      "Caffè, torta e uva"
+    ],
+    "corretta": 1,
+    "spiegazione": "Latte, biscotti e miele: una merenda dolcissima!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-062",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino ha un asino grigio. Lo porta alla vigna ogni mattina.",
+    "domanda": "Di che colore è l'asino di Nonno Pino?",
+    "risposte": [
+      "Grigio",
+      "Nero",
+      "Bianco"
+    ],
+    "corretta": 0,
+    "spiegazione": "Grigio e paziente: un vero amico di campagna!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-063",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito va alla chiesa del Carmine. Ci va con il nipote Luca.",
+    "domanda": "Con chi va Mastro Vito alla chiesa del Carmine?",
+    "risposte": [
+      "Con la moglie Gina",
+      "Con l'amico Rocco",
+      "Con il nipote Luca"
+    ],
+    "corretta": 2,
+    "spiegazione": "Con il nipote Luca: nonno e nipote, una bella coppia!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-064",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo raccoglie 7 limoni nell'orto. Li mette in un cesto.",
+    "domanda": "Quanti limoni raccoglie Zio Cosimo?",
+    "risposte": [
+      "5",
+      "7",
+      "9"
+    ],
+    "corretta": 1,
+    "spiegazione": "7 limoni gialli: profumo di sole in cucina!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-065",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa prepara la borsa per una gita. Mette un ombrello, un panino, il cappello e una giacca.",
+    "domanda": "Quale di queste cose mette nella borsa?",
+    "risposte": [
+      "Le scarpe",
+      "La giacca",
+      "La sciarpa"
+    ],
+    "corretta": 1,
+    "spiegazione": "La giacca, per il fresco della sera!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-066",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo passa il pomeriggio in campagna. Taglia la legna, dà l'acqua all'orto, legge e riposa.",
+    "domanda": "Quale di queste cose fa Zio Cosimo?",
+    "risposte": [
+      "Raccoglie le olive",
+      "Taglia la legna",
+      "Pota la vigna"
+    ],
+    "corretta": 1,
+    "spiegazione": "Taglia la legna: il camino d'inverno sarà caldo!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-067",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito passeggia per il paese. Passa da via Cesare Battisti e piazza Regina Elena. Poi vede il Palazzo Marchesale e la Chiesa Madre.",
+    "domanda": "Da quale strada passa Mastro Vito?",
+    "risposte": [
+      "Via Fiume",
+      "Corso Vittorio Emanuele",
+      "Via Cesare Battisti"
+    ],
+    "corretta": 2,
+    "spiegazione": "Via Cesare Battisti, all'inizio della sua bella passeggiata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-068",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia fa una torta. Usa 3 uova, un limone, farina, zucchero e burro.",
+    "domanda": "Quante uova usa Zia Lucia per la torta?",
+    "risposte": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "corretta": 1,
+    "spiegazione": "3 uova per una torta soffice e profumata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-069",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino porta i nipoti al Monte Santa Sofia. Sono Marta, Enzo, Giulia, Pietro e Nina.",
+    "domanda": "Quale nipote va con Nonno Pino?",
+    "risposte": [
+      "Sara",
+      "Matteo",
+      "Chiara",
+      "Pietro"
+    ],
+    "corretta": 3,
+    "spiegazione": "Pietro, con Marta, Enzo, Giulia e Nina: una gita allegra!",
+    "fatto_id": null,
+    "stato": "attiva"
   }
 ]

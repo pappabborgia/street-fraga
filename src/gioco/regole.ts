@@ -123,7 +123,7 @@ export function prossimaDomanda(
   const liv: Livello = primaDellaPartita ? 1 : livello;
   const disponibili = mazzo.filter((d) => d.stato === "attiva" && d.livello === liv && !usate.has(d.id));
   // Un po' di calcolo ogni tanto, anche se il mazzo ha ancora domande.
-  const usaCalcolo = disponibili.length === 0 || rng() < 0.25;
+  const usaCalcolo = disponibili.length === 0;
   let d: Domanda;
   if (usaCalcolo) {
     let tentativi = 0;

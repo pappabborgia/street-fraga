@@ -1,15 +1,51 @@
 {
-  "nota": "Quante domande servono per materia. Le materie con fonte possono averne meno: la differenza si compensa con matematica, logica e memoria (vedi docs/rapporto-domande.md).",
+  "nota": "Quante domande servono per materia. Storia, geografia e feste hanno meno domande perché i fatti verificati non bastano (123 invece di 150): le 27 mancanti sono compensate con matematica (+9), logica (+9) e memoria (+9). Vedi docs/rapporto-domande.md.",
   "materie": {
-    "storia":     { "prefisso": "STO", "obiettivo": 50, "con_fonte": true },
-    "geografia":  { "prefisso": "GEO", "obiettivo": 50, "con_fonte": true },
-    "feste":      { "prefisso": "FES", "obiettivo": 50, "con_fonte": true },
-    "matematica": { "prefisso": "MAT", "obiettivo": 90, "con_fonte": false },
-    "parole":     { "prefisso": "PAR", "obiettivo": 70, "con_fonte": false },
-    "memoria":    { "prefisso": "MEM", "obiettivo": 60, "con_fonte": false },
-    "logica":     { "prefisso": "LOG", "obiettivo": 60, "con_fonte": false },
-    "tempo":      { "prefisso": "TEM", "obiettivo": 40, "con_fonte": false },
-    "campagna":   { "prefisso": "CAM", "obiettivo": 30, "con_fonte": false }
+    "storia": {
+      "prefisso": "STO",
+      "obiettivo": 50,
+      "con_fonte": true
+    },
+    "geografia": {
+      "prefisso": "GEO",
+      "obiettivo": 50,
+      "con_fonte": true
+    },
+    "feste": {
+      "prefisso": "FES",
+      "obiettivo": 50,
+      "con_fonte": true
+    },
+    "matematica": {
+      "prefisso": "MAT",
+      "obiettivo": 99,
+      "con_fonte": false
+    },
+    "parole": {
+      "prefisso": "PAR",
+      "obiettivo": 70,
+      "con_fonte": false
+    },
+    "memoria": {
+      "prefisso": "MEM",
+      "obiettivo": 69,
+      "con_fonte": false
+    },
+    "logica": {
+      "prefisso": "LOG",
+      "obiettivo": 69,
+      "con_fonte": false
+    },
+    "tempo": {
+      "prefisso": "TEM",
+      "obiettivo": 40,
+      "con_fonte": false
+    },
+    "campagna": {
+      "prefisso": "CAM",
+      "obiettivo": 30,
+      "con_fonte": false
+    }
   },
   "totale": 500
 }

@@ -1017,5 +1017,158 @@
     "spiegazione": "Bianca è una gallina, e ogni gallina è un uccello.",
     "fatto_id": null,
     "stato": "attiva"
+  },
+  {
+    "id": "LOG-061",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Sabato, domenica, lunedì. Che giorno viene dopo?",
+    "risposte": [
+      "Mercoledì",
+      "Martedì",
+      "Giovedì"
+    ],
+    "corretta": 1,
+    "spiegazione": "I giorni vanno in ordine: dopo lunedì viene martedì.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-062",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Bicicletta",
+      "Gallina",
+      "Anatra"
+    ],
+    "corretta": 0,
+    "spiegazione": "Gallina e anatra sono animali da cortile, la bicicletta è un mezzo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-063",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "6, 5, 4, 3. Dopo viene 2.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si toglie sempre 1: dopo 3 viene 2.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-064",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nonna Rosa ha 2 fichi. Zio Cosimo ha 7 fichi. Chi ne ha di più?",
+    "risposte": [
+      "Nonna Rosa",
+      "Zio Cosimo",
+      "Sono pari"
+    ],
+    "corretta": 1,
+    "spiegazione": "7 è più di 2: Zio Cosimo ha più fichi.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-065",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "6, 12, 18, 24. Che numero viene dopo?",
+    "risposte": [
+      "28",
+      "30",
+      "32"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si aggiunge sempre 6: dopo 24 viene 30.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-066",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Limone",
+      "Patata",
+      "Arancia"
+    ],
+    "corretta": 1,
+    "spiegazione": "Limone e arancia sono frutti, la patata è un ortaggio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-067",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Se c'è il sole, Zio Cosimo va in vigna. Oggi c'è il sole. Dove va Zio Cosimo?",
+    "risposte": [
+      "In vigna",
+      "In cantina",
+      "Al mare"
+    ],
+    "corretta": 0,
+    "spiegazione": "Oggi c'è il sole, quindi Zio Cosimo va in vigna.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-068",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "1, 2, 4, 7, 11. Che numero viene dopo?",
+    "risposte": [
+      "15",
+      "16",
+      "14",
+      "18"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si aggiunge 1, poi 2, 3, 4: ora si aggiunge 5.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-069",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "La vigna è più grande dell'orto. Il giardino è più piccolo dell'orto. Qual è il più grande?",
+    "risposte": [
+      "L'orto",
+      "Il giardino",
+      "La vigna"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il giardino è il più piccolo, la vigna è la più grande.",
+    "fatto_id": null,
+    "stato": "attiva"
   }
 ]

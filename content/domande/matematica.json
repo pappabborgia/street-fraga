@@ -7,8 +7,8 @@
     "stimolo": null,
     "domanda": "Compri 2 chili di olive. Un chilo costa 2 euro. Quanto paghi?",
     "risposte": [
-      "2 euro",
       "6 euro",
+      "2 euro",
       "4 euro"
     ],
     "corretta": 2,
@@ -30,11 +30,11 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 10 galline e 2 galli. Quanti animali in tutto?",
     "risposte": [
-      "15",
+      "12",
       "11",
-      "12"
+      "15"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "10 più 2 fa 12. Che chiasso al mattino!",
     "fatto_id": null,
     "stato": "attiva",
@@ -53,11 +53,11 @@
     "stimolo": null,
     "domanda": "Compri 3 chili di olive. Un chilo costa 2 euro. Quanto paghi?",
     "risposte": [
+      "6 euro",
       "5 euro",
-      "4 euro",
-      "6 euro"
+      "4 euro"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "3 volte 2 fa 6. Conto giusto, spesa fatta!",
     "fatto_id": null,
     "stato": "attiva",
@@ -76,11 +76,11 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 6 arance. Ne aggiungi 7. Quante sono ora?",
     "risposte": [
-      "12",
       "13",
-      "15"
+      "15",
+      "12"
     ],
-    "corretta": 1,
+    "corretta": 0,
     "spiegazione": "6 più 7 fa 13. Che bel cesto pieno!",
     "fatto_id": null,
     "stato": "attiva",
@@ -99,11 +99,11 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 9 arance. Ne aggiungi 5. Quante sono ora?",
     "risposte": [
-      "14",
       "17",
-      "11"
+      "11",
+      "14"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "9 più 5 fa 14. Che bel cesto pieno!",
     "fatto_id": null,
     "stato": "attiva",
@@ -122,11 +122,11 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 11 galline e 2 galli. Quanti animali in tutto?",
     "risposte": [
-      "12",
       "13",
+      "12",
       "17"
     ],
-    "corretta": 1,
+    "corretta": 0,
     "spiegazione": "11 più 2 fa 13. Che chiasso al mattino!",
     "fatto_id": null,
     "stato": "attiva",
@@ -169,8 +169,8 @@
     "domanda": "Hai 14 taralli. Ne regali 5 alla vicina. Quanti te ne restano?",
     "risposte": [
       "9",
-      "6",
-      "8"
+      "8",
+      "6"
     ],
     "corretta": 0,
     "spiegazione": "14 meno 5 fa 9. E la vicina è contenta!",
@@ -191,11 +191,11 @@
     "stimolo": null,
     "domanda": "Compri 5 pagnotte. Ognuna costa 1 euro. Quanto spendi?",
     "risposte": [
-      "6 euro",
+      "5 euro",
       "7 euro",
-      "5 euro"
+      "6 euro"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "5 per 1 fa 5 euro. Pane fresco per tutti!",
     "fatto_id": null,
     "stato": "attiva",
@@ -214,9 +214,9 @@
     "stimolo": null,
     "domanda": "Hai 10 taralli. Ne regali 2 alla vicina. Quanti te ne restano?",
     "risposte": [
-      "7",
+      "10",
       "8",
-      "10"
+      "7"
     ],
     "corretta": 1,
     "spiegazione": "10 meno 2 fa 8. E la vicina è contenta!",
@@ -237,11 +237,11 @@
     "stimolo": null,
     "domanda": "Hai 9 uova. Ne usi 4 per una frittata. Quante uova restano?",
     "risposte": [
-      "8",
       "6",
-      "5"
+      "5",
+      "8"
     ],
-    "corretta": 2,
+    "corretta": 1,
     "spiegazione": "9 meno 4 fa 5. Buona frittata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -260,11 +260,11 @@
     "stimolo": null,
     "domanda": "Hai 12 taralli. Ne regali 4 alla vicina. Quanti te ne restano?",
     "risposte": [
+      "9",
       "8",
-      "6",
-      "9"
+      "6"
     ],
-    "corretta": 0,
+    "corretta": 1,
     "spiegazione": "12 meno 4 fa 8. E la vicina è contenta!",
     "fatto_id": null,
     "stato": "attiva",
@@ -306,11 +306,11 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 5 arance. Ne aggiungi 4. Quante sono ora?",
     "risposte": [
-      "6",
       "8",
-      "9"
+      "9",
+      "6"
     ],
-    "corretta": 2,
+    "corretta": 1,
     "spiegazione": "5 più 4 fa 9. Che bel cesto pieno!",
     "fatto_id": null,
     "stato": "attiva",
@@ -329,8 +329,8 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 5 galline e 2 galli. Quanti animali in tutto?",
     "risposte": [
-      "10",
       "11",
+      "10",
       "7"
     ],
     "corretta": 2,
@@ -352,11 +352,11 @@
     "stimolo": null,
     "domanda": "Hai 10 uova. Ne usi 2 per una frittata. Quante uova restano?",
     "risposte": [
-      "8",
       "6",
-      "10"
+      "10",
+      "8"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "10 meno 2 fa 8. Buona frittata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -375,11 +375,11 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 9 galline e 2 galli. Quanti animali in tutto?",
     "risposte": [
-      "11",
+      "10",
       "9",
-      "10"
+      "11"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "9 più 2 fa 11. Che chiasso al mattino!",
     "fatto_id": null,
     "stato": "attiva",
@@ -398,8 +398,8 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 8 arance. Ne aggiungi 7. Quante sono ora?",
     "risposte": [
-      "13",
       "19",
+      "13",
       "15"
     ],
     "corretta": 2,
@@ -421,11 +421,11 @@
     "stimolo": null,
     "domanda": "Compri 4 chili di olive. Un chilo costa 3 euro. Quanto paghi?",
     "risposte": [
-      "9 euro",
       "12 euro",
-      "16 euro"
+      "16 euro",
+      "9 euro"
     ],
-    "corretta": 1,
+    "corretta": 0,
     "spiegazione": "4 volte 3 fa 12. Conto giusto, spesa fatta!",
     "fatto_id": null,
     "stato": "attiva",
@@ -444,11 +444,11 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 6 arance. Ne aggiungi 6. Quante sono ora?",
     "risposte": [
-      "12",
+      "9",
       "10",
-      "9"
+      "12"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "6 più 6 fa 12. Che bel cesto pieno!",
     "fatto_id": null,
     "stato": "attiva",
@@ -467,11 +467,11 @@
     "stimolo": null,
     "domanda": "Compri 4 pagnotte. Ognuna costa 2 euro. Quanto spendi?",
     "risposte": [
+      "8 euro",
       "12 euro",
-      "11 euro",
-      "8 euro"
+      "11 euro"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "4 per 2 fa 8 euro. Pane fresco per tutti!",
     "fatto_id": null,
     "stato": "attiva",
@@ -491,10 +491,10 @@
     "domanda": "Hai 12 uova. Ne usi 2 per una frittata. Quante uova restano?",
     "risposte": [
       "12",
-      "10",
-      "8"
+      "8",
+      "10"
     ],
-    "corretta": 1,
+    "corretta": 2,
     "spiegazione": "12 meno 2 fa 10. Buona frittata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -536,11 +536,11 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 11 galline e 3 galli. Quanti animali in tutto?",
     "risposte": [
-      "14",
       "15",
-      "11"
+      "11",
+      "14"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "11 più 3 fa 14. Che chiasso al mattino!",
     "fatto_id": null,
     "stato": "attiva",
@@ -582,11 +582,11 @@
     "stimolo": null,
     "domanda": "Nel pollaio ci sono 8 galline e 2 galli. Quanti animali in tutto?",
     "risposte": [
-      "10",
       "7",
+      "10",
       "11"
     ],
-    "corretta": 0,
+    "corretta": 1,
     "spiegazione": "8 più 2 fa 10. Che chiasso al mattino!",
     "fatto_id": null,
     "stato": "attiva",
@@ -628,11 +628,11 @@
     "stimolo": null,
     "domanda": "Compri 5 pagnotte. Ognuna costa 2 euro. Quanto spendi?",
     "risposte": [
-      "10 euro",
       "14 euro",
-      "11 euro"
+      "11 euro",
+      "10 euro"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "5 per 2 fa 10 euro. Pane fresco per tutti!",
     "fatto_id": null,
     "stato": "attiva",
@@ -651,11 +651,11 @@
     "stimolo": null,
     "domanda": "Hai 8 uova. Ne usi 3 per una frittata. Quante uova restano?",
     "risposte": [
-      "2",
+      "5",
       "8",
-      "5"
+      "2"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "8 meno 3 fa 5. Buona frittata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -697,9 +697,9 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 12 arance. Ne aggiungi 8. Quante sono ora?",
     "risposte": [
-      "18",
+      "24",
       "20",
-      "24"
+      "18"
     ],
     "corretta": 1,
     "spiegazione": "12 più 8 fa 20. Che bel cesto pieno!",
@@ -743,8 +743,8 @@
     "stimolo": null,
     "domanda": "In un cesto ci sono 7 arance. Ne aggiungi 5. Quante sono ora?",
     "risposte": [
-      "9",
       "16",
+      "9",
       "12"
     ],
     "corretta": 2,
@@ -789,11 +789,11 @@
     "stimolo": null,
     "domanda": "Hai 10 uova. Ne usi 4 per una frittata. Quante uova restano?",
     "risposte": [
+      "6",
       "9",
-      "8",
-      "6"
+      "8"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "10 meno 4 fa 6. Buona frittata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -830,12 +830,242 @@
   {
     "id": "MAT-037",
     "materia": "matematica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Hai 8 taralli. Ne regali 5 alla vicina. Quanti te ne restano?",
+    "risposte": [
+      "3",
+      "4",
+      "2"
+    ],
+    "corretta": 0,
+    "spiegazione": "8 meno 5 fa 3. E la vicina è contenta!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 8,
+      "b": 5,
+      "unita": ""
+    }
+  },
+  {
+    "id": "MAT-038",
+    "materia": "matematica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In un cesto ci sono 9 arance. Ne aggiungi 8. Quante sono ora?",
+    "risposte": [
+      "21",
+      "19",
+      "17"
+    ],
+    "corretta": 2,
+    "spiegazione": "9 più 8 fa 17. Che bel cesto pieno!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "+",
+      "a": 9,
+      "b": 8,
+      "unita": ""
+    }
+  },
+  {
+    "id": "MAT-039",
+    "materia": "matematica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Compri 4 pagnotte. Ognuna costa 1 euro. Quanto spendi?",
+    "risposte": [
+      "1 euro",
+      "8 euro",
+      "4 euro"
+    ],
+    "corretta": 2,
+    "spiegazione": "4 per 1 fa 4 euro. Pane fresco per tutti!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 4,
+      "b": 1,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-040",
+    "materia": "matematica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Hai 6 uova. Ne usi 3 per una frittata. Quante uova restano?",
+    "risposte": [
+      "4",
+      "7",
+      "3"
+    ],
+    "corretta": 2,
+    "spiegazione": "6 meno 3 fa 3. Buona frittata!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 6,
+      "b": 3,
+      "unita": ""
+    }
+  },
+  {
+    "id": "MAT-041",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In piazza Risorgimento ci sono 6 file di 6 sedie. Quante sedie in tutto?",
+    "risposte": [
+      "40 sedie",
+      "41 sedie",
+      "36 sedie"
+    ],
+    "corretta": 2,
+    "spiegazione": "6 per 6 fa 36. Posti per tutto il concerto!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 6,
+      "b": 6,
+      "unita": "sedie"
+    }
+  },
+  {
+    "id": "MAT-042",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In piazza Risorgimento ci sono 5 file di 8 sedie. Quante sedie in tutto?",
+    "risposte": [
+      "38 sedie",
+      "40 sedie",
+      "41 sedie"
+    ],
+    "corretta": 1,
+    "spiegazione": "5 per 8 fa 40. Posti per tutto il concerto!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 5,
+      "b": 8,
+      "unita": "sedie"
+    }
+  },
+  {
+    "id": "MAT-043",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi con 10 euro. La spesa costa 3 euro. Quanto ti danno di resto?",
+    "risposte": [
+      "7 euro",
+      "10 euro",
+      "6 euro"
+    ],
+    "corretta": 0,
+    "spiegazione": "10 meno 3 fa 7. Controlla sempre il resto!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 10,
+      "b": 3,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-044",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 5 casse. Quante bottiglie hai?",
+    "risposte": [
+      "28 bottiglie",
+      "30 bottiglie",
+      "33 bottiglie"
+    ],
+    "corretta": 1,
+    "spiegazione": "5 casse da 6 fanno 30 bottiglie. Salute!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 6,
+      "b": 5,
+      "unita": "bottiglie"
+    }
+  },
+  {
+    "id": "MAT-045",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi con 10 euro. La spesa costa 8 euro. Quanto ti danno di resto?",
+    "risposte": [
+      "1 euro",
+      "2 euro",
+      "4 euro"
+    ],
+    "corretta": 1,
+    "spiegazione": "10 meno 8 fa 2. Controlla sempre il resto!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 10,
+      "b": 8,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-046",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi con 20 euro. La spesa costa 3 euro. Quanto ti danno di resto?",
+    "risposte": [
+      "17 euro",
+      "19 euro",
+      "21 euro"
+    ],
+    "corretta": 0,
+    "spiegazione": "20 meno 3 fa 17. Controlla sempre il resto!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 20,
+      "b": 3,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-047",
+    "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Paghi con 10 euro. La spesa costa 7 euro. Quanto ti danno di resto?",
     "risposte": [
-      "4 euro",
+      "6 euro",
       "2 euro",
       "3 euro"
     ],
@@ -851,271 +1081,18 @@
     }
   },
   {
-    "id": "MAT-038",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 4 casse. Quante bottiglie hai?",
-    "risposte": [
-      "28 bottiglie",
-      "34 bottiglie",
-      "24 bottiglie"
-    ],
-    "corretta": 2,
-    "spiegazione": "4 casse da 6 fanno 24 bottiglie. Salute!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "*",
-      "a": 6,
-      "b": 4,
-      "unita": "bottiglie"
-    }
-  },
-  {
-    "id": "MAT-039",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi con 20 euro. La spesa costa 13 euro. Quanto ti danno di resto?",
-    "risposte": [
-      "6 euro",
-      "7 euro",
-      "4 euro"
-    ],
-    "corretta": 1,
-    "spiegazione": "20 meno 13 fa 7. Controlla sempre il resto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "-",
-      "a": 20,
-      "b": 13,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-040",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Hai lavorato a maglia 90 centimetri di sciarpa. Ne fai altri 40. Quanto è lunga?",
-    "risposte": [
-      "130 centimetri",
-      "125 centimetri",
-      "140 centimetri"
-    ],
-    "corretta": 0,
-    "spiegazione": "90 più 40 fa 130 centimetri. Una sciarpa bella calda!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "+",
-      "a": 90,
-      "b": 40,
-      "unita": "centimetri"
-    }
-  },
-  {
-    "id": "MAT-041",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi con 20 euro. La spesa costa 4 euro. Quanto ti danno di resto?",
-    "risposte": [
-      "19 euro",
-      "16 euro",
-      "20 euro"
-    ],
-    "corretta": 1,
-    "spiegazione": "20 meno 4 fa 16. Controlla sempre il resto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "-",
-      "a": 20,
-      "b": 4,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-042",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Cammini 20 minuti fino a piazza Regina Elena. Poi altri 20 minuti in corso Vittorio Emanuele. Quanti minuti in tutto?",
-    "risposte": [
-      "39 minuti",
-      "44 minuti",
-      "40 minuti"
-    ],
-    "corretta": 2,
-    "spiegazione": "20 più 20 fa 40 minuti. Bella passeggiata!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "+",
-      "a": 20,
-      "b": 20,
-      "unita": "minuti"
-    }
-  },
-  {
-    "id": "MAT-043",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "In piazza Risorgimento ci sono 5 file di 9 sedie. Quante sedie in tutto?",
-    "risposte": [
-      "40 sedie",
-      "43 sedie",
-      "45 sedie"
-    ],
-    "corretta": 2,
-    "spiegazione": "5 per 9 fa 45. Posti per tutto il concerto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "*",
-      "a": 5,
-      "b": 9,
-      "unita": "sedie"
-    }
-  },
-  {
-    "id": "MAT-044",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Cammini 10 minuti fino a piazza Regina Elena. Poi altri 15 minuti in corso Vittorio Emanuele. Quanti minuti in tutto?",
-    "risposte": [
-      "26 minuti",
-      "23 minuti",
-      "25 minuti"
-    ],
-    "corretta": 2,
-    "spiegazione": "10 più 15 fa 25 minuti. Bella passeggiata!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "+",
-      "a": 10,
-      "b": 15,
-      "unita": "minuti"
-    }
-  },
-  {
-    "id": "MAT-045",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "In piazza Risorgimento ci sono 4 file di 10 sedie. Quante sedie in tutto?",
-    "risposte": [
-      "40 sedie",
-      "43 sedie",
-      "38 sedie"
-    ],
-    "corretta": 0,
-    "spiegazione": "4 per 10 fa 40. Posti per tutto il concerto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "*",
-      "a": 4,
-      "b": 10,
-      "unita": "sedie"
-    }
-  },
-  {
-    "id": "MAT-046",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi con 10 euro. La spesa costa 8 euro. Quanto ti danno di resto?",
-    "risposte": [
-      "1 euro",
-      "4 euro",
-      "2 euro"
-    ],
-    "corretta": 2,
-    "spiegazione": "10 meno 8 fa 2. Controlla sempre il resto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "-",
-      "a": 10,
-      "b": 8,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-047",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi con 20 euro. La spesa costa 3 euro. Quanto ti danno di resto?",
-    "risposte": [
-      "17 euro",
-      "21 euro",
-      "19 euro"
-    ],
-    "corretta": 0,
-    "spiegazione": "20 meno 3 fa 17. Controlla sempre il resto!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "-",
-      "a": 20,
-      "b": 3,
-      "unita": "euro"
-    }
-  },
-  {
     "id": "MAT-048",
-    "materia": "matematica",
-    "livello": 2,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 5 casse. Quante bottiglie hai?",
-    "risposte": [
-      "29 bottiglie",
-      "33 bottiglie",
-      "30 bottiglie"
-    ],
-    "corretta": 2,
-    "spiegazione": "5 casse da 6 fanno 30 bottiglie. Salute!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "*",
-      "a": 6,
-      "b": 5,
-      "unita": "bottiglie"
-    }
-  },
-  {
-    "id": "MAT-049",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 40 centimetri di sciarpa. Ne fai altri 15. Quanto è lunga?",
     "risposte": [
+      "60 centimetri",
       "55 centimetri",
-      "54 centimetri",
-      "60 centimetri"
+      "54 centimetri"
     ],
-    "corretta": 0,
+    "corretta": 1,
     "spiegazione": "40 più 15 fa 55 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1127,18 +1104,18 @@
     }
   },
   {
-    "id": "MAT-050",
+    "id": "MAT-049",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Cammini 15 minuti fino a piazza Regina Elena. Poi altri 20 minuti in corso Vittorio Emanuele. Quanti minuti in tutto?",
     "risposte": [
-      "35 minuti",
       "30 minuti",
-      "32 minuti"
+      "32 minuti",
+      "35 minuti"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "15 più 20 fa 35 minuti. Bella passeggiata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1150,18 +1127,18 @@
     }
   },
   {
-    "id": "MAT-051",
+    "id": "MAT-050",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Cammini 15 minuti fino a piazza Regina Elena. Poi altri 10 minuti in corso Vittorio Emanuele. Quanti minuti in tutto?",
     "risposte": [
+      "23 minuti",
       "25 minuti",
-      "22 minuti",
-      "23 minuti"
+      "22 minuti"
     ],
-    "corretta": 0,
+    "corretta": 1,
     "spiegazione": "15 più 10 fa 25 minuti. Bella passeggiata!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1173,18 +1150,18 @@
     }
   },
   {
-    "id": "MAT-052",
+    "id": "MAT-051",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Paghi con 10 euro. La spesa costa 5 euro. Quanto ti danno di resto?",
     "risposte": [
-      "9 euro",
       "6 euro",
-      "5 euro"
+      "5 euro",
+      "9 euro"
     ],
-    "corretta": 2,
+    "corretta": 1,
     "spiegazione": "10 meno 5 fa 5. Controlla sempre il resto!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1196,18 +1173,18 @@
     }
   },
   {
-    "id": "MAT-053",
+    "id": "MAT-052",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 50 centimetri di sciarpa. Ne fai altri 35. Quanto è lunga?",
     "risposte": [
-      "85 centimetri",
       "86 centimetri",
-      "84 centimetri"
+      "84 centimetri",
+      "85 centimetri"
     ],
-    "corretta": 0,
+    "corretta": 2,
     "spiegazione": "50 più 35 fa 85 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1219,7 +1196,7 @@
     }
   },
   {
-    "id": "MAT-054",
+    "id": "MAT-053",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
@@ -1227,10 +1204,10 @@
     "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 3 casse. Quante bottiglie hai?",
     "risposte": [
       "21 bottiglie",
-      "16 bottiglie",
-      "18 bottiglie"
+      "18 bottiglie",
+      "16 bottiglie"
     ],
-    "corretta": 2,
+    "corretta": 1,
     "spiegazione": "3 casse da 6 fanno 18 bottiglie. Salute!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1242,7 +1219,7 @@
     }
   },
   {
-    "id": "MAT-055",
+    "id": "MAT-054",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
@@ -1265,7 +1242,7 @@
     }
   },
   {
-    "id": "MAT-056",
+    "id": "MAT-055",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
@@ -1288,16 +1265,16 @@
     }
   },
   {
-    "id": "MAT-057",
+    "id": "MAT-056",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 40 centimetri di sciarpa. Ne fai altri 20. Quanto è lunga?",
     "risposte": [
-      "63 centimetri",
+      "61 centimetri",
       "60 centimetri",
-      "61 centimetri"
+      "63 centimetri"
     ],
     "corretta": 1,
     "spiegazione": "40 più 20 fa 60 centimetri. Una sciarpa bella calda!",
@@ -1311,7 +1288,7 @@
     }
   },
   {
-    "id": "MAT-058",
+    "id": "MAT-057",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
@@ -1334,18 +1311,18 @@
     }
   },
   {
-    "id": "MAT-059",
+    "id": "MAT-058",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Hai 50 olive. Ne regali la metà a tua sorella. Quante ne regali?",
     "risposte": [
-      "27",
       "25",
-      "23"
+      "23",
+      "27"
     ],
-    "corretta": 1,
+    "corretta": 0,
     "spiegazione": "La metà di 50 è 25. Si divide in parti giuste!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1357,7 +1334,7 @@
     }
   },
   {
-    "id": "MAT-060",
+    "id": "MAT-059",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
@@ -1380,18 +1357,18 @@
     }
   },
   {
-    "id": "MAT-061",
+    "id": "MAT-060",
     "materia": "matematica",
     "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 80 centimetri di sciarpa. Ne fai altri 40. Quanto è lunga?",
     "risposte": [
-      "115 centimetri",
       "120 centimetri",
+      "115 centimetri",
       "125 centimetri"
     ],
-    "corretta": 1,
+    "corretta": 0,
     "spiegazione": "80 più 40 fa 120 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1403,6 +1380,29 @@
     }
   },
   {
+    "id": "MAT-061",
+    "materia": "matematica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cammini 20 minuti fino a piazza Regina Elena. Poi altri 20 minuti in corso Vittorio Emanuele. Quanti minuti in tutto?",
+    "risposte": [
+      "40 minuti",
+      "35 minuti",
+      "45 minuti"
+    ],
+    "corretta": 0,
+    "spiegazione": "20 più 20 fa 40 minuti. Bella passeggiata!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "+",
+      "a": 20,
+      "b": 20,
+      "unita": "minuti"
+    }
+  },
+  {
     "id": "MAT-062",
     "materia": "matematica",
     "livello": 2,
@@ -1410,8 +1410,8 @@
     "stimolo": null,
     "domanda": "In piazza Risorgimento ci sono 6 file di 9 sedie. Quante sedie in tutto?",
     "risposte": [
-      "51 sedie",
       "56 sedie",
+      "51 sedie",
       "54 sedie"
     ],
     "corretta": 2,
@@ -1433,8 +1433,8 @@
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 60 centimetri di sciarpa. Ne fai altri 30. Quanto è lunga?",
     "risposte": [
-      "87 centimetri",
       "94 centimetri",
+      "87 centimetri",
       "90 centimetri"
     ],
     "corretta": 2,
@@ -1456,11 +1456,11 @@
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 50 centimetri di sciarpa. Ne fai altri 10. Quanto è lunga?",
     "risposte": [
-      "61 centimetri",
+      "60 centimetri",
       "55 centimetri",
-      "60 centimetri"
+      "61 centimetri"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "50 più 10 fa 60 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1479,11 +1479,11 @@
     "stimolo": null,
     "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 2 casse. Quante bottiglie hai?",
     "risposte": [
+      "12 bottiglie",
       "10 bottiglie",
-      "11 bottiglie",
-      "12 bottiglie"
+      "11 bottiglie"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "2 casse da 6 fanno 12 bottiglie. Salute!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1525,11 +1525,11 @@
     "stimolo": null,
     "domanda": "In piazza Risorgimento ci sono 4 file di 7 sedie. Quante sedie in tutto?",
     "risposte": [
+      "28 sedie",
       "38 sedie",
-      "32 sedie",
-      "28 sedie"
+      "32 sedie"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "4 per 7 fa 28. Posti per tutto il concerto!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1549,8 +1549,8 @@
     "domanda": "Hai lavorato a maglia 30 centimetri di sciarpa. Ne fai altri 35. Quanto è lunga?",
     "risposte": [
       "65 centimetri",
-      "66 centimetri",
-      "69 centimetri"
+      "69 centimetri",
+      "66 centimetri"
     ],
     "corretta": 0,
     "spiegazione": "30 più 35 fa 65 centimetri. Una sciarpa bella calda!",
@@ -1572,10 +1572,10 @@
     "domanda": "In piazza Risorgimento ci sono 6 file di 8 sedie. Quante sedie in tutto?",
     "risposte": [
       "52 sedie",
-      "47 sedie",
-      "48 sedie"
+      "48 sedie",
+      "47 sedie"
     ],
-    "corretta": 2,
+    "corretta": 1,
     "spiegazione": "6 per 8 fa 48. Posti per tutto il concerto!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1594,11 +1594,11 @@
     "stimolo": null,
     "domanda": "Hai lavorato a maglia 50 centimetri di sciarpa. Ne fai altri 20. Quanto è lunga?",
     "risposte": [
-      "73 centimetri",
+      "70 centimetri",
       "67 centimetri",
-      "70 centimetri"
+      "73 centimetri"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "50 più 20 fa 70 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1658,193 +1658,185 @@
   {
     "id": "MAT-073",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Riempi 8 cassette di uva. Ognuna pesa 15 chili. Quanti chili in tutto?",
+    "domanda": "Hai lavorato a maglia 30 centimetri di sciarpa. Ne fai altri 40. Quanto è lunga?",
     "risposte": [
-      "120 chili",
-      "117 chili",
-      "130 chili",
-      "124 chili"
+      "70 centimetri",
+      "69 centimetri",
+      "72 centimetri"
     ],
     "corretta": 0,
-    "spiegazione": "8 per 15 fa 120 chili. Che vendemmia!",
+    "spiegazione": "30 più 40 fa 70 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "*",
-      "a": 8,
-      "b": 15,
-      "unita": "chili"
+      "op": "+",
+      "a": 30,
+      "b": 40,
+      "unita": "centimetri"
     }
   },
   {
     "id": "MAT-074",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Hai 24 taralli. Li dividi tra 6 nipoti in parti uguali. Quanti ne riceve ciascuno?",
+    "domanda": "Hai lavorato a maglia 90 centimetri di sciarpa. Ne fai altri 10. Quanto è lunga?",
     "risposte": [
-      "8",
-      "1",
-      "4",
-      "6"
+      "101 centimetri",
+      "103 centimetri",
+      "100 centimetri"
     ],
     "corretta": 2,
-    "spiegazione": "24 diviso 6 fa 4. Nessun nipote resta senza!",
+    "spiegazione": "90 più 10 fa 100 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "/",
-      "a": 24,
-      "b": 6,
-      "unita": ""
+      "op": "+",
+      "a": 90,
+      "b": 10,
+      "unita": "centimetri"
     }
   },
   {
     "id": "MAT-075",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Hai 15 taralli. Li dividi tra 5 nipoti in parti uguali. Quanti ne riceve ciascuno?",
+    "domanda": "Hai lavorato a maglia 80 centimetri di sciarpa. Ne fai altri 30. Quanto è lunga?",
     "risposte": [
-      "3",
-      "7",
-      "5",
-      "2"
+      "108 centimetri",
+      "105 centimetri",
+      "110 centimetri"
     ],
-    "corretta": 0,
-    "spiegazione": "15 diviso 5 fa 3. Nessun nipote resta senza!",
+    "corretta": 2,
+    "spiegazione": "80 più 30 fa 110 centimetri. Una sciarpa bella calda!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "/",
-      "a": 15,
-      "b": 5,
-      "unita": ""
+      "op": "+",
+      "a": 80,
+      "b": 30,
+      "unita": "centimetri"
     }
   },
   {
     "id": "MAT-076",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Paghi 54 euro per 6 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "domanda": "Paghi con 20 euro. La spesa costa 17 euro. Quanto ti danno di resto?",
     "risposte": [
       "7 euro",
-      "9 euro",
-      "8 euro",
-      "6 euro"
+      "4 euro",
+      "3 euro"
     ],
-    "corretta": 1,
-    "spiegazione": "54 diviso 6 fa 9 euro. Conto preciso!",
+    "corretta": 2,
+    "spiegazione": "20 meno 17 fa 3. Controlla sempre il resto!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "/",
-      "a": 54,
-      "b": 6,
+      "op": "-",
+      "a": 20,
+      "b": 17,
       "unita": "euro"
     }
   },
   {
     "id": "MAT-077",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Raccogli 20 chili di olive al giorno. Lavori per 5 giorni. Quanti chili raccogli?",
+    "domanda": "In piazza Risorgimento ci sono 5 file di 7 sedie. Quante sedie in tutto?",
     "risposte": [
-      "104 chili",
-      "100 chili",
-      "101 chili",
-      "110 chili"
+      "36 sedie",
+      "35 sedie",
+      "32 sedie"
     ],
     "corretta": 1,
-    "spiegazione": "20 per 5 fa 100 chili. Che raccolta!",
+    "spiegazione": "5 per 7 fa 35. Posti per tutto il concerto!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
       "op": "*",
-      "a": 20,
-      "b": 5,
-      "unita": "chili"
+      "a": 5,
+      "b": 7,
+      "unita": "sedie"
     }
   },
   {
     "id": "MAT-078",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Paghi 30 euro per 5 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "domanda": "Paghi con 20 euro. La spesa costa 6 euro. Quanto ti danno di resto?",
     "risposte": [
-      "6 euro",
-      "7 euro",
-      "8 euro",
-      "3 euro"
+      "13 euro",
+      "14 euro",
+      "17 euro"
     ],
-    "corretta": 0,
-    "spiegazione": "30 diviso 5 fa 6 euro. Conto preciso!",
+    "corretta": 1,
+    "spiegazione": "20 meno 6 fa 14. Controlla sempre il resto!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "/",
-      "a": 30,
-      "b": 5,
+      "op": "-",
+      "a": 20,
+      "b": 6,
       "unita": "euro"
     }
   },
   {
     "id": "MAT-079",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Paghi 15 euro per 3 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "domanda": "Una cassa contiene 6 bottiglie di Primitivo. Compri 4 casse. Quante bottiglie hai?",
     "risposte": [
-      "5 euro",
-      "3 euro",
-      "8 euro",
-      "4 euro"
+      "34 bottiglie",
+      "26 bottiglie",
+      "24 bottiglie"
     ],
-    "corretta": 0,
-    "spiegazione": "15 diviso 3 fa 5 euro. Conto preciso!",
+    "corretta": 2,
+    "spiegazione": "4 casse da 6 fanno 24 bottiglie. Salute!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "/",
-      "a": 15,
-      "b": 3,
-      "unita": "euro"
+      "op": "*",
+      "a": 6,
+      "b": 4,
+      "unita": "bottiglie"
     }
   },
   {
     "id": "MAT-080",
     "materia": "matematica",
-    "livello": 3,
+    "livello": 2,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Riempi 7 cassette di uva. Ognuna pesa 20 chili. Quanti chili in tutto?",
+    "domanda": "In piazza Risorgimento ci sono 4 file di 8 sedie. Quante sedie in tutto?",
     "risposte": [
-      "140 chili",
-      "142 chili",
-      "150 chili",
-      "135 chili"
+      "32 sedie",
+      "42 sedie",
+      "34 sedie"
     ],
     "corretta": 0,
-    "spiegazione": "7 per 20 fa 140 chili. Che vendemmia!",
+    "spiegazione": "4 per 8 fa 32. Posti per tutto il concerto!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
       "op": "*",
-      "a": 7,
-      "b": 20,
-      "unita": "chili"
+      "a": 4,
+      "b": 8,
+      "unita": "sedie"
     }
   },
   {
@@ -1855,12 +1847,12 @@
     "stimolo": null,
     "domanda": "Paghi 28 euro per 4 bottiglie di olio uguali. Quanto costa una bottiglia?",
     "risposte": [
-      "10 euro",
-      "8 euro",
       "7 euro",
-      "4 euro"
+      "5 euro",
+      "9 euro",
+      "10 euro"
     ],
-    "corretta": 2,
+    "corretta": 0,
     "spiegazione": "28 diviso 4 fa 7 euro. Conto preciso!",
     "fatto_id": null,
     "stato": "attiva",
@@ -1877,22 +1869,22 @@
     "livello": 3,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Raccogli 30 chili di olive al giorno. Lavori per 3 giorni. Quanti chili raccogli?",
+    "domanda": "Hai 24 taralli. Li dividi tra 6 nipoti in parti uguali. Quanti ne riceve ciascuno?",
     "risposte": [
-      "88 chili",
-      "95 chili",
-      "92 chili",
-      "90 chili"
+      "2",
+      "4",
+      "8",
+      "3"
     ],
-    "corretta": 3,
-    "spiegazione": "30 per 3 fa 90 chili. Che raccolta!",
+    "corretta": 1,
+    "spiegazione": "24 diviso 6 fa 4. Nessun nipote resta senza!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
-      "op": "*",
-      "a": 30,
-      "b": 3,
-      "unita": "chili"
+      "op": "/",
+      "a": 24,
+      "b": 6,
+      "unita": ""
     }
   },
   {
@@ -1901,11 +1893,155 @@
     "livello": 3,
     "tipo": "scelta",
     "stimolo": null,
+    "domanda": "Paghi 54 euro per 6 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "risposte": [
+      "6 euro",
+      "12 euro",
+      "8 euro",
+      "9 euro"
+    ],
+    "corretta": 3,
+    "spiegazione": "54 diviso 6 fa 9 euro. Conto preciso!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 54,
+      "b": 6,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-084",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Raccogli 15 chili di olive al giorno. Lavori per 3 giorni. Quanti chili raccogli?",
+    "risposte": [
+      "45 chili",
+      "50 chili",
+      "49 chili",
+      "42 chili"
+    ],
+    "corretta": 0,
+    "spiegazione": "15 per 3 fa 45 chili. Che raccolta!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 15,
+      "b": 3,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-085",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Hai 25 taralli. Li dividi tra 5 nipoti in parti uguali. Quanti ne riceve ciascuno?",
+    "risposte": [
+      "2",
+      "7",
+      "4",
+      "5"
+    ],
+    "corretta": 3,
+    "spiegazione": "25 diviso 5 fa 5. Nessun nipote resta senza!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 25,
+      "b": 5,
+      "unita": ""
+    }
+  },
+  {
+    "id": "MAT-086",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi 30 euro per 5 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "risposte": [
+      "6 euro",
+      "4 euro",
+      "9 euro",
+      "8 euro"
+    ],
+    "corretta": 0,
+    "spiegazione": "30 diviso 5 fa 6 euro. Conto preciso!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 30,
+      "b": 5,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-087",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi 45 euro per 5 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "risposte": [
+      "8 euro",
+      "7 euro",
+      "9 euro",
+      "11 euro"
+    ],
+    "corretta": 2,
+    "spiegazione": "45 diviso 5 fa 9 euro. Conto preciso!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 45,
+      "b": 5,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-088",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 10 cassette di uva. Ognuna pesa 15 chili. Quanti chili in tutto?",
+    "risposte": [
+      "152 chili",
+      "155 chili",
+      "160 chili",
+      "150 chili"
+    ],
+    "corretta": 3,
+    "spiegazione": "10 per 15 fa 150 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 10,
+      "b": 15,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-089",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
     "domanda": "Riempi 8 cassette di uva. Ognuna pesa 20 chili. Quanti chili in tutto?",
     "risposte": [
-      "163 chili",
+      "165 chili",
+      "159 chili",
       "170 chili",
-      "158 chili",
       "160 chili"
     ],
     "corretta": 3,
@@ -1920,171 +2056,243 @@
     }
   },
   {
-    "id": "MAT-084",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Riempi 12 cassette di uva. Ognuna pesa 20 chili. Quanti chili in tutto?",
-    "risposte": [
-      "239 chili",
-      "245 chili",
-      "237 chili",
-      "240 chili"
-    ],
-    "corretta": 3,
-    "spiegazione": "12 per 20 fa 240 chili. Che vendemmia!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "*",
-      "a": 12,
-      "b": 20,
-      "unita": "chili"
-    }
-  },
-  {
-    "id": "MAT-085",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Hai 24 taralli. Li dividi tra 3 nipoti in parti uguali. Quanti ne riceve ciascuno?",
-    "risposte": [
-      "6",
-      "5",
-      "8",
-      "9"
-    ],
-    "corretta": 2,
-    "spiegazione": "24 diviso 3 fa 8. Nessun nipote resta senza!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "/",
-      "a": 24,
-      "b": 3,
-      "unita": ""
-    }
-  },
-  {
-    "id": "MAT-086",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi 32 euro per 4 bottiglie di olio uguali. Quanto costa una bottiglia?",
-    "risposte": [
-      "8 euro",
-      "10 euro",
-      "11 euro",
-      "7 euro"
-    ],
-    "corretta": 0,
-    "spiegazione": "32 diviso 4 fa 8 euro. Conto preciso!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "/",
-      "a": 32,
-      "b": 4,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-087",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi 24 euro per 4 bottiglie di olio uguali. Quanto costa una bottiglia?",
-    "risposte": [
-      "9 euro",
-      "4 euro",
-      "6 euro",
-      "8 euro"
-    ],
-    "corretta": 2,
-    "spiegazione": "24 diviso 4 fa 6 euro. Conto preciso!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "/",
-      "a": 24,
-      "b": 4,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-088",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi 36 euro per 6 bottiglie di olio uguali. Quanto costa una bottiglia?",
-    "risposte": [
-      "10 euro",
-      "8 euro",
-      "6 euro",
-      "5 euro"
-    ],
-    "corretta": 2,
-    "spiegazione": "36 diviso 6 fa 6 euro. Conto preciso!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "/",
-      "a": 36,
-      "b": 6,
-      "unita": "euro"
-    }
-  },
-  {
-    "id": "MAT-089",
-    "materia": "matematica",
-    "livello": 3,
-    "tipo": "scelta",
-    "stimolo": null,
-    "domanda": "Paghi 20 euro per 4 bottiglie di olio uguali. Quanto costa una bottiglia?",
-    "risposte": [
-      "5 euro",
-      "2 euro",
-      "6 euro",
-      "9 euro"
-    ],
-    "corretta": 0,
-    "spiegazione": "20 diviso 4 fa 5 euro. Conto preciso!",
-    "fatto_id": null,
-    "stato": "attiva",
-    "calcolo": {
-      "op": "/",
-      "a": 20,
-      "b": 4,
-      "unita": "euro"
-    }
-  },
-  {
     "id": "MAT-090",
     "materia": "matematica",
     "livello": 3,
     "tipo": "scelta",
     "stimolo": null,
-    "domanda": "Raccogli 30 chili di olive al giorno. Lavori per 4 giorni. Quanti chili raccogli?",
+    "domanda": "Riempi 12 cassette di uva. Ognuna pesa 25 chili. Quanti chili in tutto?",
     "risposte": [
-      "119 chili",
-      "130 chili",
-      "124 chili",
-      "120 chili"
+      "304 chili",
+      "300 chili",
+      "295 chili",
+      "299 chili"
     ],
-    "corretta": 3,
-    "spiegazione": "30 per 4 fa 120 chili. Che raccolta!",
+    "corretta": 1,
+    "spiegazione": "12 per 25 fa 300 chili. Che vendemmia!",
     "fatto_id": null,
     "stato": "attiva",
     "calcolo": {
       "op": "*",
-      "a": 30,
-      "b": 4,
+      "a": 12,
+      "b": 25,
       "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-091",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 12 cassette di uva. Ognuna pesa 15 chili. Quanti chili in tutto?",
+    "risposte": [
+      "182 chili",
+      "180 chili",
+      "177 chili",
+      "185 chili"
+    ],
+    "corretta": 1,
+    "spiegazione": "12 per 15 fa 180 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 12,
+      "b": 15,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-092",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 10 cassette di uva. Ognuna pesa 20 chili. Quanti chili in tutto?",
+    "risposte": [
+      "195 chili",
+      "203 chili",
+      "200 chili",
+      "204 chili"
+    ],
+    "corretta": 2,
+    "spiegazione": "10 per 20 fa 200 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 10,
+      "b": 20,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-093",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi 30 euro per 6 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "risposte": [
+      "3 euro",
+      "2 euro",
+      "6 euro",
+      "5 euro"
+    ],
+    "corretta": 3,
+    "spiegazione": "30 diviso 6 fa 5 euro. Conto preciso!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 30,
+      "b": 6,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-094",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Paghi 15 euro per 5 bottiglie di olio uguali. Quanto costa una bottiglia?",
+    "risposte": [
+      "2 euro",
+      "1 euro",
+      "4 euro",
+      "3 euro"
+    ],
+    "corretta": 3,
+    "spiegazione": "15 diviso 5 fa 3 euro. Conto preciso!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 15,
+      "b": 5,
+      "unita": "euro"
+    }
+  },
+  {
+    "id": "MAT-095",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 6 cassette di uva. Ognuna pesa 25 chili. Quanti chili in tutto?",
+    "risposte": [
+      "149 chili",
+      "155 chili",
+      "150 chili",
+      "153 chili"
+    ],
+    "corretta": 2,
+    "spiegazione": "6 per 25 fa 150 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 6,
+      "b": 25,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-096",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 7 cassette di uva. Ognuna pesa 15 chili. Quanti chili in tutto?",
+    "risposte": [
+      "115 chili",
+      "105 chili",
+      "109 chili",
+      "102 chili"
+    ],
+    "corretta": 1,
+    "spiegazione": "7 per 15 fa 105 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 7,
+      "b": 15,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-097",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Raccogli 20 chili di olive al giorno. Lavori per 5 giorni. Quanti chili raccogli?",
+    "risposte": [
+      "95 chili",
+      "101 chili",
+      "100 chili",
+      "105 chili"
+    ],
+    "corretta": 2,
+    "spiegazione": "20 per 5 fa 100 chili. Che raccolta!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 20,
+      "b": 5,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-098",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Riempi 9 cassette di uva. Ognuna pesa 15 chili. Quanti chili in tutto?",
+    "risposte": [
+      "130 chili",
+      "140 chili",
+      "135 chili",
+      "132 chili"
+    ],
+    "corretta": 2,
+    "spiegazione": "9 per 15 fa 135 chili. Che vendemmia!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "*",
+      "a": 9,
+      "b": 15,
+      "unita": "chili"
+    }
+  },
+  {
+    "id": "MAT-099",
+    "materia": "matematica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Hai 21 taralli. Li dividi tra 3 nipoti in parti uguali. Quanti ne riceve ciascuno?",
+    "risposte": [
+      "8",
+      "10",
+      "7",
+      "9"
+    ],
+    "corretta": 2,
+    "spiegazione": "21 diviso 3 fa 7. Nessun nipote resta senza!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "/",
+      "a": 21,
+      "b": 3,
+      "unita": ""
     }
   }
 ]

@@ -1,1 +1,766 @@
-[]
+[
+  {
+    "id": "STO-001",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Secondo una spiegazione, da dove viene il nome Fragagnano?",
+    "risposte": [
+      "Da un fiume vicino",
+      "Da un santo francese",
+      "Da un nome romano"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il nome verrebbe da un antico romano padrone di queste terre.",
+    "fatto_id": "S01",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-002",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove sono stati trovati resti di capanne preistoriche?",
+    "risposte": [
+      "In piazza Risorgimento",
+      "Sul Monte Santa Sofia",
+      "Sotto il municipio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il Monte Santa Sofia era abitato già nella preistoria!",
+    "fatto_id": "S02",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-003",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Sul Monte Santa Sofia c'è un sito archeologico. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Lì sono stati trovati resti di capanne antichissime.",
+    "fatto_id": "S02",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-004",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Di quale epoca sono le capanne del Monte Santa Sofia?",
+    "risposte": [
+      "Ottocentesca",
+      "Medievale",
+      "Moderna",
+      "Preistorica"
+    ],
+    "corretta": 3,
+    "spiegazione": "Sono preistoriche: migliaia di anni fa!",
+    "fatto_id": "S02",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-005",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama la sorgente del Monte Santa Sofia?",
+    "risposte": [
+      "Funtanedda",
+      "Fontanone",
+      "Acquasanta"
+    ],
+    "corretta": 0,
+    "spiegazione": "La funtanedda sgorga ancora dalle rocce del monte.",
+    "fatto_id": "S03",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-006",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Dalle rocce del Monte Santa Sofia sgorga una sorgente. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Si chiama funtanedda.",
+    "fatto_id": "S03",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-007",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dal 1278 il feudo fu di quale famiglia?",
+    "risposte": [
+      "Dell'Antoglietta",
+      "Degli Sforza",
+      "Dei Medici"
+    ],
+    "corretta": 0,
+    "spiegazione": "I dell'Antoglietta tennero il feudo per secoli.",
+    "fatto_id": "S04",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-008",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Da quale paese veniva la famiglia dell'Antoglietta?",
+    "risposte": [
+      "Dalla Spagna",
+      "Dalla Francia",
+      "Dall'Inghilterra",
+      "Dalla Germania"
+    ],
+    "corretta": 1,
+    "spiegazione": "Erano di origine francese: in Francia si chiamavano Nanteuil.",
+    "fatto_id": "S04",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-009",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno i dell'Antoglietta ebbero il feudo?",
+    "risposte": [
+      "1678",
+      "1478",
+      "1278"
+    ],
+    "corretta": 2,
+    "spiegazione": "Era il 1278: quasi 750 anni fa!",
+    "fatto_id": "S04",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-010",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno fu costruita la torre del castello?",
+    "risposte": [
+      "1887",
+      "1687",
+      "1487"
+    ],
+    "corretta": 2,
+    "spiegazione": "La torre è del 1487. Ha più di 500 anni!",
+    "fatto_id": "S05",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-011",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "La torre del castello ha più di 500 anni. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Fu eretta nel 1487.",
+    "fatto_id": "S05",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-012",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno fu costruito il palazzo baronale?",
+    "risposte": [
+      "1587",
+      "1787",
+      "1887",
+      "1687"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il palazzo fu costruito nel 1587, intorno alla torre più antica.",
+    "fatto_id": "S05B",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-013",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa aveva la torre del castello per difendersi?",
+    "risposte": [
+      "Una porta di vetro",
+      "Un giardino fiorito",
+      "Un ponte levatoio"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il ponte levatoio si alzava per chiudere l'ingresso.",
+    "fatto_id": "S06",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-014",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Il Palazzo Marchesale fu fortificato per paura di chi?",
+    "risposte": [
+      "Dei Turchi",
+      "Dei lupi",
+      "Delle tempeste"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si temevano gli sbarchi dei Turchi sulla costa.",
+    "fatto_id": "S07",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-015",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale marchese fece fortificare il Palazzo Marchesale?",
+    "risposte": [
+      "Francesco Maria dell'Antoglietta",
+      "Federico di Svevia",
+      "Carlo d'Angiò"
+    ],
+    "corretta": 0,
+    "spiegazione": "Fu il marchese Francesco Maria dell'Antoglietta.",
+    "fatto_id": "S07",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-016",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che tipo di portale ha il Palazzo Marchesale?",
+    "risposte": [
+      "Bugnato",
+      "Di marmo bianco",
+      "Di ferro battuto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il bugnato è fatto di grandi pietre squadrate e sporgenti.",
+    "fatto_id": "S08",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-017",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il portale bugnato è fatto di grandi pietre sporgenti. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Dà al palazzo un aspetto forte e solido.",
+    "fatto_id": "S08",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-018",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che forma ha il cortile del Palazzo Marchesale?",
+    "risposte": [
+      "Un cerchio",
+      "Un triangolo",
+      "Un trapezio",
+      "Una stella"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il portale porta in un cortile a forma di trapezio.",
+    "fatto_id": "S08B",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-019",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale santa ha una statua su un antico palazzo in piazza?",
+    "risposte": [
+      "Sant'Irene",
+      "Santa Rita",
+      "Santa Lucia"
+    ],
+    "corretta": 0,
+    "spiegazione": "La statua di Sant'Irene sta sopra lo stemma dei marchesi.",
+    "fatto_id": "S09",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-020",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi furono gli ultimi feudatari di Fragagnano?",
+    "risposte": [
+      "I Borbone",
+      "I Carducci Agustini",
+      "I Normanni"
+    ],
+    "corretta": 1,
+    "spiegazione": "Dopo i dell'Antoglietta arrivarono i Carducci Agustini.",
+    "fatto_id": "S11B",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-021",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno il Palazzo Marchesale fu donato al Comune?",
+    "risposte": [
+      "1779",
+      "1879",
+      "1979"
+    ],
+    "corretta": 2,
+    "spiegazione": "Nel 1979: da allora il palazzo è di tutti.",
+    "fatto_id": "S13",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-022",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il Palazzo Marchesale fu donato al Comune. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Avvenne nel 1979.",
+    "fatto_id": "S13",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-023",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel Novecento, a che cosa servì il palazzo baronale?",
+    "risposte": [
+      "A fare il vino",
+      "A fare il pane",
+      "A tessere la lana"
+    ],
+    "corretta": 0,
+    "spiegazione": "Fu usato in parte come stabilimento per il vino.",
+    "fatto_id": "S14",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-024",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Negli anni Settanta il palazzo baronale ospitò il Municipio. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Fu sede del Municipio per un periodo.",
+    "fatto_id": "S14B",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-025",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa c'è oggi nel Palazzo Marchesale?",
+    "risposte": [
+      "Una sala convegni",
+      "Una stazione",
+      "Una piscina"
+    ],
+    "corretta": 0,
+    "spiegazione": "Nella sala convegni si fanno feste ed eventi.",
+    "fatto_id": "S15",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-026",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno Sant'Antonio fu proclamato patrono?",
+    "risposte": [
+      "1904",
+      "1804",
+      "1954"
+    ],
+    "corretta": 0,
+    "spiegazione": "Fu proclamato patrono nel 1904.",
+    "fatto_id": "S16",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-027",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il palazzo baronale è di fronte al Palazzo Marchesale. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! I due palazzi si guardano.",
+    "fatto_id": "S18",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-028",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il palazzo più antico del paese?",
+    "risposte": [
+      "Il municipio",
+      "Il Palazzo Marchesale",
+      "Il palazzo baronale"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il palazzo baronale, detto anche castello, è il più antico.",
+    "fatto_id": "S19",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-029",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Su quale piazza si affaccia il Palazzo Marchesale?",
+    "risposte": [
+      "Piazza Dante",
+      "Piazza Regina Elena",
+      "Piazza Garibaldi"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il palazzo domina piazza Regina Elena.",
+    "fatto_id": "S20",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-030",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "A chi è dedicata la Chiesa Madre di Fragagnano?",
+    "risposte": [
+      "San Nicola",
+      "Maria Santissima Immacolata",
+      "Santa Lucia"
+    ],
+    "corretta": 1,
+    "spiegazione": "La Chiesa Madre è dedicata a Maria Santissima Immacolata.",
+    "fatto_id": "C01",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-031",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "La Chiesa Madre fa parte di quale arcidiocesi?",
+    "risposte": [
+      "Bari",
+      "Taranto",
+      "Lecce"
+    ],
+    "corretta": 1,
+    "spiegazione": "È una parrocchia dell'Arcidiocesi di Taranto.",
+    "fatto_id": "C01",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-032",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno la chiesa del Carmine prese l'aspetto di oggi?",
+    "risposte": [
+      "1511",
+      "1711",
+      "1911"
+    ],
+    "corretta": 2,
+    "spiegazione": "La chiesa del Carmine di oggi è del 1911.",
+    "fatto_id": "C02",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-033",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale corso si trova la chiesa del Carmine?",
+    "risposte": [
+      "Corso Garibaldi",
+      "Corso Italia",
+      "Corso Vittorio Emanuele"
+    ],
+    "corretta": 2,
+    "spiegazione": "È in corso Vittorio Emanuele, all'angolo con via Fiume.",
+    "fatto_id": "C02",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-034",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come chiamano i fragagnanesi la chiesa del Carmine?",
+    "risposte": [
+      "Oratorio",
+      "Chiesone",
+      "Cappellone"
+    ],
+    "corretta": 0,
+    "spiegazione": "In paese tutti la chiamano oratorio.",
+    "fatto_id": "C03",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-035",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quante navate ha la chiesa del Carmine?",
+    "risposte": [
+      "2",
+      "3",
+      "1",
+      "5"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ha una sola navata, semplice e raccolta.",
+    "fatto_id": "C03",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-036",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove si trova la Cappella della Madonna del Favore?",
+    "risposte": [
+      "In campagna, fuori paese",
+      "Dentro il castello",
+      "In piazza Regina Elena"
+    ],
+    "corretta": 0,
+    "spiegazione": "È in campagna, a circa 1 chilometro dal paese.",
+    "fatto_id": "C04",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-037",
+    "materia": "storia",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Secondo la leggenda, dove fu trovata l'immagine della Madonna?",
+    "risposte": [
+      "In un pozzo",
+      "In una grotta",
+      "Sotto un ulivo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Secondo la leggenda, la Madonna del Favore fu trovata in un pozzo.",
+    "fatto_id": "C05",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-038",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Secondo il racconto, verso dove fu girato l'ingresso della cappella?",
+    "risposte": [
+      "Verso il paese",
+      "Verso Taranto",
+      "Verso il monte",
+      "Verso il mare"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si racconta che da allora la cappella non crollò più.",
+    "fatto_id": "C11",
+    "stato": "attiva"
+  },
+  {
+    "id": "STO-039",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Secondo una fonte, in passato c'era una comunità di origine...?",
+    "risposte": [
+      "Albanese",
+      "Spagnola",
+      "Greca",
+      "Tedesca"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si racconta di una comunità albanese, poi diventata fragagnanese.",
+    "fatto_id": "S17",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-040",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nel 1905, che cosa fu trovato vicino al paese?",
+    "risposte": [
+      "Una statua romana",
+      "Un'anfora d'olio",
+      "Monete greche antiche"
+    ],
+    "corretta": 2,
+    "spiegazione": "Un piccolo tesoro di monete greche di oltre 2.000 anni fa.",
+    "fatto_id": "S21",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-041",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno Fragagnano entrò nella provincia dello Ionio?",
+    "risposte": [
+      "1823",
+      "1973",
+      "1923"
+    ],
+    "corretta": 2,
+    "spiegazione": "Nel 1923: oggi si chiama provincia di Taranto.",
+    "fatto_id": "S22",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-042",
+    "materia": "storia",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In che anno la cappella del Favore sarebbe già citata?",
+    "risposte": [
+      "1777",
+      "1877",
+      "1577"
+    ],
+    "corretta": 2,
+    "spiegazione": "Sarebbe citata in una visita dell'arcivescovo di Taranto del 1577.",
+    "fatto_id": "C06",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-043",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con che cosa fu costruita la Chiesa Madre?",
+    "risposte": [
+      "I soldi del re",
+      "Le offerte dei cittadini",
+      "Un tesoro trovato"
+    ],
+    "corretta": 1,
+    "spiegazione": "Un'iscrizione del 1774 ricorda le offerte dei cittadini.",
+    "fatto_id": "C07",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-044",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa c'è davanti alla Chiesa Madre?",
+    "risposte": [
+      "Un campo sportivo",
+      "Una grande fontana",
+      "Un'ampia scalinata"
+    ],
+    "corretta": 2,
+    "spiegazione": "Un'ampia scalinata porta al portale della Chiesa Madre.",
+    "fatto_id": "C08",
+    "stato": "da_rivedere"
+  },
+  {
+    "id": "STO-045",
+    "materia": "storia",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Nella Chiesa Madre ci sono reliquie di Sant'Antonio. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Vero! Si conservano reliquie di Sant'Antonio di Padova.",
+    "fatto_id": "C09",
+    "stato": "da_rivedere"
+  }
+]
