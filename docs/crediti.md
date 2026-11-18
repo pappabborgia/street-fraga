@@ -8,3 +8,4 @@
 - **Copertina** (`public/copertina.webp`) — immagine fornita dal gestore del gioco ("Street Fraga: Sfida in Piazza"), usata nella schermata iniziale. Da decidere con il gestore: la scritta in inglese "Arcade Fight" e lo stile del logo, simile a quello di un videogioco esistente.
 - **Copertina verticale** (`public/copertina-verticale.webp`) — versione alta della copertina fornita dal gestore per lo schermo del telefono (ritagliata sopra il pulsante GIOCA disegnato nella prova).
 - **Sfondi delle sfide** (`public/sfondi/*-pixel.png`: chiesa, scuola, cappella, municipio, piazza) — immagini fornite dal gestore, ridotte da noi a 320 px e 64 colori (aspetto a pixel grossi, circa 25 KB l'una).
+- **Ritratti dei lottatori** (`public/ritratti/*.webp`) — immagine fornita dal gestore (`docs/immagini/ritratti.png`), ritagliata da noi in 10 facce da 256 px.

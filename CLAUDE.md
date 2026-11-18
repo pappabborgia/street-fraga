@@ -7,7 +7,7 @@ Si vince rispondendo a domande. È un gioco, non una terapia: non scrivere mai
 che cura, previene o misura demenza o altre malattie.
 
 Tutto è originale: niente nomi, personaggi, grafica, suoni, musiche o loghi di
-Street Fighter o di altri giochi. Personaggi disegnati in SVG da noi; sfondi delle sfide e copertina forniti dal gestore.
+Street Fighter o di altri giochi. Lottatori interi disegnati in SVG da noi; ritratti delle facce, sfondi delle sfide e copertina forniti dal gestore.
 Musica: brani di Mozart (pubblico dominio) arrangiati da noi con Web Audio.
 Crediti e licenze in `docs/crediti.md`.
 

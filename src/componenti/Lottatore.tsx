@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
 import type { Aspetto, Personaggio } from "@/gioco/personaggi";
-import { Volto } from "./Volto";
 
 const NERO = "#1a1a1a";
 
@@ -407,12 +406,15 @@ export function Lottatore({ p, verso = "destra", className = "" }: { p: Personag
   );
 }
 
-/** Solo la faccia (disegno più curato, senza quadretti): griglia di scelta, barra dell'energia, torneo. */
+/**
+ * Solo la faccia: griglia di scelta, barra dell'energia, tabellone del torneo.
+ * Ritratti disegnati forniti dal gestore (public/ritratti/<id>.webp, ritagliati da docs/immagini/ritratti.png).
+ */
 export function Ritratto({ p, verso = "destra" }: { p: Personaggio; verso?: "destra" | "sinistra" }) {
   return (
-    <svg viewBox="28 6 150 150" className="w-full h-full" aria-hidden="true"
-      style={verso === "sinistra" ? { transform: "scaleX(-1)" } : undefined}>
-      <Volto a={p.aspetto} />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={`/ritratti/${p.id}.webp`} alt="" aria-hidden="true" width={256} height={256} draggable={false}
+      className="block w-full h-full object-cover select-none"
+      style={verso === "sinistra" ? { transform: "scaleX(-1)" } : undefined} />
   );
 }
