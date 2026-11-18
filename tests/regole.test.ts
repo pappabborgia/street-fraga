@@ -1,0 +1,100 @@
+import { describe, expect, it } from "vitest";
+import {
+  DANNO_COLPO, DANNO_SPECIALE, ENERGIA_INIZIALE, PUNTI_GIUSTA, PUNTI_SPECIALE,
+  adattaLivello, applicaRisposta, mescolaRisposte, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
+} from "@/gioco/regole";
+import { MAZZO } from "@/gioco/domande";
+import { creaRng } from "@/gioco/rng";
+
+describe("punteggio e colpi", () => {
+  it("risposta giusta: 10 punti e l'avversario perde energia", () => {
+    const r = applicaRisposta(nuovoCombattente(), nuovoCombattente(), true);
+    expect(r.attaccante.punti).toBe(PUNTI_GIUSTA);
+    expect(r.difensore.energia).toBe(ENERGIA_INIZIALE - DANNO_COLPO);
+  });
+
+  it("risposta sbagliata: nessun punto tolto, nessun danno", () => {
+    let a = nuovoCombattente();
+    a = applicaRisposta(a, nuovoCombattente(), true).attaccante;
+    const r = applicaRisposta(a, nuovoCombattente(), false);
+    expect(r.attaccante.punti).toBe(PUNTI_GIUSTA);
+    expect(r.difensore.energia).toBe(ENERGIA_INIZIALE);
+    expect(r.attaccante.serie).toBe(0);
+  });
+
+  it("3 giuste di fila: colpo speciale e 5 punti in più", () => {
+    let a = nuovoCombattente(), d = nuovoCombattente();
+    for (let i = 0; i < 2; i++) ({ attaccante: a, difensore: d } = applicaRisposta(a, d, true));
+    const r = applicaRisposta(a, d, true);
+    expect(r.esito.speciale).toBe(true);
+    expect(r.attaccante.punti).toBe(3 * PUNTI_GIUSTA + PUNTI_SPECIALE);
+    expect(r.difensore.energia).toBe(ENERGIA_INIZIALE - 2 * DANNO_COLPO - DANNO_SPECIALE);
+  });
+
+  it("l'energia non scende sotto zero", () => {
+    let a = nuovoCombattente(), d = nuovoCombattente();
+    for (let i = 0; i < 20; i++) ({ attaccante: a, difensore: d } = applicaRisposta(a, d, true));
+    expect(d.energia).toBe(0);
+  });
+
+  it("6 giuste su 10 non bastano per il KO: si decide a energia", () => {
+    let a = nuovoCombattente(), d = nuovoCombattente();
+    const seq = [true, false, true, false, true, true, false, true, false, true];
+    for (const g of seq) ({ attaccante: a, difensore: d } = applicaRisposta(a, d, g));
+    expect(d.energia).toBeGreaterThan(0);
+  });
+
+  it("vince chi ha più energia; pari se uguale", () => {
+    const g = { ...nuovoCombattente(), energia: 40 };
+    const c = { ...nuovoCombattente(), energia: 30 };
+    expect(vincitore(g, c)).toBe("giocatore");
+    expect(vincitore(c, g)).toBe("computer");
+    expect(vincitore(g, { ...c, energia: 40 })).toBe("pari");
+  });
+
+  it("la partita finisce dopo 10 domande a testa, 11 con lo spareggio, o al KO", () => {
+    const g = { ...nuovoCombattente(), risposte: 10 };
+    const c = { ...nuovoCombattente(), risposte: 10 };
+    expect(partitaFinita(g, c, false)).toBe(true);
+    expect(partitaFinita(g, c, true)).toBe(false);
+    expect(partitaFinita({ ...g, risposte: 2 }, { ...c, energia: 0, risposte: 2 }, false)).toBe(true);
+  });
+});
+
+describe("difficoltà che si adatta", () => {
+  it("sale dopo 3 giuste di fila e scende dopo 2 sbagliate", () => {
+    expect(adattaLivello(1, 3, 0)).toBe(2);
+    expect(adattaLivello(2, 2, 0)).toBe(2);
+    expect(adattaLivello(3, 3, 0)).toBe(3);
+    expect(adattaLivello(2, 0, 2)).toBe(1);
+    expect(adattaLivello(1, 0, 2)).toBe(1);
+  });
+});
+
+describe("scelta e mescolamento delle domande", () => {
+  it("la prima domanda della partita è sempre facile", () => {
+    for (let s = 0; s < 200; s++) {
+      const d = prossimaDomanda(creaRng(s), MAZZO, new Set(), 3, true);
+      expect(d.livello).toBe(1);
+    }
+  });
+
+  it("mescolare non perde la risposta giusta", () => {
+    const rng = creaRng(7);
+    for (const d of MAZZO) {
+      const m = mescolaRisposte(rng, d);
+      expect(m.risposte[m.corretta]).toBe(d.risposte[d.corretta]);
+      expect([...m.risposte].sort()).toEqual([...d.risposte].sort());
+    }
+  });
+
+  it("non ripete domande nella stessa partita", () => {
+    const rng = creaRng(3);
+    const usate = new Set<string>();
+    for (let i = 0; i < 22; i++) {
+      const d = prossimaDomanda(rng, MAZZO, usate, ((i % 3) + 1) as 1 | 2 | 3, i === 0);
+      expect(usate.has(d.id)).toBe(false);
+      usate.add(d.id);
+    }
+  });
+});

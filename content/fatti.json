@@ -1,0 +1,147 @@
+[
+  {
+    "id": "G01",
+    "testo": "Fragagnano è un comune della provincia di Taranto, in Puglia.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Dall'Appendice A. Base di partenza per la fase 1."
+  },
+  {
+    "id": "G02",
+    "testo": "Fragagnano ha circa 5.000 abitanti (4.889 al 1° gennaio 2026, stima Istat).",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.tuttitalia.it/puglia/32-fragagnano/statistiche/censimento-2021/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Nelle domande usare solo 'circa 5.000'."
+  },
+  {
+    "id": "G06",
+    "testo": "Gli abitanti di Fragagnano si chiamano fragagnanesi.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G05",
+    "testo": "Il CAP di Fragagnano è 74022, il prefisso telefonico 099.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G10",
+    "testo": "Il comune più vicino è San Marzano di San Giuseppe, a circa 4 km.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.comuni-italiani.it/073/006/limitrofi.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S05",
+    "testo": "La torre del palazzo baronale, detto anche castello, fu eretta nel 1487.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Un'altra fonte indica il 1587 per il palazzo: non mettere 1587 tra le risposte sbagliate."
+  },
+  {
+    "id": "S07",
+    "testo": "Nel Seicento il marchese Francesco Maria dell'Antoglietta fece costruire e fortificare il Palazzo Marchesale per paura dei Turchi.",
+    "fonti": [
+      "https://www.italia.it/it/puglia/fragagnano",
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S13",
+    "testo": "Nel 1979 il Palazzo Marchesale passò al Comune per donazione.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T01",
+    "testo": "Il patrono è Sant'Antonio di Padova; la sua festa nel calendario è il 13 giugno.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.tarantinitime.it/?p=3482"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T02",
+    "testo": "La grande festa patronale si tiene in agosto, nei giorni 11, 12 e 13.",
+    "fonti": [
+      "https://milazzo.life/notizie-comune-fragagnano/",
+      "https://www.eventiesagre.it/Eventi_Feste/21026888_Dik+Dik+In+Concerto.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Da sostituire con l'articolo originale di nuovodialogo.com nella fase 2."
+  },
+  {
+    "id": "T06",
+    "testo": "Nel Rito dei Santi San Giuseppe siede a capotavola, con un bastone fiorito.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T07",
+    "testo": "Nel Rito dei Santi San Giuseppe batte il bastone a terra per iniziare il pranzo; le pietanze sono 13.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G07",
+    "testo": "In dialetto il paese si chiama Fragnànu.",
+    "fonti": [
+      "https://en.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T08",
+    "testo": "Tra i cibi del Rito dei Santi ci sono bucatini con la mollica, ceci, fagioli, fave, baccalà, carciofi, cavolfiori fritti, arance, li cartiddati, lampascioni e pesce fritto.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  }
+]
