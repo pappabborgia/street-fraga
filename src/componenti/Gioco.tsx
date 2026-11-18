@@ -339,7 +339,7 @@ export default function Gioco() {
   // ---------------- Disegno ----------------
   return (
     <div onPointerDownCapture={primoTocco} className="min-h-dvh flex flex-col">
-      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} />
+      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} inCasa={schermata === "casa"} />
       <main className="flex-1 w-full mx-auto max-w-5xl px-4 pb-10">
         {schermata === "casa" && (
           <SchermataCasa titoloRef={titoloRef} sessione={sessione} inProva={inProva}
@@ -579,23 +579,27 @@ function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, on
   onGioca: () => void; onClassifica: () => void; onAltro: () => void; onEsci: () => void;
 }) {
   return (
-    <section className="flex flex-col gap-4 md:grid md:justify-center md:items-center md:content-center md:min-h-[calc(100dvh-7rem)]
-      md:grid-cols-[minmax(0,21rem)_minmax(0,19rem)] md:gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,22rem)] lg:gap-8">
-      {/* La copertina fa parte della pagina: senza cornice, sfuma nel viola in basso */}
-      <h1 ref={titoloRef} tabIndex={-1} className="-mx-4 md:mx-0">
+    /* Telefono: copertina in alto e pulsanti sotto. Tablet e computer: copertina a tutto schermo
+       come la schermata iniziale di un gioco da PC, con il menu sopra, a destra. */
+    <section className="casa flex flex-col gap-4">
+      {/* sfondo: la stessa copertina, sfocata e scurita, per riempire tutto lo schermo */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/copertina-720.webp" alt="" aria-hidden="true"
+        className="casa-sfondo hidden absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70" />
+      <div aria-hidden="true" className="casa-sfondo hidden absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,15,46,0.15),rgba(27,15,46,0.85))]" />
+      <h1 ref={titoloRef} tabIndex={-1} className="casa-arte relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/copertina.webp"
           srcSet="/copertina-720.webp 720w, /copertina.webp 1254w"
-          sizes="(min-width: 768px) 32rem, 100vw"
+          sizes="(min-width: 768px) 100vh, 100vw"
           width={1254} height={1254}
           alt={T.titolo}
-          className="copertina block w-full h-auto max-h-[46dvh] object-cover object-top md:max-h-[70dvh] md:object-contain md:rounded-[var(--raggio)]"
+          className="copertina block w-full h-auto max-h-[46dvh] object-cover object-top"
         />
       </h1>
-      <div className="flex flex-col gap-4 -mt-2 md:mt-0">
-        {/* Su schermi grandi il titolo apre la colonna dei pulsanti */}
-        <p className="hidden md:block text-[1.75rem] lg:text-[2rem] font-bold leading-tight">{T.sottotitolo}</p>
+      <div className="casa-menu relative flex flex-col gap-4 -mt-2">
+        <p className="casa-titolo hidden fumetto text-[var(--giallo)] text-[1.75rem] leading-tight">{T.sottotitolo}</p>
         {sessione || inProva ? (
           <div className="flex items-center gap-3 rounded-[var(--raggio)] bg-[var(--notte-chiara)] pl-4 pr-2 py-2">
             <p className="flex-1 leading-snug">
@@ -604,7 +608,7 @@ function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, on
             <Pulsante variante="scuro" className="shrink-0 !px-4" aria-label={T.cambiaGiocatore} onClick={onEsci}>{T.cambia}</Pulsante>
           </div>
         ) : (
-          <p className="md:hidden text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
+          <p className="casa-sottotitolo text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
         )}
         <Pulsante variante="giallo" className="w-full fumetto !text-[2.25rem] !min-h-[5.75rem] tracking-wide" onClick={onGioca}>
           <span aria-hidden="true">▶</span> {T.gioca}

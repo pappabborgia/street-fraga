@@ -35,23 +35,31 @@ export function Pulsante({ variante = "bianco", className = "", onClick, childre
 }
 
 /** Barra in alto: "Indietro" a sinistra, la musica al centro, "Casa" a destra, sempre nello stesso posto. */
-export function BarraFissa({ onIndietro, onCasa, musica, onMusica }: {
-  onIndietro: () => void; onCasa: () => void; musica: boolean; onMusica: () => void;
+export function BarraFissa({ onIndietro, onCasa, musica, onMusica, inCasa = false }: {
+  onIndietro: () => void; onCasa: () => void; musica: boolean; onMusica: () => void; inCasa?: boolean;
 }) {
   return (
-    <nav className="sticky top-0 z-30 bg-[var(--notte)] border-b-2 border-[var(--notte-chiara)] px-3 py-2" aria-label={T.navigazione}>
+    <nav aria-label={T.navigazione}
+      className={inCasa
+        ? "barra-casa sticky top-0 z-30 bg-[var(--notte)] px-3 py-2" /* in casa: solo la musica */
+        : "sticky top-0 z-30 bg-[var(--notte)] border-b-2 border-[var(--notte-chiara)] px-3 py-2"}>
       <div className="mx-auto max-w-5xl flex items-center justify-between gap-2">
-        <Pulsante variante="scuro" onClick={onIndietro} className="!px-3 !text-[1.375rem]">
-          <span aria-hidden="true">←</span> {T.indietro}
-        </Pulsante>
+        {/* In casa "Indietro" e "Casa" non servono: resta solo la musica, a destra */}
+        {inCasa ? <span className="flex-1" /> : (
+          <Pulsante variante="scuro" onClick={onIndietro} className="!px-3 !text-[1.375rem]">
+            <span aria-hidden="true">←</span> {T.indietro}
+          </Pulsante>
+        )}
         <Pulsante variante="scuro" onClick={onMusica} className="!px-2 !gap-0 flex-col !leading-tight min-w-[5rem]" aria-pressed={musica}
           aria-label={musica ? T.musicaTogli : T.musicaMetti}>
           <span className="testo-piccolo">{T.musica}</span>
           <span className="text-[1.375rem]"><span aria-hidden="true">{musica ? "♪ " : "✕ "}</span>{musica ? T.si : T.no}</span>
         </Pulsante>
-        <Pulsante variante="scuro" onClick={onCasa} className="!px-3 !text-[1.375rem]">
-          <span aria-hidden="true">⌂</span> {T.casa}
-        </Pulsante>
+        {!inCasa && (
+          <Pulsante variante="scuro" onClick={onCasa} className="!px-3 !text-[1.375rem]">
+            <span aria-hidden="true">⌂</span> {T.casa}
+          </Pulsante>
+        )}
       </div>
     </nav>
   );

@@ -193,11 +193,42 @@ html.ridotto .pulsante:active { transform: none; }
 html.ridotto .titolo-festa, html.ridotto .su-e-giu, html.ridotto .stordito { animation: dissolvenza 0.6s ease-out both !important; }
 html.ridotto .cuore { animation: none !important; opacity: 0; }
 
-/* Copertina integrata nella pagina: sfuma nel fondo viola, senza cornice */
+/* ---------------- Casa ----------------
+ * Telefono: copertina in alto (a tutta larghezza, sfuma nel viola) e pulsanti sotto.
+ * Tablet in verticale: la stessa colonna, centrata e non troppo larga.
+ * Schermi larghi in orizzontale: copertina a tutto schermo come un gioco da PC, menu sopra a destra.
+ */
 .copertina {
   -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
 }
-@media (min-width: 768px) {
-  .copertina { -webkit-mask-image: none; mask-image: none; }
+.casa-arte { margin-left: -1rem; margin-right: -1rem; }
+@media (min-width: 640px) {
+  .casa { max-width: 34rem; margin: 0 auto; padding-top: 0.5rem; }
+  .casa-arte { margin: 0; }
+  .casa-arte .copertina { border-radius: var(--raggio); max-height: 50dvh; object-fit: contain; }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  .barra-casa { position: fixed; top: 0; right: 0; background: transparent; }
+  .casa {
+    position: fixed; inset: 0; z-index: 10; max-width: none; margin: 0; padding: 0;
+    flex-direction: row; align-items: center; justify-content: center; gap: 0; overflow: hidden;
+  }
+  .casa-sfondo { display: block; }
+  .casa-arte { height: 100%; display: flex; align-items: center; flex-shrink: 1; min-width: 0; }
+  .casa-arte .copertina {
+    height: 100%; max-height: none; width: auto; max-width: none; object-fit: contain; border-radius: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 90%, transparent 100%);
+  }
+  .casa-menu {
+    width: 24rem; flex-shrink: 0; margin: 0 1.5rem 0 -7rem; padding: 1.5rem;
+    border-radius: var(--raggio); background: rgba(27, 15, 46, 0.86);
+  }
+  .casa-titolo { display: block; }
+  .casa-sottotitolo { display: none; }
+}
+@media (min-width: 1280px) and (orientation: landscape) {
+  .casa-menu { width: 26rem; margin-left: -4rem; margin-right: 3rem; }
+  .casa-titolo { font-size: 2rem; }
 }
