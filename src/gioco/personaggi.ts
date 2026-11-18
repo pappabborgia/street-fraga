@@ -46,18 +46,23 @@ export interface Personaggio {
   aspetto: Aspetto;
 }
 
-/** Personaggi di fantasia, caricature affettuose di figure di paese. Nessuna persona reale. */
+/**
+ * Personaggi di fantasia, caricature affettuose di figure di paese. Nessuna persona reale.
+ * Nomi e colpi in salentino del nord (la variante di Fragagnano): parole come corpu, càuci, focu,
+ * cielu, utte, mieru vengono dalla voce "Dialetti salentini"; le altre sono adattate con le regole
+ * della variante (maschile in -u, LL > DD, "te" = di, "ca" = che). Da confermare in paese.
+ */
 export const PERSONAGGI: Personaggio[] = [
   {
     id: "nonna", nome: "Nonna Ninetta", figura: "La vecchietta",
     descrizione: "Ha cresciuto 4 figli e 9 nipoti. Il mattarello non lo molla mai.",
-    mosse: [{ nome: "Mattarellata rotante", stile: "lancio", oggetto: "mattarello" }, { nome: "Ciabatta volante", stile: "lancio", oggetto: "ciabatta" }],
+    mosse: [{ nome: "Corpu te mattareddu", stile: "lancio", oggetto: "mattarello" }, { nome: "La ciabatta ca vola", stile: "lancio", oggetto: "ciabatta" }],
     speciali: [
-      { nome: "Pioggia di taralli", effetto: "pioggia", oggetto: "tarallo" },
-      { nome: "Mattarello rotante", effetto: "lancio", oggetto: "mattarello" },
-      { nome: "Ciabatta supersonica", effetto: "lancio", oggetto: "ciabatta" },
-      { nome: "Grandinata di pomodori", effetto: "pioggia", oggetto: "pomodoro" },
-      { nome: "Vortice di uova sbattute", effetto: "vortice", oggetto: "uovo" },
+      { nome: "Taraddi te lu cielu", effetto: "pioggia", oggetto: "tarallo" },
+      { nome: "Lu mattareddu ca gira", effetto: "lancio", oggetto: "mattarello" },
+      { nome: "Ciabatta te focu", effetto: "lancio", oggetto: "ciabatta" },
+      { nome: "Pummitori te lu cielu", effetto: "pioggia", oggetto: "pomodoro" },
+      { nome: "Ova a giru", effetto: "vortice", oggetto: "uovo" },
     ],
     suono: ["SBAM!", "PAFF!"],
     aspetto: {
@@ -68,15 +73,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "contadino", nome: "Zio Cosimo", figura: "Il contadino",
+    id: "contadino", nome: "Zziu Cosimu", figura: "Il contadino",
     descrizione: "In campagna dall'alba. Conosce ogni ulivo per nome.",
-    mosse: [{ nome: "Zappata tellurica", stile: "salto" }, { nome: "Spallata del trattore", stile: "carica" }],
+    mosse: [{ nome: "Corpu te zappa", stile: "salto" }, { nome: "Spallata te trattore", stile: "carica" }],
     speciali: [
-      { nome: "Tempesta di olive", effetto: "pioggia", oggetto: "oliva" },
-      { nome: "Zappata tellurica", effetto: "onda", oggetto: "oliva" },
-      { nome: "Peperoncino infuocato", effetto: "fuoco", oggetto: "peperoncino" },
-      { nome: "Pagnotta a sorpresa", effetto: "lancio", oggetto: "pagnotta" },
-      { nome: "Tornado di fichi", effetto: "vortice", oggetto: "fico" },
+      { nome: "Olive te lu cielu", effetto: "pioggia", oggetto: "oliva" },
+      { nome: "La zappata ca trema", effetto: "onda", oggetto: "oliva" },
+      { nome: "Focu te peperoncinu", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Lu pane ca vola", effetto: "lancio", oggetto: "pagnotta" },
+      { nome: "Fiche a giru", effetto: "vortice", oggetto: "fico" },
     ],
     suono: ["TUNF!", "STRACK!"],
     aspetto: {
@@ -87,15 +92,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "tamarro", nome: "Tony Tuta", figura: "Il tamarro",
+    id: "tamarro", nome: "'Ntoni Tuta", figura: "Il tamarro",
     descrizione: "Tuta lucida, catenone d'oro e occhiali da sole anche di sera.",
-    mosse: [{ nome: "Catenone rotante", stile: "capriola" }, { nome: "Sgommata in piazza", stile: "carica" }],
+    mosse: [{ nome: "Lu catinone ca gira", stile: "capriola" }, { nome: "Sgommata a la piazza", stile: "carica" }],
     speciali: [
-      { nome: "Motorino truccato", effetto: "lancio", oggetto: "motorino" },
-      { nome: "Sgommata di fuoco", effetto: "fuoco", oggetto: "peperoncino" },
-      { nome: "Stereo a tutto volume", effetto: "onda", oggetto: "nota" },
-      { nome: "Catenone rotante", effetto: "vortice", oggetto: "moneta" },
-      { nome: "Pioggia di peperoncini", effetto: "pioggia", oggetto: "peperoncino" },
+      { nome: "Lu motorinu truccatu", effetto: "lancio", oggetto: "motorino" },
+      { nome: "Sgommata te focu", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Musica a tuttu volume", effetto: "onda", oggetto: "nota" },
+      { nome: "Lu catinone a giru", effetto: "vortice", oggetto: "moneta" },
+      { nome: "Peperoncini te lu cielu", effetto: "pioggia", oggetto: "peperoncino" },
     ],
     suono: ["VROOM!", "SDENG!"],
     aspetto: {
@@ -106,15 +111,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "ricco", nome: "Commendator Nando", figura: "Il ricco",
+    id: "ricco", nome: "Lu Commendatore Nandu", figura: "Il ricco",
     descrizione: "Abito bianco, bastone dorato. Offre sempre lui il caffè.",
-    mosse: [{ nome: "Colpo di bastone dorato", stile: "salto" }, { nome: "Lancio della moneta d'oro", stile: "lancio", oggetto: "moneta" }],
+    mosse: [{ nome: "Corpu te bastone d'oru", stile: "salto" }, { nome: "La moneta ca vola", stile: "lancio", oggetto: "moneta" }],
     speciali: [
-      { nome: "Pioggia di monete", effetto: "pioggia", oggetto: "moneta" },
-      { nome: "Bottiglia d'annata", effetto: "lancio", oggetto: "bottiglia" },
-      { nome: "Vortice d'oro", effetto: "vortice", oggetto: "moneta" },
-      { nome: "Brindisi esplosivo", effetto: "onda", oggetto: "bottiglia" },
-      { nome: "Campanello del maggiordomo", effetto: "cade", oggetto: "campana" },
+      { nome: "Sordi te lu cielu", effetto: "pioggia", oggetto: "moneta" },
+      { nome: "La buttiglia ca vola", effetto: "lancio", oggetto: "bottiglia" },
+      { nome: "Oru a giru", effetto: "vortice", oggetto: "moneta" },
+      { nome: "Lu brindisi ca scoppia", effetto: "onda", oggetto: "bottiglia" },
+      { nome: "Lu campanellu te lu servu", effetto: "cade", oggetto: "campana" },
     ],
     suono: ["DLIN!", "BONK!"],
     aspetto: {
@@ -125,15 +130,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "arrangiato", nome: "Peppino l'Arrangiato", figura: "Il povero (ma furbo)",
+    id: "arrangiato", nome: "Peppinu l'Arrangiatu", figura: "Il povero (ma furbo)",
     descrizione: "Non ha una lira, ma aggiusta tutto con uno spago.",
-    mosse: [{ nome: "Calcio con la scarpa bucata", stile: "salto" }, { nome: "Capriola con la toppa", stile: "capriola" }],
+    mosse: [{ nome: "Càuci cu la scarpa bucata", stile: "salto" }, { nome: "Capriola cu la toppa", stile: "capriola" }],
     speciali: [
-      { nome: "Sedia catapulta", effetto: "lancio", oggetto: "sedia" },
-      { nome: "Pioggia di ciabatte", effetto: "pioggia", oggetto: "ciabatta" },
-      { nome: "Tornado di cianfrusaglie", effetto: "vortice", oggetto: "sedia" },
-      { nome: "Fuoco di paglia", effetto: "fuoco", oggetto: "peperoncino" },
-      { nome: "Pagnotta di tre giorni", effetto: "lancio", oggetto: "pagnotta" },
+      { nome: "La seggia ca vola", effetto: "lancio", oggetto: "sedia" },
+      { nome: "Ciabatte te lu cielu", effetto: "pioggia", oggetto: "ciabatta" },
+      { nome: "Seggie a giru", effetto: "vortice", oggetto: "sedia" },
+      { nome: "Focu te paglia", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Pane te tre giurni", effetto: "lancio", oggetto: "pagnotta" },
     ],
     suono: ["CRAC!", "PUF!"],
     aspetto: {
@@ -144,15 +149,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "svizzero", nome: "Franco lo Svizzero", figura: "Tornato dalla Svizzera",
+    id: "svizzero", nome: "Francu lu Svizzeru", figura: "Tornato dalla Svizzera",
     descrizione: "Partito con la valigia di cartone, tornato col macchinone.",
-    mosse: [{ nome: "Pugno puntuale", stile: "carica" }, { nome: "Tavoletta volante", stile: "lancio", oggetto: "cioccolato" }],
+    mosse: [{ nome: "Pugnu puntuale", stile: "carica" }, { nome: "La cioccolata ca vola", stile: "lancio", oggetto: "cioccolato" }],
     speciali: [
-      { nome: "Valanga di cioccolata", effetto: "pioggia", oggetto: "cioccolato" },
-      { nome: "Cucù a molla", effetto: "lancio", oggetto: "cucu" },
-      { nome: "Mille orologi", effetto: "vortice", oggetto: "cucu" },
-      { nome: "Fonduta bollente", effetto: "fuoco", oggetto: "cioccolato" },
-      { nome: "Campanaccio delle Alpi", effetto: "cade", oggetto: "campana" },
+      { nome: "Cioccolata te lu cielu", effetto: "pioggia", oggetto: "cioccolato" },
+      { nome: "Lu cucù ca zumpa", effetto: "lancio", oggetto: "cucu" },
+      { nome: "Orologi a giru", effetto: "vortice", oggetto: "cucu" },
+      { nome: "Fonduta te focu", effetto: "fuoco", oggetto: "cioccolato" },
+      { nome: "Lu campanazzu te le Alpi", effetto: "cade", oggetto: "campana" },
     ],
     suono: ["CUCÙ!", "TIC-TAC!"],
     aspetto: {
@@ -163,15 +168,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "vignaiolo", nome: "Mastro Vito", figura: "Il vignaiolo",
+    id: "vignaiolo", nome: "Mesciu Vitu", figura: "Il vignaiolo",
     descrizione: "Il suo Primitivo è il migliore. Lo dice lui.",
-    mosse: [{ nome: "Pigiatura volante", stile: "salto" }, { nome: "Lancio del grappolo", stile: "lancio", oggetto: "uva" }],
+    mosse: [{ nome: "Pigiata ca vola", stile: "salto" }, { nome: "Lu grappulu ca vola", stile: "lancio", oggetto: "uva" }],
     speciali: [
-      { nome: "Grappolo di Primitivo", effetto: "pioggia", oggetto: "uva" },
-      { nome: "Bottiglia stappata", effetto: "lancio", oggetto: "bottiglia" },
-      { nome: "Vendemmia volante", effetto: "vortice", oggetto: "uva" },
-      { nome: "Pigiatura di fuoco", effetto: "fuoco", oggetto: "uva" },
-      { nome: "Pioggia di fichi", effetto: "pioggia", oggetto: "fico" },
+      { nome: "Uva te lu cielu", effetto: "pioggia", oggetto: "uva" },
+      { nome: "La utte te mieru", effetto: "lancio", oggetto: "bottiglia" },
+      { nome: "Vendemmia a giru", effetto: "vortice", oggetto: "uva" },
+      { nome: "Pigiata te focu", effetto: "fuoco", oggetto: "uva" },
+      { nome: "Fiche te lu cielu", effetto: "pioggia", oggetto: "fico" },
     ],
     suono: ["SPLASH!", "ZAC!"],
     aspetto: {
@@ -182,15 +187,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "banda", nome: "Maestro Totò", figura: "Il suonatore della banda",
+    id: "banda", nome: "Mesciu Totò", figura: "Il suonatore della banda",
     descrizione: "Non perde una processione. Batte il tempo anche quando dorme.",
-    mosse: [{ nome: "Nota sparata", stile: "lancio", oggetto: "nota" }, { nome: "Marcia trionfale", stile: "carica" }],
+    mosse: [{ nome: "La nota ca vola", stile: "lancio", oggetto: "nota" }, { nome: "La marcia te la banda", stile: "carica" }],
     speciali: [
-      { nome: "Grancassa tonante", effetto: "onda", oggetto: "nota" },
-      { nome: "Pioggia di note", effetto: "pioggia", oggetto: "nota" },
-      { nome: "Vortice musicale", effetto: "vortice", oggetto: "nota" },
-      { nome: "Marcia di fuoco", effetto: "fuoco", oggetto: "nota" },
-      { nome: "Campanella del maestro", effetto: "cade", oggetto: "campana" },
+      { nome: "Lu tamburru ca tona", effetto: "onda", oggetto: "nota" },
+      { nome: "Note te lu cielu", effetto: "pioggia", oggetto: "nota" },
+      { nome: "Musica a giru", effetto: "vortice", oggetto: "nota" },
+      { nome: "Marcia te focu", effetto: "fuoco", oggetto: "nota" },
+      { nome: "La campanella te lu mesciu", effetto: "cade", oggetto: "campana" },
     ],
     suono: ["BUM!", "TATÀ!"],
     aspetto: {
@@ -201,15 +206,15 @@ export const PERSONAGGI: Personaggio[] = [
     },
   },
   {
-    id: "parroco", nome: "Don Saverio", figura: "Il parroco",
+    id: "parroco", nome: "Don Saveriu", figura: "Il parroco",
     descrizione: "Conosce tutti in paese. Le sue prediche sono leggendarie.",
-    mosse: [{ nome: "Predica tonante", stile: "carica" }, { nome: "Scivolata in tonaca", stile: "capriola" }],
+    mosse: [{ nome: "La predica ca tona", stile: "carica" }, { nome: "Scivolata cu la tonaca", stile: "capriola" }],
     speciali: [
-      { nome: "Rintocco del campanile", effetto: "cade", oggetto: "campana" },
-      { nome: "Predica a tutto volume", effetto: "onda", oggetto: "nota" },
-      { nome: "Vortice di campanelle", effetto: "vortice", oggetto: "campana" },
-      { nome: "Pagnotta della domenica", effetto: "lancio", oggetto: "pagnotta" },
-      { nome: "Fuoco del camino", effetto: "fuoco", oggetto: "pagnotta" },
+      { nome: "La campana te la chiesa", effetto: "cade", oggetto: "campana" },
+      { nome: "Predica a tuttu volume", effetto: "onda", oggetto: "nota" },
+      { nome: "Campanelle a giru", effetto: "vortice", oggetto: "campana" },
+      { nome: "Lu pane te la tumenica", effetto: "lancio", oggetto: "pagnotta" },
+      { nome: "Focu te lu caminu", effetto: "fuoco", oggetto: "pagnotta" },
     ],
     suono: ["DONG!", "SWISH!"],
     aspetto: {
@@ -222,13 +227,13 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "albanese", nome: "Arben", figura: "L'albanese",
     descrizione: "Arrivato da ragazzo, ormai è più fragagnanese di tutti.",
-    mosse: [{ nome: "Calcio volante", stile: "salto" }, { nome: "Abbraccio stritolante", stile: "carica" }],
+    mosse: [{ nome: "Càuci ca vola", stile: "salto" }, { nome: "Abbracciu ca stringe", stile: "carica" }],
     speciali: [
-      { nome: "Volo dell'aquila", effetto: "lancio", oggetto: "aquila" },
-      { nome: "Pioggia di peperoncini", effetto: "pioggia", oggetto: "peperoncino" },
-      { nome: "Vortice dell'aquila", effetto: "vortice", oggetto: "aquila" },
-      { nome: "Calcio infuocato", effetto: "fuoco", oggetto: "peperoncino" },
-      { nome: "Pioggia di fichi", effetto: "pioggia", oggetto: "fico" },
+      { nome: "Lu volu te l'aquila", effetto: "lancio", oggetto: "aquila" },
+      { nome: "Peperoncini te lu cielu", effetto: "pioggia", oggetto: "peperoncino" },
+      { nome: "L'aquila a giru", effetto: "vortice", oggetto: "aquila" },
+      { nome: "Càuci te focu", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Fiche te lu cielu", effetto: "pioggia", oggetto: "fico" },
     ],
     suono: ["WHAM!", "STROC!"],
     aspetto: {
