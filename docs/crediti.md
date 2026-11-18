@@ -6,3 +6,4 @@
 - **Effetti sonori** — generati dal codice con Web Audio. Nessun file esterno.
 - **Disegni** (lottatori, chiesa, logo) — originali, in SVG, creati per questo gioco. La chiesa è disegnata in modo evocativo, ispirata a una foto di riferimento ("Ph Salvo Lupo") che non è inclusa nel gioco.
 - **Copertina** (`public/copertina.webp`) — immagine fornita dal gestore del gioco ("Street Fraga: Sfida in Piazza"), usata nella schermata iniziale. Da decidere con il gestore: la scritta in inglese "Arcade Fight" e lo stile del logo, simile a quello di un videogioco esistente.
+- **Copertina verticale** (`public/copertina-verticale.webp`) — versione alta della copertina fornita dal gestore per lo schermo del telefono (ritagliata sopra il pulsante GIOCA disegnato nella prova).

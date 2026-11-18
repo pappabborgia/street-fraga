@@ -616,15 +616,18 @@ function SchermataCasa({ titoloRef, onGioca }: { titoloRef: RefTitolo; onGioca: 
         className="casa-sfondo hidden absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70" />
       <div aria-hidden="true" className="casa-sfondo hidden absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,15,46,0.15),rgba(27,15,46,0.85))]" />
       <h1 ref={titoloRef} tabIndex={-1} className="casa-arte relative">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/copertina.webp"
-          srcSet="/copertina-720.webp 720w, /copertina.webp 1254w"
-          sizes="(min-width: 768px) 100vh, 100vw"
-          width={1254} height={1254}
-          alt={T.titolo}
-          className="copertina block w-full h-auto max-h-[46dvh] object-cover object-top"
-        />
+        {/* telefono e tablet in verticale: la copertina alta, fatta per lo schermo dell'iPhone */}
+        <picture className="contents">
+          <source media="(orientation: portrait), (max-width: 767px)" srcSet="/copertina-verticale.webp" width={961} height={1382} />
+          <img
+            src="/copertina.webp"
+            srcSet="/copertina-720.webp 720w, /copertina.webp 1254w"
+            sizes="(min-width: 768px) 100vh, 100vw"
+            width={1254} height={1254}
+            alt={T.titolo}
+            className="copertina block w-full h-auto max-h-[46dvh] object-cover object-top"
+          />
+        </picture>
       </h1>
       <div className="casa-menu relative flex flex-col gap-4 -mt-2">
         <Pulsante variante="giallo" className="pulsa w-full fumetto !text-[2.5rem] !min-h-[6.5rem] tracking-wide" onClick={onGioca}>
