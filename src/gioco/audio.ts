@@ -156,7 +156,7 @@ class Suonatore {
   private inizio = 0;
   private prossimo = 0; // indice del giro
   private programmatiFinoA = 0;
-  musicaAttiva = true;
+  musicaAttiva = false; // di default solo i suoni dei colpi
   suoniAttivi = true;
 
   /** Va chiamato dopo un tocco del giocatore (i browser lo richiedono). */

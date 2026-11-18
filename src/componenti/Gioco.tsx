@@ -10,7 +10,7 @@ import { creaRng, mescola } from "@/gioco/rng";
 import type { Domanda, Livello } from "@/gioco/tipi";
 import {
   BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, SECONDI_PER_RISPOSTA, colpoPerTempo, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
-  DOMANDE_PER_LIVELLO, adattaLivello, applicaRisposta, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
+  DOMANDE_PER_LIVELLO, adattaLivello, applicaRisposta, bonusVelocita, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
 } from "@/gioco/regole";
 import { Arena, MOMENTO_COLPO, type Azione } from "./Arena";
 import { Lottatore, Ritratto } from "./Lottatore";
@@ -49,6 +49,8 @@ interface Partita {
   numero: number;
   fase: Fase;
   scelta: number | null;
+  inizio: number; // quando è comparsa la domanda (per il bonus velocità)
+  tempoScelta: number | null; // quando è stata toccata la risposta
   esito: EsitoColpo | null;
   esitoComputer: EsitoColpo | null;
   azione: Azione | null;
@@ -152,9 +154,9 @@ export default function Gioco() {
   const me = trovaPersonaggio(mioId);
   const lui = trovaPersonaggio(avversarioId);
 
-  const nuovaDomanda = useCallback((p: Omit<Partita, "domanda" | "fase" | "scelta">, prima: boolean): Partita => {
+  const nuovaDomanda = useCallback((p: Omit<Partita, "domanda" | "fase" | "scelta" | "inizio" | "tempoScelta">, prima: boolean): Partita => {
     const d = prossimaDomanda(rng.current, MAZZO, new Set(p.usate), p.livello, prima);
-    return { ...p, domanda: d, usate: [...p.usate, d.id], fase: d.stimolo ? "stimolo" : "domanda", scelta: null };
+    return { ...p, domanda: d, usate: [...p.usate, d.id], fase: d.stimolo ? "stimolo" : "domanda", scelta: null, inizio: Date.now(), tempoScelta: null };
   }, []);
 
   const iniziaPartita = () => {
@@ -178,7 +180,8 @@ export default function Gioco() {
   const rispondi = (i: number) => {
     if (!partita) return;
     const giusta = i === partita.domanda.corretta;
-    const r = applicaRisposta(partita.giocatore, partita.computer, giusta, livelloScelto);
+    const secondi = ((partita.tempoScelta ?? Date.now()) - partita.inizio) / 1000;
+    const r = applicaRisposta(partita.giocatore, partita.computer, giusta, livelloScelto, giusta ? bonusVelocita(secondi, livelloScelto) : null);
     const lim = DOMANDE_PER_LIVELLO[livelloScelto];
     const giusteDiFila = giusta ? partita.giusteDiFila + 1 : 0;
     const sbagliateDiFila = giusta ? 0 : partita.sbagliateDiFila + 1;
@@ -537,9 +540,9 @@ export default function Gioco() {
           <SchermataLotta
             titoloRef={titoloRef} p={partita} me={me} lui={lui} imp={imp} haVoce={haVoce}
             conTempo={conTempo} onScaduto={tempoScaduto} luogo={LUOGHI_TORNEO[torneo?.turno ?? 0]}
-            scegli={(i) => (imp.dueTocchi ? setPartita({ ...partita, scelta: i }) : rispondi(i))}
+            scegli={(i) => (imp.dueTocchi ? setPartita({ ...partita, scelta: i, tempoScelta: Date.now() }) : rispondi(i))}
             conferma={() => partita.scelta !== null && rispondi(partita.scelta)}
-            memorizzato={() => setPartita({ ...partita, fase: "domanda" })}
+            memorizzato={() => setPartita({ ...partita, fase: "domanda", inizio: Date.now(), tempoScelta: null })}
             avantiEsito={turnoComputer}
             avantiComputer={dopoComputer}
             avantiSpareggio={dopoSpareggio}
@@ -798,6 +801,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
                 <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? specialeDi(me, p.giocatore.giuste).nome : me.mosse[(p.giocatore.giuste - 1) % 2].nome)}</p>
                 {p.esito.speciale && <p className="font-bold">★ {T.serieSpeciale}</p>}
                 <p className="text-[1.75rem] font-bold">{T.puntiGuadagnati(p.esito.punti)}</p>
+                {p.esito.bonus && <p className="font-bold">⚡ {T.bonusVelocita(p.esito.bonus.nome, p.esito.bonus.punti)}</p>}
               </>
             ) : (
               <>

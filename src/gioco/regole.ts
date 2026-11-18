@@ -50,6 +50,25 @@ export interface EsitoColpo {
   speciale: boolean;
   danno: number;
   punti: number;
+  /** Bonus velocità già compreso in "punti". */
+  bonus?: Bonus | null;
+}
+
+/**
+ * Bonus velocità: più in fretta si risponde giusto, più punti in più.
+ * È solo un regalo: chi risponde con calma prende comunque tutti i punti della risposta giusta.
+ */
+export const FASCE_VELOCITA = [
+  { entro: 10, quota: 0.5, nome: "Fulmine" },
+  { entro: 20, quota: 0.3, nome: "Svelto" },
+  { entro: 30, quota: 0.1, nome: "Pronto" },
+] as const;
+export interface Bonus { punti: number; nome: string }
+
+export function bonusVelocita(secondi: number, livelloScelto: Livello): Bonus | null {
+  const f = FASCE_VELOCITA.find((x) => secondi <= x.entro);
+  if (!f) return null;
+  return { punti: Math.max(1, Math.round(PUNTI_PER_LIVELLO[livelloScelto].giusta * f.quota)), nome: f.nome };
 }
 
 /** Applica una risposta: chi risponde è `attaccante`, chi subisce è `difensore`. */
@@ -58,6 +77,7 @@ export function applicaRisposta(
   difensore: Combattente,
   giusta: boolean,
   livelloScelto: Livello = 1,
+  bonus: Bonus | null = null,
 ): { attaccante: Combattente; difensore: Combattente; esito: EsitoColpo } {
   if (!giusta) {
     return {
@@ -70,7 +90,7 @@ export function applicaRisposta(
   const speciale = serie % SERIE_PER_SPECIALE === 0;
   const danno = speciale ? DANNO_SPECIALE : DANNO_COLPO;
   const { giusta: pg, speciale: ps } = PUNTI_PER_LIVELLO[livelloScelto];
-  const punti = pg + (speciale ? ps : 0);
+  const punti = pg + (speciale ? ps : 0) + (bonus?.punti ?? 0);
   return {
     attaccante: {
       ...attaccante,
@@ -80,7 +100,7 @@ export function applicaRisposta(
       risposte: attaccante.risposte + 1,
     },
     difensore: { ...difensore, energia: Math.max(0, difensore.energia - danno) },
-    esito: { giusta: true, speciale, danno, punti },
+    esito: { giusta: true, speciale, danno, punti, bonus },
   };
 }
 

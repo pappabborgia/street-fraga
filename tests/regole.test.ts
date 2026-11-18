@@ -129,9 +129,24 @@ describe("livelli scelti", () => {
     expect(adattaLivello(2, 3, 0, d.min, d.max)).toBe(3);
   });
 
-  it("il punteggio massimo di una partita entra nei limiti del database (300)", async () => {
-    const { PUNTI_PER_LIVELLO } = await import("@/gioco/regole");
-    const max = 11 * PUNTI_PER_LIVELLO[3].giusta + 3 * PUNTI_PER_LIVELLO[3].speciale;
-    expect(max).toBeLessThanOrEqual(300);
+  it("il punteggio massimo di una partita entra nei limiti del database (500)", async () => {
+    const { PUNTI_PER_LIVELLO, bonusVelocita } = await import("@/gioco/regole");
+    const max = 11 * (PUNTI_PER_LIVELLO[3].giusta + bonusVelocita(0, 3)!.punti) + 3 * PUNTI_PER_LIVELLO[3].speciale;
+    expect(max).toBeLessThanOrEqual(500);
+  });
+});
+
+describe("bonus velocità", () => {
+  it("più veloce = più punti; con calma nessun bonus ma nessun punto tolto", async () => {
+    const { bonusVelocita, PUNTI_PER_LIVELLO } = await import("@/gioco/regole");
+    expect(bonusVelocita(5, 1)).toEqual({ punti: 5, nome: "Fulmine" });
+    expect(bonusVelocita(15, 1)).toEqual({ punti: 3, nome: "Svelto" });
+    expect(bonusVelocita(25, 1)).toEqual({ punti: 1, nome: "Pronto" });
+    expect(bonusVelocita(45, 1)).toBeNull();
+    expect(bonusVelocita(5, 3)!.punti).toBe(10);
+    const lento = applicaRisposta(nuovoCombattente(), nuovoCombattente(), true, 2, bonusVelocita(60, 2));
+    expect(lento.attaccante.punti).toBe(PUNTI_PER_LIVELLO[2].giusta);
+    const veloce = applicaRisposta(nuovoCombattente(), nuovoCombattente(), true, 2, bonusVelocita(3, 2));
+    expect(veloce.attaccante.punti).toBeGreaterThan(lento.attaccante.punti);
   });
 });
