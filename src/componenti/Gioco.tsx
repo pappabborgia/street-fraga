@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { T } from "@/testi";
 import { BRANI_TORNEO, audio } from "@/gioco/audio";
+import { urloDi, voceDi } from "@/gioco/urli";
 import { leggi, voceItaliana, zitto } from "@/gioco/voce";
 import { type Impostazioni, PREDEFINITE, SCALA, carica, salva } from "@/gioco/impostazioni";
 import { PERSONAGGI, type Personaggio, specialeDi, trovaPersonaggio } from "@/gioco/personaggi";
@@ -201,6 +202,7 @@ export default function Gioco() {
     const giusteDiFila = giusta ? partita.giusteDiFila + 1 : 0;
     const sbagliateDiFila = giusta ? 0 : partita.sbagliateDiFila + 1;
     if (giusta) audio.giusto(); else audio.sbagliato();
+    audio.urlo(voceDi(me.id), 0.05, r.esito.speciale);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
     else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(me, partita.giocatore).stile]);
     else audio.manca();
@@ -218,6 +220,7 @@ export default function Gioco() {
         chi: "giocatore",
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(me, partita.giocatore, r.esito),
+        urlo: urloDi(me.id, partita.numero, r.esito.speciale),
         ...stileMossa(me, partita.giocatore),
         speciale: specialeDi(me, r.attaccante.giuste),
         chiave: contatore.current++,
@@ -234,6 +237,7 @@ export default function Gioco() {
     const sbagliateDiFila = partita.sbagliateDiFila + 1;
     audio.sbagliato();
     const stile = stileMossa(lui, partita.computer);
+    audio.urlo(voceDi(lui.id), 0.05);
     audio.colpo(MOMENTO_COLPO[stile.stile]);
     setPartita({
       ...partita,
@@ -243,7 +247,7 @@ export default function Gioco() {
       esito: r.esito,
       scaduto: true,
       fase: "esito",
-      azione: { chi: "computer", tipo: "colpo", scritta: lui.suono[partita.computer.giuste % 2], ...stile, chiave: contatore.current++ },
+      azione: { chi: "computer", tipo: "colpo", scritta: lui.suono[partita.computer.giuste % 2], urlo: urloDi(lui.id, partita.numero, false), ...stile, chiave: contatore.current++ },
     });
   };
 
@@ -252,6 +256,7 @@ export default function Gioco() {
     if (partita.computer.energia === 0 || partita.giocatore.energia === 0) return finePartita();
     const giusta = rng.current() < BRAVURA_COMPUTER[livelloScelto];
     const r = applicaRisposta(partita.computer, partita.giocatore, giusta, livelloScelto);
+    audio.urlo(voceDi(lui.id), 0.05, r.esito.speciale);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
     else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(lui, partita.computer).stile]);
     else audio.manca();
@@ -265,6 +270,7 @@ export default function Gioco() {
         chi: "computer",
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(lui, partita.computer, r.esito),
+        urlo: urloDi(lui.id, partita.numero + 1, r.esito.speciale),
         ...stileMossa(lui, partita.computer),
         speciale: specialeDi(lui, r.attaccante.giuste),
         chiave: contatore.current++,
@@ -750,6 +756,11 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
       {/* nomi, facce ed energia stanno sopra lo sfondo, come nelle sale giochi */}
       <Arena luogo={luogo} giocatore={me} computer={lui} azione={p.azione}
         ko={p.fase === "esito" || p.fase === "computer" ? ko : null}
+        punti={p.fase === "esito" && p.esito?.giusta ? {
+          testo: T.puntiGuadagnati(p.esito.punti),
+          extra: p.esito.bonus ? `⚡ ${p.esito.bonus.nome}!` : undefined,
+          chiave: p.numero,
+        } : null}
         className={`rounded-2xl border-[3px] border-black mt-3 ${inDomanda ? "h-[15rem] sm:h-[22rem]" : "h-[20rem] sm:h-[28rem]"}`}>
         <Hud p={p} me={me} lui={lui} />
       </Arena>
@@ -807,26 +818,20 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
             <span aria-hidden="true" className="text-[2.5rem] leading-none">{p.esito.giusta ? "✓" : p.scaduto ? "⏱" : "✗"}</span>
             <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{p.esito.giusta ? T.giusto : p.scaduto ? T.tempoScaduto : T.sbagliato}</h1>
           </div>
-          <div className="pannello p-5 flex flex-col gap-3">
-            {p.esito.giusta ? (
-              <>
-                <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? specialeDi(me, p.giocatore.giuste).nome : me.mosse[(p.giocatore.giuste - 1) % 2].nome)}</p>
-                {p.esito.speciale && <p className="font-bold">★ {T.serieSpeciale}</p>}
-                <p className="text-[1.75rem] font-bold">{T.puntiGuadagnati(p.esito.punti)}</p>
-                {p.esito.bonus && <p className="font-bold">⚡ {T.bonusVelocita(p.esito.bonus.nome, p.esito.bonus.punti)}</p>}
-              </>
-            ) : (
-              <>
-                <p>{p.scaduto ? T.colpitoPerTempo(lui.nome, lui.mosse[p.computer.giuste % 2].nome) : T.manca(me.nome)}</p>
-                <p>{T.rispostaGiusta} <strong className="text-[1.5rem]">✓ {d.risposte[d.corretta]}</strong></p>
-                <p className="font-bold">{T.incoraggia[p.numero % T.incoraggia.length]}</p>
-              </>
-            )}
-            <div className="border-t-4 border-dashed border-black/30 pt-3">
-              <p className="font-bold">{T.loSapevi}</p>
-              <p>{d.spiegazione}</p>
+          {p.esito.giusta ? (
+            /* risposta giusta: niente spiegazioni, i punti volano nel riquadro della lotta */
+            <p className="sr-only">{T.puntiGuadagnati(p.esito.punti)}</p>
+          ) : (
+            <div className="pannello p-5 flex flex-col gap-3">
+              <p>{p.scaduto ? T.colpitoPerTempo(lui.nome, lui.mosse[p.computer.giuste % 2].nome) : T.manca(me.nome)}</p>
+              <p>{T.rispostaGiusta} <strong className="text-[1.5rem]">✓ {d.risposte[d.corretta]}</strong></p>
+              <p className="font-bold">{T.incoraggia[p.numero % T.incoraggia.length]}</p>
+              <div className="border-t-4 border-dashed border-black/30 pt-3">
+                <p className="font-bold">{T.loSapevi}</p>
+                <p>{d.spiegazione}</p>
+              </div>
             </div>
-          </div>
+          )}
           <Pulsante variante="giallo" className="w-full" onClick={avantiEsito}>{T.avanti} <span aria-hidden="true">→</span></Pulsante>
         </div>
       )}

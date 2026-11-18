@@ -82,9 +82,6 @@ export const T = {
   rispostaGiusta: "La risposta giusta è:",
   loSapevi: "Lo sapevi?",
   puntiGuadagnati: (p: number) => `+${p} punti`,
-  bonusVelocita: (nome: string, p: number) => `${nome}! Bonus velocità: +${p} (già contati)`,
-  serieSpeciale: "3 di fila: colpo speciale!",
-  colpisce: (chi: string, mossa: string) => `${chi} colpisce con: ${mossa}`,
   manca: (chi: string) => `${chi} manca il colpo... e inciampa!`,
   incoraggia: [
     "Niente paura, la prossima è tua!",

@@ -11,6 +11,8 @@ export interface Azione {
   chi: Lato;
   tipo: "colpo" | "speciale" | "manca";
   scritta: string;
+  /** il grido di chi attacca: si sente e compare in un fumetto sopra la sua testa */
+  urlo?: string;
   chiave: number;
   stile?: Stile;
   oggetto?: Oggetto;
@@ -49,12 +51,14 @@ export function geometria(w: number, h: number, altezza = 0.82, aria = 0.08) {
 }
 
 export function Arena({
-  giocatore, computer, azione = null, ko = null, stretta = false, className = "", luogo = "chiesa", altezza: altezzaData = 0.82, children,
+  giocatore, computer, azione = null, ko = null, stretta = false, className = "", luogo = "chiesa", altezza: altezzaData = 0.82, children, punti = null,
 }: {
   giocatore: Personaggio; computer: Personaggio; azione?: Azione | null;
   ko?: Lato | null; stretta?: boolean; className?: string; luogo?: Luogo;
   /** quanto sono alti i lottatori rispetto al riquadro */
   altezza?: number;
+  /** punti guadagnati: volano su dal lottatore e restano lì finché si tocca "Avanti" */
+  punti?: { testo: string; extra?: string; chiave: number } | null;
   /** cose da mettere in alto sopra lo sfondo, per esempio la barra dell'energia:
       i lottatori si rimpiccioliscono quanto basta per stare sotto */
   children?: React.ReactNode;
@@ -134,6 +138,10 @@ export function Arena({
               <Fiammata x={g.centro[bersaglio]} h={h} fw={g.fw} ritardo={momento} />
             </>
           )}
+          {azione.urlo && (
+            <Urlo testo={azione.urlo} x={g.centro[azione.chi]} y={Math.max(hSopra + 48, h * (0.97 - altezza) - 4)}
+              lato={azione.chi} />
+          )}
           {azione.tipo !== "manca" && <Stelline x={g.centro[bersaglio]} y={h * (0.97 - altezza * 0.68)} ritardo={momento} />}
           <Scritta
             testo={azione.scritta}
@@ -151,7 +159,30 @@ export function Arena({
           </span>
         </div>
       )}
+      {punti && (
+        <Animato key={`punti-${punti.chiave}`} className="effetto punti-volano"
+          style={{ left: Math.min(Math.max(g.centro.giocatore, w * 0.3), w * 0.7), top: Math.max(hSopra + 4, h * 0.05), translate: "-50% 0" }}
+          a={{ durata: 1200, ritardo: momento * 1000 + 250, easing: "cubic-bezier(.2,.8,.3,1)", kf: [
+            { transform: `translateY(${h * 0.45}px) scale(0.4)`, opacity: 0 },
+            { offset: 0.25, opacity: 1 },
+            { transform: "translateY(-6px) scale(1.15)", offset: 0.8 },
+            { transform: "translateY(0px) scale(1)", opacity: 1 },
+          ] }}>
+          <span className="punti-numero">{punti.testo}</span>
+          {punti.extra && <span className="punti-extra">{punti.extra}</span>}
+        </Animato>
+      )}
       {children && <div ref={refSopra} className="arena-sopra">{children}</div>}
+    </div>
+  );
+}
+
+/** Fumetto con il grido di chi attacca: compare insieme al suono e se ne va piano dopo un secondo e mezzo
+    (è come il suono: dura quanto il grido; i messaggi da leggere restano tutti fino ad "Avanti"). */
+function Urlo({ testo, x, y, lato }: { testo: string; x: number; y: number; lato: Lato }) {
+  return (
+    <div className={`effetto urlo urlo-${lato}`} style={{ left: x, top: y }}>
+      <span className="urlo-testo">{testo}</span>
     </div>
   );
 }

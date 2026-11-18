@@ -42,6 +42,7 @@ Vista e udito
 - Niente lampeggi, niente scosse veloci. Animazioni lente e brevi (massimo 1,5 secondi), nessuna animazione infinita.
 - Movimenti: per scelta del gestore le mosse si vedono complete di default, anche con "riduci movimento" attivo sul telefono. Nelle Impostazioni → "Movimenti dei lottatori" si può scegliere "Come il telefono" (rispetta `prefers-reduced-motion`) o "Ridotti".
 - Eccezione (scelta del gestore): in casa il pulsante GIOCA pulsa piano all'infinito (2,4 secondi a ciclo, niente lampeggio acceso/spento); fermo con "Movimenti ridotti".
+- Urli dei lottatori (scelta del gestore): a ogni mossa chi attacca grida (voce fatta con Web Audio) e la parola compare in un fumetto, che se ne va dopo 1,5 secondi come il suono. Solo esclamazioni italiane o versi, elenco in `src/gioco/urli.ts`.
 - Festa di fine partita: circa 17 secondi, fatta di scene brevi (ognuna al massimo 1,5 secondi).
 
 Solidità

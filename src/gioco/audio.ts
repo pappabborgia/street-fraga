@@ -1,3 +1,4 @@
+import type { Voce, Vocale } from "./urli";
 /**
  * Musica e suoni, tutti generati dal browser con Web Audio (nessun file esterno).
  * Musica: arrangiamenti elettronici originali di brani di Mozart (pubblico dominio).
@@ -337,6 +338,57 @@ class Suonatore {
     this.fruscio(0.2, 0.6);
     this.botta(momento, 0.8);
     this.botta(momento + 0.18, 0.5);
+  }
+  /**
+   * Urlo del lottatore: una "voce" fatta con un'onda a dente di sega che passa da due filtri
+   * (le formanti della vocale), con un po' di vibrato e di fiato. Dura meno di un secondo.
+   */
+  urlo(v: Voce, ritardo = 0, forte = false) {
+    if (!this.ctx || !this.suoniAttivi) return;
+    const ctx = this.ctx;
+    const t = ctx.currentTime + ritardo;
+    const durata = forte ? 0.75 : 0.45;
+    const f0 = v.altezza * (forte ? 1.15 : 1);
+    const fine = f0 * (v.andamento > 0 ? 1.35 : 0.7);
+    const osc = ctx.createOscillator();
+    osc.type = "sawtooth";
+    osc.frequency.setValueAtTime(f0 * 0.9, t);
+    osc.frequency.linearRampToValueAtTime(f0 * 1.08, t + durata * 0.25);
+    osc.frequency.exponentialRampToValueAtTime(fine, t + durata);
+    // vibrato
+    const lfo = ctx.createOscillator();
+    lfo.frequency.value = 6;
+    const lfoG = ctx.createGain();
+    lfoG.gain.value = f0 * 0.03;
+    lfo.connect(lfoG).connect(osc.frequency);
+    // fiato
+    const fiato = ctx.createBufferSource();
+    fiato.buffer = this.rumore;
+    const fiatoG = ctx.createGain();
+    fiatoG.gain.value = 0.12;
+    // formanti: si parte da "i" e si arriva alla vocale (iaaa, iooo...)
+    const FORMANTI: Record<Vocale, [number, number]> = { a: [800, 1200], o: [500, 900], e: [480, 1900], u: [330, 800] };
+    const [f1, f2] = FORMANTI[v.vocale];
+    const voce = ctx.createGain();
+    const env = ctx.createGain();
+    for (const [da, a, q, peso] of [[320, f1, 6, 1], [2200, f2, 9, 0.6]] as const) {
+      const bp = ctx.createBiquadFilter();
+      bp.type = "bandpass";
+      bp.Q.value = q;
+      bp.frequency.setValueAtTime(da, t);
+      bp.frequency.exponentialRampToValueAtTime(a, t + 0.12);
+      const g = ctx.createGain();
+      g.gain.value = peso;
+      osc.connect(bp); fiato.connect(fiatoG).connect(bp);
+      bp.connect(g).connect(voce);
+    }
+    const vol = forte ? 0.9 : 0.7;
+    env.gain.setValueAtTime(0.001, t);
+    env.gain.exponentialRampToValueAtTime(vol, t + 0.04);
+    env.gain.setValueAtTime(vol, t + durata * 0.6);
+    env.gain.exponentialRampToValueAtTime(0.001, t + durata);
+    voce.connect(env).connect(this.busEffetti!);
+    for (const n of [osc, lfo, fiato]) { n.start(t); n.stop(t + durata + 0.05); }
   }
   manca() { this.tono(500, 110, 0.6, "sine", 0.3, 0.5); }
   giusto() { this.tono(784, 784, 0.12, "square", 0.1); this.tono(1047, 1047, 0.2, "square", 0.1, 0.12); }

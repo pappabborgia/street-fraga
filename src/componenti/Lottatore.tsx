@@ -326,40 +326,45 @@ function Oggetto({ a }: { a: Aspetto }) {
 
 /**
  * Filtro "a pixel": prende un punto ogni `passo` unità e lo allarga a quadretto,
- * così il disegno sembra fatto a pixel grossi come gli sfondi. Funziona dentro l'SVG
+ * così il disegno sembra fatto a pixel come gli sfondi. Funziona dentro l'SVG
  * (anche con il braccio che si muove), senza immagini in più da scaricare.
- * `scala` = pixel dello schermo per unità del disegno: se il disegno è piccolo, il punto preso
- * deve restare largo almeno 2 pixel dello schermo, altrimenti il browser lo perde e il disegno sparisce.
+ * `scala` = pixel (CSS) per unità del disegno. Il punto preso è largo 1,5 pixel CSS: più piccolo,
+ * su iPhone si perde e il lottatore diventa trasparente. I quadretti si allargano un filo
+ * più del necessario, così tra uno e l'altro non resta mai un buco.
  */
-function FiltroPixel({ id, x, y, w, h, passo = 5, scala }: { id: string; x: number; y: number; w: number; h: number; passo?: number; scala: number }) {
-  const punto = Math.max(1, 2 / Math.max(scala, 0.01));
-  const cella = Math.max(passo, punto / 0.6);
-  const raggio = (cella - punto) / 2;
+function FiltroPixel({ id, x, y, w, h, passo = 3, scala }: { id: string; x: number; y: number; w: number; h: number; passo?: number; scala: number }) {
+  const punto = 1.5 / Math.max(scala, 0.05);
+  const cella = Math.max(passo, punto * 1.6);
+  const raggio = (cella - punto) / 2 + punto * 0.35;
+  const inizio = (cella - punto) / 2;
   return (
     <filter id={id} x={x} y={y} width={w} height={h} filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse"
       colorInterpolationFilters="sRGB">
-      <feFlood x={x + raggio} y={y + raggio} width={punto} height={punto} floodColor="#000" />
+      <feFlood x={x + inizio} y={y + inizio} width={punto} height={punto} floodColor="#000" />
       <feComposite x={x} y={y} width={cella} height={cella} />
       <feTile x={x} y={y} width={w} height={h} result="punti" />
       <feComposite in="SourceGraphic" in2="punti" operator="in" />
-      <feMorphology operator="dilate" radius={raggio + 0.01} />
+      <feMorphology operator="dilate" radius={raggio} />
     </filter>
   );
 }
 
-/** Quanti pixel dello schermo vale un'unità del disegno (si aggiorna se l'elemento cambia misura). */
-function useScala(unitaAltezza: number) {
+/** Quanti pixel CSS vale un'unità del disegno (si aggiorna se l'elemento cambia misura). */
+function useScala(unitaLarghezza: number, unitaAltezza: number) {
   const ref = useRef<SVGSVGElement>(null);
   const [scala, setScala] = useState(1);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const misura = () => setScala((el.getBoundingClientRect().height * (window.devicePixelRatio || 1)) / unitaAltezza);
+    const misura = () => {
+      const r = el.getBoundingClientRect();
+      setScala(Math.min(r.width / unitaLarghezza, r.height / unitaAltezza));
+    };
     misura();
     const ro = new ResizeObserver(misura);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [unitaAltezza]);
+  }, [unitaLarghezza, unitaAltezza]);
   return [ref, scala] as const;
 }
 
@@ -368,7 +373,7 @@ export function Lottatore({ p, verso = "destra", className = "" }: { p: Personag
   const uid = useId().replace(/:/g, "");
   const idQuadri = `quadri-${uid}`;
   const idPixel = `pixel-${uid}`;
-  const [refSvg, scala] = useScala(300);
+  const [refSvg, scala] = useScala(210, 300);
   const righe = a.dettaglio === "catena" ? a.maglia2 : undefined;
   const manica = a.corpo === "gonna" || a.corpo === "tonaca" ? a.maglia : a.maglia;
   return (
@@ -404,11 +409,11 @@ export function Lottatore({ p, verso = "destra", className = "" }: { p: Personag
 /** Solo la faccia, per la griglia di scelta. */
 export function Ritratto({ p, verso = "destra" }: { p: Personaggio; verso?: "destra" | "sinistra" }) {
   const id = `pixel-r-${useId().replace(/:/g, "")}`;
-  const [refSvg, scala] = useScala(110);
+  const [refSvg, scala] = useScala(120, 110);
   return (
     <svg ref={refSvg} viewBox="50 10 120 110" className="w-full h-full" aria-hidden="true"
       style={verso === "sinistra" ? { transform: "scaleX(-1)" } : undefined}>
-      <defs><FiltroPixel id={id} x={50} y={10} w={120} h={110} passo={4} scala={scala} /></defs>
+      <defs><FiltroPixel id={id} x={50} y={10} w={120} h={110} passo={2.5} scala={scala} /></defs>
       <g filter={`url(#${id})`}><Testa a={p.aspetto} /></g>
     </svg>
   );

@@ -286,6 +286,9 @@ html.ridotto .pulsa { animation: none; }
 }
 .hud-nome {
   grid-area: nome; min-width: 0; overflow-wrap: break-word; hyphens: manual;
+  /* sempre alto 2 righe, anche se il nome è corto: così le due barre stanno alla stessa altezza */
+  height: 2.3em; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+  align-self: end;
   font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.15;
   text-transform: uppercase; color: var(--giallo); letter-spacing: 0;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 2px 0 #000;
@@ -306,7 +309,35 @@ html.ridotto .pulsa { animation: none; }
   .hud-lato { grid-template-areas: "ritratto nome" "ritratto barra"; }
   .hud-destra { grid-template-areas: "nome ritratto" "barra ritratto"; }
   .hud-ritratto { width: 4.5rem; height: 4.5rem; }
-  .hud-nome { font-family: "Bungee", "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 1.5rem; }
+  /* schermi larghi: una riga sola, i nomi ci stanno quasi sempre (se no finiscono con "…") */
+  .hud-nome { font-family: "Bungee", "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 1.5rem;
+    height: 1.3em; -webkit-line-clamp: 1; display: block; white-space: nowrap; text-overflow: ellipsis; }
   .hud-barra { height: 2.25rem; }
 }
 html.ridotto .hud-pieno { transition: none; }
+
+/* Punti che volano su dal lottatore quando la risposta è giusta (restano fino ad "Avanti") */
+.punti-volano { z-index: 7; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; white-space: nowrap; pointer-events: none; }
+.punti-numero {
+  font-family: "Bungee", "Atkinson Hyperlegible", sans-serif; font-size: 2rem; line-height: 1; color: var(--giallo);
+  text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 3px 3px 0 #000, 4px 5px 0 #000;
+}
+.punti-extra {
+  font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 700; font-size: 1.25rem; color: #fff;
+  background: #1d3a8a; border: 3px solid #000; padding: 0.1rem 0.6rem;
+}
+@media (min-width: 640px) { .punti-numero { font-size: 2.75rem; } }
+
+/* Fumetto del grido: sopra la testa di chi attacca, verso il centro; compare piano e resta */
+.urlo { z-index: 6; translate: 0 -100%; animation: urlo 1.5s ease-out both; pointer-events: none; }
+@keyframes urlo { 0% { opacity: 0; } 12% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
+html.ridotto .urlo { animation: urlo 1.5s linear both; }
+.urlo-giocatore { transform: translateX(-15%); }
+.urlo-computer { transform: translateX(-85%); }
+.urlo-testo {
+  display: inline-block; white-space: nowrap; font-family: "Bungee", "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.25rem; line-height: 1.1; color: #111; background: #fff;
+  border: 3px solid #000; border-radius: 1rem; padding: 0.2rem 0.6rem; box-shadow: 3px 3px 0 #000;
+}
+@media (min-width: 640px) { .urlo-testo { font-size: 1.5rem; } .punti-numero { font-size: 2.75rem; } }
+@media (max-width: 639px) { .punti-numero { font-size: 1.75rem; } }
