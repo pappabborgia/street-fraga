@@ -1,7 +1,8 @@
-export type Effetto = "pioggia" | "lancio" | "onda" | "cade";
+export type Effetto = "pioggia" | "lancio" | "onda" | "cade" | "fuoco" | "vortice";
 export type Oggetto =
   | "tarallo" | "oliva" | "moneta" | "cioccolato" | "uva" | "nota"
-  | "campana" | "aquila" | "sedia" | "motorino" | "mattarello" | "ciabatta";
+  | "campana" | "aquila" | "sedia" | "motorino" | "mattarello" | "ciabatta"
+  | "pomodoro" | "uovo" | "peperoncino" | "fico" | "pagnotta" | "bottiglia" | "cucu";
 
 /** Come si muove il lottatore in una mossa normale. */
 export type Stile = "salto" | "capriola" | "carica" | "lancio";
@@ -31,13 +32,16 @@ export interface Aspetto {
   oggetto: "mattarello" | "zappa" | "nessuno" | "bastone" | "sedia" | "orologio" | "cesto" | "mazza" | "libro";
 }
 
+export interface Speciale { nome: string; effetto: Effetto; oggetto: Oggetto }
+
 export interface Personaggio {
   id: string;
   nome: string;
   figura: string;
   descrizione: string;
   mosse: [Mossa, Mossa];
-  speciale: { nome: string; effetto: Effetto; oggetto: Oggetto };
+  /** 5 colpi speciali, usati a rotazione. */
+  speciali: [Speciale, Speciale, Speciale, Speciale, Speciale];
   suono: [string, string]; // scritte da fumetto per i colpi
   aspetto: Aspetto;
 }
@@ -48,7 +52,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "nonna", nome: "Nonna Ninetta", figura: "La vecchietta",
     descrizione: "Ha cresciuto 4 figli e 9 nipoti. Il mattarello non lo molla mai.",
     mosse: [{ nome: "Mattarellata rotante", stile: "lancio", oggetto: "mattarello" }, { nome: "Ciabatta volante", stile: "lancio", oggetto: "ciabatta" }],
-    speciale: { nome: "Pioggia di taralli", effetto: "pioggia", oggetto: "tarallo" },
+    speciali: [
+      { nome: "Pioggia di taralli", effetto: "pioggia", oggetto: "tarallo" },
+      { nome: "Mattarello rotante", effetto: "lancio", oggetto: "mattarello" },
+      { nome: "Ciabatta supersonica", effetto: "lancio", oggetto: "ciabatta" },
+      { nome: "Grandinata di pomodori", effetto: "pioggia", oggetto: "pomodoro" },
+      { nome: "Vortice di uova sbattute", effetto: "vortice", oggetto: "uovo" },
+    ],
     suono: ["SBAM!", "PAFF!"],
     aspetto: {
       pelle: "#f2c9a0", capelli: "#d9d9d9", capigliatura: "crocchia", cappello: "fazzoletto",
@@ -61,7 +71,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "contadino", nome: "Zio Cosimo", figura: "Il contadino",
     descrizione: "In campagna dall'alba. Conosce ogni ulivo per nome.",
     mosse: [{ nome: "Zappata tellurica", stile: "salto" }, { nome: "Spallata del trattore", stile: "carica" }],
-    speciale: { nome: "Tempesta di olive", effetto: "pioggia", oggetto: "oliva" },
+    speciali: [
+      { nome: "Tempesta di olive", effetto: "pioggia", oggetto: "oliva" },
+      { nome: "Zappata tellurica", effetto: "onda", oggetto: "oliva" },
+      { nome: "Peperoncino infuocato", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Pagnotta a sorpresa", effetto: "lancio", oggetto: "pagnotta" },
+      { nome: "Tornado di fichi", effetto: "vortice", oggetto: "fico" },
+    ],
     suono: ["TUNF!", "STRACK!"],
     aspetto: {
       pelle: "#d9a066", capelli: "#9a9a9a", capigliatura: "corti", cappello: "coppola",
@@ -74,7 +90,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "tamarro", nome: "Tony Tuta", figura: "Il tamarro",
     descrizione: "Tuta lucida, catenone d'oro e occhiali da sole anche di sera.",
     mosse: [{ nome: "Catenone rotante", stile: "capriola" }, { nome: "Sgommata in piazza", stile: "carica" }],
-    speciale: { nome: "Motorino truccato", effetto: "lancio", oggetto: "motorino" },
+    speciali: [
+      { nome: "Motorino truccato", effetto: "lancio", oggetto: "motorino" },
+      { nome: "Sgommata di fuoco", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Stereo a tutto volume", effetto: "onda", oggetto: "nota" },
+      { nome: "Catenone rotante", effetto: "vortice", oggetto: "moneta" },
+      { nome: "Pioggia di peperoncini", effetto: "pioggia", oggetto: "peperoncino" },
+    ],
     suono: ["VROOM!", "SDENG!"],
     aspetto: {
       pelle: "#e0b080", capelli: "#1a1a1a", capigliatura: "ricci", cappello: "nessuno",
@@ -87,7 +109,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "ricco", nome: "Commendator Nando", figura: "Il ricco",
     descrizione: "Abito bianco, bastone dorato. Offre sempre lui il caffè.",
     mosse: [{ nome: "Colpo di bastone dorato", stile: "salto" }, { nome: "Lancio della moneta d'oro", stile: "lancio", oggetto: "moneta" }],
-    speciale: { nome: "Pioggia di monete", effetto: "pioggia", oggetto: "moneta" },
+    speciali: [
+      { nome: "Pioggia di monete", effetto: "pioggia", oggetto: "moneta" },
+      { nome: "Bottiglia d'annata", effetto: "lancio", oggetto: "bottiglia" },
+      { nome: "Vortice d'oro", effetto: "vortice", oggetto: "moneta" },
+      { nome: "Brindisi esplosivo", effetto: "onda", oggetto: "bottiglia" },
+      { nome: "Campanello del maggiordomo", effetto: "cade", oggetto: "campana" },
+    ],
     suono: ["DLIN!", "BONK!"],
     aspetto: {
       pelle: "#f0c39a", capelli: "#cfcfcf", capigliatura: "pochi", cappello: "panama",
@@ -100,7 +128,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "arrangiato", nome: "Peppino l'Arrangiato", figura: "Il povero (ma furbo)",
     descrizione: "Non ha una lira, ma aggiusta tutto con uno spago.",
     mosse: [{ nome: "Calcio con la scarpa bucata", stile: "salto" }, { nome: "Capriola con la toppa", stile: "capriola" }],
-    speciale: { nome: "Sedia catapulta", effetto: "lancio", oggetto: "sedia" },
+    speciali: [
+      { nome: "Sedia catapulta", effetto: "lancio", oggetto: "sedia" },
+      { nome: "Pioggia di ciabatte", effetto: "pioggia", oggetto: "ciabatta" },
+      { nome: "Tornado di cianfrusaglie", effetto: "vortice", oggetto: "sedia" },
+      { nome: "Fuoco di paglia", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Pagnotta di tre giorni", effetto: "lancio", oggetto: "pagnotta" },
+    ],
     suono: ["CRAC!", "PUF!"],
     aspetto: {
       pelle: "#e3b388", capelli: "#5a3b22", capigliatura: "corti", cappello: "basco",
@@ -113,7 +147,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "svizzero", nome: "Franco lo Svizzero", figura: "Tornato dalla Svizzera",
     descrizione: "Partito con la valigia di cartone, tornato col macchinone.",
     mosse: [{ nome: "Pugno puntuale", stile: "carica" }, { nome: "Tavoletta volante", stile: "lancio", oggetto: "cioccolato" }],
-    speciale: { nome: "Valanga di cioccolata", effetto: "pioggia", oggetto: "cioccolato" },
+    speciali: [
+      { nome: "Valanga di cioccolata", effetto: "pioggia", oggetto: "cioccolato" },
+      { nome: "Cucù a molla", effetto: "lancio", oggetto: "cucu" },
+      { nome: "Mille orologi", effetto: "vortice", oggetto: "cucu" },
+      { nome: "Fonduta bollente", effetto: "fuoco", oggetto: "cioccolato" },
+      { nome: "Campanaccio delle Alpi", effetto: "cade", oggetto: "campana" },
+    ],
     suono: ["CUCÙ!", "TIC-TAC!"],
     aspetto: {
       pelle: "#f2c49b", capelli: "#7a5a3a", capigliatura: "pochi", cappello: "nessuno",
@@ -126,7 +166,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "vignaiolo", nome: "Mastro Vito", figura: "Il vignaiolo",
     descrizione: "Il suo Primitivo è il migliore. Lo dice lui.",
     mosse: [{ nome: "Pigiatura volante", stile: "salto" }, { nome: "Lancio del grappolo", stile: "lancio", oggetto: "uva" }],
-    speciale: { nome: "Grappolo di Primitivo", effetto: "pioggia", oggetto: "uva" },
+    speciali: [
+      { nome: "Grappolo di Primitivo", effetto: "pioggia", oggetto: "uva" },
+      { nome: "Bottiglia stappata", effetto: "lancio", oggetto: "bottiglia" },
+      { nome: "Vendemmia volante", effetto: "vortice", oggetto: "uva" },
+      { nome: "Pigiatura di fuoco", effetto: "fuoco", oggetto: "uva" },
+      { nome: "Pioggia di fichi", effetto: "pioggia", oggetto: "fico" },
+    ],
     suono: ["SPLASH!", "ZAC!"],
     aspetto: {
       pelle: "#d39a68", capelli: "#3a2a1a", capigliatura: "corti", cappello: "paglia",
@@ -139,7 +185,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "banda", nome: "Maestro Totò", figura: "Il suonatore della banda",
     descrizione: "Non perde una processione. Batte il tempo anche quando dorme.",
     mosse: [{ nome: "Nota sparata", stile: "lancio", oggetto: "nota" }, { nome: "Marcia trionfale", stile: "carica" }],
-    speciale: { nome: "Grancassa tonante", effetto: "onda", oggetto: "nota" },
+    speciali: [
+      { nome: "Grancassa tonante", effetto: "onda", oggetto: "nota" },
+      { nome: "Pioggia di note", effetto: "pioggia", oggetto: "nota" },
+      { nome: "Vortice musicale", effetto: "vortice", oggetto: "nota" },
+      { nome: "Marcia di fuoco", effetto: "fuoco", oggetto: "nota" },
+      { nome: "Campanella del maestro", effetto: "cade", oggetto: "campana" },
+    ],
     suono: ["BUM!", "TATÀ!"],
     aspetto: {
       pelle: "#eab48a", capelli: "#2a2a2a", capigliatura: "corti", cappello: "banda",
@@ -152,7 +204,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "parroco", nome: "Don Saverio", figura: "Il parroco",
     descrizione: "Conosce tutti in paese. Le sue prediche sono leggendarie.",
     mosse: [{ nome: "Predica tonante", stile: "carica" }, { nome: "Scivolata in tonaca", stile: "capriola" }],
-    speciale: { nome: "Rintocco del campanile", effetto: "cade", oggetto: "campana" },
+    speciali: [
+      { nome: "Rintocco del campanile", effetto: "cade", oggetto: "campana" },
+      { nome: "Predica a tutto volume", effetto: "onda", oggetto: "nota" },
+      { nome: "Vortice di campanelle", effetto: "vortice", oggetto: "campana" },
+      { nome: "Pagnotta della domenica", effetto: "lancio", oggetto: "pagnotta" },
+      { nome: "Fuoco del camino", effetto: "fuoco", oggetto: "pagnotta" },
+    ],
     suono: ["DONG!", "SWISH!"],
     aspetto: {
       pelle: "#f0c8a0", capelli: "#8a8a8a", capigliatura: "pochi", cappello: "nessuno",
@@ -165,7 +223,13 @@ export const PERSONAGGI: Personaggio[] = [
     id: "albanese", nome: "Arben", figura: "L'albanese",
     descrizione: "Arrivato da ragazzo, ormai è più fragagnanese di tutti.",
     mosse: [{ nome: "Calcio volante", stile: "salto" }, { nome: "Abbraccio stritolante", stile: "carica" }],
-    speciale: { nome: "Volo dell'aquila", effetto: "lancio", oggetto: "aquila" },
+    speciali: [
+      { nome: "Volo dell'aquila", effetto: "lancio", oggetto: "aquila" },
+      { nome: "Pioggia di peperoncini", effetto: "pioggia", oggetto: "peperoncino" },
+      { nome: "Vortice dell'aquila", effetto: "vortice", oggetto: "aquila" },
+      { nome: "Calcio infuocato", effetto: "fuoco", oggetto: "peperoncino" },
+      { nome: "Pioggia di fichi", effetto: "pioggia", oggetto: "fico" },
+    ],
     suono: ["WHAM!", "STROC!"],
     aspetto: {
       pelle: "#e6b48c", capelli: "#2b1b10", capigliatura: "ricci", cappello: "plis",
@@ -178,3 +242,7 @@ export const PERSONAGGI: Personaggio[] = [
 
 export const trovaPersonaggio = (id: string): Personaggio =>
   PERSONAGGI.find((p) => p.id === id) ?? PERSONAGGI[0];
+
+/** Il colpo speciale di turno: cambiano a rotazione, uno ogni 3 risposte giuste di fila. */
+export const specialeDi = (p: Personaggio, giuste: number): Speciale =>
+  p.speciali[Math.floor(Math.max(0, giuste - 1) / 3) % p.speciali.length];

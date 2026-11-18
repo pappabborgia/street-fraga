@@ -1,12 +1,13 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Personaggio } from "@/gioco/personaggi";
 import { audio } from "@/gioco/audio";
 import { T } from "@/testi";
 import { Chiesa } from "./Chiesa";
 import { Lottatore } from "./Lottatore";
 import { SvgOggetto } from "./Oggetti";
-import { useMisure } from "./Arena";
+import { geometria, useMisure } from "./Arena";
+import { Animato, anima, braccio, corpo, type NomeMossa } from "./movimento";
 
 /**
  * Festa di fine partita: circa 17 secondi, fatti di 11 scene brevi (ognuna al massimo 1,5 secondi),
@@ -42,35 +43,34 @@ export function Festa({ me, lui, risultato, className = "" }: {
     if (scena === 9) audio.vittoria();
   }, [scena, risultato]);
 
-  const fh = h * 0.7;
-  const fw = fh * (210 / 300);
-  const margine = Math.max(w * 0.04, w / 2 - fw - h * 0.12);
-  const spinta = Math.max(0, w - 2 * margine - 2 * fw + fw * 0.2);
+  const { margine, fw } = geometria(w, h, 0.7, 0.12);
+  const refIo = useRef<HTMLDivElement>(null);
+  const refLui = useRef<HTMLDivElement>(null);
 
   // Chi festeggia e chi no (al pareggio festeggiano tutti e due)
   const vinceIo = risultato !== "perso";
   const vinceLui = risultato !== "vinto";
-  const anim = (vince: boolean) => {
-    switch (scena) {
-      case 1: return vince ? "festa-salto" : "festa-gira";
-      case 2: return vince ? "festa-capriola" : "festa-siede";
-      case 3: return vince ? "festa-braccia" : "festa-seduto";
-      case 4: return vince ? "festa-lancia" : "festa-seduto";
-      case 5: return vince ? "festa-salto" : "festa-seduto";
-      case 6: return vince ? "festa-braccia" : "festa-rialza";
-      case 7: case 8: return "anim-stretta";
-      case 9: return "festa-inchino festa-vicini";
-      case 10: return "festa-vicini";
-      default: return "";
+
+  // Movimenti di ogni scena, con le Web Animations (funzionano anche su iPhone)
+  useEffect(() => {
+    const box = ref.current?.getBoundingClientRect();
+    const S = geometria(box?.width ?? w, box?.height ?? h, 0.7, 0.12).spinta;
+    const anim: (Animation | null)[] = [];
+    for (const [el, d, vince] of [[refIo.current, 1, vinceIo], [refLui.current, -1, vinceLui]] as const) {
+      const m = mossaFesta(scena, vince);
+      if (m.corpo) anim.push(anima(el, corpo(m.corpo, d, S)));
+      if (m.braccio) anim.push(anima(el?.querySelector(".braccio-av"), braccio(m.braccio, 1400)));
     }
-  };
+    return () => anim.forEach((x) => x?.cancel());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scena]);
 
   const centri = { io: margine + fw / 2, lui: w - margine - fw / 2 };
   const vincitore = risultato === "perso" ? lui : me;
   const titolo = risultato === "vinto" ? T.titoloVinto : risultato === "perso" ? T.titoloPerso : T.titoloPari;
 
   return (
-    <div ref={ref} className={`arena ${className}`} style={{ ["--spinta" as string]: `${spinta}px` }} aria-hidden="true">
+    <div ref={ref} className={`arena ${className}`} aria-hidden="true">
       <Chiesa />
       {/* Fuochi d'artificio */}
       {(scena === 3 || scena === 5 || scena === 10) && (
@@ -85,11 +85,11 @@ export function Festa({ me, lui, risultato, className = "" }: {
         <Coriandoli key={`cor-${scena}`} w={w} h={h} seme={scena} taralli={scena === 5} />
       )}
 
-      <div key={`io-${scena}`} className={`lott ${anim(vinceIo)}`} style={{ left: margine, height: "70%" }}>
+      <div ref={refIo} key={`io-${scena}`} className="lott" style={{ left: margine, height: "70%" }}>
         <Lottatore p={me} verso="destra" />
         {!vinceIo && scena >= 1 && scena <= 5 && <Stordito />}
       </div>
-      <div key={`lui-${scena}`} className={`lott cpu ${anim(vinceLui)}`} style={{ right: margine, height: "70%" }}>
+      <div ref={refLui} key={`lui-${scena}`} className="lott cpu" style={{ right: margine, height: "70%" }}>
         <Lottatore p={lui} verso="sinistra" />
         {!vinceLui && scena >= 1 && scena <= 5 && <Stordito />}
       </div>
@@ -97,7 +97,7 @@ export function Festa({ me, lui, risultato, className = "" }: {
       {/* Il vincitore lancia in aria il suo oggetto */}
       {scena === 4 && (
         <div className="effetto su-e-giu" style={{ left: (risultato === "perso" ? centri.lui : centri.io) - 30, top: h * 0.35, width: 60, height: 60 }}>
-          <SvgOggetto tipo={vincitore.speciale.oggetto} className="w-full h-full" />
+          <SvgOggetto tipo={vincitore.speciali[0].oggetto} className="w-full h-full" />
         </div>
       )}
       {/* Cuori quando si stringono la mano */}
@@ -134,12 +134,13 @@ function Fuoco({ x, y, ritardo, colore }: { x: number; y: number; ritardo: numbe
   return (
     <>
       {raggi.map((a, i) => (
-        <div key={i} className="effetto scintilla"
-          style={{
-            left: x - 6, top: y - 6, width: 12, height: 12, background: colore,
-            ["--x" as string]: `${Math.cos(a) * 70}px`, ["--y" as string]: `${Math.sin(a) * 70}px`,
-            animationDelay: `${ritardo}s`,
-          }} />
+        <Animato key={i} className="effetto scintilla"
+          style={{ left: x - 6, top: y - 6, width: 12, height: 12, background: colore }}
+          a={{ durata: 1300, ritardo: ritardo * 1000, easing: "ease-out", kf: [
+            { transform: "translate(0px, 0px) scale(0.3)", opacity: 1 },
+            { offset: 0.7, opacity: 1 },
+            { transform: `translate(${Math.cos(a) * 70}px, ${Math.sin(a) * 70}px) scale(1)`, opacity: 0 },
+          ] }} />
       ))}
     </>
   );
@@ -154,13 +155,34 @@ function Coriandoli({ w, h, seme, taralli }: { w: number; h: number; seme: numbe
     <>
       {pezzi.map((p, i) =>
         taralli && i % 3 === 0 ? (
-          <div key={i} className="effetto cade" style={{ left: p.x, top: p.y, width: 34, height: 34, animationDelay: `${p.ritardo}s`, ["--giro" as string]: `${p.giro}deg` }}>
+          <Animato key={i} className="effetto" style={{ left: p.x, top: p.y, width: 34, height: 34 }} a={caduta(h, p.ritardo, p.giro)}>
             <SvgOggetto tipo="tarallo" className="w-full h-full" />
-          </div>
+          </Animato>
         ) : (
-          <div key={i} className="effetto cade coriandolo" style={{ left: p.x, top: p.y, background: p.colore, animationDelay: `${p.ritardo}s`, ["--giro" as string]: `${p.giro}deg` }} />
+          <Animato key={i} className="effetto coriandolo" style={{ left: p.x, top: p.y, background: p.colore }} a={caduta(h, p.ritardo, p.giro)} />
         ),
       )}
     </>
   );
+}
+
+const caduta = (h: number, ritardo: number, giro: number) => ({
+  durata: 900, ritardo: ritardo * 1000, easing: "cubic-bezier(.45,0,.9,.6)",
+  kf: [{ transform: `translateY(${-1.2 * h}px) rotate(0deg)` }, { transform: `translateY(0px) rotate(${giro}deg)` }],
+});
+
+/** Che cosa fa ogni lottatore in ogni scena della festa. */
+function mossaFesta(scena: number, vince: boolean): { corpo: NomeMossa | null; braccio?: "alza" | "tiro" | "porgi" } {
+  switch (scena) {
+    case 1: return { corpo: vince ? "festa-salto" : "festa-gira" };
+    case 2: return { corpo: vince ? "festa-capriola" : "festa-siede" };
+    case 3: return vince ? { corpo: "festa-saltello", braccio: "alza" } : { corpo: "festa-seduto" };
+    case 4: return vince ? { corpo: "lancio", braccio: "tiro" } : { corpo: "festa-seduto" };
+    case 5: return { corpo: vince ? "festa-salto" : "festa-seduto" };
+    case 6: return vince ? { corpo: "festa-saltello", braccio: "alza" } : { corpo: "festa-rialza" };
+    case 7: case 8: return { corpo: "stretta", braccio: "porgi" };
+    case 9: return { corpo: "festa-inchino" };
+    case 10: return { corpo: "festa-vicini" };
+    default: return { corpo: null };
+  }
 }

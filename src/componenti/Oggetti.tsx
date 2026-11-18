@@ -98,6 +98,61 @@ export function DisegnoOggetto({ tipo }: { tipo: Oggetto }) {
           <path d="M8 44 L54 38" stroke="#4a1a1a" strokeWidth={4} />
         </g>
       );
+    case "pomodoro":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <circle cx={30} cy={34} r={20} fill="#d7261e" />
+          <path d="M20 16 L30 22 L40 16 L34 24 L42 26 L30 26 L18 26 L26 24 Z" fill="#3d8a2f" strokeWidth={2} />
+          <ellipse cx={22} cy={30} rx={4} ry={6} fill="#f07a6e" stroke="none" />
+        </g>
+      );
+    case "uovo":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M30 6 Q48 8 48 34 Q48 54 30 54 Q12 54 12 34 Q12 8 30 6 Z" fill="#fbf3e0" />
+          <ellipse cx={23} cy={24} rx={4} ry={7} fill="#ffffff" stroke="none" />
+        </g>
+      );
+    case "peperoncino":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M14 14 Q34 10 48 30 Q56 46 44 54 Q40 40 28 30 Q18 24 14 14 Z" fill="#d7261e" />
+          <path d="M14 14 Q8 8 12 4 M14 14 L22 12" stroke="#3d8a2f" strokeWidth={5} fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case "fico":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M30 8 Q36 18 46 30 Q54 50 30 54 Q6 50 14 30 Q24 18 30 8 Z" fill="#6b2f6e" />
+          <path d="M30 8 L30 2" stroke="#5a3a1a" strokeWidth={4} />
+          <ellipse cx={24} cy={36} rx={3} ry={6} fill="#a46aa8" stroke="none" />
+        </g>
+      );
+    case "pagnotta":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <ellipse cx={30} cy={34} rx={26} ry={18} fill="#c98a3c" />
+          <path d="M16 28 L22 22 M28 26 L34 20 M40 28 L46 22" stroke="#7a4a18" strokeWidth={3} />
+        </g>
+      );
+    case "bottiglia":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M25 4 L35 4 L35 18 Q44 22 44 32 L44 54 L16 54 L16 32 Q16 22 25 18 Z" fill="#1f4d2b" />
+          <rect x={20} y={34} width={20} height={12} fill="#f3e6c4" strokeWidth={2} />
+          <rect x={25} y={2} width={10} height={6} fill="#8a1c1c" strokeWidth={2} />
+        </g>
+      );
+    case "cucu":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M6 24 L30 6 L54 24 Z" fill="#7a4a1f" />
+          <rect x={12} y={24} width={36} height={30} fill="#b07a3e" />
+          <circle cx={30} cy={38} r={9} fill="#f7f4ea" />
+          <path d="M30 38 L30 32 M30 38 L34 40" strokeWidth={2} />
+          <path d="M26 20 Q30 14 36 18 L40 16 L36 21 Q32 24 26 20 Z" fill="#ffd23f" strokeWidth={2} />
+        </g>
+      );
     case "motorino":
       return (
         <g stroke={N} strokeWidth={3}>

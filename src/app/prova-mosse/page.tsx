@@ -16,12 +16,15 @@ export default function ProvaMosse() {
             titolo: m.nome,
             a: { chi: "giocatore", tipo: "colpo", scritta: p.suono[k], stile: m.stile, oggetto: m.oggetto, chiave: giro * 1000 + i * 10 + k } as Azione,
           })),
-          { titolo: `Speciale: ${p.speciale.nome}`, a: { chi: "giocatore", tipo: "speciale", scritta: p.suono[0], chiave: giro * 1000 + i * 10 + 5 } },
+          ...p.speciali.map((sp, k) => ({
+            titolo: `Speciale: ${sp.nome}`,
+            a: { chi: "giocatore", tipo: "speciale", scritta: p.suono[0], speciale: sp, chiave: giro * 1000 + i * 10 + 5 + k } as Azione,
+          })),
         ];
         return (
           <section key={p.id}>
             <h2 className="testo-titolo">{p.nome}</h2>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {azioni.map(({ titolo, a }) => (
                 <div key={titolo}>
                   <p className="font-bold">{titolo}</p>

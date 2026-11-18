@@ -53,6 +53,8 @@ export const T = {
   sceltaTitolo: "Scegli il tuo lottatore",
   sceltaAiuto: "Tocca una faccia per vederla meglio.",
   colpoSpeciale: "Colpo speciale",
+  colpiSpeciali: "I suoi 5 colpi speciali",
+  mosse: "Mosse normali",
   sceglieQuesto: (nome: string) => `Scelgo ${nome}`,
 
   // Presentazione

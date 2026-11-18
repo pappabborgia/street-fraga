@@ -4,7 +4,7 @@ import { T } from "@/testi";
 import { audio } from "@/gioco/audio";
 import { leggi, voceItaliana, zitto } from "@/gioco/voce";
 import { type Impostazioni, PREDEFINITE, SCALA, carica, salva } from "@/gioco/impostazioni";
-import { PERSONAGGI, type Personaggio, trovaPersonaggio } from "@/gioco/personaggi";
+import { PERSONAGGI, type Personaggio, specialeDi, trovaPersonaggio } from "@/gioco/personaggi";
 import { MAZZO } from "@/gioco/domande";
 import { creaRng, scegli } from "@/gioco/rng";
 import type { Domanda, Livello } from "@/gioco/tipi";
@@ -129,7 +129,7 @@ export default function Gioco() {
   };
 
   const scritta = (p: Personaggio, c: Combattente, e: EsitoColpo) =>
-    !e.giusta ? "BOING!" : e.speciale ? p.speciale.nome.toUpperCase().split(" ")[0] + "!" : p.suono[c.giuste % 2];
+    !e.giusta ? "BOING!" : e.speciale ? p.suono[0] : p.suono[c.giuste % 2];
 
   const stileMossa = (p: Personaggio, c: Combattente) => {
     const m = p.mosse[c.giuste % 2];
@@ -161,6 +161,7 @@ export default function Gioco() {
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(me, partita.giocatore, r.esito),
         ...stileMossa(me, partita.giocatore),
+        speciale: specialeDi(me, r.attaccante.giuste),
         chiave: contatore.current++,
       },
     });
@@ -206,6 +207,7 @@ export default function Gioco() {
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(lui, partita.computer, r.esito),
         ...stileMossa(lui, partita.computer),
+        speciale: specialeDi(lui, r.attaccante.giuste),
         chiave: contatore.current++,
       },
     });
@@ -314,11 +316,16 @@ export default function Gioco() {
               <div className="pannello p-5 flex flex-col gap-3">
                 <p className="font-bold text-[1.5rem]">{me.figura}</p>
                 <p>{me.descrizione}</p>
-                <p className="font-bold">{T.colpoSpeciale}:</p>
-                <p className="flex items-center gap-3 text-[1.5rem] font-bold">
-                  <SvgOggetto tipo={me.speciale.oggetto} className="w-12 h-12 shrink-0" />
-                  {me.speciale.nome}
-                </p>
+                <p className="font-bold">{T.colpiSpeciali}:</p>
+                <ul className="flex flex-col gap-2">
+                  {me.speciali.map((sp) => (
+                    <li key={sp.nome} className="flex items-center gap-3 font-bold">
+                      <SvgOggetto tipo={sp.oggetto} className="w-10 h-10 shrink-0" />
+                      {sp.nome}
+                    </li>
+                  ))}
+                </ul>
+                <p className="font-bold">{T.mosse}:</p>
                 <ul className="list-disc pl-7">
                   {me.mosse.map((m) => <li key={m.nome}>{m.nome}</li>)}
                 </ul>
@@ -571,7 +578,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
           <div className="pannello p-5 flex flex-col gap-3">
             {p.esito.giusta ? (
               <>
-                <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? me.speciale.nome : me.mosse[(p.giocatore.giuste - 1) % 2].nome)}</p>
+                <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? specialeDi(me, p.giocatore.giuste).nome : me.mosse[(p.giocatore.giuste - 1) % 2].nome)}</p>
                 {p.esito.speciale && <p className="font-bold">★ {T.serieSpeciale}</p>}
                 <p className="text-[1.75rem] font-bold">{T.puntiGuadagnati(p.esito.punti)}</p>
               </>
@@ -598,7 +605,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
             <span aria-hidden="true" className="text-[2.5rem] leading-none">{p.esitoComputer.giusta ? "✓" : "✗"}</span>
             <p className="font-bold text-[1.5rem]">
               {p.esitoComputer.giusta
-                ? T.computerGiusto(lui.nome, p.esitoComputer.speciale ? lui.speciale.nome : lui.mosse[(p.computer.giuste - 1) % 2].nome)
+                ? T.computerGiusto(lui.nome, p.esitoComputer.speciale ? specialeDi(lui, p.computer.giuste).nome : lui.mosse[(p.computer.giuste - 1) % 2].nome)
                 : T.computerSbagliato(lui.nome)}
             </p>
           </div>

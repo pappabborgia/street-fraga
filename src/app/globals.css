@@ -91,104 +91,12 @@ body {
 .lottatore-svg { width: 100%; height: 100%; overflow: visible; position: relative; }
 .braccio-av { transform-box: view-box; transform-origin: 128px 124px; }
 
-.anim-salto { animation: salto 1.3s ease-in-out both; }
-.anim-salto .braccio-av { animation: pugno 1.3s ease-in-out both; }
-.anim-capriola { animation: capriola 1.2s ease-in-out both; }
-.anim-carica { animation: carica 1.1s ease-in-out both; }
-.anim-carica .braccio-av { animation: pugno 1.1s ease-in-out both; }
-.anim-lancio { animation: lancio 1.1s ease-in-out both; }
-.anim-lancio .braccio-av { animation: tiro 1.1s ease-in-out both; }
-.anim-speciale { animation: speciale 1.5s ease-in-out both; }
-.anim-speciale .braccio-av { animation: pugno 1.5s ease-in-out both; }
-.anim-manca { animation: manca 1.4s ease-in-out both; }
-.anim-subisce { animation: subisce 0.6s ease-out both; }
-.anim-subisce-forte { animation: subisce-forte 0.55s ease-out both; }
-.anim-ko { animation: ko 1.2s ease-in 0.5s both; transform-origin: 50% 95%; }
-.anim-stretta { animation: stretta 1.4s ease-in-out both; }
-.anim-stretta .braccio-av { animation: porgi 1.4s ease-in-out both; }
 
 /* Salto mortale: si accuccia, vola facendo un giro completo e atterra sull'avversario */
-@keyframes salto {
-  0% { transform: translate(0, 0) rotate(0); }
-  15% { transform: translate(0, 4%) scale(1.06, 0.86); }
-  48% { transform: translate(calc(var(--dir) * var(--spinta) * 0.55), -42%) rotate(calc(var(--dir) * 200deg)); }
-  66% { transform: translate(calc(var(--dir) * var(--spinta)), -3%) rotate(calc(var(--dir) * 360deg)); }
-  76% { transform: translate(calc(var(--dir) * var(--spinta) * 0.95), 0) rotate(calc(var(--dir) * 360deg)) scale(1.05, 0.93); }
-  100% { transform: translate(0, 0) rotate(calc(var(--dir) * 360deg)); }
-}
 /* Capriola a terra */
-@keyframes capriola {
-  0% { transform: translate(0, 0) rotate(0); }
-  15% { transform: translate(0, 6%) scale(1, 0.85); }
-  58% { transform: translate(calc(var(--dir) * var(--spinta)), 14%) rotate(calc(var(--dir) * 360deg)) scale(0.82); }
-  70% { transform: translate(calc(var(--dir) * var(--spinta) * 0.97), 0) rotate(calc(var(--dir) * 360deg)) scale(1); }
-  100% { transform: translate(0, 0) rotate(calc(var(--dir) * 360deg)); }
-}
 /* Carica a tutta velocità, con la scia di fuoco */
-@keyframes carica {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(calc(var(--dir) * -18px)) skewX(calc(var(--dir) * 8deg)); }
-  45% { transform: translateX(calc(var(--dir) * var(--spinta))) skewX(calc(var(--dir) * -14deg)); }
-  62% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.94)) skewX(0); }
-  100% { transform: translateX(0); }
-}
 /* Caricamento e lancio di un oggetto */
-@keyframes lancio {
-  0% { transform: translateX(0) rotate(0); }
-  28% { transform: translateX(calc(var(--dir) * -16px)) rotate(calc(var(--dir) * -8deg)); }
-  42% { transform: translateX(calc(var(--dir) * 22px)) rotate(calc(var(--dir) * 6deg)); }
-  100% { transform: translateX(0) rotate(0); }
-}
-@keyframes tiro {
-  0% { transform: none; }
-  28% { transform: rotate(55deg); }
-  42% { transform: rotate(-70deg); }
-  100% { transform: none; }
-}
-@keyframes pugno {
-  0%, 35% { transform: none; }
-  50%, 70% { transform: translate(14px, -8px) rotate(-38deg); }
-  100% { transform: none; }
-}
 /* Colpo speciale: doppio salto mortale avvolto dalle fiamme */
-@keyframes speciale {
-  0% { transform: translate(0, 0) rotate(0); }
-  12% { transform: translate(0, 5%) scale(1.06, 0.84); }
-  40% { transform: translate(calc(var(--dir) * var(--spinta) * 0.3), -48%) rotate(calc(var(--dir) * 360deg)) scale(1.1); }
-  57% { transform: translate(calc(var(--dir) * var(--spinta) * 0.85), -28%) rotate(calc(var(--dir) * 720deg)) scale(1.1); }
-  65% { transform: translate(calc(var(--dir) * var(--spinta)), 0) rotate(calc(var(--dir) * 720deg)) scale(1.06, 0.92); }
-  76% { transform: translate(calc(var(--dir) * var(--spinta) * 0.96), 0) rotate(calc(var(--dir) * 720deg)); }
-  100% { transform: translate(0, 0) rotate(calc(var(--dir) * 720deg)); }
-}
-@keyframes manca {
-  0% { transform: translateX(0) rotate(0); }
-  40% { transform: translateX(calc(var(--dir) * var(--spinta) * 1.1)) rotate(0); }
-  58% { transform: translateX(calc(var(--dir) * var(--spinta) * 1.3)) rotate(calc(var(--dir) * 16deg)); }
-  78% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.9)) rotate(calc(var(--dir) * -6deg)); }
-  100% { transform: translateX(0) rotate(0); }
-}
-@keyframes subisce {
-  0% { transform: translateX(0) rotate(0); }
-  35% { transform: translateX(calc(var(--dir) * -28px)) rotate(calc(var(--dir) * -12deg)); }
-  100% { transform: translateX(0) rotate(0); }
-}
-@keyframes subisce-forte {
-  0% { transform: translate(0, 0) rotate(0); }
-  40% { transform: translate(calc(var(--dir) * -50px), -16%) rotate(calc(var(--dir) * -28deg)); }
-  100% { transform: translate(0, 0) rotate(0); }
-}
-@keyframes ko {
-  from { transform: rotate(0); }
-  to { transform: translateY(12%) rotate(calc(var(--dir) * -78deg)); }
-}
-@keyframes stretta {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)); }
-}
-@keyframes porgi {
-  from { transform: none; }
-  to { transform: translate(8px, 10px) rotate(-12deg); }
-}
 
 /* Fuoco: cresce dal basso e si spegne piano, senza lampeggiare */
 .aura, .scia { position: absolute; z-index: 0; pointer-events: none; }
@@ -222,34 +130,11 @@ body {
 }
 .stellina {
   color: #ffd23f; font-size: 1.75rem; line-height: 1; -webkit-text-stroke: 2px #1a1a1a;
-  animation: schizza 0.55s ease-out both;
-}
-@keyframes schizza {
-  from { transform: translate(0, 0) scale(0.4); opacity: 1; }
-  to { transform: translate(var(--sx), var(--sy)) scale(1.1); opacity: 0; }
 }
 /* Oggetto lanciato: gira su se stesso, colpisce e cade a terra */
-.lancio-oggetto { animation: lancia 1s ease-in-out 0.35s both; z-index: 4; }
-@keyframes lancia {
-  0% { transform: translate(var(--dx), 0) rotate(0); opacity: 0; }
-  6% { opacity: 1; }
-  50% { transform: translate(0, 0) rotate(calc(var(--dir) * 540deg)); opacity: 1; }
-  100% { transform: translate(calc(var(--dir) * 30px), var(--terra)) rotate(calc(var(--dir) * 900deg)); opacity: 1; }
-}
 
 /* Effetti dei colpi speciali */
 .effetto { position: absolute; pointer-events: none; }
-.cade { animation: cade 0.8s cubic-bezier(.45,0,.9,.6) both; z-index: 4; }
-@keyframes cade {
-  from { transform: translateY(-120cqh) rotate(0); }
-  to { transform: translateY(0) rotate(var(--giro, 200deg)); }
-}
-.vola { animation: vola 0.9s ease-in-out both; z-index: 4; }
-@keyframes vola {
-  0% { transform: translate(var(--dx), 0) rotate(0); }
-  50% { transform: translate(calc(var(--dx) / 2), -18cqh) rotate(calc(var(--dir) * 180deg)); }
-  100% { transform: translate(0, 0) rotate(calc(var(--dir) * 360deg)); }
-}
 .cerchio { animation: cerchio 1.1s ease-out both; border: 6px solid #ffd23f; border-radius: 50%; }
 @keyframes cerchio {
   from { transform: scale(0.2); opacity: 0.9; }
@@ -265,14 +150,11 @@ body {
 
 /* Chi preferisce meno movimento: solo dissolvenze, niente spostamenti né rotazioni */
 @media (prefers-reduced-motion: reduce) {
-  .anim-salto, .anim-capriola, .anim-carica, .anim-lancio, .anim-speciale, .anim-manca,
-  .anim-subisce, .anim-subisce-forte, .anim-stretta,
-  .lott .braccio-av, .cade, .vola, .scoppio, .lancio-oggetto, .striscione {
+  .scoppio, .striscione {
     animation: dissolvenza 0.6s ease-out both !important;
   }
   .aura svg, .scia svg, .fiammata svg, .stellina, .buio { animation: none !important; opacity: 0; }
-  .anim-ko { animation: none; opacity: 0.6; }
-  .cerchio { animation: none; opacity: 0.5; }
+    .cerchio { animation: none; opacity: 0.5; }
   .pulsante:active { transform: none; }
 }
 
@@ -282,70 +164,13 @@ body {
 /* ---------------- Festa di fine partita ----------------
  * Ogni scena dura al massimo 1,5 secondi; le scene si susseguono per circa 17 secondi.
  */
-.festa-salto { animation: festa-salto 1.4s ease-in-out both; }
-@keyframes festa-salto {
-  0% { transform: translateY(0) rotate(0); }
-  20% { transform: translateY(5%) scale(1.05, 0.88); }
-  55% { transform: translateY(-40%) rotate(calc(var(--dir) * 360deg)); }
-  80% { transform: translateY(0) rotate(calc(var(--dir) * 360deg)) scale(1.05, 0.92); }
-  100% { transform: translateY(0) rotate(calc(var(--dir) * 360deg)); }
-}
-.festa-capriola { animation: festa-capriola 1.4s ease-in-out both; }
-@keyframes festa-capriola {
-  0% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(10%) rotate(calc(var(--dir) * -360deg)) scale(0.85); }
-  100% { transform: translateY(0) rotate(calc(var(--dir) * -360deg)) scale(1); }
-}
-.festa-braccia .braccio-av, .festa-braccia .braccio-dietro { animation: braccia 1.4s ease-in-out both; transform-box: view-box; }
-.festa-braccia .braccio-dietro { transform-origin: 76px 124px; }
-.festa-braccia { animation: saltello 1.4s ease-in-out both; }
-@keyframes braccia {
-  0% { transform: none; }
-  30%, 70% { transform: rotate(-120deg); }
-  100% { transform: rotate(-120deg); }
-}
-@keyframes saltello {
-  0%, 50%, 100% { transform: translateY(0); }
-  25%, 75% { transform: translateY(-8%); }
-}
-.festa-lancia .braccio-av { animation: tiro 1.4s ease-in-out both; }
-.festa-gira { animation: festa-gira 1.4s ease-in-out both; transform-origin: 50% 95%; }
-@keyframes festa-gira {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(-12deg); }
-  50% { transform: rotate(10deg); }
-  75% { transform: rotate(-6deg); }
-  100% { transform: rotate(0); }
-}
-.festa-siede { animation: festa-siede 1s ease-in both; transform-origin: 50% 100%; }
-.festa-seduto { transform: translateY(14%) scaleY(0.82); transform-origin: 50% 100%; }
-@keyframes festa-siede {
-  from { transform: none; }
-  to { transform: translateY(14%) scaleY(0.82); }
-}
-.festa-rialza { animation: festa-rialza 1.2s ease-out both; transform-origin: 50% 100%; }
-@keyframes festa-rialza {
-  from { transform: translateY(14%) scaleY(0.82); }
-  to { transform: none; }
-}
-.festa-vicini { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)); }
-.festa-inchino { animation: festa-inchino 1.4s ease-in-out both; transform-origin: 50% 100%; }
-@keyframes festa-inchino {
-  0%, 100% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)) rotate(0); }
-  45%, 60% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)) rotate(calc(var(--dir) * 22deg)); }
-}
 .stordito { animation: stordito 1.4s ease-in-out both; }
 @keyframes stordito {
   from { transform: rotate(-10deg); opacity: 0; }
   to { transform: rotate(10deg); opacity: 1; }
 }
 .coriandolo { width: 10px; height: 16px; border: 1px solid #1a1a1a; }
-.scintilla { border-radius: 50%; border: 2px solid #1a1a1a; animation: scintilla 1.3s ease-out both; }
-@keyframes scintilla {
-  0% { transform: translate(0, 0) scale(0.3); opacity: 1; }
-  70% { opacity: 1; }
-  100% { transform: translate(var(--x), var(--y)) scale(1); opacity: 0; }
-}
+.scintilla { border-radius: 50%; border: 2px solid #1a1a1a; }
 .su-e-giu { animation: su-e-giu 1.4s ease-in-out both; z-index: 4; }
 @keyframes su-e-giu {
   0% { transform: translateY(0) rotate(0); }
@@ -364,9 +189,8 @@ body {
   to { transform: scale(1) rotate(-4deg); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .festa-salto, .festa-capriola, .festa-braccia, .festa-gira, .festa-siede, .festa-rialza, .festa-inchino,
-  .festa-braccia .braccio-av, .festa-braccia .braccio-dietro, .festa-lancia .braccio-av, .titolo-festa, .su-e-giu, .stordito {
+  .titolo-festa, .su-e-giu, .stordito {
     animation: dissolvenza 0.6s ease-out both !important;
   }
-  .scintilla, .cuore, .coriandolo { animation: none !important; opacity: 0; }
+  .cuore { animation: none !important; opacity: 0; }
 }
