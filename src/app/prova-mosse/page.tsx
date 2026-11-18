@@ -1,22 +1,37 @@
 "use client";
 import { useState } from "react";
 import { PERSONAGGI } from "@/gioco/personaggi";
-import { Arena } from "@/componenti/Arena";
+import { Arena, type Azione } from "@/componenti/Arena";
 
-/** Pagina di prova (non collegata dal gioco): mostra il colpo speciale di ogni lottatore. */
+/** Pagina di prova (non collegata dal gioco): tutte le mosse di ogni lottatore. */
 export default function ProvaMosse() {
   const [giro, setGiro] = useState(1);
   return (
-    <main className="p-4 grid gap-6 sm:grid-cols-2">
-      <button className="pulsante pulsante-giallo sm:col-span-2" onClick={() => setGiro((g) => g + 1)}>Rivedi i colpi</button>
-      {PERSONAGGI.map((p, i) => (
-        <div key={p.id}>
-          <p className="font-bold">{p.nome}: {p.speciale.nome}</p>
-          <Arena giocatore={p} computer={PERSONAGGI[(i + 1) % PERSONAGGI.length]}
-            azione={{ chi: "giocatore", tipo: "speciale", scritta: p.suono[0], chiave: giro * 100 + i }}
-            className="rounded-2xl border-4 border-black h-[15rem]" />
-        </div>
-      ))}
+    <main className="p-4 flex flex-col gap-6">
+      <button className="pulsante pulsante-giallo" onClick={() => setGiro((g) => g + 1)}>Rivedi le mosse</button>
+      {PERSONAGGI.map((p, i) => {
+        const avv = PERSONAGGI[(i + 1) % PERSONAGGI.length];
+        const azioni: { titolo: string; a: Azione }[] = [
+          ...p.mosse.map((m, k) => ({
+            titolo: m.nome,
+            a: { chi: "giocatore", tipo: "colpo", scritta: p.suono[k], stile: m.stile, oggetto: m.oggetto, chiave: giro * 1000 + i * 10 + k } as Azione,
+          })),
+          { titolo: `Speciale: ${p.speciale.nome}`, a: { chi: "giocatore", tipo: "speciale", scritta: p.suono[0], chiave: giro * 1000 + i * 10 + 5 } },
+        ];
+        return (
+          <section key={p.id}>
+            <h2 className="testo-titolo">{p.nome}</h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {azioni.map(({ titolo, a }) => (
+                <div key={titolo}>
+                  <p className="font-bold">{titolo}</p>
+                  <Arena giocatore={p} computer={avv} azione={a} className="rounded-2xl border-4 border-black h-[13rem]" />
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </main>
   );
 }

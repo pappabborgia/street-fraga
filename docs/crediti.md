@@ -5,3 +5,4 @@
 - **Musica** — Wolfgang Amadeus Mozart, "Rondò alla turca" (Sonata K. 331) e "Piccola serenata notturna" (K. 525). Composizioni di pubblico dominio. Arrangiamento elettronico originale scritto per questo gioco e suonato dal browser con Web Audio (`src/gioco/audio.ts`). Nessun file audio esterno.
 - **Effetti sonori** — generati dal codice con Web Audio. Nessun file esterno.
 - **Disegni** (lottatori, chiesa, logo) — originali, in SVG, creati per questo gioco. La chiesa è disegnata in modo evocativo, ispirata a una foto di riferimento ("Ph Salvo Lupo") che non è inclusa nel gioco.
+- **Copertina** (`public/copertina.webp`) — immagine fornita dal gestore del gioco, usata nella schermata iniziale. Da verificare con il gestore: nell'immagine compaiono l'insegna di un bar reale ("Bar Nolita"), la scritta in inglese "Arcade Fight" e un logo in stile simile a quello di un videogioco esistente.

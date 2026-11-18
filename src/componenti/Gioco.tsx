@@ -12,8 +12,7 @@ import {
   BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
   adattaLivello, applicaRisposta, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
 } from "@/gioco/regole";
-import { Arena, type Azione } from "./Arena";
-import { Logo } from "./Logo";
+import { Arena, MOMENTO_COLPO, type Azione } from "./Arena";
 import { Lottatore, Ritratto } from "./Lottatore";
 import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
@@ -129,6 +128,11 @@ export default function Gioco() {
   const scritta = (p: Personaggio, c: Combattente, e: EsitoColpo) =>
     !e.giusta ? "BOING!" : e.speciale ? p.speciale.nome.toUpperCase().split(" ")[0] + "!" : p.suono[c.giuste % 2];
 
+  const stileMossa = (p: Personaggio, c: Combattente) => {
+    const m = p.mosse[c.giuste % 2];
+    return { stile: m.stile, oggetto: m.oggetto };
+  };
+
   const rispondi = (i: number) => {
     if (!partita) return;
     const giusta = i === partita.domanda.corretta;
@@ -136,7 +140,9 @@ export default function Gioco() {
     const giusteDiFila = giusta ? partita.giusteDiFila + 1 : 0;
     const sbagliateDiFila = giusta ? 0 : partita.sbagliateDiFila + 1;
     if (giusta) audio.giusto(); else audio.sbagliato();
-    if (r.esito.speciale) audio.speciale(); else if (giusta) audio.colpo(); else audio.manca();
+    if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
+    else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(me, partita.giocatore).stile]);
+    else audio.manca();
     setPartita({
       ...partita,
       giocatore: r.attaccante,
@@ -150,6 +156,7 @@ export default function Gioco() {
         chi: "giocatore",
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(me, partita.giocatore, r.esito),
+        ...stileMossa(me, partita.giocatore),
         chiave: contatore.current++,
       },
     });
@@ -160,7 +167,9 @@ export default function Gioco() {
     if (partita.computer.energia === 0) return finePartita();
     const giusta = rng.current() < BRAVURA_COMPUTER[livelloScelto];
     const r = applicaRisposta(partita.computer, partita.giocatore, giusta);
-    if (r.esito.speciale) audio.speciale(); else if (giusta) audio.colpo(); else audio.manca();
+    if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
+    else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(lui, partita.computer).stile]);
+    else audio.manca();
     setPartita({
       ...partita,
       computer: r.attaccante,
@@ -171,6 +180,7 @@ export default function Gioco() {
         chi: "computer",
         tipo: !giusta ? "manca" : r.esito.speciale ? "speciale" : "colpo",
         scritta: scritta(lui, partita.computer, r.esito),
+        ...stileMossa(lui, partita.computer),
         chiave: contatore.current++,
       },
     });
@@ -272,7 +282,7 @@ export default function Gioco() {
                   {me.speciale.nome}
                 </p>
                 <ul className="list-disc pl-7">
-                  {me.mosse.map((m) => <li key={m}>{m}</li>)}
+                  {me.mosse.map((m) => <li key={m.nome}>{m.nome}</li>)}
                 </ul>
               </div>
             </div>
@@ -336,15 +346,21 @@ type RefTitolo = React.RefObject<HTMLHeadingElement | null>;
 
 function SchermataCasa({ titoloRef, onGioca, onRegole, onImpostazioni }: { titoloRef: RefTitolo; onGioca: () => void; onRegole: () => void; onImpostazioni: () => void }) {
   return (
-    <section className="pt-4 flex flex-col gap-5">
-      <div className="arena rounded-2xl border-4 border-black h-[18rem] sm:h-[24rem]">
-        <Chiesa />
-        <div className="absolute inset-0 flex items-start justify-center pt-2 px-2">
-          <h1 ref={titoloRef} tabIndex={-1} className="w-[88%] max-w-[22rem]"><Logo className="w-full h-auto drop-shadow-[0_6px_0_rgba(0,0,0,0.6)]" /></h1>
-        </div>
-      </div>
-      <p className="text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
+    <section className="pt-4 grid gap-5 md:grid-cols-2 md:items-center">
+      <h1 ref={titoloRef} tabIndex={-1} className="w-full max-w-[32rem] mx-auto">
+        {/* Copertina fornita dal gestore del gioco */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/copertina.webp"
+          srcSet="/copertina-720.webp 720w, /copertina.webp 1254w"
+          sizes="(min-width: 768px) 32rem, 100vw"
+          width={1254} height={1254}
+          alt={T.titolo}
+          className="w-full h-auto rounded-2xl border-4 border-black shadow-[0_6px_0_#000]"
+        />
+      </h1>
       <div className="flex flex-col gap-4">
+        <p className="text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
         <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={onGioca}>{T.gioca}</Pulsante>
         <Pulsante className="w-full" onClick={onRegole}>{T.comeSiGioca}</Pulsante>
         <Pulsante className="w-full" onClick={onImpostazioni}>{T.impostazioni}</Pulsante>
@@ -493,7 +509,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
           <div className="pannello p-5 flex flex-col gap-3">
             {p.esito.giusta ? (
               <>
-                <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? me.speciale.nome : me.mosse[(p.giocatore.giuste - 1) % 2])}</p>
+                <p className="font-bold">{T.colpisce(me.nome, p.esito.speciale ? me.speciale.nome : me.mosse[(p.giocatore.giuste - 1) % 2].nome)}</p>
                 {p.esito.speciale && <p className="font-bold">★ {T.serieSpeciale}</p>}
                 <p className="text-[1.75rem] font-bold">{T.puntiGuadagnati(p.esito.punti)}</p>
               </>
@@ -520,7 +536,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
             <span aria-hidden="true" className="text-[2.5rem] leading-none">{p.esitoComputer.giusta ? "✓" : "✗"}</span>
             <p className="font-bold text-[1.5rem]">
               {p.esitoComputer.giusta
-                ? T.computerGiusto(lui.nome, p.esitoComputer.speciale ? lui.speciale.nome : lui.mosse[(p.computer.giuste - 1) % 2])
+                ? T.computerGiusto(lui.nome, p.esitoComputer.speciale ? lui.speciale.nome : lui.mosse[(p.computer.giuste - 1) % 2].nome)
                 : T.computerSbagliato(lui.nome)}
             </p>
           </div>

@@ -252,11 +252,35 @@ class Suonatore {
     this.tono(160, 50, 0.2, "sine", vol, ritardo);
   }
 
-  colpo() { this.botta(0.55); }
-  speciale() {
+  /** Fruscio d'aria (salti, lanci). */
+  fruscio(ritardo = 0, durata = 0.35) {
+    if (!this.ctx || !this.suoniAttivi) return;
+    const t = this.ctx.currentTime + ritardo;
+    const src = this.ctx.createBufferSource();
+    src.buffer = this.rumore;
+    const filtro = this.ctx.createBiquadFilter();
+    filtro.type = "bandpass";
+    filtro.Q.value = 2;
+    filtro.frequency.setValueAtTime(400, t);
+    filtro.frequency.exponentialRampToValueAtTime(2400, t + durata);
+    const g = this.ctx.createGain();
+    g.gain.setValueAtTime(0.001, t);
+    g.gain.exponentialRampToValueAtTime(0.35, t + durata * 0.5);
+    g.gain.exponentialRampToValueAtTime(0.001, t + durata);
+    src.connect(filtro).connect(g).connect(this.busEffetti!);
+    src.start(t);
+    src.stop(t + durata + 0.05);
+  }
+  /** Colpo normale: fruscio e botta al momento dell'impatto. */
+  colpo(momento = 0.55) {
+    this.fruscio(Math.max(0, momento - 0.4));
+    this.botta(momento);
+  }
+  speciale(momento = 0.95) {
     [523, 659, 784, 1047].forEach((f, i) => this.tono(f, f, 0.12, "square", 0.12, i * 0.08));
-    this.botta(0.75, 0.7);
-    this.botta(0.95, 0.5);
+    this.fruscio(0.2, 0.6);
+    this.botta(momento, 0.8);
+    this.botta(momento + 0.18, 0.5);
   }
   manca() { this.tono(500, 110, 0.6, "sine", 0.3, 0.5); }
   giusto() { this.tono(784, 784, 0.12, "square", 0.1); this.tono(1047, 1047, 0.2, "square", 0.1, 0.12); }

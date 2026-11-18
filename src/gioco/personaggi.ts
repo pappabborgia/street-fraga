@@ -1,7 +1,16 @@
 export type Effetto = "pioggia" | "lancio" | "onda" | "cade";
 export type Oggetto =
   | "tarallo" | "oliva" | "moneta" | "cioccolato" | "uva" | "nota"
-  | "campana" | "aquila" | "sedia" | "motorino";
+  | "campana" | "aquila" | "sedia" | "motorino" | "mattarello" | "ciabatta";
+
+/** Come si muove il lottatore in una mossa normale. */
+export type Stile = "salto" | "capriola" | "carica" | "lancio";
+
+export interface Mossa {
+  nome: string;
+  stile: Stile;
+  oggetto?: Oggetto; // solo per "lancio"
+}
 
 export interface Aspetto {
   pelle: string;
@@ -27,7 +36,7 @@ export interface Personaggio {
   nome: string;
   figura: string;
   descrizione: string;
-  mosse: [string, string];
+  mosse: [Mossa, Mossa];
   speciale: { nome: string; effetto: Effetto; oggetto: Oggetto };
   suono: [string, string]; // scritte da fumetto per i colpi
   aspetto: Aspetto;
@@ -38,7 +47,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "nonna", nome: "Nonna Ninetta", figura: "La vecchietta",
     descrizione: "Ha cresciuto 4 figli e 9 nipoti. Il mattarello non lo molla mai.",
-    mosse: ["Mattarellata rotante", "Ciabatta volante"],
+    mosse: [{ nome: "Mattarellata rotante", stile: "lancio", oggetto: "mattarello" }, { nome: "Ciabatta volante", stile: "lancio", oggetto: "ciabatta" }],
     speciale: { nome: "Pioggia di taralli", effetto: "pioggia", oggetto: "tarallo" },
     suono: ["SBAM!", "PAFF!"],
     aspetto: {
@@ -51,7 +60,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "contadino", nome: "Zio Cosimo", figura: "Il contadino",
     descrizione: "In campagna dall'alba. Conosce ogni ulivo per nome.",
-    mosse: ["Zappata tellurica", "Spallata del trattore"],
+    mosse: [{ nome: "Zappata tellurica", stile: "salto" }, { nome: "Spallata del trattore", stile: "carica" }],
     speciale: { nome: "Tempesta di olive", effetto: "pioggia", oggetto: "oliva" },
     suono: ["TUNF!", "STRACK!"],
     aspetto: {
@@ -64,7 +73,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "tamarro", nome: "Tony Tuta", figura: "Il tamarro",
     descrizione: "Tuta lucida, catenone d'oro e occhiali da sole anche di sera.",
-    mosse: ["Catenone rotante", "Sgommata in piazza"],
+    mosse: [{ nome: "Catenone rotante", stile: "capriola" }, { nome: "Sgommata in piazza", stile: "carica" }],
     speciale: { nome: "Motorino truccato", effetto: "lancio", oggetto: "motorino" },
     suono: ["VROOM!", "SDENG!"],
     aspetto: {
@@ -77,7 +86,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "ricco", nome: "Commendator Nando", figura: "Il ricco",
     descrizione: "Abito bianco, bastone dorato. Offre sempre lui il caffè.",
-    mosse: ["Colpo di bastone dorato", "Spinta del portafoglio"],
+    mosse: [{ nome: "Colpo di bastone dorato", stile: "salto" }, { nome: "Lancio della moneta d'oro", stile: "lancio", oggetto: "moneta" }],
     speciale: { nome: "Pioggia di monete", effetto: "pioggia", oggetto: "moneta" },
     suono: ["DLIN!", "BONK!"],
     aspetto: {
@@ -90,7 +99,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "arrangiato", nome: "Peppino l'Arrangiato", figura: "Il povero (ma furbo)",
     descrizione: "Non ha una lira, ma aggiusta tutto con uno spago.",
-    mosse: ["Calcio con la scarpa bucata", "Ginocchiata con la toppa"],
+    mosse: [{ nome: "Calcio con la scarpa bucata", stile: "salto" }, { nome: "Capriola con la toppa", stile: "capriola" }],
     speciale: { nome: "Sedia catapulta", effetto: "lancio", oggetto: "sedia" },
     suono: ["CRAC!", "PUF!"],
     aspetto: {
@@ -103,7 +112,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "svizzero", nome: "Franco lo Svizzero", figura: "Tornato dalla Svizzera",
     descrizione: "Partito con la valigia di cartone, tornato col macchinone.",
-    mosse: ["Pugno puntuale", "Spinta del cucù"],
+    mosse: [{ nome: "Pugno puntuale", stile: "carica" }, { nome: "Tavoletta volante", stile: "lancio", oggetto: "cioccolato" }],
     speciale: { nome: "Valanga di cioccolata", effetto: "pioggia", oggetto: "cioccolato" },
     suono: ["CUCÙ!", "TIC-TAC!"],
     aspetto: {
@@ -116,7 +125,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "vignaiolo", nome: "Mastro Vito", figura: "Il vignaiolo",
     descrizione: "Il suo Primitivo è il migliore. Lo dice lui.",
-    mosse: ["Pigiatura volante", "Tralcio a frusta"],
+    mosse: [{ nome: "Pigiatura volante", stile: "salto" }, { nome: "Lancio del grappolo", stile: "lancio", oggetto: "uva" }],
     speciale: { nome: "Grappolo di Primitivo", effetto: "pioggia", oggetto: "uva" },
     suono: ["SPLASH!", "ZAC!"],
     aspetto: {
@@ -129,7 +138,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "banda", nome: "Maestro Totò", figura: "Il suonatore della banda",
     descrizione: "Non perde una processione. Batte il tempo anche quando dorme.",
-    mosse: ["Bacchettata a tempo", "Marcia trionfale"],
+    mosse: [{ nome: "Nota sparata", stile: "lancio", oggetto: "nota" }, { nome: "Marcia trionfale", stile: "carica" }],
     speciale: { nome: "Grancassa tonante", effetto: "onda", oggetto: "nota" },
     suono: ["BUM!", "TATÀ!"],
     aspetto: {
@@ -142,7 +151,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "parroco", nome: "Don Saverio", figura: "Il parroco",
     descrizione: "Conosce tutti in paese. Le sue prediche sono leggendarie.",
-    mosse: ["Predica tonante", "Scivolata in tonaca"],
+    mosse: [{ nome: "Predica tonante", stile: "carica" }, { nome: "Scivolata in tonaca", stile: "capriola" }],
     speciale: { nome: "Rintocco del campanile", effetto: "cade", oggetto: "campana" },
     suono: ["DONG!", "SWISH!"],
     aspetto: {
@@ -155,7 +164,7 @@ export const PERSONAGGI: Personaggio[] = [
   {
     id: "albanese", nome: "Arben", figura: "L'albanese",
     descrizione: "Arrivato da ragazzo, ormai è più fragagnanese di tutti.",
-    mosse: ["Calcio volante", "Abbraccio stritolante"],
+    mosse: [{ nome: "Calcio volante", stile: "salto" }, { nome: "Abbraccio stritolante", stile: "carica" }],
     speciale: { nome: "Volo dell'aquila", effetto: "lancio", oggetto: "aquila" },
     suono: ["WHAM!", "STROC!"],
     aspetto: {

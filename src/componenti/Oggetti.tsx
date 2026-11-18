@@ -81,6 +81,23 @@ export function DisegnoOggetto({ tipo }: { tipo: Oggetto }) {
           <path d="M13 14 L40 26" stroke="#6b4a24" strokeWidth={4} fill="none" />
         </g>
       );
+    case "mattarello":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <rect x={4} y={24} width={52} height={14} rx={7} fill="#e1b97a" />
+          <rect x={0} y={27} width={8} height={8} rx={3} fill="#b8864a" />
+          <rect x={52} y={27} width={8} height={8} rx={3} fill="#b8864a" />
+          <path d="M14 28 L46 28" stroke="#f3d6a4" strokeWidth={2} />
+        </g>
+      );
+    case "ciabatta":
+      return (
+        <g stroke={N} strokeWidth={3}>
+          <path d="M6 40 Q4 26 18 24 L48 22 Q58 24 56 34 Q54 42 42 42 L14 46 Q6 46 6 40 Z" fill="#8e2a2a" />
+          <path d="M22 24 Q30 12 40 22" fill="#c94f4f" />
+          <path d="M8 44 L54 38" stroke="#4a1a1a" strokeWidth={4} />
+        </g>
+      );
     case "motorino":
       return (
         <g stroke={N} strokeWidth={3}>
@@ -99,6 +116,18 @@ export function SvgOggetto({ tipo, className = "" }: { tipo: Oggetto; className?
   return (
     <svg viewBox="0 0 60 60" className={className} aria-hidden="true">
       <DisegnoOggetto tipo={tipo} />
+    </svg>
+  );
+}
+
+/** Fiamma da fumetto: tre lingue di fuoco una dentro l'altra. */
+export function Fiamma({ className = "", style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 60 80" className={className} style={style} aria-hidden="true">
+      <path d="M30 78 Q4 74 6 50 Q8 34 18 22 Q16 36 24 40 Q20 20 34 2 Q36 22 46 30 Q50 22 48 14 Q58 30 56 50 Q56 74 30 78 Z"
+        fill="#d4140f" stroke={N} strokeWidth={3} strokeLinejoin="round" />
+      <path d="M30 74 Q14 70 15 54 Q16 44 24 36 Q24 46 30 48 Q28 32 38 20 Q40 36 46 42 Q50 52 46 62 Q42 72 30 74 Z" fill="#ff7a00" />
+      <path d="M30 72 Q22 68 22 58 Q22 52 28 46 Q30 54 34 54 Q34 46 38 40 Q42 50 40 60 Q38 70 30 72 Z" fill="#ffd23f" />
     </svg>
   );
 }
