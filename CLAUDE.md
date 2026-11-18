@@ -32,7 +32,7 @@ Tempo
 Lingua
 - Dai del tu. Parole di tutti i giorni. Niente inglese né parole tecniche (unica eccezione: il titolo "Street Fraga").
 - Una cosa sola per schermata. Nei menu al massimo 3 scelte per volta.
-- Pulsanti "Indietro" e "Casa" sempre visibili e sempre nello stesso posto.
+- Pulsanti "Indietro" e "Casa" sempre visibili e sempre nello stesso posto (tranne in casa, dove ci sono solo "Menu", "Musica" e GIOCA).
 - Tutti i testi dell'interfaccia in `src/testi.ts`.
 
 Vista e udito
@@ -41,6 +41,7 @@ Vista e udito
 - Suoni e musica attivabili e disattivabili. Tutto quello che si sente deve anche vedersi.
 - Niente lampeggi, niente scosse veloci. Animazioni lente e brevi (massimo 1,5 secondi), nessuna animazione infinita.
 - Movimenti: per scelta del gestore le mosse si vedono complete di default, anche con "riduci movimento" attivo sul telefono. Nelle Impostazioni → "Movimenti dei lottatori" si può scegliere "Come il telefono" (rispetta `prefers-reduced-motion`) o "Ridotti".
+- Eccezione (scelta del gestore): in casa il pulsante GIOCA pulsa piano all'infinito (2,4 secondi a ciclo, niente lampeggio acceso/spento); fermo con "Movimenti ridotti".
 - Festa di fine partita: circa 17 secondi, fatta di scene brevi (ognuna al massimo 1,5 secondi).
 
 Solidità

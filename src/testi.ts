@@ -230,6 +230,7 @@ export const T = {
   progressi: (p: number, v: number, g: number) => `${p} punti · ${v} ${v === 1 ? "vittoria" : "vittorie"} · ${g} ${g === 1 ? "giorno" : "giorni"} di gioco`,
   tueCoppe: (n: number) => `🏆 Coppe vinte: ${n}`,
   altro: "Altro",
+  menu: "Menu",
   puntiSalvati: "Punti salvati nella classifica!",
   puntiNonSalvatiProva: "In prova i punti non vengono salvati.",
   puntiNonSalvatiRete: "Non sono riuscito a salvare i punti: manca la connessione.",

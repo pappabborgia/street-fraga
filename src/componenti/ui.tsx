@@ -35,8 +35,8 @@ export function Pulsante({ variante = "bianco", className = "", onClick, childre
 }
 
 /** Barra in alto: "Indietro" a sinistra, la musica al centro, "Casa" a destra, sempre nello stesso posto. */
-export function BarraFissa({ onIndietro, onCasa, musica, onMusica, inCasa = false }: {
-  onIndietro: () => void; onCasa: () => void; musica: boolean; onMusica: () => void; inCasa?: boolean;
+export function BarraFissa({ onIndietro, onCasa, musica, onMusica, inCasa = false, onMenu }: {
+  onIndietro: () => void; onCasa: () => void; musica: boolean; onMusica: () => void; inCasa?: boolean; onMenu?: () => void;
 }) {
   return (
     <nav aria-label={T.navigazione}
@@ -45,7 +45,12 @@ export function BarraFissa({ onIndietro, onCasa, musica, onMusica, inCasa = fals
         : "sticky top-0 z-30 bg-[var(--notte)] border-b-2 border-[var(--notte-chiara)] px-3 py-2"}>
       <div className="mx-auto max-w-5xl flex items-center justify-between gap-2">
         {/* In casa "Indietro" e "Casa" non servono: resta solo la musica, a destra */}
-        {inCasa ? <span className="flex-1" /> : (
+        {inCasa ? (
+          /* in casa: a sinistra il menu (classifica, impostazioni, chi gioca), a destra la musica */
+          <Pulsante variante="scuro" onClick={onMenu} className="!px-3 !text-[1.375rem]">
+            <span aria-hidden="true">☰</span> {T.menu}
+          </Pulsante>
+        ) : (
           <Pulsante variante="scuro" onClick={onIndietro} className="!px-3 !text-[1.375rem]">
             <span aria-hidden="true">←</span> {T.indietro}
           </Pulsante>

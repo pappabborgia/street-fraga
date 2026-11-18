@@ -221,14 +221,21 @@ html.ridotto .cuore { animation: none !important; opacity: 0; }
     -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 90%, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 90%, transparent 100%);
   }
-  .casa-menu {
-    width: 24rem; flex-shrink: 0; margin: 0 1.5rem 0 -7rem; padding: 1.5rem;
-    border-radius: var(--raggio); background: rgba(27, 15, 46, 0.86);
-  }
+  /* solo GIOCA, sopra la copertina in basso al centro, come la schermata di un gioco da PC */
+  .casa-menu { position: absolute; left: 50%; bottom: 7%; width: 24rem; margin: 0; transform: translateX(-50%); }
   .casa-titolo { display: block; }
   .casa-sottotitolo { display: none; }
 }
 @media (min-width: 1280px) and (orientation: landscape) {
-  .casa-menu { width: 26rem; margin-left: -4rem; margin-right: 3rem; }
+  .casa-menu { width: 28rem; }
   .casa-titolo { font-size: 2rem; }
 }
+
+/* GIOCA pulsa piano (scelta del gestore): si ingrandisce e si illumina, senza lampeggiare.
+   Un ciclo ogni 2,4 secondi, ben sotto le soglie di rischio per la fotosensibilità. Fermo con "Movimenti ridotti". */
+.pulsa { animation: pulsa 2.4s ease-in-out infinite; }
+@keyframes pulsa {
+  0%, 100% { transform: scale(1); box-shadow: 0 5px 0 #000, 0 0 0 rgba(255, 210, 63, 0); }
+  50% { transform: scale(1.05); box-shadow: 0 5px 0 #000, 0 0 32px rgba(255, 210, 63, 0.85); }
+}
+html.ridotto .pulsa { animation: none; }

@@ -358,19 +358,25 @@ export default function Gioco() {
   // ---------------- Disegno ----------------
   return (
     <div onPointerDownCapture={primoTocco} className="min-h-dvh flex flex-col">
-      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} inCasa={schermata === "casa"} />
+      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} inCasa={schermata === "casa"} onMenu={() => vai("altro")} />
       <main className="flex-1 w-full mx-auto max-w-5xl px-4 pb-10">
         {schermata === "casa" && (
-          <SchermataCasa titoloRef={titoloRef} sessione={sessione} inProva={inProva}
-            onGioca={() => vai(sessione || inProva ? "livello" : "accesso")}
-            onClassifica={() => vai("classifica")} onAltro={() => vai("altro")} onEsci={esci} />
+          <SchermataCasa titoloRef={titoloRef} onGioca={() => vai(sessione || inProva ? "livello" : "accesso")} />
         )}
         {schermata === "altro" && (
           <section className="pt-6 flex flex-col gap-5">
-            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.altro}</h1>
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.menu}</h1>
+            {(sessione || inProva) && (
+              <div className="flex items-center gap-3 rounded-[var(--raggio)] bg-[var(--notte-chiara)] pl-4 pr-2 py-2">
+                <p className="flex-1 leading-snug">
+                  {sessione ? <>{T.staiGiocandoCome} <strong className="text-[1.5rem] text-[var(--giallo)]">{sessione.nome}</strong></> : T.giochiInProva}
+                </p>
+                <Pulsante variante="scuro" className="shrink-0 !px-4" aria-label={T.cambiaGiocatore} onClick={esci}>{T.cambia}</Pulsante>
+              </div>
+            )}
+            <Pulsante className="w-full" onClick={() => vai("classifica")}><span aria-hidden="true">🏆</span> {T.classifica}</Pulsante>
             <Pulsante className="w-full" onClick={() => vai("regole")}>{T.comeSiGioca}</Pulsante>
             <Pulsante className="w-full" onClick={() => vai("impostazioni")}>{T.impostazioni}</Pulsante>
-            {(sessione || inProva) && <Pulsante className="w-full" onClick={esci}>{T.cambiaGiocatore}</Pulsante>}
           </section>
         )}
         {schermata === "classifica" && <SchermataClassifica titoloRef={titoloRef} sessione={sessione} />}
@@ -596,10 +602,7 @@ function testoDaLeggere(d: Domanda) {
 
 type RefTitolo = React.RefObject<HTMLHeadingElement | null>;
 
-function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, onAltro, onEsci }: {
-  titoloRef: RefTitolo; sessione: Sessione | null; inProva: boolean;
-  onGioca: () => void; onClassifica: () => void; onAltro: () => void; onEsci: () => void;
-}) {
+function SchermataCasa({ titoloRef, onGioca }: { titoloRef: RefTitolo; onGioca: () => void }) {
   return (
     /* Telefono: copertina in alto e pulsanti sotto. Tablet e computer: copertina a tutto schermo
        come la schermata iniziale di un gioco da PC, con il menu sopra, a destra. */
@@ -621,28 +624,9 @@ function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, on
         />
       </h1>
       <div className="casa-menu relative flex flex-col gap-4 -mt-2">
-        <p className="casa-titolo hidden fumetto text-[var(--giallo)] text-[1.75rem] leading-tight">{T.sottotitolo}</p>
-        {sessione || inProva ? (
-          <div className="flex items-center gap-3 rounded-[var(--raggio)] bg-[var(--notte-chiara)] pl-4 pr-2 py-2">
-            <p className="flex-1 leading-snug">
-              {sessione ? <>{T.staiGiocandoCome} <strong className="text-[1.5rem] text-[var(--giallo)]">{sessione.nome}</strong></> : T.giochiInProva}
-            </p>
-            <Pulsante variante="scuro" className="shrink-0 !px-4" aria-label={T.cambiaGiocatore} onClick={onEsci}>{T.cambia}</Pulsante>
-          </div>
-        ) : (
-          <p className="casa-sottotitolo text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
-        )}
-        <Pulsante variante="giallo" className="w-full fumetto !text-[2.25rem] !min-h-[5.75rem] tracking-wide" onClick={onGioca}>
+        <Pulsante variante="giallo" className="pulsa w-full fumetto !text-[2.5rem] !min-h-[6.5rem] tracking-wide" onClick={onGioca}>
           <span aria-hidden="true">▶</span> {T.gioca}
         </Pulsante>
-        <div className="grid grid-cols-2 gap-4">
-          <Pulsante variante="scuro" className="flex-col !gap-1 !px-2" onClick={onClassifica}>
-            <span aria-hidden="true" className="text-[1.75rem] leading-none">🏆</span>{T.classifica}
-          </Pulsante>
-          <Pulsante variante="scuro" className="flex-col !gap-1 !px-2" onClick={onAltro}>
-            <span aria-hidden="true" className="text-[1.75rem] leading-none">☰</span>{T.altro}
-          </Pulsante>
-        </div>
       </div>
     </section>
   );
