@@ -18,9 +18,18 @@ import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
 import { Chiesa } from "./Chiesa";
 import { Festa, scegliSottotitolo, type Risultato } from "./Festa";
+import {
+  SchermataBenvenuto, SchermataChiGioca, SchermataCodice, SchermataHaiNome, SchermataNome, SchermataNomePreso,
+} from "./Accesso";
+import { SchermataClassifica } from "./Classifica";
+import {
+  type Esito, type Sessione, SenzaRete, accedi, chiSono, dimenticaSessione, esciDalDb, nomeValido, nomiDelDispositivo,
+  registra, salvaPartita, salvaSessione, sessioneSalvata,
+} from "@/gioco/conto";
 import { applicaMovimenti } from "./movimento";
 
-type Schermata = "casa" | "regole" | "impostazioni" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
+type Schermata = "casa" | "regole" | "impostazioni" | "altro" | "classifica"
+  | "accesso" | "haiNome" | "nome" | "codice" | "ripeti" | "nomePreso" | "benvenuto" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
 
 interface Partita {
@@ -48,6 +57,19 @@ export default function Gioco() {
   const [livelloScelto, setLivelloScelto] = useState<Livello>(1);
   const [conTempo, setConTempo] = useState(false);
   const [mioId, setMioId] = useState<string>(PERSONAGGI[0].id);
+  // Chi gioca: un giocatore registrato oppure "in prova" (punti non salvati)
+  const [sessione, setSessione] = useState<Sessione | null>(null);
+  const [inProva, setInProva] = useState(false);
+  const [nomi, setNomi] = useState<string[]>([]);
+  const [flusso, setFlusso] = useState<"nuovo" | "entra">("nuovo");
+  const [nome, setNome] = useState("");
+  const [codice, setCodice] = useState("");
+  const [codice1, setCodice1] = useState(""); // il primo codice, solo in memoria finché non si conferma
+  const [errore, setErrore] = useState<React.ReactNode>(null);
+  const [attesa, setAttesa] = useState(false);
+  const [restaCollegato, setRestaCollegato] = useState(true);
+  const [proposta, setProposta] = useState<string | null>(null);
+  const [benvenuto, setBenvenuto] = useState("");
   const [avversarioId, setAvversarioId] = useState<string>(PERSONAGGI[1].id);
   const [partita, setPartita] = useState<Partita | null>(null);
   const [haVoce, setHaVoce] = useState(false);
@@ -59,6 +81,13 @@ export default function Gioco() {
   useEffect(() => {
     // letto dopo il primo disegno: sul server localStorage non esiste
     setImp(carica()); // eslint-disable-line react-hooks/set-state-in-effect
+    setNomi(nomiDelDispositivo());
+    const s = sessioneSalvata();
+    if (s) {
+      setSessione(s);
+      // controlla in silenzio che il gettone sia ancora valido
+      chiSono(s.token).then((r) => { if (!r) { dimenticaSessione(); setSessione(null); } }).catch(() => {});
+    }
     rng.current = creaRng(Math.floor(Math.random() * 2 ** 31));
   }, []);
   useEffect(() => {
@@ -245,13 +274,128 @@ export default function Gioco() {
     if (partita.fase === "domanda") leggi(testoDaLeggere(partita.domanda));
   }, [imp.leggiSempre, partita?.fase, partita?.numero, schermata]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ---------------- Accesso ----------------
+  const pulisci = () => { setErrore(null); setCodice(""); setCodice1(""); };
+
+  const messaggioErrore = (e: Exclude<Esito, { nome: string }>) => {
+    switch (e.errore) {
+      case "codice_sbagliato": return <><span>{T.codiceSbagliato}</span><span className="font-normal">{T.codiceDimenticato}</span></>;
+      case "pausa": return T.pausa(e.minuti);
+      case "nome_sconosciuto": return T.nomeSconosciuto;
+      case "nome_non_valido": return T.nomeNonValido;
+      default: return T.senzaRete;
+    }
+  };
+
+  const entrato = (s: Sessione, testo: string) => {
+    salvaSessione(s, restaCollegato);
+    setSessione(s); setInProva(false); setNomi(nomiDelDispositivo());
+    setCodice(""); setCodice1("");
+    setBenvenuto(testo);
+    setStoria(["casa", "benvenuto"]);
+  };
+
+  const entra = async () => {
+    setAttesa(true); setErrore(null);
+    try {
+      const r = await accedi(nome, codice);
+      if ("nome" in r && r.nome) return entrato({ nome: r.nome, token: r.token }, T.bentornato(r.nome));
+      setCodice("");
+      setErrore(messaggioErrore(r as Exclude<Esito, { nome: string }>));
+    } catch (e) {
+      setErrore(e instanceof SenzaRete ? T.senzaRete : T.senzaRete);
+    } finally { setAttesa(false); }
+  };
+
+  const registrati = async (n: string) => {
+    setAttesa(true); setErrore(null);
+    try {
+      const r = await registra(n, codice1);
+      if ("nome" in r && r.nome) return entrato({ nome: r.nome, token: r.token }, T.benvenuto(r.nome));
+      if (r.errore === "nome_preso") { setProposta(r.proposta); setNome(n); setCodice(""); return setStoria(["casa", "nomePreso"]); }
+      setErrore(messaggioErrore(r as Exclude<Esito, { nome: string }>));
+    } catch {
+      setErrore(T.senzaRete);
+    } finally { setAttesa(false); }
+  };
+
+  const esci = () => {
+    if (sessione) void esciDalDb(sessione.token).catch(() => {});
+    dimenticaSessione();
+    setSessione(null); setInProva(false);
+    setStoria(["casa"]);
+  };
+
   // ---------------- Disegno ----------------
   return (
     <div onPointerDownCapture={primoTocco} className="min-h-dvh flex flex-col">
       <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica && audio.pronto} />
       <main className="flex-1 w-full mx-auto max-w-5xl px-4 pb-10">
         {schermata === "casa" && (
-          <SchermataCasa titoloRef={titoloRef} onGioca={() => vai("livello")} onRegole={() => vai("regole")} onImpostazioni={() => vai("impostazioni")} />
+          <SchermataCasa titoloRef={titoloRef} sessione={sessione} inProva={inProva}
+            onGioca={() => vai(sessione || inProva ? "livello" : "accesso")}
+            onClassifica={() => vai("classifica")} onAltro={() => vai("altro")} onEsci={esci} />
+        )}
+        {schermata === "altro" && (
+          <section className="pt-6 flex flex-col gap-5">
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.altro}</h1>
+            <Pulsante className="w-full" onClick={() => vai("regole")}>{T.comeSiGioca}</Pulsante>
+            <Pulsante className="w-full" onClick={() => vai("impostazioni")}>{T.impostazioni}</Pulsante>
+            {(sessione || inProva) && <Pulsante className="w-full" onClick={esci}>{T.esci}</Pulsante>}
+          </section>
+        )}
+        {schermata === "classifica" && <SchermataClassifica titoloRef={titoloRef} sessione={sessione} />}
+        {schermata === "accesso" && (
+          <SchermataChiGioca titoloRef={titoloRef} nomi={nomi}
+            onNome={(n) => { setNome(n); setFlusso("entra"); pulisci(); vai("codice"); }}
+            onAltro={() => vai("haiNome")}
+            onRegistro={() => { setFlusso("nuovo"); setNome(""); pulisci(); vai("nome"); }}
+            onHoNome={() => { setFlusso("entra"); setNome(""); pulisci(); vai("nome"); }}
+            onProva={() => { setInProva(true); setStoria(["casa", "livello"]); }} />
+        )}
+        {schermata === "haiNome" && (
+          <SchermataHaiNome titoloRef={titoloRef}
+            onSi={() => { setFlusso("entra"); setNome(""); pulisci(); vai("nome"); }}
+            onNo={() => { setFlusso("nuovo"); setNome(""); pulisci(); vai("nome"); }} />
+        )}
+        {schermata === "nome" && (
+          <SchermataNome titoloRef={titoloRef} nome={nome} onCambia={setNome} errore={errore as string | null} nuovo={flusso === "nuovo"}
+            onAvanti={() => {
+              if (!nomeValido(nome)) return setErrore(T.nomeNonValido);
+              setNome(nome.trim().replace(/\s+/g, " ")); pulisci(); vai("codice");
+            }} />
+        )}
+        {schermata === "codice" && (
+          flusso === "nuovo" ? (
+            <SchermataCodice titoloRef={titoloRef} titolo={T.scegliCodice} consiglio={T.consiglioBancomat}
+              codice={codice} onCambia={(c) => { setCodice(c); setErrore(null); }} errore={errore}
+              pulsante={T.avanti} attesa={false} onAvanti={() => { setCodice1(codice); setCodice(""); vai("ripeti"); }} />
+          ) : (
+            <SchermataCodice titoloRef={titoloRef} titolo={T.scriviCodice(nome)}
+              codice={codice} onCambia={(c) => { setCodice(c); setErrore(null); }} errore={errore}
+              pulsante={T.entra} attesa={attesa} onAvanti={entra} dimenticato
+              restaCollegato={restaCollegato} onRestaCollegato={setRestaCollegato} />
+          )
+        )}
+        {schermata === "ripeti" && (
+          <SchermataCodice titoloRef={titoloRef} titolo={T.ripetiCodice}
+            codice={codice} onCambia={(c) => { setCodice(c); setErrore(null); }} errore={errore}
+            pulsante={T.avanti} attesa={attesa} onAvanti={() => {
+              if (codice !== codice1) {
+                setCodice(""); setCodice1(""); setErrore(T.codiciDiversi);
+                return setStoria((st) => [...st.slice(0, -1)]);
+              }
+              void registrati(nome);
+            }}
+            restaCollegato={restaCollegato} onRestaCollegato={setRestaCollegato} />
+        )}
+        {schermata === "nomePreso" && (
+          <SchermataNomePreso titoloRef={titoloRef} nome={nome} proposta={proposta}
+            onUsa={() => { if (proposta) { setNome(proposta); void registrati(proposta); } }}
+            onAltro={() => { setCodice(""); setCodice1(""); setStoria(["casa", "nome"]); }} />
+        )}
+        {schermata === "benvenuto" && (
+          <SchermataBenvenuto titoloRef={titoloRef} testo={benvenuto} onAvanti={() => setStoria(["casa", "livello"])} />
         )}
         {schermata === "regole" && (
           <section className="pt-6 flex flex-col gap-6">
@@ -373,7 +517,7 @@ export default function Gioco() {
           />
         )}
         {schermata === "fine" && partita && (
-          <SchermataFine titoloRef={titoloRef} p={partita} me={me} lui={lui} ancora={() => {
+          <SchermataFine titoloRef={titoloRef} p={partita} me={me} lui={lui} sessione={sessione} livello={livelloScelto} ancora={() => {
             const altri = PERSONAGGI.filter((x) => x.id !== mioId);
             setAvversarioId(scegli(rng.current, altri).id);
             setStoria(["casa", "presentazione"]);
@@ -392,7 +536,10 @@ function testoDaLeggere(d: Domanda) {
 
 type RefTitolo = React.RefObject<HTMLHeadingElement | null>;
 
-function SchermataCasa({ titoloRef, onGioca, onRegole, onImpostazioni }: { titoloRef: RefTitolo; onGioca: () => void; onRegole: () => void; onImpostazioni: () => void }) {
+function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, onAltro, onEsci }: {
+  titoloRef: RefTitolo; sessione: Sessione | null; inProva: boolean;
+  onGioca: () => void; onClassifica: () => void; onAltro: () => void; onEsci: () => void;
+}) {
   return (
     <section className="pt-4 grid gap-5 md:grid-cols-2 md:items-center">
       <h1 ref={titoloRef} tabIndex={-1} className="w-full max-w-[32rem] mx-auto">
@@ -408,10 +555,17 @@ function SchermataCasa({ titoloRef, onGioca, onRegole, onImpostazioni }: { titol
         />
       </h1>
       <div className="flex flex-col gap-4">
-        <p className="text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
+        {sessione || inProva ? (
+          <div className="pannello p-4 flex items-center justify-between gap-3">
+            <p className="font-bold">{sessione ? T.giochiCome(sessione.nome) : T.giochiInProva}</p>
+            <Pulsante className="!min-h-[4.5rem] shrink-0" onClick={onEsci}>{T.esci}</Pulsante>
+          </div>
+        ) : (
+          <p className="text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
+        )}
         <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={onGioca}>{T.gioca}</Pulsante>
-        <Pulsante className="w-full" onClick={onRegole}>{T.comeSiGioca}</Pulsante>
-        <Pulsante className="w-full" onClick={onImpostazioni}>{T.impostazioni}</Pulsante>
+        <Pulsante className="w-full" onClick={onClassifica}><span aria-hidden="true">🏆</span> {T.classifica}</Pulsante>
+        <Pulsante className="w-full" onClick={onAltro}>{T.altro}</Pulsante>
       </div>
     </section>
   );
@@ -632,12 +786,23 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
   );
 }
 
-function SchermataFine({ titoloRef, p, me, lui, ancora }: { titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; ancora: () => void }) {
+function SchermataFine({ titoloRef, p, me, lui, ancora, sessione, livello }: {
+  titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; ancora: () => void; sessione: Sessione | null; livello: Livello;
+}) {
   const v = vincitore(p.giocatore, p.computer);
   const risultato: Risultato = v === "giocatore" ? "vinto" : v === "computer" ? "perso" : "pari";
   const titolo = risultato === "vinto" ? T.titoloVinto : risultato === "perso" ? T.titoloPerso : T.titoloPari;
   const seme = p.giocatore.punti + p.computer.energia + p.numero;
   const sottotitolo = scegliSottotitolo(risultato, risultato === "perso" ? lui.nome : me.nome, risultato === "perso" ? me.nome : lui.nome, seme);
+  const [salvataggio, setSalvataggio] = useState<"no" | "ok" | "errore">("no");
+  const salvato = useRef(false);
+  useEffect(() => {
+    if (!sessione || salvato.current) return;
+    salvato.current = true;
+    salvaPartita(sessione.token, { punti: p.giocatore.punti, vinta: risultato === "vinto", personaggio: me.id, avversario: lui.id, livello })
+      .then((r) => setSalvataggio(r?.ok ? "ok" : "errore"))
+      .catch(() => setSalvataggio("errore"));
+  }, [sessione, p, me, lui, livello, risultato]);
   return (
     <section className="flex flex-col gap-5 pt-4">
       <Festa me={me} lui={lui} risultato={risultato} seme={seme} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
@@ -649,6 +814,9 @@ function SchermataFine({ titoloRef, p, me, lui, ancora }: { titoloRef: RefTitolo
         <p className="font-bold">{T.stretta}</p>
         <p className="text-[1.75rem] font-bold">★ {T.tuoiPunti(p.giocatore.punti)}</p>
         <p>{T.risposteGiuste(p.giocatore.giuste)}</p>
+        {!sessione && <p className="font-bold">{T.puntiNonSalvatiProva}</p>}
+        {sessione && salvataggio === "ok" && <p className="font-bold">✓ {T.puntiSalvati}</p>}
+        {sessione && salvataggio === "errore" && <p className="font-bold">⚠ {T.puntiNonSalvatiRete}</p>}
       </div>
       <Pulsante variante="giallo" className="w-full" onClick={ancora}>{T.giocaAncora}</Pulsante>
     </section>
