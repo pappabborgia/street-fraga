@@ -1,1 +1,890 @@
-[]
+[
+  {
+    "id": "TEM-001",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "La festa di Sant'Antonio è il 13 giugno. Oggi è l'11 giugno. Quanti giorni mancano?",
+    "risposte": [
+      "4",
+      "2",
+      "6"
+    ],
+    "corretta": 1,
+    "spiegazione": "Mancano 2 giorni. Sant'Antonio è il patrono del paese!",
+    "fatto_id": "T01",
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 13,
+      "b": 11,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-002",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Natale è il 25 dicembre. Oggi è il 23 dicembre. Quanti giorni mancano?",
+    "risposte": [
+      "2",
+      "6",
+      "4"
+    ],
+    "corretta": 0,
+    "spiegazione": "Mancano 2 giorni. Si prepara il presepe!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 25,
+      "b": 23,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-003",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Natale è il 25 dicembre. Oggi è il 16 dicembre. Quanti giorni mancano?",
+    "risposte": [
+      "9",
+      "6",
+      "13"
+    ],
+    "corretta": 0,
+    "spiegazione": "Mancano 9 giorni. Si prepara il presepe!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 25,
+      "b": 16,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-004",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Natale è il 25 dicembre. Oggi è il 19 dicembre. Quanti giorni mancano?",
+    "risposte": [
+      "4",
+      "6",
+      "10"
+    ],
+    "corretta": 1,
+    "spiegazione": "Mancano 6 giorni. Si prepara il presepe!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 25,
+      "b": 19,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-005",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Natale è il 25 dicembre. Oggi è il 21 dicembre. Quanti giorni mancano?",
+    "risposte": [
+      "5",
+      "4",
+      "1"
+    ],
+    "corretta": 1,
+    "spiegazione": "Mancano 4 giorni. Si prepara il presepe!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 25,
+      "b": 21,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-006",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Natale è il 25 dicembre. Oggi è il 22 dicembre. Quanti giorni mancano?",
+    "risposte": [
+      "3",
+      "7",
+      "4"
+    ],
+    "corretta": 0,
+    "spiegazione": "Mancano 3 giorni. Si prepara il presepe!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "calcolo": {
+      "op": "-",
+      "a": 25,
+      "b": 22,
+      "unita": ""
+    }
+  },
+  {
+    "id": "TEM-007",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è martedì. Che giorno è domani?",
+    "risposte": [
+      "Mercoledì",
+      "Giovedì",
+      "Venerdì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo martedì viene mercoledì. La settimana gira sempre uguale!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 1,
+      "n": 1
+    }
+  },
+  {
+    "id": "TEM-008",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è mercoledì. Che giorno è domani?",
+    "risposte": [
+      "Giovedì",
+      "Venerdì",
+      "Sabato"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo mercoledì viene giovedì. La settimana gira sempre uguale!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 2,
+      "n": 1
+    }
+  },
+  {
+    "id": "TEM-009",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è sabato. Che giorno è domani?",
+    "risposte": [
+      "Domenica",
+      "Martedì",
+      "Lunedì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo sabato viene domenica. La settimana gira sempre uguale!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 5,
+      "n": 1
+    }
+  },
+  {
+    "id": "TEM-010",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è domenica. Che giorno è domani?",
+    "risposte": [
+      "Martedì",
+      "Mercoledì",
+      "Lunedì"
+    ],
+    "corretta": 2,
+    "spiegazione": "Dopo domenica viene lunedì. La settimana gira sempre uguale!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 6,
+      "n": 1
+    }
+  },
+  {
+    "id": "TEM-011",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è giovedì. Che giorno è domani?",
+    "risposte": [
+      "Sabato",
+      "Domenica",
+      "Venerdì"
+    ],
+    "corretta": 2,
+    "spiegazione": "Dopo giovedì viene venerdì. La settimana gira sempre uguale!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 3,
+      "n": 1
+    }
+  },
+  {
+    "id": "TEM-012",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che mese viene dopo febbraio?",
+    "risposte": [
+      "Marzo",
+      "Aprile",
+      "Gennaio"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo febbraio arriva marzo.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "mese_dopo",
+      "mese": 1
+    }
+  },
+  {
+    "id": "TEM-013",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che mese viene dopo luglio?",
+    "risposte": [
+      "Agosto",
+      "Ottobre",
+      "Settembre"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo luglio arriva agosto.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "mese_dopo",
+      "mese": 6
+    }
+  },
+  {
+    "id": "TEM-014",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che mese viene dopo ottobre?",
+    "risposte": [
+      "Novembre",
+      "Dicembre",
+      "Gennaio"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo ottobre arriva novembre.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "mese_dopo",
+      "mese": 9
+    }
+  },
+  {
+    "id": "TEM-015",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che mese viene dopo gennaio?",
+    "risposte": [
+      "Febbraio",
+      "Dicembre",
+      "Aprile"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo gennaio arriva febbraio.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "mese_dopo",
+      "mese": 0
+    }
+  },
+  {
+    "id": "TEM-016",
+    "materia": "tempo",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che mese viene dopo marzo?",
+    "risposte": [
+      "Aprile",
+      "Giugno",
+      "Maggio"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo marzo arriva aprile.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "mese_dopo",
+      "mese": 2
+    }
+  },
+  {
+    "id": "TEM-017",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è lunedì. Che giorno sarà tra 5 giorni?",
+    "risposte": [
+      "Domenica",
+      "Sabato",
+      "Lunedì"
+    ],
+    "corretta": 1,
+    "spiegazione": "Contando 5 giorni da lunedì si arriva a sabato.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 0,
+      "n": 5
+    }
+  },
+  {
+    "id": "TEM-018",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è mercoledì. Che giorno sarà tra 2 giorni?",
+    "risposte": [
+      "Venerdì",
+      "Domenica",
+      "Giovedì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Contando 2 giorni da mercoledì si arriva a venerdì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 2,
+      "n": 2
+    }
+  },
+  {
+    "id": "TEM-019",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è martedì. Che giorno sarà tra 2 giorni?",
+    "risposte": [
+      "Sabato",
+      "Mercoledì",
+      "Giovedì"
+    ],
+    "corretta": 2,
+    "spiegazione": "Contando 2 giorni da martedì si arriva a giovedì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 1,
+      "n": 2
+    }
+  },
+  {
+    "id": "TEM-020",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è martedì. Che giorno sarà tra 3 giorni?",
+    "risposte": [
+      "Venerdì",
+      "Mercoledì",
+      "Giovedì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Contando 3 giorni da martedì si arriva a venerdì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 1,
+      "n": 3
+    }
+  },
+  {
+    "id": "TEM-021",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è lunedì. Che giorno sarà tra 4 giorni?",
+    "risposte": [
+      "Venerdì",
+      "Sabato",
+      "Mercoledì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Contando 4 giorni da lunedì si arriva a venerdì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 0,
+      "n": 4
+    }
+  },
+  {
+    "id": "TEM-022",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è giovedì. Che giorno sarà tra 3 giorni?",
+    "risposte": [
+      "Lunedì",
+      "Sabato",
+      "Domenica"
+    ],
+    "corretta": 2,
+    "spiegazione": "Contando 3 giorni da giovedì si arriva a domenica.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 3,
+      "n": 3
+    }
+  },
+  {
+    "id": "TEM-023",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti giorni ha il mese di maggio?",
+    "risposte": [
+      "30 giorni",
+      "28 giorni",
+      "31 giorni"
+    ],
+    "corretta": 2,
+    "spiegazione": "Maggio ha 31 giorni. Si possono contare sulle nocche!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorni_mese",
+      "mese": 4
+    }
+  },
+  {
+    "id": "TEM-024",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti giorni ha il mese di ottobre?",
+    "risposte": [
+      "29 giorni",
+      "30 giorni",
+      "31 giorni"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ottobre ha 31 giorni. Si possono contare sulle nocche!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorni_mese",
+      "mese": 9
+    }
+  },
+  {
+    "id": "TEM-025",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti giorni ha il mese di giugno?",
+    "risposte": [
+      "28 giorni",
+      "30 giorni",
+      "29 giorni"
+    ],
+    "corretta": 1,
+    "spiegazione": "Giugno ha 30 giorni. Si possono contare sulle nocche!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorni_mese",
+      "mese": 5
+    }
+  },
+  {
+    "id": "TEM-026",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti giorni ha il mese di marzo?",
+    "risposte": [
+      "30 giorni",
+      "31 giorni",
+      "28 giorni"
+    ],
+    "corretta": 1,
+    "spiegazione": "Marzo ha 31 giorni. Si possono contare sulle nocche!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorni_mese",
+      "mese": 2
+    }
+  },
+  {
+    "id": "TEM-027",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanti giorni ha il mese di gennaio?",
+    "risposte": [
+      "28 giorni",
+      "30 giorni",
+      "31 giorni"
+    ],
+    "corretta": 2,
+    "spiegazione": "Gennaio ha 31 giorni. Si possono contare sulle nocche!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorni_mese",
+      "mese": 0
+    }
+  },
+  {
+    "id": "TEM-028",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Sono le 9 del mattino. Il pranzo è tra 4 ore. A che ora si pranza?",
+    "risposte": [
+      "Alle 13",
+      "Alle 12",
+      "Alle 11"
+    ],
+    "corretta": 0,
+    "spiegazione": "9 più 4 fa 13: si pranza alle 13. Buon appetito!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "ora",
+      "h": 9,
+      "n": 4
+    }
+  },
+  {
+    "id": "TEM-029",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Sono le 11 del mattino. Il pranzo è tra 3 ore. A che ora si pranza?",
+    "risposte": [
+      "Alle 12",
+      "Alle 14",
+      "Alle 15"
+    ],
+    "corretta": 1,
+    "spiegazione": "11 più 3 fa 14: si pranza alle 14. Buon appetito!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "ora",
+      "h": 11,
+      "n": 3
+    }
+  },
+  {
+    "id": "TEM-030",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Sono le 10 del mattino. Il pranzo è tra 2 ore. A che ora si pranza?",
+    "risposte": [
+      "Alle 11",
+      "Alle 12",
+      "Alle 14"
+    ],
+    "corretta": 1,
+    "spiegazione": "10 più 2 fa 12: si pranza alle 12. Buon appetito!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "ora",
+      "h": 10,
+      "n": 2
+    }
+  },
+  {
+    "id": "TEM-031",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Sono le 11 del mattino. Il pranzo è tra 2 ore. A che ora si pranza?",
+    "risposte": [
+      "Alle 11",
+      "Alle 13",
+      "Alle 12"
+    ],
+    "corretta": 1,
+    "spiegazione": "11 più 2 fa 13: si pranza alle 13. Buon appetito!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "ora",
+      "h": 11,
+      "n": 2
+    }
+  },
+  {
+    "id": "TEM-032",
+    "materia": "tempo",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Sono le 9 del mattino. Il pranzo è tra 3 ore. A che ora si pranza?",
+    "risposte": [
+      "Alle 13",
+      "Alle 14",
+      "Alle 12"
+    ],
+    "corretta": 2,
+    "spiegazione": "9 più 3 fa 12: si pranza alle 12. Buon appetito!",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "ora",
+      "h": 9,
+      "n": 3
+    }
+  },
+  {
+    "id": "TEM-033",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è il 27 ottobre. Che data sarà tra 9 giorni?",
+    "risposte": [
+      "5 novembre",
+      "7 novembre",
+      "6 novembre",
+      "3 novembre"
+    ],
+    "corretta": 0,
+    "spiegazione": "Ottobre finisce presto: tra 9 giorni sarà il 5 novembre.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "data_dopo",
+      "g": 27,
+      "mese": 9,
+      "n": 9
+    }
+  },
+  {
+    "id": "TEM-034",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è il 24 settembre. Che data sarà tra 8 giorni?",
+    "risposte": [
+      "30 settembre",
+      "3 ottobre",
+      "2 ottobre",
+      "4 ottobre"
+    ],
+    "corretta": 2,
+    "spiegazione": "Settembre finisce presto: tra 8 giorni sarà il 2 ottobre.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "data_dopo",
+      "g": 24,
+      "mese": 8,
+      "n": 8
+    }
+  },
+  {
+    "id": "TEM-035",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è il 27 luglio. Che data sarà tra 6 giorni?",
+    "risposte": [
+      "2 agosto",
+      "4 agosto",
+      "1 agosto",
+      "3 agosto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Luglio finisce presto: tra 6 giorni sarà il 2 agosto.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "data_dopo",
+      "g": 27,
+      "mese": 6,
+      "n": 6
+    }
+  },
+  {
+    "id": "TEM-036",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è il 26 aprile. Che data sarà tra 6 giorni?",
+    "risposte": [
+      "4 maggio",
+      "2 maggio",
+      "30 aprile",
+      "3 maggio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Aprile finisce presto: tra 6 giorni sarà il 2 maggio.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "data_dopo",
+      "g": 26,
+      "mese": 3,
+      "n": 6
+    }
+  },
+  {
+    "id": "TEM-037",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è giovedì. Che giorno sarà tra 9 giorni?",
+    "risposte": [
+      "Lunedì",
+      "Giovedì",
+      "Sabato",
+      "Domenica"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ogni 7 giorni torna lo stesso giorno: sarà sabato.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 3,
+      "n": 9
+    }
+  },
+  {
+    "id": "TEM-038",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è venerdì. Che giorno sarà tra 13 giorni?",
+    "risposte": [
+      "Mercoledì",
+      "Sabato",
+      "Giovedì",
+      "Martedì"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ogni 7 giorni torna lo stesso giorno: sarà giovedì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 4,
+      "n": 13
+    }
+  },
+  {
+    "id": "TEM-039",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è giovedì. Che giorno sarà tra 12 giorni?",
+    "risposte": [
+      "Domenica",
+      "Mercoledì",
+      "Martedì",
+      "Giovedì"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ogni 7 giorni torna lo stesso giorno: sarà martedì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 3,
+      "n": 12
+    }
+  },
+  {
+    "id": "TEM-040",
+    "materia": "tempo",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Oggi è domenica. Che giorno sarà tra 12 giorni?",
+    "risposte": [
+      "Giovedì",
+      "Mercoledì",
+      "Sabato",
+      "Venerdì"
+    ],
+    "corretta": 3,
+    "spiegazione": "Ogni 7 giorni torna lo stesso giorno: sarà venerdì.",
+    "fatto_id": null,
+    "stato": "attiva",
+    "verifica": {
+      "tipo": "giorno_dopo",
+      "giorno": 6,
+      "n": 12
+    }
+  }
+]

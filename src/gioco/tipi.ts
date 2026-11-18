@@ -27,6 +27,8 @@ export interface Domanda {
   stato: Stato;
   /** Solo per le domande generate dal codice (matematica, tempo). */
   calcolo?: Calcolo;
+  /** Domande di calendario generate dal codice: dati per ricalcolare la risposta nei test. */
+  verifica?: Verifica;
 }
 
 export interface Fatto {
@@ -38,3 +40,10 @@ export interface Fatto {
   note: string;
   da_verificare?: boolean;
 }
+
+export type Verifica =
+  | { tipo: "giorno_dopo"; giorno: number; n: number }
+  | { tipo: "mese_dopo"; mese: number }
+  | { tipo: "giorni_mese"; mese: number }
+  | { tipo: "ora"; h: number; n: number }
+  | { tipo: "data_dopo"; g: number; mese: number; n: number };

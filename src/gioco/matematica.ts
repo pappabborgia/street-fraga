@@ -11,6 +11,9 @@ export function calcola(c: Pick<Calcolo, "op" | "a" | "b">): number {
   }
 }
 
+/** "il 13", ma "l'8" e "l'11". */
+export const ilGiorno = (g: number) => (g === 8 || g === 11 ? `l'${g}` : `il ${g}`);
+
 export function formatta(n: number, unita: string): string {
   return unita ? `${n} ${unita}` : `${n}`;
 }
@@ -115,24 +118,113 @@ const MODELLI: Modello[] = [
     },
   },
   {
+    chiave: "uova", materia: "matematica", livello: 1, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 6, 12), b = intero(rng, 2, 4);
+      return {
+        testo: `Hai ${a} uova. Ne usi ${b} per una frittata. Quante uova restano?`,
+        calcolo: { op: "-", a, b, unita: "" },
+        spiegazione: (r) => `${a} meno ${b} fa ${r}. Buona frittata!`,
+      };
+    },
+  },
+  {
+    chiave: "pollaio", materia: "matematica", livello: 1, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 4, 12), b = intero(rng, 2, 3);
+      return {
+        testo: `Nel pollaio ci sono ${a} galline e ${b} galli. Quanti animali in tutto?`,
+        calcolo: { op: "+", a, b, unita: "" },
+        spiegazione: (r) => `${a} più ${b} fa ${r}. Che chiasso al mattino!`,
+      };
+    },
+  },
+  {
+    chiave: "pagnotte", materia: "matematica", livello: 1, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 2, 5), b = intero(rng, 1, 2);
+      return {
+        testo: `Compri ${a} pagnotte. Ognuna costa ${b} euro. Quanto spendi?`,
+        calcolo: { op: "*", a, b, unita: "euro" },
+        spiegazione: (r) => `${a} per ${b} fa ${r} euro. Pane fresco per tutti!`,
+      };
+    },
+  },
+  {
+    chiave: "sedie", materia: "matematica", livello: 2, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 3, 6), b = intero(rng, 5, 10);
+      return {
+        testo: `In piazza Risorgimento ci sono ${a} file di ${b} sedie. Quante sedie in tutto?`,
+        calcolo: { op: "*", a, b, unita: "sedie" },
+        spiegazione: (r) => `${a} per ${b} fa ${r}. Posti per tutto il concerto!`,
+      };
+    },
+  },
+  {
+    chiave: "meta", materia: "matematica", livello: 2, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 6, 25) * 2;
+      return {
+        testo: `Hai ${a} olive. Ne regali la metà a tua sorella. Quante ne regali?`,
+        calcolo: { op: "/", a, b: 2, unita: "" },
+        spiegazione: (r) => `La metà di ${a} è ${r}. Si divide in parti giuste!`,
+      };
+    },
+  },
+  {
+    chiave: "sciarpa", materia: "matematica", livello: 2, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 3, 9) * 10, b = intero(rng, 2, 8) * 5;
+      return {
+        testo: `Hai lavorato a maglia ${a} centimetri di sciarpa. Ne fai altri ${b}. Quanto è lunga?`,
+        calcolo: { op: "+", a, b, unita: "centimetri" },
+        spiegazione: (r) => `${a} più ${b} fa ${r} centimetri. Una sciarpa bella calda!`,
+      };
+    },
+  },
+  {
+    chiave: "prezzo", materia: "matematica", livello: 3, fatto_id: null,
+    crea: (rng) => {
+      const b = intero(rng, 3, 6), k = intero(rng, 3, 9);
+      const a = b * k;
+      return {
+        testo: `Paghi ${a} euro per ${b} bottiglie di olio uguali. Quanto costa una bottiglia?`,
+        calcolo: { op: "/", a, b, unita: "euro" },
+        spiegazione: (r) => `${a} diviso ${b} fa ${r} euro. Conto preciso!`,
+      };
+    },
+  },
+  {
+    chiave: "cassette", materia: "matematica", livello: 3, fatto_id: null,
+    crea: (rng) => {
+      const a = intero(rng, 6, 12), b = intero(rng, 3, 5) * 5;
+      return {
+        testo: `Riempi ${a} cassette di uva. Ognuna pesa ${b} chili. Quanti chili in tutto?`,
+        calcolo: { op: "*", a, b, unita: "chili" },
+        spiegazione: (r) => `${a} per ${b} fa ${r} chili. Che vendemmia!`,
+      };
+    },
+  },
+  {
     chiave: "santantonio", materia: "tempo", livello: 1, fatto_id: "T01",
     crea: (rng) => {
       const b = intero(rng, 6, 11);
       return {
-        testo: `La festa di Sant'Antonio è il 13 giugno. Oggi è il ${b} giugno. Quanti giorni mancano?`,
+        testo: `La festa di Sant'Antonio è il 13 giugno. Oggi è ${ilGiorno(b)} giugno. Quanti giorni mancano?`,
         calcolo: { op: "-", a: 13, b, unita: "" },
         spiegazione: (r) => `Mancano ${r} giorni. Sant'Antonio è il patrono del paese!`,
       };
     },
   },
   {
-    chiave: "festagrande", materia: "tempo", livello: 2, fatto_id: "T02",
+    chiave: "natale", materia: "tempo", livello: 1, fatto_id: null,
     crea: (rng) => {
-      const b = intero(rng, 1, 7);
+      const b = intero(rng, 15, 23);
       return {
-        testo: `La festa grande comincia l'11 agosto. Oggi è il ${b} agosto. Quanti giorni mancano?`,
-        calcolo: { op: "-", a: 11, b, unita: "" },
-        spiegazione: (r) => `Mancano ${r} giorni. La festa grande dura 3 giorni!`,
+        testo: `Natale è il 25 dicembre. Oggi è ${ilGiorno(b)} dicembre. Quanti giorni mancano?`,
+        calcolo: { op: "-", a: 25, b, unita: "" },
+        spiegazione: (r) => `Mancano ${r} giorni. Si prepara il presepe!`,
       };
     },
   },
@@ -160,7 +252,7 @@ function sbagliate(rng: Rng, giusta: number, quante: number, passo: number): num
 export function generaDomanda(rng: Rng, filtro: { livello?: Livello; chiave?: string } = {}): Domanda {
   let candidati = MODELLI;
   if (filtro.chiave) candidati = MODELLI.filter((m) => m.chiave === filtro.chiave);
-  else if (filtro.livello) candidati = MODELLI.filter((m) => m.livello === filtro.livello);
+  else if (filtro.livello) candidati = MODELLI.filter((m) => m.livello === filtro.livello && m.materia === "matematica");
   const m = scegli(rng, candidati);
   const { testo, calcolo, spiegazione } = m.crea(rng);
   const r = calcola(calcolo);

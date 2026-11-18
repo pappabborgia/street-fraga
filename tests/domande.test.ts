@@ -45,6 +45,28 @@ describe("tutte le domande insieme", () => {
     }
   });
 
+  it("calendario: ogni risposta giusta è ricalcolata con il calendario vero", () => {
+    const giorni = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"];
+    const mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+    const cap = (x: string) => x[0].toUpperCase() + x.slice(1);
+    for (const d of PER_MATERIA.tempo) {
+      const v = d.verifica;
+      if (!v) continue;
+      let atteso: string;
+      if (v.tipo === "giorno_dopo") atteso = cap(giorni[(v.giorno + v.n) % 7]);
+      else if (v.tipo === "mese_dopo") atteso = cap(mesi[(v.mese + 1) % 12]);
+      else if (v.tipo === "giorni_mese") atteso = `${new Date(Date.UTC(2025, v.mese + 1, 0)).getUTCDate()} giorni`;
+      else if (v.tipo === "ora") atteso = `Alle ${v.h + v.n}`;
+      else {
+        const x = new Date(Date.UTC(2025, v.mese, v.g + v.n));
+        atteso = `${x.getUTCDate()} ${mesi[x.getUTCMonth()]}`;
+      }
+      // il giorno nel testo della domanda deve essere quello usato per il calcolo
+      if (v.tipo === "giorno_dopo") expect(d.domanda, d.id).toContain(`Oggi è ${giorni[v.giorno]}`);
+      expect(d.risposte[d.corretta], d.id).toBe(atteso);
+    }
+  });
+
   it("i fatti hanno id unici, fonti web, data e affidabilità", () => {
     expect(new Set(FATTI.map((f) => f.id)).size).toBe(FATTI.length);
     for (const f of FATTI) {

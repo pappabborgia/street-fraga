@@ -175,12 +175,12 @@
     "stimolo": null,
     "domanda": "Trova la parola che non c'entra.",
     "risposte": [
-      "Mela",
-      "Pera",
-      "Sedia"
+      "Forchetta",
+      "Cucchiaio",
+      "Cipolla"
     ],
     "corretta": 2,
-    "spiegazione": "Mela e pera sono frutti; la sedia serve per sedersi.",
+    "spiegazione": "Forchetta e cucchiaio sono posate, la cipolla si mangia!",
     "fatto_id": null,
     "stato": "attiva"
   },
@@ -326,12 +326,12 @@
     "stimolo": null,
     "domanda": "Trova la parola che non c'entra.",
     "risposte": [
-      "Rosso",
-      "Verde",
-      "Tavolo"
+      "Camicia",
+      "Gonna",
+      "Martello"
     ],
     "corretta": 2,
-    "spiegazione": "Rosso e verde sono colori; il tavolo è un mobile.",
+    "spiegazione": "Camicia e gonna si indossano, il martello serve per i chiodi.",
     "fatto_id": null,
     "stato": "attiva"
   },
