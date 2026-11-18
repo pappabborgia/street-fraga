@@ -19,6 +19,7 @@ export function SchermataParola({ titoloRef, parola, token, avanti }: {
   const [esito, setEsito] = useState<{ salvato: boolean; proposta?: Proposta | null } | null>(null);
   const [testo, setTesto] = useState("");
   const [errore, setErrore] = useState<string | null>(null);
+  const [info, setInfo] = useState(false);
 
   useEffect(() => {
     let vivo = true;
@@ -43,13 +44,23 @@ export function SchermataParola({ titoloRef, parola, token, avanti }: {
 
   return (
     <section className="pt-6 flex flex-col gap-5">
-      <p className="fumetto text-[var(--giallo)] text-[1.25rem]">🗣 {T.dialettoEtichetta}</p>
+      <div className="flex items-center gap-3">
+        <p className="fumetto text-[var(--giallo)] text-[1.25rem] leading-tight">🗣 {T.dialettoEtichetta}</p>
+        {passo !== "fatto" && (
+          <button type="button" aria-label={T.perche} aria-expanded={info} onClick={() => setInfo(!info)}
+            className="shrink-0 w-14 h-14 rounded-full border-[3px] border-white bg-[var(--notte-chiara)] text-white text-[1.75rem] font-bold leading-none">
+            i
+          </button>
+        )}
+      </div>
       <h1 ref={titoloRef} tabIndex={-1} className="testo-domanda">{T.comeSiDice(parola)}</h1>
 
-      {(passo === "carico" || passo === "proposta" || passo === "scrivo" || passo === "invio") && (
-        <div className="pannello p-4 flex flex-col gap-2">
+      {/* La spiegazione compare solo se si tocca la "i" */}
+      {passo !== "fatto" && info && (
+        <div className="pannello p-4 flex flex-col gap-3">
           <p className="font-bold">{T.dialettoSpiegazione}</p>
           <p>{T.comeFunziona}</p>
+          <Pulsante className="w-full" onClick={() => setInfo(false)}>{T.chiudiInfo}</Pulsante>
         </div>
       )}
 

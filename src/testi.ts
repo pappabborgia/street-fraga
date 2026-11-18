@@ -212,6 +212,10 @@ export const T = {
   parolaInAttesa: "Grazie! La parola è salvata nel telefono e verrà inviata appena c'è connessione.",
   parolaVuota: "Scrivi la parola, oppure tocca «Non lo so».",
 
+  // Spiegazione della raccolta, dietro la "i"
+  perche: "Perché te lo chiediamo?",
+  chiudiInfo: "Chiudi",
+
   // Classifica
   classifica: "Classifica",
   classificaTitolo: "Classifica del paese",
@@ -271,3 +275,40 @@ export const T = {
   musicaMetti: "Musica spenta: tocca per accenderla",
   musicaSpenta: "Musica spenta",
 } as const;
+
+/** Testi della pagina di gestione (/gestione), solo per chi gestisce il gioco. */
+export const G = {
+  titolo: "Gestione di Street Fraga",
+  password: "Password di gestione",
+  entra: "Entra",
+  esci: "Esci",
+  aggiorna: "Aggiorna",
+  sbagliata: "Password sbagliata.",
+  pausa: (m: number) => `Troppi tentativi: riprova tra ${m} minuti.`,
+  senzaRete: "Non riesco a raggiungere il database. Controlla la connessione.",
+  riepilogo: "Riepilogo",
+  giocatori: "Giocatori",
+  partite: "Partite",
+  partiteOggi: "Partite oggi",
+  partiteSettimana: "Partite questa settimana",
+  coppe: "Coppe vinte",
+  parole: "Parole del dialetto",
+  paroleConfermate: "Parole confermate",
+  votiParole: "Risposte sul dialetto",
+  classifica: "Classifica di sempre",
+  classificaSettimana: "Classifica della settimana",
+  perGiorno: "Partite per giorno",
+  ultimePartite: "Ultime partite",
+  chiGioca: "Chi gioca",
+  dialetto: "Parole del dialetto raccolte",
+  colonne: {
+    nome: "Nome", registrato: "Registrato il", partite: "Partite", vittorie: "Vittorie", punti: "Punti",
+    coppe: "Coppe", giorni: "Giorni di gioco", ultima: "Ultima partita", giorno: "Giorno", quando: "Quando",
+    personaggio: "Personaggio", avversario: "Avversario", livello: "Livello", vinta: "Vinta",
+    italiano: "Italiano", dialetto: "Dialetto", si: "Sì", no: "No", stato: "Stato",
+  },
+  confermata: "Confermata",
+  daConfermare: "Da confermare",
+  daFonte: "(proposta da fonte)",
+  nessunDato: "Ancora niente.",
+};

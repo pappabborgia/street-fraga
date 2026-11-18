@@ -130,3 +130,15 @@ export function parolaDaChiedere(elenco: string[], daConfermare: string[], casua
   try { localStorage.setItem(CHIAVE_CHIESTE, JSON.stringify([...chieste, scelta])); } catch {}
   return scelta;
 }
+
+// ---------- Pagina di gestione ----------
+export type Riga = Record<string, string | number | boolean | null>;
+export interface Pannello {
+  errore?: "password_sbagliata" | "pausa" | "password_non_impostata";
+  minuti?: number;
+  riepilogo?: Record<string, number>;
+  giocatori?: Riga[]; classifica?: Riga[]; classifica_settimana?: Riga[];
+  per_giorno?: Riga[]; ultime_partite?: Riga[]; parole?: Riga[];
+}
+/** Tutti i dati per il gestore, protetti da password (controllata dal database). */
+export const pannelloGestione = (password: string) => rpc<Pannello>("pannello_gestione", { p_password: password });
