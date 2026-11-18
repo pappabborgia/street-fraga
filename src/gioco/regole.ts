@@ -13,6 +13,19 @@ export const DANNO_COLPO = 12;
 export const DANNO_SPECIALE = 20;
 export const PUNTI_GIUSTA = 10;
 export const PUNTI_SPECIALE = 5;
+
+/** Il livello scelto cambia le domande e i punti per ogni risposta giusta. */
+export const PUNTI_PER_LIVELLO: Record<Livello, { giusta: number; speciale: number }> = {
+  1: { giusta: 10, speciale: 5 },
+  2: { giusta: 15, speciale: 7 },
+  3: { giusta: 20, speciale: 10 },
+};
+/** Livelli di domanda ammessi per ogni livello scelto, e da quale si parte dopo la prima domanda (sempre facile). */
+export const DOMANDE_PER_LIVELLO: Record<Livello, { min: Livello; max: Livello; partenza: Livello }> = {
+  1: { min: 1, max: 2, partenza: 1 },
+  2: { min: 1, max: 3, partenza: 2 },
+  3: { min: 2, max: 3, partenza: 3 },
+};
 export const SERIE_PER_SPECIALE = 3;
 /** Solo nella modalità facoltativa "Con il tempo". */
 export const SECONDI_PER_RISPOSTA = 45;
@@ -44,6 +57,7 @@ export function applicaRisposta(
   attaccante: Combattente,
   difensore: Combattente,
   giusta: boolean,
+  livelloScelto: Livello = 1,
 ): { attaccante: Combattente; difensore: Combattente; esito: EsitoColpo } {
   if (!giusta) {
     return {
@@ -55,7 +69,8 @@ export function applicaRisposta(
   const serie = attaccante.serie + 1;
   const speciale = serie % SERIE_PER_SPECIALE === 0;
   const danno = speciale ? DANNO_SPECIALE : DANNO_COLPO;
-  const punti = PUNTI_GIUSTA + (speciale ? PUNTI_SPECIALE : 0);
+  const { giusta: pg, speciale: ps } = PUNTI_PER_LIVELLO[livelloScelto];
+  const punti = pg + (speciale ? ps : 0);
   return {
     attaccante: {
       ...attaccante,
@@ -91,9 +106,9 @@ export function partitaFinita(g: Combattente, c: Combattente, spareggio: boolean
 }
 
 /** Difficoltà che si adatta con dolcezza: sale dopo 3 giuste di fila, scende dopo 2 sbagliate di fila. */
-export function adattaLivello(livello: Livello, giusteDiFila: number, sbagliateDiFila: number): Livello {
-  if (giusteDiFila > 0 && giusteDiFila % 3 === 0 && livello < 3) return (livello + 1) as Livello;
-  if (sbagliateDiFila > 0 && sbagliateDiFila % 2 === 0 && livello > 1) return (livello - 1) as Livello;
+export function adattaLivello(livello: Livello, giusteDiFila: number, sbagliateDiFila: number, min: Livello = 1, max: Livello = 3): Livello {
+  if (giusteDiFila > 0 && giusteDiFila % 3 === 0 && livello < max) return (livello + 1) as Livello;
+  if (sbagliateDiFila > 0 && sbagliateDiFila % 2 === 0 && livello > min) return (livello - 1) as Livello;
   return livello;
 }
 

@@ -23,20 +23,21 @@ export const T = {
   regole: [
     "Scegli il tuo lottatore.",
     "Rispondi alle domande toccando un pulsante.",
-    "Risposta giusta: il tuo lottatore colpisce e guadagni 10 punti.",
-    "3 risposte giuste di fila: colpo speciale e 5 punti in più!",
+    "Risposta giusta: il tuo lottatore colpisce e guadagni punti.",
+    "Più è difficile il livello, più punti prendi: 10, 15 o 20.",
+    "3 risposte giuste di fila: colpo speciale e punti in più!",
     "Risposta sbagliata: nessun punto tolto. Si impara qualcosa di nuovo.",
     "Vince chi ha più energia dopo 10 domande.",
   ],
   capito: "Ho capito, gioco!",
 
   // Livello
-  livelloTitolo: "Quanto è bravo il tuo avversario?",
+  livelloTitolo: "Quanto vuoi che sia difficile?",
   livelli: { 1: "Facile", 2: "Medio", 3: "Difficile" } as Record<1 | 2 | 3, string>,
   livelliSpiegazione: {
-    1: "Sbaglia spesso. Ideale per cominciare.",
-    2: "Se la cava bene.",
-    3: "Risponde quasi sempre giusto.",
+    1: "Domande facili. 10 punti per ogni risposta giusta.",
+    2: "Domande medie. 15 punti per ogni risposta giusta.",
+    3: "Domande difficili. 20 punti per ogni risposta giusta!",
   } as Record<1 | 2 | 3, string>,
 
   // Tempo

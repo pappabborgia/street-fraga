@@ -106,3 +106,32 @@ describe("modalità con il tempo", () => {
     expect(colpoPerTempo({ ...nuovoCombattente(), energia: 5 }).energia).toBe(0);
   });
 });
+
+describe("livelli scelti", () => {
+  it("più punti con i livelli più difficili: 10, 15, 20 (e bonus 5, 7, 10)", async () => {
+    const { PUNTI_PER_LIVELLO } = await import("@/gioco/regole");
+    for (const l of [1, 2, 3] as const) {
+      let a = nuovoCombattente(), d = nuovoCombattente();
+      ({ attaccante: a, difensore: d } = applicaRisposta(a, d, true, l));
+      expect(a.punti).toBe(PUNTI_PER_LIVELLO[l].giusta);
+      ({ attaccante: a, difensore: d } = applicaRisposta(a, d, true, l));
+      ({ attaccante: a, difensore: d } = applicaRisposta(a, d, true, l));
+      expect(a.punti).toBe(3 * PUNTI_PER_LIVELLO[l].giusta + PUNTI_PER_LIVELLO[l].speciale);
+    }
+    expect([1, 2, 3].map((l) => PUNTI_PER_LIVELLO[l as 1 | 2 | 3].giusta)).toEqual([10, 15, 20]);
+  });
+
+  it("la difficoltà resta nei limiti del livello scelto", async () => {
+    const { DOMANDE_PER_LIVELLO } = await import("@/gioco/regole");
+    const f = DOMANDE_PER_LIVELLO[1], d = DOMANDE_PER_LIVELLO[3];
+    expect(adattaLivello(2, 3, 0, f.min, f.max)).toBe(2); // facile: mai domande difficili
+    expect(adattaLivello(2, 0, 2, d.min, d.max)).toBe(2); // difficile: mai domande facili
+    expect(adattaLivello(2, 3, 0, d.min, d.max)).toBe(3);
+  });
+
+  it("il punteggio massimo di una partita entra nei limiti del database (300)", async () => {
+    const { PUNTI_PER_LIVELLO } = await import("@/gioco/regole");
+    const max = 11 * PUNTI_PER_LIVELLO[3].giusta + 3 * PUNTI_PER_LIVELLO[3].speciale;
+    expect(max).toBeLessThanOrEqual(300);
+  });
+});

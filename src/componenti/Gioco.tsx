@@ -10,7 +10,7 @@ import { creaRng, scegli } from "@/gioco/rng";
 import type { Domanda, Livello } from "@/gioco/tipi";
 import {
   BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, SECONDI_PER_RISPOSTA, colpoPerTempo, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
-  adattaLivello, applicaRisposta, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
+  DOMANDE_PER_LIVELLO, adattaLivello, applicaRisposta, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
 } from "@/gioco/regole";
 import { Arena, MOMENTO_COLPO, type Azione } from "./Arena";
 import { Lottatore, Ritratto } from "./Lottatore";
@@ -151,7 +151,7 @@ export default function Gioco() {
 
   const iniziaPartita = () => {
     const base = {
-      giocatore: nuovoCombattente(), computer: nuovoCombattente(), livello: 1 as Livello,
+      giocatore: nuovoCombattente(), computer: nuovoCombattente(), livello: DOMANDE_PER_LIVELLO[livelloScelto].partenza,
       giusteDiFila: 0, sbagliateDiFila: 0, usate: [], numero: 1,
       esito: null, esitoComputer: null, azione: null, spareggio: false, scaduto: false,
     };
@@ -170,7 +170,8 @@ export default function Gioco() {
   const rispondi = (i: number) => {
     if (!partita) return;
     const giusta = i === partita.domanda.corretta;
-    const r = applicaRisposta(partita.giocatore, partita.computer, giusta);
+    const r = applicaRisposta(partita.giocatore, partita.computer, giusta, livelloScelto);
+    const lim = DOMANDE_PER_LIVELLO[livelloScelto];
     const giusteDiFila = giusta ? partita.giusteDiFila + 1 : 0;
     const sbagliateDiFila = giusta ? 0 : partita.sbagliateDiFila + 1;
     if (giusta) audio.giusto(); else audio.sbagliato();
@@ -182,7 +183,7 @@ export default function Gioco() {
       giocatore: r.attaccante,
       computer: r.difensore,
       giusteDiFila, sbagliateDiFila,
-      livello: adattaLivello(partita.livello, giusteDiFila, sbagliateDiFila),
+      livello: adattaLivello(partita.livello, giusteDiFila, sbagliateDiFila, lim.min, lim.max),
       scelta: i,
       esito: r.esito,
       scaduto: false,
@@ -202,7 +203,8 @@ export default function Gioco() {
   const tempoScaduto = () => {
     if (!partita || partita.fase !== "domanda") return;
     if (partita.scelta !== null) return rispondi(partita.scelta);
-    const r = applicaRisposta(partita.giocatore, partita.computer, false);
+    const r = applicaRisposta(partita.giocatore, partita.computer, false, livelloScelto);
+    const lim = DOMANDE_PER_LIVELLO[livelloScelto];
     const sbagliateDiFila = partita.sbagliateDiFila + 1;
     audio.sbagliato();
     const stile = stileMossa(lui, partita.computer);
@@ -211,7 +213,7 @@ export default function Gioco() {
       ...partita,
       giocatore: colpoPerTempo(r.attaccante),
       giusteDiFila: 0, sbagliateDiFila,
-      livello: adattaLivello(partita.livello, 0, sbagliateDiFila),
+      livello: adattaLivello(partita.livello, 0, sbagliateDiFila, lim.min, lim.max),
       esito: r.esito,
       scaduto: true,
       fase: "esito",
@@ -223,7 +225,7 @@ export default function Gioco() {
     if (!partita) return;
     if (partita.computer.energia === 0 || partita.giocatore.energia === 0) return finePartita();
     const giusta = rng.current() < BRAVURA_COMPUTER[livelloScelto];
-    const r = applicaRisposta(partita.computer, partita.giocatore, giusta);
+    const r = applicaRisposta(partita.computer, partita.giocatore, giusta, livelloScelto);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
     else if (giusta) audio.colpo(MOMENTO_COLPO[stileMossa(lui, partita.computer).stile]);
     else audio.manca();
