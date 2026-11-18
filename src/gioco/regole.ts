@@ -14,6 +14,8 @@ export const DANNO_SPECIALE = 20;
 export const PUNTI_GIUSTA = 10;
 export const PUNTI_SPECIALE = 5;
 export const SERIE_PER_SPECIALE = 3;
+/** Solo nella modalità facoltativa "Con il tempo". */
+export const SECONDI_PER_RISPOSTA = 45;
 
 /** Probabilità che il computer risponda giusto, per livello scelto. */
 export const BRAVURA_COMPUTER: Record<Livello, number> = { 1: 0.45, 2: 0.6, 3: 0.75 };
@@ -65,6 +67,11 @@ export function applicaRisposta(
     difensore: { ...difensore, energia: Math.max(0, difensore.energia - danno) },
     esito: { giusta: true, speciale, danno, punti },
   };
+}
+
+/** Tempo scaduto: l'avversario ne approfitta con un colpo normale (senza punti per lui). */
+export function colpoPerTempo(difensore: Combattente): Combattente {
+  return { ...difensore, energia: Math.max(0, difensore.energia - DANNO_COLPO) };
 }
 
 export type Vincitore = "giocatore" | "computer" | "pari";

@@ -98,3 +98,11 @@ describe("scelta e mescolamento delle domande", () => {
     }
   });
 });
+
+describe("modalità con il tempo", () => {
+  it("se il tempo finisce l'avversario toglie un colpo normale, senza scendere sotto zero", async () => {
+    const { colpoPerTempo, DANNO_COLPO, ENERGIA_INIZIALE, nuovoCombattente } = await import("@/gioco/regole");
+    expect(colpoPerTempo(nuovoCombattente()).energia).toBe(ENERGIA_INIZIALE - DANNO_COLPO);
+    expect(colpoPerTempo({ ...nuovoCombattente(), energia: 5 }).energia).toBe(0);
+  });
+});

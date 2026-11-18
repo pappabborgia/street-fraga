@@ -39,6 +39,16 @@ export const T = {
     3: "Risponde quasi sempre giusto.",
   } as Record<1 | 2 | 3, string>,
 
+  // Tempo
+  tempoTitolo: "Vuoi giocare con il tempo?",
+  senzaTempo: "Senza tempo",
+  senzaTempoSpiegazione: "Rispondi con calma, quando vuoi.",
+  conTempo: "Con il tempo",
+  conTempoSpiegazione: (s: number) => `${s} secondi per ogni risposta. Se il tempo finisce, l'avversario ti colpisce!`,
+  tempoRimasto: (s: number) => `Tempo: ${s} secondi`,
+  tempoScaduto: "Tempo scaduto!",
+  colpitoPerTempo: (chi: string, mossa: string) => `${chi} ne approfitta e ti colpisce con: ${mossa}`,
+
   // Scelta lottatore
   sceltaTitolo: "Scegli il tuo lottatore",
   sceltaAiuto: "Tocca una faccia per vederla meglio.",

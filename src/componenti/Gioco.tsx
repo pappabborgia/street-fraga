@@ -9,7 +9,7 @@ import { MAZZO } from "@/gioco/domande";
 import { creaRng, scegli } from "@/gioco/rng";
 import type { Domanda, Livello } from "@/gioco/tipi";
 import {
-  BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
+  BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, SECONDI_PER_RISPOSTA, colpoPerTempo, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
   adattaLivello, applicaRisposta, nuovoCombattente, partitaFinita, prossimaDomanda, vincitore,
 } from "@/gioco/regole";
 import { Arena, MOMENTO_COLPO, type Azione } from "./Arena";
@@ -18,7 +18,7 @@ import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
 import { Chiesa } from "./Chiesa";
 
-type Schermata = "casa" | "regole" | "impostazioni" | "livello" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
+type Schermata = "casa" | "regole" | "impostazioni" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
 
 interface Partita {
@@ -36,6 +36,7 @@ interface Partita {
   esitoComputer: EsitoColpo | null;
   azione: Azione | null;
   spareggio: boolean;
+  scaduto: boolean; // il tempo è finito prima della risposta
 }
 
 export default function Gioco() {
@@ -43,6 +44,7 @@ export default function Gioco() {
   const [storia, setStoria] = useState<Schermata[]>(["casa"]);
   const schermata = storia[storia.length - 1];
   const [livelloScelto, setLivelloScelto] = useState<Livello>(1);
+  const [conTempo, setConTempo] = useState(false);
   const [mioId, setMioId] = useState<string>(PERSONAGGI[0].id);
   const [avversarioId, setAvversarioId] = useState<string>(PERSONAGGI[1].id);
   const [partita, setPartita] = useState<Partita | null>(null);
@@ -119,7 +121,7 @@ export default function Gioco() {
     const base = {
       giocatore: nuovoCombattente(), computer: nuovoCombattente(), livello: 1 as Livello,
       giusteDiFila: 0, sbagliateDiFila: 0, usate: [], numero: 1,
-      esito: null, esitoComputer: null, azione: null, spareggio: false,
+      esito: null, esitoComputer: null, azione: null, spareggio: false, scaduto: false,
     };
     setPartita(nuovaDomanda(base, true));
     setStoria(["casa", "lotta"]);
@@ -151,6 +153,7 @@ export default function Gioco() {
       livello: adattaLivello(partita.livello, giusteDiFila, sbagliateDiFila),
       scelta: i,
       esito: r.esito,
+      scaduto: false,
       fase: "esito",
       azione: {
         chi: "giocatore",
@@ -162,9 +165,30 @@ export default function Gioco() {
     });
   };
 
+  /** Modalità "Con il tempo": se il tempo finisce vale la risposta già toccata, altrimenti colpisce l'avversario. */
+  const tempoScaduto = () => {
+    if (!partita || partita.fase !== "domanda") return;
+    if (partita.scelta !== null) return rispondi(partita.scelta);
+    const r = applicaRisposta(partita.giocatore, partita.computer, false);
+    const sbagliateDiFila = partita.sbagliateDiFila + 1;
+    audio.sbagliato();
+    const stile = stileMossa(lui, partita.computer);
+    audio.colpo(MOMENTO_COLPO[stile.stile]);
+    setPartita({
+      ...partita,
+      giocatore: colpoPerTempo(r.attaccante),
+      giusteDiFila: 0, sbagliateDiFila,
+      livello: adattaLivello(partita.livello, 0, sbagliateDiFila),
+      esito: r.esito,
+      scaduto: true,
+      fase: "esito",
+      azione: { chi: "computer", tipo: "colpo", scritta: lui.suono[partita.computer.giuste % 2], ...stile, chiave: contatore.current++ },
+    });
+  };
+
   const turnoComputer = () => {
     if (!partita) return;
-    if (partita.computer.energia === 0) return finePartita();
+    if (partita.computer.energia === 0 || partita.giocatore.energia === 0) return finePartita();
     const giusta = rng.current() < BRAVURA_COMPUTER[livelloScelto];
     const r = applicaRisposta(partita.computer, partita.giocatore, giusta);
     if (r.esito.speciale) audio.speciale(MOMENTO_COLPO.speciale);
@@ -240,11 +264,24 @@ export default function Gioco() {
           <section className="pt-6 flex flex-col gap-5">
             <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.livelloTitolo}</h1>
             {([1, 2, 3] as Livello[]).map((l) => (
-              <Pulsante key={l} className="w-full flex-col !items-start text-left" onClick={() => { setLivelloScelto(l); vai("scelta"); }}>
+              <Pulsante key={l} className="w-full flex-col !items-start text-left" onClick={() => { setLivelloScelto(l); vai("tempo"); }}>
                 <span className="text-[1.75rem]">{T.livelli[l]}</span>
                 <span className="testo-piccolo font-normal">{T.livelliSpiegazione[l]}</span>
               </Pulsante>
             ))}
+          </section>
+        )}
+        {schermata === "tempo" && (
+          <section className="pt-6 flex flex-col gap-5">
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.tempoTitolo}</h1>
+            <Pulsante className="w-full flex-col !items-start text-left" onClick={() => { setConTempo(false); vai("scelta"); }}>
+              <span className="text-[1.75rem]">{T.senzaTempo}</span>
+              <span className="testo-piccolo font-normal">{T.senzaTempoSpiegazione}</span>
+            </Pulsante>
+            <Pulsante className="w-full flex-col !items-start text-left" onClick={() => { setConTempo(true); vai("scelta"); }}>
+              <span className="text-[1.75rem]"><span aria-hidden="true">⏱</span> {T.conTempo}</span>
+              <span className="testo-piccolo font-normal">{T.conTempoSpiegazione(SECONDI_PER_RISPOSTA)}</span>
+            </Pulsante>
           </section>
         )}
         {schermata === "scelta" && (
@@ -301,7 +338,7 @@ export default function Gioco() {
               {me.nome} <span className="fumetto text-[var(--giallo)] block my-1">{T.contro}</span> {lui.nome}
             </h1>
             <Arena giocatore={me} computer={lui} className="rounded-2xl border-4 border-black h-[15rem] sm:h-[22rem]" />
-            <p className="text-center">{T.arena} · {T.livelli[livelloScelto]}</p>
+            <p className="text-center">{T.arena} · {T.livelli[livelloScelto]} · {conTempo ? T.conTempo : T.senzaTempo}</p>
             <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={iniziaPartita}>{T.combatti}</Pulsante>
           </section>
         )}
@@ -316,6 +353,7 @@ export default function Gioco() {
         {schermata === "lotta" && partita && (
           <SchermataLotta
             titoloRef={titoloRef} p={partita} me={me} lui={lui} imp={imp} haVoce={haVoce}
+            conTempo={conTempo} onScaduto={tempoScaduto}
             scegli={(i) => (imp.dueTocchi ? setPartita({ ...partita, scelta: i }) : rispondi(i))}
             conferma={() => partita.scelta !== null && rispondi(partita.scelta)}
             memorizzato={() => setPartita({ ...partita, fase: "domanda" })}
@@ -440,8 +478,9 @@ function Hud({ p, me, lui }: { p: Partita; me: Personaggio; lui: Personaggio }) 
   );
 }
 
-function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, memorizzato, avantiEsito, avantiComputer, avantiSpareggio }: {
+function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScaduto, scegli, conferma, memorizzato, avantiEsito, avantiComputer, avantiSpareggio }: {
   titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; imp: Impostazioni; haVoce: boolean;
+  conTempo: boolean; onScaduto: () => void;
   scegli: (i: number) => void; conferma: () => void; memorizzato: () => void;
   avantiEsito: () => void; avantiComputer: () => void; avantiSpareggio: () => void;
 }) {
@@ -449,6 +488,20 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
   useEffect(() => {
     if (p.scelta !== null && p.fase === "domanda") confermaRef.current?.scrollIntoView({ block: "nearest" });
   }, [p.scelta, p.fase]);
+  // Conto alla rovescia, solo nella modalità "Con il tempo"
+  const [rimasti, setRimasti] = useState(SECONDI_PER_RISPOSTA);
+  const scadutoRef = useRef(onScaduto);
+  useEffect(() => { scadutoRef.current = onScaduto; });
+  useEffect(() => {
+    if (!conTempo || p.fase !== "domanda") return;
+    const fine = Date.now() + SECONDI_PER_RISPOSTA * 1000;
+    const t = setInterval(() => {
+      const r = Math.max(0, Math.ceil((fine - Date.now()) / 1000));
+      setRimasti(r);
+      if (r === 0) { clearInterval(t); scadutoRef.current(); }
+    }, 250);
+    return () => { clearInterval(t); setRimasti(SECONDI_PER_RISPOSTA); };
+  }, [conTempo, p.fase, p.numero]);
   const d = p.domanda;
   const ko = p.computer.energia === 0 ? "computer" : p.giocatore.energia === 0 ? "giocatore" : null;
   const totale = DOMANDE_PER_GIOCATORE + (p.spareggio ? 1 : 0);
@@ -476,6 +529,14 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
 
       {p.fase === "domanda" && (
         <div className="flex flex-col gap-4">
+          {conTempo && (
+            <div role="timer" aria-live="off">
+              <p className="testo-piccolo font-bold"><span aria-hidden="true">⏱</span> {T.tempoRimasto(rimasti)}</p>
+              <div className="h-5 border-4 border-black rounded-lg bg-[#3a2a4a] overflow-hidden">
+                <div className="h-full bg-white transition-[width] duration-300 ease-linear" style={{ width: `${(rimasti / SECONDI_PER_RISPOSTA) * 100}%` }} />
+              </div>
+            </div>
+          )}
           <h1 ref={titoloRef} tabIndex={-1} className="pannello p-5 testo-domanda">{d.domanda}</h1>
           {haVoce && (
             <Pulsante className="w-full" onClick={() => leggi(testoDaLeggere(d))}><span aria-hidden="true">🔊</span> {T.ascolta}</Pulsante>
@@ -503,8 +564,8 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
       {p.fase === "esito" && p.esito && (
         <div className="flex flex-col gap-4" aria-live="polite">
           <div className={`pannello !text-white p-4 flex items-center gap-3 ${p.esito.giusta ? "!bg-[var(--verde-giusto)]" : "!bg-[var(--rosso-sbaglio)]"}`}>
-            <span aria-hidden="true" className="text-[2.5rem] leading-none">{p.esito.giusta ? "✓" : "✗"}</span>
-            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{p.esito.giusta ? T.giusto : T.sbagliato}</h1>
+            <span aria-hidden="true" className="text-[2.5rem] leading-none">{p.esito.giusta ? "✓" : p.scaduto ? "⏱" : "✗"}</span>
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{p.esito.giusta ? T.giusto : p.scaduto ? T.tempoScaduto : T.sbagliato}</h1>
           </div>
           <div className="pannello p-5 flex flex-col gap-3">
             {p.esito.giusta ? (
@@ -515,7 +576,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, scegli, conferma, 
               </>
             ) : (
               <>
-                <p>{T.manca(me.nome)}</p>
+                <p>{p.scaduto ? T.colpitoPerTempo(lui.nome, lui.mosse[p.computer.giuste % 2].nome) : T.manca(me.nome)}</p>
                 <p>{T.rispostaGiusta} <strong className="text-[1.5rem]">✓ {d.risposte[d.corretta]}</strong></p>
                 <p className="font-bold">{T.incoraggia[p.numero % T.incoraggia.length]}</p>
               </>
