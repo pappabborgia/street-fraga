@@ -177,3 +177,5 @@ revoke all on all functions in schema public from public, anon, authenticated;
 grant execute on function public.registra(text, text), public.accedi(text, text), public.chi_sono(text), public.esci(text),
   public.salva_partita(text, int, boolean, text, text, int), public.classifica(text), public.il_mio_profilo(text),
   public.cancella_profilo(text, text) to anon, authenticated;
+
+alter function public.nome_valido(text) set search_path = public;

@@ -39,7 +39,9 @@ Vista e udito
 - Mai il colore da solo: giusto/sbagliato = icona + parola + colore.
 - Pulsante "Ascolta" (voce italiana del dispositivo), opzione "Leggi sempre ad alta voce"; nascosto se non c'è voce italiana.
 - Suoni e musica attivabili e disattivabili. Tutto quello che si sente deve anche vedersi.
-- Niente lampeggi, niente scosse veloci. Animazioni lente e brevi (massimo 1,5 secondi), nessuna animazione infinita. Rispettare `prefers-reduced-motion`.
+- Niente lampeggi, niente scosse veloci. Animazioni lente e brevi (massimo 1,5 secondi), nessuna animazione infinita.
+- Movimenti: per scelta del gestore le mosse si vedono complete di default, anche con "riduci movimento" attivo sul telefono. Nelle Impostazioni → "Movimenti dei lottatori" si può scegliere "Come il telefono" (rispetta `prefers-reduced-motion`) o "Ridotti".
+- Festa di fine partita: circa 17 secondi, fatta di scene brevi (ognuna al massimo 1,5 secondi).
 
 Solidità
 - Funziona in verticale e orizzontale da 360 px di larghezza. PWA. Partita contro il computer anche senza rete.
