@@ -231,6 +231,8 @@ export const T = {
   tueCoppe: (n: number) => `🏆 Coppe vinte: ${n}`,
   altro: "Altro",
   menu: "Menu",
+  comincia: "Comincia",
+  altreCose: "Altre cose",
   puntiSalvati: "Punti salvati nella classifica!",
   puntiNonSalvatiProva: "In prova i punti non vengono salvati.",
   puntiNonSalvatiRete: "Non sono riuscito a salvare i punti: manca la connessione.",

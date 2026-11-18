@@ -32,7 +32,7 @@ Tempo
 Lingua
 - Dai del tu. Parole di tutti i giorni. Niente inglese né parole tecniche (unica eccezione: il titolo "Street Fraga").
 - Una cosa sola per schermata. Nei menu al massimo 3 scelte per volta.
-- Pulsanti "Indietro" e "Casa" sempre visibili e sempre nello stesso posto (tranne in casa, dove ci sono solo "Menu", "Musica" e GIOCA).
+- Pulsanti "Indietro" e "Casa" sempre visibili e sempre nello stesso posto (tranne in casa, dove ci sono solo la copertina e GIOCA; classifica, regole e impostazioni stanno nella schermata dopo GIOCA).
 - Tutti i testi dell'interfaccia in `src/testi.ts`.
 
 Vista e udito

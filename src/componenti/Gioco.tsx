@@ -358,14 +358,15 @@ export default function Gioco() {
   // ---------------- Disegno ----------------
   return (
     <div onPointerDownCapture={primoTocco} className="min-h-dvh flex flex-col">
-      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} inCasa={schermata === "casa"} onMenu={() => vai("altro")} />
-      <main className="flex-1 w-full mx-auto max-w-5xl px-4 pb-10">
+      {/* in casa nessuna barra: solo la copertina e GIOCA */}
+      {schermata !== "casa" && <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} />}
+      <main className={`flex-1 flex flex-col w-full mx-auto max-w-5xl px-4 ${schermata === "casa" ? "" : "pb-10"}`}>
         {schermata === "casa" && (
-          <SchermataCasa titoloRef={titoloRef} onGioca={() => vai(sessione || inProva ? "livello" : "accesso")} />
+          <SchermataCasa titoloRef={titoloRef} onGioca={() => vai(sessione || inProva ? "altro" : "accesso")} />
         )}
         {schermata === "altro" && (
           <section className="pt-6 flex flex-col gap-5">
-            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.menu}</h1>
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.pronto}</h1>
             {(sessione || inProva) && (
               <div className="flex items-center gap-3 rounded-[var(--raggio)] bg-[var(--notte-chiara)] pl-4 pr-2 py-2">
                 <p className="flex-1 leading-snug">
@@ -374,9 +375,10 @@ export default function Gioco() {
                 <Pulsante variante="scuro" className="shrink-0 !px-4" aria-label={T.cambiaGiocatore} onClick={esci}>{T.cambia}</Pulsante>
               </div>
             )}
-            <Pulsante className="w-full" onClick={() => vai("classifica")}><span aria-hidden="true">🏆</span> {T.classifica}</Pulsante>
-            <Pulsante className="w-full" onClick={() => vai("regole")}>{T.comeSiGioca}</Pulsante>
-            <Pulsante className="w-full" onClick={() => vai("impostazioni")}>{T.impostazioni}</Pulsante>
+            <Pulsante variante="giallo" className="w-full fumetto !text-[2rem] !min-h-[5.5rem]" onClick={() => vai("livello")}>
+              <span aria-hidden="true">{"\u25B6\uFE0E"}</span> {T.comincia}
+            </Pulsante>
+            <AltreScelte vai={vai} />
           </section>
         )}
         {schermata === "classifica" && <SchermataClassifica titoloRef={titoloRef} sessione={sessione} />}
@@ -388,6 +390,7 @@ export default function Gioco() {
             onHoNome={() => { setFlusso("entra"); setNome(""); pulisci(); vai("nome"); }}
             onProva={() => { setInProva(true); setStoria(["casa", "livello"]); }} />
         )}
+        {schermata === "accesso" && <AltreScelte vai={vai} />}
         {schermata === "haiNome" && (
           <SchermataHaiNome titoloRef={titoloRef}
             onSi={() => { setFlusso("entra"); setNome(""); pulisci(); vai("nome"); }}
@@ -625,7 +628,7 @@ function SchermataCasa({ titoloRef, onGioca }: { titoloRef: RefTitolo; onGioca: 
       </h1>
       <div className="casa-menu relative flex flex-col gap-4 -mt-2">
         <Pulsante variante="giallo" className="pulsa w-full fumetto !text-[2.5rem] !min-h-[6.5rem] tracking-wide" onClick={onGioca}>
-          <span aria-hidden="true">▶</span> {T.gioca}
+          <span aria-hidden="true">{"\u25B6\uFE0E"}</span> {T.gioca}
         </Pulsante>
       </div>
     </section>
@@ -921,6 +924,17 @@ function SchermataCampione({ titoloRef, me, battuti, sessione, livello, nuovo }:
         {sessione && errore && <p>⚠ {T.coppaNonSalvata}</p>}
       </div>
       <Pulsante variante="giallo" className="w-full" onClick={nuovo}>{T.nuovoTorneo}</Pulsante>
+    </section>
+  );
+}
+
+/** Classifica, regole e impostazioni: sotto le scelte principali, dopo GIOCA (la casa resta pulita). */
+function AltreScelte({ vai }: { vai: (s: Schermata) => void }) {
+  return (
+    <section aria-label={T.altreCose} className="mt-8 pt-6 border-t-2 border-[var(--notte-chiara)] flex flex-col gap-4">
+      <Pulsante variante="scuro" className="w-full" onClick={() => vai("classifica")}><span aria-hidden="true">🏆</span> {T.classifica}</Pulsante>
+      <Pulsante variante="scuro" className="w-full" onClick={() => vai("regole")}>{T.comeSiGioca}</Pulsante>
+      <Pulsante variante="scuro" className="w-full" onClick={() => vai("impostazioni")}>{T.impostazioni}</Pulsante>
     </section>
   );
 }

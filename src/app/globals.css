@@ -239,3 +239,16 @@ html.ridotto .cuore { animation: none !important; opacity: 0; }
   50% { transform: scale(1.05); box-shadow: 0 5px 0 #000, 0 0 32px rgba(255, 210, 63, 0.85); }
 }
 html.ridotto .pulsa { animation: none; }
+
+/* Telefono e tablet in verticale: la copertina riempie tutto lo schermo sotto la barra,
+   senza spazi scuri, e GIOCA sta sopra la copertina, in fondo, dove arriva il pollice */
+@media not ((min-width: 768px) and (orientation: landscape)) {
+  .casa { flex: 1; position: relative; margin: 0 -1rem; max-width: none; padding: 0; min-height: 20rem; }
+  .casa-arte { position: absolute; inset: 0; margin: 0; }
+  .casa-arte .copertina { -webkit-mask-image: none; mask-image: none; width: 100%; height: 100%; max-height: none; border-radius: 0; object-fit: cover; object-position: center top; }
+  .casa-menu { position: absolute; left: 1rem; right: 1rem; bottom: calc(1.25rem + env(safe-area-inset-bottom)); margin: 0; }
+}
+@media not ((min-width: 768px) and (orientation: landscape)) {
+  /* in casa la barra (solo "Musica") sta sopra la copertina, trasparente: nessuna fascia scura */
+  .barra-casa { position: absolute; top: 0; left: 0; right: 0; z-index: 20; background: transparent; border-bottom: 0; }
+}
