@@ -14,7 +14,7 @@ export const PREDEFINITE: Impostazioni = {
   dueTocchi: true,
   leggiSempre: false,
   suoni: true,
-  musica: false, // scelta del gestore: di default solo i suoni dei colpi e delle scene
+  musica: true, // scelta del gestore: musica accesa di default, a volume basso
   movimenti: "completi", // scelta del gestore: le mosse si vedono sempre, anche con "riduci movimento" sul telefono
 };
 
@@ -25,7 +25,7 @@ export const SCALA: Record<Grandezza, string> = {
 };
 
 const CHIAVE = "street-fraga-impostazioni";
-const VERSIONE = 3; // v2: movimenti "completi" di default; v3: musica spenta di default
+const VERSIONE = 4; // v2: movimenti "completi" di default; v4: musica accesa di default (a volume basso)
 
 export function carica(): Impostazioni {
   try {
@@ -34,8 +34,8 @@ export function carica(): Impostazioni {
       const salvate = JSON.parse(s);
       // impostazioni salvate prima della versione 2: il vecchio valore predefinito dei movimenti non vale più
       if ((salvate.versione ?? 1) < 2 && salvate.movimenti === "telefono") delete salvate.movimenti;
-      // prima della versione 3 la musica era accesa di default: si torna al nuovo valore
-      if ((salvate.versione ?? 1) < 3) delete salvate.musica;
+      // prima della versione 4 il valore predefinito della musica era diverso: si torna al nuovo
+      if ((salvate.versione ?? 1) < 4) delete salvate.musica;
       return { ...PREDEFINITE, ...salvate };
     }
   } catch {}

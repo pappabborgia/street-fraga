@@ -145,6 +145,9 @@ export const BRANI_TORNEO: Brano[] = ["lotta", "sinfonia", "sonata", "figaro"];
 
 export type Brano = keyof typeof BRANI;
 
+/** Volume della musica (prima era 0,5). */
+const VOLUME_MUSICA = 0.28;
+
 class Suonatore {
   private ctx: AudioContext | null = null;
   private master: GainNode | null = null;
@@ -156,7 +159,7 @@ class Suonatore {
   private inizio = 0;
   private prossimo = 0; // indice del giro
   private programmatiFinoA = 0;
-  musicaAttiva = false; // di default solo i suoni dei colpi
+  musicaAttiva = true;
   suoniAttivi = true;
 
   /** Va chiamato dopo un tocco del giocatore (i browser lo richiedono). */
@@ -170,7 +173,7 @@ class Suonatore {
       this.master.gain.value = 0.9;
       this.master.connect(this.ctx.destination);
       this.busMusica = this.ctx.createGain();
-      this.busMusica.gain.value = 0.5; // volume medio
+      this.busMusica.gain.value = VOLUME_MUSICA; // volume basso: la musica accompagna, i colpi si sentono di più
       this.busMusica.connect(this.master);
       this.busEffetti = this.ctx.createGain();
       this.busEffetti.gain.value = 0.7;
@@ -210,7 +213,7 @@ class Suonatore {
       g.setValueAtTime(g.value, this.ctx.currentTime);
       g.linearRampToValueAtTime(0, this.ctx.currentTime + 0.15);
       const nuovo = this.ctx.createGain();
-      nuovo.gain.value = 0.5;
+      nuovo.gain.value = VOLUME_MUSICA;
       nuovo.connect(this.master!);
       const vecchio = this.busMusica;
       setTimeout(() => vecchio.disconnect(), 300);
