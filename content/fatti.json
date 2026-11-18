@@ -3,15 +3,16 @@
     "id": "G01",
     "testo": "Fragagnano è un comune della provincia di Taranto, in Puglia.",
     "fonti": [
-      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
-    "note": "Dall'Appendice A. Base di partenza per la fase 1."
+    "note": ""
   },
   {
     "id": "G02",
-    "testo": "Fragagnano ha circa 5.000 abitanti (4.889 al 1° gennaio 2026, stima Istat).",
+    "testo": "Fragagnano ha circa 5.000 abitanti: 4.889 al 1° gennaio 2026 secondo l'Istat.",
     "fonti": [
       "https://www.tuttitalia.it/puglia/32-fragagnano/",
       "https://www.tuttitalia.it/puglia/32-fragagnano/statistiche/censimento-2021/"
@@ -21,31 +22,269 @@
     "note": "Nelle domande usare solo 'circa 5.000'."
   },
   {
-    "id": "G06",
-    "testo": "Gli abitanti di Fragagnano si chiamano fragagnanesi.",
+    "id": "G03",
+    "testo": "La superficie del comune è di circa 22 km².",
     "fonti": [
-      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.comuni-italiani.it/073/006/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "tuttitalia dice 22,41 km², comuni-italiani 22,04: usare solo 'circa 22'."
+  },
+  {
+    "id": "G04",
+    "testo": "Il municipio è a 126 metri sul livello del mare; il territorio va da 77 a 134 metri.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO: Wikipedia indica 123 metri. Non usare finché non si decide.",
+    "da_verificare": true
+  },
+  {
+    "id": "G05",
+    "testo": "Il codice postale (CAP) è 74022, il prefisso telefonico 099.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.comuni-italiani.it/073/006/"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
     "note": ""
   },
   {
-    "id": "G05",
-    "testo": "Il CAP di Fragagnano è 74022, il prefisso telefonico 099.",
+    "id": "G06",
+    "testo": "Gli abitanti si chiamano fragagnanesi.",
     "fonti": [
-      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.comuni-italiani.it/073/006/"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
     "note": ""
+  },
+  {
+    "id": "G07",
+    "testo": "In dialetto il paese si chiama Fragnànu.",
+    "fonti": [
+      "https://en.wikipedia.org/wiki/Fragagnano",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Due voci di enciclopedia, senza note."
+  },
+  {
+    "id": "G08",
+    "testo": "Taranto, il capoluogo, è a circa 20 km.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.tuttitalia.it/puglia/32-fragagnano/36-comuni-limitrofi/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G09",
+    "testo": "Confinano con Fragagnano San Marzano di San Giuseppe, Lizzano, Sava e Grottaglie.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/36-comuni-limitrofi/",
+      "https://www.comuni-italiani.it/073/006/limitrofi.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G09B",
+    "testo": "Anche Taranto confina con Fragagnano.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/36-comuni-limitrofi/",
+      "https://www.comuni-italiani.it/073/006/limitrofi.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO: tuttitalia mette Taranto tra i confinanti, comuni-italiani no. Roccaforzata per tuttitalia è in seconda corona.",
+    "da_verificare": true
   },
   {
     "id": "G10",
     "testo": "Il comune più vicino è San Marzano di San Giuseppe, a circa 4 km.",
     "fonti": [
-      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://www.tuttitalia.it/puglia/32-fragagnano/36-comuni-limitrofi/",
       "https://www.comuni-italiani.it/073/006/limitrofi.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G11",
+    "testo": "Il paese sorge sul crinale di una dolce altura della Murgia tarantina.",
+    "fonti": [
+      "https://www.italia.it/it/puglia/fragagnano",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G12",
+    "testo": "Il municipio è in via Cesare Battisti 1.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G13",
+    "testo": "Fragagnano fa parte dell'Unione dei Comuni 'Terre del Mare e del Sole'.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Non usare il numero dei comuni dell'Unione."
+  },
+  {
+    "id": "G14",
+    "testo": "Lo stemma è diviso in due: una spiga di grano d'oro su verde e un grappolo d'uva su argento.",
+    "fonti": [
+      "https://www.comuni-italiani.it/073/006/stemma.html",
+      "https://heraldry-wiki.com/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G15",
+    "testo": "Luoghi del paese: piazza Regina Elena, piazza Risorgimento, corso Vittorio Emanuele, via Fiume, via Cesare Battisti.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://www.eventiesagre.it/Eventi_Feste/21026888_Dik+Dik+In+Concerto.html",
+      "https://fondoambiente.it/luoghi/chiesa-bvdel-carmine",
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Solo per le scene inventate (matematica, memoria, logica)."
+  },
+  {
+    "id": "G16",
+    "testo": "Fragagnano è in zona sismica 4, quella con il rischio più basso.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G17",
+    "testo": "Fragagnano è in zona climatica C.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Parola tecnica: usare con cautela."
+  },
+  {
+    "id": "G18",
+    "testo": "Vicino a Fragagnano passava l'antica via Appia.",
+    "fonti": [
+      "https://www.localidautore.com/paesi/fragagnano-1444",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "G19",
+    "testo": "Il mare è a una decina di chilometri in linea d'aria.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": "Solo Wikipedia, senza nota."
+  },
+  {
+    "id": "G20",
+    "testo": "Le campagne sono divise da muretti a secco, con piccole costruzioni in pietra a secco.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S01",
+    "testo": "Il nome verrebbe da quello di un romano proprietario delle terre, con il suffisso latino -anus.",
+    "fonti": [
+      "https://www.comuni-italiani.it/073/006/",
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://www.giornalearmonia.it/2015/07/04/possessio-fregani-quattro-rioni-quattro-colori-diversi-ma-un-solo-obiettivo-unificarsi-sotto-un-unico-vessillo/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "È un'ipotesi: nelle domande dire 'secondo una spiegazione'."
+  },
+  {
+    "id": "S01B",
+    "testo": "Il nome del romano era Freganius.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://www.giornalearmonia.it/2015/07/04/possessio-fregani-quattro-rioni-quattro-colori-diversi-ma-un-solo-obiettivo-unificarsi-sotto-un-unico-vessillo/",
+      "https://www.comuni-italiani.it/073/006/"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO di grafia: Freganius (Wikipedia, Armonia) contro Fraganius/Fregianus (comuni-italiani).",
+    "da_verificare": true
+  },
+  {
+    "id": "S02",
+    "testo": "Sul Monte Santa Sofia sono stati trovati resti di capanne preistoriche: è un sito archeologico.",
+    "fonti": [
+      "https://www.localidautore.com/paesi/fragagnano-1444",
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://www.giornalearmonia.it/2015/07/04/possessio-fregani-quattro-rioni-quattro-colori-diversi-ma-un-solo-obiettivo-unificarsi-sotto-un-unico-vessillo/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S03",
+    "testo": "Dalle rocce del Monte Santa Sofia sgorga una sorgente chiamata funtanedda.",
+    "fonti": [
+      "https://www.localidautore.com/paesi/fragagnano-1444",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Wikipedia scrive 'funtaneddhra'. Nel gioco usare 'funtanedda'."
+  },
+  {
+    "id": "S04",
+    "testo": "Dal 1278 il feudo fu della famiglia dell'Antoglietta, di origine francese, detta anche De Nantolio o Nanteuil.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
@@ -59,11 +298,33 @@
     ],
     "affidabilita": "media",
     "consultato_il": "2026-11-18",
-    "note": "Un'altra fonte indica il 1587 per il palazzo: non mettere 1587 tra le risposte sbagliate."
+    "note": "Non mettere 1587 tra le risposte sbagliate: è l'anno indicato per il palazzo (S05B)."
+  },
+  {
+    "id": "S05B",
+    "testo": "Il palazzo baronale fu costruito nel 1587, intorno alla torre più antica.",
+    "fonti": [
+      "https://www.localidautore.com/paesi/fragagnano-1444",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Non mettere 1487 tra le risposte sbagliate. Evitare domande che confondano torre e palazzo."
+  },
+  {
+    "id": "S06",
+    "testo": "La torre aveva un piccolo ponte levatoio e una scala esterna in muratura.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
   },
   {
     "id": "S07",
-    "testo": "Nel Seicento il marchese Francesco Maria dell'Antoglietta fece costruire e fortificare il Palazzo Marchesale per paura dei Turchi.",
+    "testo": "Il marchese Francesco Maria dell'Antoglietta fece costruire e fortificare il Palazzo Marchesale per paura dei Turchi.",
     "fonti": [
       "https://www.italia.it/it/puglia/fragagnano",
       "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
@@ -73,10 +334,339 @@
     "note": ""
   },
   {
-    "id": "S13",
-    "testo": "Nel 1979 il Palazzo Marchesale passò al Comune per donazione.",
+    "id": "S07B",
+    "testo": "Epoca del Palazzo Marchesale.",
+    "fonti": [
+      "https://www.italia.it/it/puglia/fragagnano",
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://iltaccodibacco.it/puglia/eventi/204531.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO: Cinquecento (italia.it), fine Seicento (Armonia), 1701 (Wikipedia), 'settecentesco' (iltaccodibacco). Non usare date.",
+    "da_verificare": true
+  },
+  {
+    "id": "S08",
+    "testo": "Il Palazzo Marchesale ha un grande portale bugnato.",
+    "fonti": [
+      "https://www.italia.it/it/puglia/fragagnano",
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S08B",
+    "testo": "Il portale del Palazzo Marchesale porta in un cortile a forma di trapezio.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S09",
+    "testo": "Su un palazzo antico in piazza c'è la statua di Sant'Irene sopra lo stemma dei dell'Antoglietta.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Armonia parla del palazzo cinquecentesco accanto al castello, Wikipedia del palazzo baronale: non dire quale palazzo."
+  },
+  {
+    "id": "S10",
+    "testo": "Al marchese Francesco Maria dell'Antoglietta succedette il figlio Lelio, nel 1718.",
     "fonti": [
       "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Non citare la morte del marchese (regola: niente lutti)."
+  },
+  {
+    "id": "S11",
+    "testo": "Titolo e feudo passarono ai Carducci Agustini: con un matrimonio nel 1812, oppure con una cessione nel 1797.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO: Armonia 10 luglio 1812 (matrimonio), Wikipedia 1797 (cessione).",
+    "da_verificare": true
+  },
+  {
+    "id": "S11B",
+    "testo": "I Carducci Agustini furono gli ultimi feudatari di Fragagnano.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S12",
+    "testo": "Un incendio rovinò il Palazzo Marchesale nel Novecento.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "CONTRASTO sull'anno: 1917 per un fulmine (Armonia), 1920 (Wikipedia). Argomento poco allegro: meglio evitarlo.",
+    "da_verificare": true
+  },
+  {
+    "id": "S13",
+    "testo": "Nel 1979 il Palazzo Marchesale fu donato al Comune.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S14",
+    "testo": "Nel Novecento il palazzo baronale fu usato in parte come stabilimento per il vino.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Il nome della famiglia proprietaria è scritto in modi diversi: non usarlo."
+  },
+  {
+    "id": "S14B",
+    "testo": "Negli anni Settanta il palazzo baronale ospitò per un periodo il Municipio.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S15",
+    "testo": "Il Palazzo Marchesale ha una sala convegni che ospita eventi.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano",
+      "https://iltaccodibacco.it/puglia/eventi/204531.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S16",
+    "testo": "Sant'Antonio di Padova fu proclamato patrono del paese nel 1904.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S17",
+    "testo": "In passato in paese ci sarebbe stata una comunità di origine albanese, poi assimilata.",
+    "fonti": [
+      "https://en.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": "Da confermare. Wikipedia in italiano cita solo influenze albanesi sul dialetto."
+  },
+  {
+    "id": "S18",
+    "testo": "Il palazzo baronale e il Palazzo Marchesale sono stati costruiti uno di fronte all'altro.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S19",
+    "testo": "Il palazzo baronale è ritenuto il palazzo più antico del paese.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S20",
+    "testo": "Il Palazzo Marchesale si affaccia su piazza Regina Elena.",
+    "fonti": [
+      "https://www.giornalearmonia.it/2012/02/22/palazzo-baronale-e-palazzo-marchesale-fragagnano-ta",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Alcune pagine di eventi indicano via Cesare Battisti o corso Vittorio Emanuele."
+  },
+  {
+    "id": "S21",
+    "testo": "Nel 1905 fu trovato un piccolo tesoro di monete greche antiche.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "S22",
+    "testo": "Nel 1923 Fragagnano entrò nella nuova provincia dello Ionio, poi chiamata provincia di Taranto.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C01",
+    "testo": "La Chiesa Madre è dedicata a Maria Santissima Immacolata ed è una parrocchia dell'Arcidiocesi di Taranto.",
+    "fonti": [
+      "https://gcatholic.org/churches/italia/101571.htm",
+      "https://www.giornalearmonia.it/2015/06/20/una-rievocazione-storica-padova-e-fragagnano-due-realta-lontane-ma-accomunate-dal-transito-di-santantonio/",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C02",
+    "testo": "La chiesa del Carmine è in corso Vittorio Emanuele, all'angolo con via Fiume; l'aspetto di oggi è del 1911.",
+    "fonti": [
+      "https://fondoambiente.it/luoghi/chiesa-bvdel-carmine",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C03",
+    "testo": "I fragagnanesi chiamano la chiesa del Carmine 'oratorio'; ha una sola navata.",
+    "fonti": [
+      "https://fondoambiente.it/luoghi/chiesa-bvdel-carmine",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C04",
+    "testo": "La Cappella della Madonna del Favore è in campagna, a circa 1 km a ovest del paese, verso Grottaglie.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://wanderlog.com/place/details/673065/cappella-della-madonna-del-favore",
+      "https://fondoambiente.it/luoghi/cappella-madonna-del-favore"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C05",
+    "testo": "Secondo la leggenda, la cappella nacque dopo il ritrovamento di un'immagine della Madonna in un pozzo vicino.",
+    "fonti": [
+      "https://www.italia.it/it/puglia/fragagnano",
+      "https://fondoambiente.it/luoghi/cappella-madonna-del-favore",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C06",
+    "testo": "La cappella sarebbe citata già nel 1577, in una visita dell'arcivescovo di Taranto.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://wanderlog.com/place/details/673065/cappella-della-madonna-del-favore"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": "Da confermare: solo Wikipedia (senza nota) e un sito di recensioni."
+  },
+  {
+    "id": "C06B",
+    "testo": "Ogni anno, l'ultima domenica di maggio, una processione di fedeli va alla Cappella della Madonna del Favore.",
+    "fonti": [
+      "https://fondoambiente.it/luoghi/cappella-madonna-del-favore",
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Wikipedia conferma la processione ma non il giorno."
+  },
+  {
+    "id": "C07",
+    "testo": "Nella Chiesa Madre un'iscrizione ricorda che fu costruita con le offerte dei cittadini, nel 1774.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C08",
+    "testo": "La Chiesa Madre è in fondo a corso Vittorio Emanuele, con una facciata barocca e un'ampia scalinata.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": "Probabilmente è la chiesa della foto usata per l'arena. Da confermare."
+  },
+  {
+    "id": "C09",
+    "testo": "Nella Chiesa Madre sono conservate reliquie di Sant'Antonio di Padova.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C10",
+    "testo": "La chiesa del Carmine fu costruita nel 1911 a spese dei cittadini.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "C11",
+    "testo": "Secondo il racconto, la cappella smise di crollare quando l'ingresso fu girato verso il paese.",
+    "fonti": [
+      "https://fondoambiente.it/luoghi/cappella-madonna-del-favore"
     ],
     "affidabilita": "media",
     "consultato_il": "2026-11-18",
@@ -87,7 +677,8 @@
     "testo": "Il patrono è Sant'Antonio di Padova; la sua festa nel calendario è il 13 giugno.",
     "fonti": [
       "https://www.tuttitalia.it/puglia/32-fragagnano/",
-      "https://www.tarantinitime.it/?p=3482"
+      "https://www.tarantinitime.it/?p=3482",
+      "https://www.giornalearmonia.it/2015/06/20/una-rievocazione-storica-padova-e-fragagnano-due-realta-lontane-ma-accomunate-dal-transito-di-santantonio/"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
@@ -95,18 +686,79 @@
   },
   {
     "id": "T02",
-    "testo": "La grande festa patronale si tiene in agosto, nei giorni 11, 12 e 13.",
+    "testo": "La festa grande del patrono si fa in agosto.",
     "fonti": [
-      "https://milazzo.life/notizie-comune-fragagnano/",
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://www.giornalearmonia.it/2015/06/20/una-rievocazione-storica-padova-e-fragagnano-due-realta-lontane-ma-accomunate-dal-transito-di-santantonio/",
+      "https://www.comuni-italiani.it/073/006/",
+      "https://iltaccodibacco.it/puglia/eventi/195838.html",
+      "https://iltaccodibacco.it/puglia/eventi/177177.html",
       "https://www.eventiesagre.it/Eventi_Feste/21026888_Dik+Dik+In+Concerto.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T02B",
+    "testo": "La festa grande di agosto dura tre giorni: 11, 12 e 13 agosto.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://milazzo.life/notizie-comune-fragagnano/",
+      "https://iltaccodibacco.it/puglia/eventi/195838.html"
     ],
     "affidabilita": "media",
     "consultato_il": "2026-11-18",
-    "note": "Da sostituire con l'articolo originale di nuovodialogo.com nella fase 2."
+    "note": "CONTRASTO: le pagine di eventi parlano solo del 12 e 13 agosto.",
+    "da_verificare": true
+  },
+  {
+    "id": "T02C",
+    "testo": "Il 12 e 13 giugno c'è la 'festa piccola'.",
+    "fonti": [
+      "https://milazzo.life/notizie-comune-fragagnano/"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": "Da confermare: solo un aggregatore. Nel 2015 i festeggiamenti di giugno andarono dall'1 al 15 giugno (Tarantini Time)."
+  },
+  {
+    "id": "T03",
+    "testo": "La festa grande fu portata in agosto perché tornavano gli emigrati: è detta anche festa dell'emigrante.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://milazzo.life/notizie-comune-fragagnano/"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T04",
+    "testo": "Il Rito dei Santi è legato a San Giuseppe, in marzo, e lo organizza la Pro Loco: 17ª edizione nel 2024.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano",
+      "https://iltaccodibacco.it/puglia/eventi/2025-03-16/",
+      "https://www.tarantinitime.it/2026/03/12/fragagnano-rinnova-il-rito-dei-santi-fede-e-tradizione-nella-xix-edizione/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "18ª edizione nel 2025, 19ª nel 2026."
+  },
+  {
+    "id": "T05",
+    "testo": "Nel Rito dei Santi a tavola siedono da 3 a 13 persone, sempre in numero dispari, in ricordo dell'Ultima Cena.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano",
+      "https://www.tarantinitime.it/2026/03/12/fragagnano-rinnova-il-rito-dei-santi-fede-e-tradizione-nella-xix-edizione/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
   },
   {
     "id": "T06",
-    "testo": "Nel Rito dei Santi San Giuseppe siede a capotavola, con un bastone fiorito.",
+    "testo": "San Giuseppe siede a capotavola con un bastone fiorito; la Madonna alla sua destra, Gesù Bambino alla sinistra.",
     "fonti": [
       "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
     ],
@@ -116,29 +768,313 @@
   },
   {
     "id": "T07",
-    "testo": "Nel Rito dei Santi San Giuseppe batte il bastone a terra per iniziare il pranzo; le pietanze sono 13.",
+    "testo": "Le pietanze del Rito dei Santi sono 13; San Giuseppe dà inizio al pranzo.",
     "fonti": [
-      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano",
+      "https://www.tarantinitime.it/2026/03/12/fragagnano-rinnova-il-rito-dei-santi-fede-e-tradizione-nella-xix-edizione/"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
     "note": ""
   },
   {
-    "id": "G07",
-    "testo": "In dialetto il paese si chiama Fragnànu.",
+    "id": "T08",
+    "testo": "Cibi del Rito dei Santi: bucatini con la mollica, ceci, fagioli, fave, baccalà, carciofi, cavolfiori fritti, arance, li cartiddati, lampascioni, pesce fritto.",
     "fonti": [
-      "https://en.wikipedia.org/wiki/Fragagnano"
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano",
+      "https://www.tarantinitime.it/2026/03/12/fragagnano-rinnova-il-rito-dei-santi-fede-e-tradizione-nella-xix-edizione/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T08B",
+    "testo": "Nel Rito dei Santi il pane, diviso tra tutti, è il simbolo della comunità.",
+    "fonti": [
+      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
     ],
     "affidabilita": "media",
     "consultato_il": "2026-11-18",
     "note": ""
   },
   {
-    "id": "T08",
-    "testo": "Tra i cibi del Rito dei Santi ci sono bucatini con la mollica, ceci, fagioli, fave, baccalà, carciofi, cavolfiori fritti, arance, li cartiddati, lampascioni e pesce fritto.",
+    "id": "T08C",
+    "testo": "Il Rito dei Santi comincia con il lavaggio delle mani.",
     "fonti": [
-      "https://www.tarantinitime.it/2024/03/15/torna-il-rito-dei-santi-con-la-proloco-di-fragagnano"
+      "https://www.tarantinitime.it/2026/03/12/fragagnano-rinnova-il-rito-dei-santi-fede-e-tradizione-nella-xix-edizione/"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T08D",
+    "testo": "Le tavolate di San Giuseppe sono chiamate anche 'mattere'.",
+    "fonti": [
+      "https://iltaccodibacco.it/puglia/eventi/54489.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola dialettale da una sola fonte."
+  },
+  {
+    "id": "T09",
+    "testo": "La Passio Christi è una rievocazione della Passione nel centro storico, prima di Pasqua: 10ª edizione nel 2019.",
+    "fonti": [
+      "https://www.eventiesagre.it/Pasqua_Pasqua/21119592_Passione+Vivente.html",
+      "https://www.tarantinitime.it/?p=26186",
+      "https://iltaccodibacco.it/puglia/eventi/204531.html",
+      "https://www.tarantinitime.it/2019/04/08/fragagnano-ta-terra-nostra-riaccende-i-riflettori-sulla-passio-christi/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Date: 9 aprile 2017 (8ª), 25 marzo 2018 (9ª), 14 aprile 2019 (10ª)."
+  },
+  {
+    "id": "T09B",
+    "testo": "La Passio Christi è organizzata dall'associazione Terra Nostra.",
+    "fonti": [
+      "https://www.eventiesagre.it/Pasqua_Pasqua/21119592_Passione+Vivente.html",
+      "https://iltaccodibacco.it/puglia/eventi/204531.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T10",
+    "testo": "Il percorso della Passio Christi si conclude al Monte Santa Sofia.",
+    "fonti": [
+      "https://www.eventiesagre.it/Pasqua_Pasqua/21119592_Passione+Vivente.html",
+      "https://www.tarantinitime.it/?p=26186"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T10B",
+    "testo": "Gli attori della Passio Christi sono passati da circa 20 a oltre 200.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=26186"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T10C",
+    "testo": "Nella Passio Christi la Via Crucis è illuminata da torce e alla fine volano colombe.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=26186"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T11",
+    "testo": "Nel Transito di Sant'Antonio il Santo viaggia su un carretto di legno tirato da un asinello.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T11B",
+    "testo": "Il Transito di Sant'Antonio, rievocazione nel centro storico, è organizzato da Terra Nostra: 7ª edizione nel 2017.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482",
+      "https://www.tarantinitime.it/2017/06/21/transitus-sancti-antonii-la-rievocazione-storica-che-accomuna-padova-con-fragagnano",
+      "https://www.eventiesagre.it/Eventi_Storici/21015563_Transitus+Sancti+Antonii.html"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "5ª nel 2015, 8ª nel 2018. La data di giugno cambia ogni anno."
+  },
+  {
+    "id": "T12",
+    "testo": "Il Torneo dei Rioni è nato nel 2015; i rioni sono Castrum, Citri, Mons Sancta Sophia e Sol Ardens.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482",
+      "https://www.giornalearmonia.it/2015/07/04/possessio-fregani-quattro-rioni-quattro-colori-diversi-ma-un-solo-obiettivo-unificarsi-sotto-un-unico-vessillo/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T12B",
+    "testo": "Nel Torneo dei Rioni si gioca a tiro alla fune, corsa nei sacchi, tiro con l'arco e albero della cuccagna.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Altri giochi: mordi la mela, carriola umana, corsa del palo."
+  },
+  {
+    "id": "T12C",
+    "testo": "Castrum vuol dire Castello, Sol Ardens Sole ardente, Mons Sancta Sophia Monte Santa Sofia.",
+    "fonti": [
+      "https://www.tarantinitime.it/?p=3482"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T13",
+    "testo": "Il Presepe Vivente nel Natale 2017 era alla 12ª edizione, il 26 dicembre e il 6 gennaio.",
+    "fonti": [
+      "https://www.eventiesagre.it/Presepi_Viventi/21016734_Presepe+Vivente+di+Fragagnano.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T14",
+    "testo": "La Notte Bianca dei Bambini è una festa per i più piccoli, a fine estate, organizzata dalla Pro Loco.",
+    "fonti": [
+      "https://salentolive24.com/2022/09/02/a-fragagnano-la-notte-bianca-dei-bambini/amp=1?print=pdf",
+      "https://www.eventiesagre.it/Eventi_Feste/21178263_La+Notte+Bianca+Dei+Bambini+A+Fragagnano.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Luogo (piazza Regina Elena) da una sola fonte."
+  },
+  {
+    "id": "T15",
+    "testo": "Il 16 luglio c'è la processione della Madonna del Carmine.",
+    "fonti": [
+      "https://iltaccodibacco.it/puglia/eventi/177619.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Una sola pagina di evento (2017)."
+  },
+  {
+    "id": "T16",
+    "testo": "In marzo, per San Giuseppe, si tiene una fiera agricola.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T17",
+    "testo": "Il Venerdì Santo si fa la processione dei Misteri.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano"
+    ],
+    "affidabilita": "bassa",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T18",
+    "testo": "Nel 2018 si sono tenuti i mercatini di Natale, alla 3ª edizione.",
+    "fonti": [
+      "https://www.eventiesagre.it/Natale_Natale/21111307_Natale+A+Fragagnano.html"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "T19",
+    "testo": "La Pro Loco organizza una passeggiata tra i melograni, con raccolta e assaggio.",
+    "fonti": [
+      "https://www.tarantinitime.it/2025/09/19/torna-a-spasso-per-fragagnano-tra-i-filari-di-melograno-gusto-natura-e-poesia/"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E01",
+    "testo": "Fragagnano è nella zona di produzione del vino Primitivo di Manduria DOC.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": "Disciplinare ufficiale."
+  },
+  {
+    "id": "E02",
+    "testo": "Il Primitivo di Manduria è DOC dal 1974.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf",
+      "https://sanmarzano.wine/en/?p=16430"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E03",
+    "testo": "Il paese è noto per l'olio d'oliva e il vino Primitivo.",
+    "fonti": [
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E04",
+    "testo": "Il Primitivo di Manduria deve avere almeno l'85% di uve Primitivo.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf",
+      "https://www.vino.com/vitigno/primitivo"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E05",
+    "testo": "Il nome 'Primitivo' viene dall'uva che matura presto.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E06",
+    "testo": "Esistono il Primitivo di Manduria e il Primitivo di Manduria Riserva.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E07",
+    "testo": "Il Primitivo di Manduria Riserva affina 24 mesi, di cui almeno 9 in legno.",
+    "fonti": [
+      "https://aisitalia.it/Disciplinari/Puglia/DOC/Primitivo%20di%20Manduria.pdf"
+    ],
+    "affidabilita": "alta",
+    "consultato_il": "2026-11-18",
+    "note": ""
+  },
+  {
+    "id": "E08",
+    "testo": "Nelle campagne di Fragagnano si coltivano soprattutto vigne e ulivi.",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Fragagnano",
+      "https://www.tuttitalia.it/puglia/32-fragagnano/"
     ],
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
