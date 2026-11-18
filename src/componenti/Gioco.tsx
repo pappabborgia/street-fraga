@@ -694,22 +694,24 @@ function SchermataImpostazioni({ titoloRef, imp, cambia, haVoce, fine }: {
   );
 }
 
+/** Barra dell'energia in stile sala giochi: ritratto nel riquadro, nome giallo, barra gialla su fondo rosso. */
 function Hud({ p, me, lui }: { p: Partita; me: Personaggio; lui: Personaggio }) {
-  const barra = (nome: string, energia: number, destra: boolean) => (
-    <div className={`flex-1 min-w-0 ${destra ? "text-right" : ""}`}>
-      <p className="testo-piccolo font-bold leading-tight truncate">{nome}</p>
-      <div className="h-7 border-[3px] border-black rounded-lg bg-[#3a2a4a] overflow-hidden relative" role="meter"
-        aria-valuemin={0} aria-valuemax={ENERGIA_INIZIALE} aria-valuenow={energia} aria-label={`${T.energia} ${nome}`}>
-        <div className="h-full bg-[var(--giallo)] transition-[width] duration-700 ease-out absolute top-0"
-          style={{ width: `${energia}%`, [destra ? "right" : "left"]: 0 }} />
+  const lato = (pers: Personaggio, energia: number, destra: boolean) => (
+    <div className={`hud-lato ${destra ? "hud-destra text-right" : ""}`}>
+      <div className="hud-ritratto"><Ritratto p={pers} verso={destra ? "sinistra" : "destra"} /></div>
+      <p className="hud-nome">{pers.nome}</p>
+      <div className="hud-barra" role="meter"
+        aria-valuemin={0} aria-valuemax={ENERGIA_INIZIALE} aria-valuenow={energia} aria-label={`${T.energia} ${pers.nome}`}>
+        <div className="hud-pieno" style={{ width: `${energia}%`, [destra ? "right" : "left"]: 0 }} />
+        {/* l'energia anche in numero: non solo il colore */}
+        <span className="hud-numero" aria-hidden="true">{energia}</span>
       </div>
-      <p className="testo-piccolo">{T.energia}: <strong>{energia}</strong></p>
     </div>
   );
   return (
-    <div className="flex gap-4 items-start pt-3">
-      {barra(me.nome, p.giocatore.energia, false)}
-      {barra(lui.nome, p.computer.energia, true)}
+    <div className="hud flex gap-3 items-start">
+      {lato(me, p.giocatore.energia, false)}
+      {lato(lui, p.computer.energia, true)}
     </div>
   );
 }
@@ -745,10 +747,12 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
 
   return (
     <section className="flex flex-col gap-4">
-      <Hud p={p} me={me} lui={lui} />
+      {/* nomi, facce ed energia stanno sopra lo sfondo, come nelle sale giochi */}
       <Arena luogo={luogo} giocatore={me} computer={lui} azione={p.azione}
         ko={p.fase === "esito" || p.fase === "computer" ? ko : null}
-        className={`rounded-2xl border-[3px] border-black ${inDomanda ? "h-[9rem] sm:h-[15rem]" : "h-[15rem] sm:h-[22rem]"}`} />
+        className={`rounded-2xl border-[3px] border-black mt-3 ${inDomanda ? "h-[15rem] sm:h-[22rem]" : "h-[20rem] sm:h-[28rem]"}`}>
+        <Hud p={p} me={me} lui={lui} />
+      </Arena>
       <div className="flex justify-between testo-piccolo font-bold">
         <span>{p.numero > DOMANDE_PER_GIOCATORE ? T.spareggio : T.domandaNumero(p.numero, totale)}</span>
         <span>{T.punti}: {p.giocatore.punti}</span>

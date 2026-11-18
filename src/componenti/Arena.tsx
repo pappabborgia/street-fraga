@@ -49,13 +49,22 @@ export function geometria(w: number, h: number, altezza = 0.82, aria = 0.08) {
 }
 
 export function Arena({
-  giocatore, computer, azione = null, ko = null, stretta = false, className = "", luogo = "chiesa",
+  giocatore, computer, azione = null, ko = null, stretta = false, className = "", luogo = "chiesa", altezza: altezzaData = 0.82, children,
 }: {
   giocatore: Personaggio; computer: Personaggio; azione?: Azione | null;
   ko?: Lato | null; stretta?: boolean; className?: string; luogo?: Luogo;
+  /** quanto sono alti i lottatori rispetto al riquadro */
+  altezza?: number;
+  /** cose da mettere in alto sopra lo sfondo, per esempio la barra dell'energia:
+      i lottatori si rimpiccioliscono quanto basta per stare sotto */
+  children?: React.ReactNode;
 }) {
   const [ref, { w, h }] = useMisure<HTMLDivElement>();
-  const g = geometria(w, h);
+  const [refSopra, { h: hSopra }] = useMisure<HTMLDivElement>();
+  const altezza = children && h > 0
+    ? Math.min(altezzaData, Math.max(0.4, (h * 0.97 - hSopra - 6) / h))
+    : altezzaData;
+  const g = geometria(w, h, altezza);
   const refG = useRef<HTMLDivElement>(null);
   const refC = useRef<HTMLDivElement>(null);
 
@@ -65,7 +74,7 @@ export function Arena({
   // Avvia i movimenti dei due lottatori a ogni nuova azione
   useEffect(() => {
     const box = ref.current?.getBoundingClientRect();
-    const { spinta } = geometria(box?.width ?? w, box?.height ?? h);
+    const { spinta } = geometria(box?.width ?? w, box?.height ?? h, altezza);
     const anim: (Animation | null)[] = [];
     for (const [lato, el] of [["giocatore", refG.current], ["computer", refC.current]] as const) {
       const d = lato === "giocatore" ? 1 : -1;
@@ -104,11 +113,11 @@ export function Arena({
       {azione?.tipo === "speciale" && attaccante && (
         <div key={`buio-${azione.chiave}`} className="effetto inset-0 buio" aria-hidden="true" />
       )}
-      <div ref={refG} key={`g-${azione?.chiave ?? 0}-${stretta}-${ko}`} className="lott" style={{ left: g.margine }}>
+      <div ref={refG} key={`g-${azione?.chiave ?? 0}-${stretta}-${ko}`} className="lott" style={{ left: g.margine, height: `${altezza * 100}%` }}>
         {fiammeAddosso("giocatore")}
         <Lottatore p={giocatore} verso="destra" />
       </div>
-      <div ref={refC} key={`c-${azione?.chiave ?? 0}-${stretta}-${ko}`} className="lott cpu" style={{ right: g.margine }}>
+      <div ref={refC} key={`c-${azione?.chiave ?? 0}-${stretta}-${ko}`} className="lott cpu" style={{ right: g.margine, height: `${altezza * 100}%` }}>
         {fiammeAddosso("computer")}
         <Lottatore p={computer} verso="sinistra" />
       </div>
@@ -125,23 +134,24 @@ export function Arena({
               <Fiammata x={g.centro[bersaglio]} h={h} fw={g.fw} ritardo={momento} />
             </>
           )}
-          {azione.tipo !== "manca" && <Stelline x={g.centro[bersaglio]} y={h * 0.4} ritardo={momento} />}
+          {azione.tipo !== "manca" && <Stelline x={g.centro[bersaglio]} y={h * (0.97 - altezza * 0.68)} ritardo={momento} />}
           <Scritta
             testo={azione.scritta}
             x={azione.tipo === "manca" ? w / 2 : g.centro[bersaglio]}
-            y={h * 0.03}
+            y={Math.max(h * 0.03, h * (0.85 - altezza))}
             manca={azione.tipo === "manca"}
             ritardo={azione.tipo === "manca" ? 0.7 : momento}
           />
         </div>
       )}
       {stretta && (
-        <div className="effetto dissolvenza fumetto text-center" style={{ left: 0, right: 0, top: h * 0.06, animationDelay: "1.2s" }} aria-hidden="true">
+        <div className="effetto dissolvenza fumetto text-center" style={{ left: 0, right: 0, top: Math.max(h * 0.06, h * (0.88 - altezza)), animationDelay: "1.2s" }} aria-hidden="true">
           <span className="inline-block bg-[var(--giallo)] text-[var(--inchiostro)] border-[3px] border-black rounded-2xl px-4 py-1 text-[1.5rem]">
             ★ ★ ★
           </span>
         </div>
       )}
+      {children && <div ref={refSopra} className="arena-sopra">{children}</div>}
     </div>
   );
 }

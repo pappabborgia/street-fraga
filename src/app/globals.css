@@ -258,3 +258,55 @@ html.ridotto .pulsa { animation: none; }
   /* in casa la barra (solo "Musica") sta sopra la copertina, trasparente: nessuna fascia scura */
   .barra-casa { position: absolute; top: 0; left: 0; right: 0; z-index: 20; background: transparent; border-bottom: 0; }
 }
+
+/* Barra dell'energia in stile sala giochi anni '90: angoli vivi, bordi neri e bianchi, colori pieni.
+   Telefono: ritratto e nome (anche su 2 righe), sotto la barra larga con l'energia in numero.
+   Schermi larghi: ritratto a lato, alto quanto nome e barra. */
+.arena-sopra {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 0.5rem 0.5rem 0.75rem;
+  /* velo scuro in alto: i nomi e i numeri si leggono su qualsiasi sfondo */
+  background: linear-gradient(rgba(10, 6, 20, 0.78), rgba(10, 6, 20, 0.55) 70%, rgba(10, 6, 20, 0));
+}
+.hud { gap: 0.75rem; }
+.hud-numero {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; font-weight: 700; line-height: 1; color: #fff;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 2px 0 #000;
+}
+.hud-lato {
+  flex: 1; min-width: 0; display: grid; column-gap: 0.5rem; align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "ritratto nome" "barra barra";
+}
+.hud-destra { grid-template-columns: 1fr auto; grid-template-areas: "nome ritratto" "barra barra"; }
+.hud-ritratto {
+  grid-area: ritratto; width: 2.5rem; height: 2.5rem; background: #2b3a8a;
+  border: 3px solid #000; box-shadow: 0 0 0 2px #f4f0e0, 0 0 0 5px #000;
+  margin: 5px; overflow: hidden;
+}
+.hud-nome {
+  grid-area: nome; min-width: 0; overflow-wrap: break-word; hyphens: manual;
+  font-family: "Atkinson Hyperlegible", sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.15;
+  text-transform: uppercase; color: var(--giallo); letter-spacing: 0;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 2px 0 #000;
+}
+.hud-barra {
+  grid-area: barra; position: relative; height: 2rem; overflow: hidden;
+  border: 3px solid #000; box-shadow: 0 0 0 2px #f4f0e0, 0 0 0 4px #000;
+  margin: 4px;
+  /* la parte persa: rossa, a fasce come sui vecchi schermi */
+  background: linear-gradient(#ff6b5a 0 30%, #d42a20 30% 75%, #8e1410 75%);
+}
+.hud-pieno {
+  position: absolute; top: 0; height: 100%;
+  background: linear-gradient(#fff4a8 0 30%, #ffd23f 30% 75%, #d99a00 75%);
+  transition: width 0.7s steps(12, end);
+}
+@media (min-width: 640px) {
+  .hud-lato { grid-template-areas: "ritratto nome" "ritratto barra"; }
+  .hud-destra { grid-template-areas: "nome ritratto" "barra ritratto"; }
+  .hud-ritratto { width: 4.5rem; height: 4.5rem; }
+  .hud-nome { font-family: "Bungee", "Atkinson Hyperlegible", sans-serif; font-weight: 400; font-size: 1.5rem; }
+  .hud-barra { height: 2.25rem; }
+}
+html.ridotto .hud-pieno { transition: none; }
