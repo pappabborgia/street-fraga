@@ -137,7 +137,7 @@ export function Arena({
       )}
       {stretta && (
         <div className="effetto dissolvenza fumetto text-center" style={{ left: 0, right: 0, top: h * 0.06, animationDelay: "1.2s" }} aria-hidden="true">
-          <span className="inline-block bg-[var(--giallo)] text-[var(--inchiostro)] border-4 border-black rounded-2xl px-4 py-1 text-[1.5rem]">
+          <span className="inline-block bg-[var(--giallo)] text-[var(--inchiostro)] border-[3px] border-black rounded-2xl px-4 py-1 text-[1.5rem]">
             ★ ★ ★
           </span>
         </div>
@@ -227,7 +227,7 @@ function Striscione({ testo }: { testo: string }) {
 function Scritta({ testo, x, y, manca, ritardo }: { testo: string; x: number; y: number; manca: boolean; ritardo: number }) {
   return (
     <div className="effetto" style={{ left: x, top: y, translate: "-50% 0", zIndex: 6 }}>
-      <div className="scoppio fumetto px-4 py-2 border-4 border-black rounded-[40%] text-[1.75rem] whitespace-nowrap"
+      <div className="scoppio fumetto px-4 py-2 border-[3px] border-black rounded-[40%] text-[1.75rem] whitespace-nowrap"
         style={{ animationDelay: `${ritardo}s`, background: manca ? "#ffffff" : "#ffd23f", color: manca ? "#1d3a8a" : "#a10f0f", boxShadow: "0 4px 0 #1a1a1a" }}>
         {testo}
       </div>

@@ -351,7 +351,7 @@ export default function Gioco() {
             <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{T.altro}</h1>
             <Pulsante className="w-full" onClick={() => vai("regole")}>{T.comeSiGioca}</Pulsante>
             <Pulsante className="w-full" onClick={() => vai("impostazioni")}>{T.impostazioni}</Pulsante>
-            {(sessione || inProva) && <Pulsante className="w-full" onClick={esci}>{T.esci}</Pulsante>}
+            {(sessione || inProva) && <Pulsante className="w-full" onClick={esci}>{T.cambiaGiocatore}</Pulsante>}
           </section>
         )}
         {schermata === "classifica" && <SchermataClassifica titoloRef={titoloRef} sessione={sessione} />}
@@ -463,7 +463,7 @@ export default function Gioco() {
           <section className="pt-6 flex flex-col gap-5">
             <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{me.nome}</h1>
             <div className="grid sm:grid-cols-2 gap-5 items-stretch">
-              <div className="arena rounded-2xl border-4 border-black h-[17rem] sm:h-auto sm:min-h-[22rem]">
+              <div className="arena rounded-2xl border-[3px] border-black h-[17rem] sm:h-auto sm:min-h-[22rem]">
                 <Chiesa />
                 <div className="absolute inset-x-0 bottom-2 h-[88%] flex justify-center">
                   <div className="h-full aspect-[210/300] dissolvenza"><Lottatore p={me} /></div>
@@ -520,7 +520,7 @@ export default function Gioco() {
             <p className="text-center text-[1.5rem] font-bold">
               {me.nome} <span className="fumetto text-[var(--giallo)]">{T.contro}</span> {lui.nome}
             </p>
-            <Arena luogo={LUOGHI_TORNEO[torneo.turno]} giocatore={me} computer={lui} className="rounded-2xl border-4 border-black h-[15rem] sm:h-[22rem]" />
+            <Arena luogo={LUOGHI_TORNEO[torneo.turno]} giocatore={me} computer={lui} className="rounded-2xl border-[3px] border-black h-[15rem] sm:h-[22rem]" />
             <p className="text-center">{NOMI_LUOGHI[LUOGHI_TORNEO[torneo.turno]]} · {T.livelli[livelloScelto]} · {conTempo ? T.conTempo : T.senzaTempo}</p>
             <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={iniziaPartita}>{T.combatti}</Pulsante>
           </section>
@@ -579,9 +579,10 @@ function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, on
   onGioca: () => void; onClassifica: () => void; onAltro: () => void; onEsci: () => void;
 }) {
   return (
-    <section className="pt-4 grid gap-5 md:grid-cols-2 md:items-center">
-      <h1 ref={titoloRef} tabIndex={-1} className="w-full max-w-[32rem] mx-auto">
-        {/* Copertina fornita dal gestore del gioco */}
+    <section className="flex flex-col gap-4 md:grid md:justify-center md:items-center md:content-center md:min-h-[calc(100dvh-7rem)]
+      md:grid-cols-[minmax(0,21rem)_minmax(0,19rem)] md:gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,22rem)] lg:gap-8">
+      {/* La copertina fa parte della pagina: senza cornice, sfuma nel viola in basso */}
+      <h1 ref={titoloRef} tabIndex={-1} className="-mx-4 md:mx-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/copertina.webp"
@@ -589,21 +590,33 @@ function SchermataCasa({ titoloRef, sessione, inProva, onGioca, onClassifica, on
           sizes="(min-width: 768px) 32rem, 100vw"
           width={1254} height={1254}
           alt={T.titolo}
-          className="w-full h-auto rounded-2xl border-4 border-black shadow-[0_6px_0_#000]"
+          className="copertina block w-full h-auto max-h-[46dvh] object-cover object-top md:max-h-[70dvh] md:object-contain md:rounded-[var(--raggio)]"
         />
       </h1>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 -mt-2 md:mt-0">
+        {/* Su schermi grandi il titolo apre la colonna dei pulsanti */}
+        <p className="hidden md:block text-[1.75rem] lg:text-[2rem] font-bold leading-tight">{T.sottotitolo}</p>
         {sessione || inProva ? (
-          <div className="pannello p-4 flex items-center justify-between gap-3">
-            <p className="font-bold">{sessione ? T.giochiCome(sessione.nome) : T.giochiInProva}</p>
-            <Pulsante className="!min-h-[4.5rem] shrink-0" onClick={onEsci}>{T.esci}</Pulsante>
+          <div className="flex items-center gap-3 rounded-[var(--raggio)] bg-[var(--notte-chiara)] pl-4 pr-2 py-2">
+            <p className="flex-1 leading-snug">
+              {sessione ? <>{T.staiGiocandoCome} <strong className="text-[1.5rem] text-[var(--giallo)]">{sessione.nome}</strong></> : T.giochiInProva}
+            </p>
+            <Pulsante variante="scuro" className="shrink-0 !px-4" aria-label={T.cambiaGiocatore} onClick={onEsci}>{T.cambia}</Pulsante>
           </div>
         ) : (
-          <p className="text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
+          <p className="md:hidden text-center text-[1.5rem] font-bold">{T.sottotitolo}</p>
         )}
-        <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={onGioca}>{T.gioca}</Pulsante>
-        <Pulsante className="w-full" onClick={onClassifica}><span aria-hidden="true">🏆</span> {T.classifica}</Pulsante>
-        <Pulsante className="w-full" onClick={onAltro}>{T.altro}</Pulsante>
+        <Pulsante variante="giallo" className="w-full fumetto !text-[2.25rem] !min-h-[5.75rem] tracking-wide" onClick={onGioca}>
+          <span aria-hidden="true">▶</span> {T.gioca}
+        </Pulsante>
+        <div className="grid grid-cols-2 gap-4">
+          <Pulsante variante="scuro" className="flex-col !gap-1 !px-2" onClick={onClassifica}>
+            <span aria-hidden="true" className="text-[1.75rem] leading-none">🏆</span>{T.classifica}
+          </Pulsante>
+          <Pulsante variante="scuro" className="flex-col !gap-1 !px-2" onClick={onAltro}>
+            <span aria-hidden="true" className="text-[1.75rem] leading-none">☰</span>{T.altro}
+          </Pulsante>
+        </div>
       </div>
     </section>
   );
@@ -670,7 +683,7 @@ function Hud({ p, me, lui }: { p: Partita; me: Personaggio; lui: Personaggio }) 
   const barra = (nome: string, energia: number, destra: boolean) => (
     <div className={`flex-1 min-w-0 ${destra ? "text-right" : ""}`}>
       <p className="testo-piccolo font-bold leading-tight truncate">{nome}</p>
-      <div className="h-7 border-4 border-black rounded-lg bg-[#3a2a4a] overflow-hidden relative" role="meter"
+      <div className="h-7 border-[3px] border-black rounded-lg bg-[#3a2a4a] overflow-hidden relative" role="meter"
         aria-valuemin={0} aria-valuemax={ENERGIA_INIZIALE} aria-valuenow={energia} aria-label={`${T.energia} ${nome}`}>
         <div className="h-full bg-[var(--giallo)] transition-[width] duration-700 ease-out absolute top-0"
           style={{ width: `${energia}%`, [destra ? "right" : "left"]: 0 }} />
@@ -720,7 +733,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
       <Hud p={p} me={me} lui={lui} />
       <Arena luogo={luogo} giocatore={me} computer={lui} azione={p.azione}
         ko={p.fase === "esito" || p.fase === "computer" ? ko : null}
-        className={`rounded-2xl border-4 border-black ${inDomanda ? "h-[9rem] sm:h-[15rem]" : "h-[15rem] sm:h-[22rem]"}`} />
+        className={`rounded-2xl border-[3px] border-black ${inDomanda ? "h-[9rem] sm:h-[15rem]" : "h-[15rem] sm:h-[22rem]"}`} />
       <div className="flex justify-between testo-piccolo font-bold">
         <span>{p.numero > DOMANDE_PER_GIOCATORE ? T.spareggio : T.domandaNumero(p.numero, totale)}</span>
         <span>{T.punti}: {p.giocatore.punti}</span>
@@ -740,7 +753,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
           {conTempo && (
             <div role="timer" aria-live="off">
               <p className="testo-piccolo font-bold"><span aria-hidden="true">⏱</span> {T.tempoRimasto(rimasti)}</p>
-              <div className="h-5 border-4 border-black rounded-lg bg-[#3a2a4a] overflow-hidden">
+              <div className="h-5 border-[3px] border-black rounded-lg bg-[#3a2a4a] overflow-hidden">
                 <div className="h-full bg-white transition-[width] duration-300 ease-linear" style={{ width: `${(rimasti / SECONDI_PER_RISPOSTA) * 100}%` }} />
               </div>
             </div>
@@ -753,7 +766,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
             {d.risposte.map((r, i) => (
               <Pulsante key={`${d.id}-${i}`} variante={p.scelta === i ? "scelto" : "bianco"} className="w-full testo-risposta !justify-start text-left"
                 aria-pressed={imp.dueTocchi ? p.scelta === i : undefined} onClick={() => scegli(i)}>
-                <span aria-hidden="true" className="inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-full border-4 border-current">
+                <span aria-hidden="true" className="inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-full border-[3px] border-current">
                   {p.scelta === i ? "✓" : ""}
                 </span>
                 <span>{r}</span>
@@ -844,7 +857,7 @@ function SchermataFine({ titoloRef, p, me, lui, sessione, livello, luogo, turno,
   }, [sessione, p, me, lui, livello, risultato]);
   return (
     <section className="flex flex-col gap-5 pt-4">
-      <Festa me={me} lui={lui} risultato={risultato} seme={seme} luogo={luogo} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
+      <Festa me={me} lui={lui} risultato={risultato} seme={seme} luogo={luogo} className="rounded-2xl border-[3px] border-black h-[17rem] sm:h-[26rem]" />
       <div className="text-center">
         <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-[var(--giallo)]">{titolo}</h1>
         <p className="text-[1.5rem] font-bold mt-1">{sottotitolo}</p>
@@ -886,7 +899,7 @@ function SchermataCampione({ titoloRef, me, battuti, sessione, livello, nuovo }:
   }, [sessione, livello, me]);
   return (
     <section className="flex flex-col gap-5 pt-4">
-      <FestaCoppa me={me} battuti={battuti} className="rounded-2xl border-4 border-black h-[19rem] sm:h-[28rem]" />
+      <FestaCoppa me={me} battuti={battuti} className="rounded-2xl border-[3px] border-black h-[19rem] sm:h-[28rem]" />
       <div className="text-center">
         <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-[var(--giallo)]">🏆 {T.campioneTitolo}</h1>
         <p className="text-[1.5rem] font-bold mt-1">{T.campioneSottotitolo(me.nome)}</p>

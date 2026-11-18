@@ -15,7 +15,7 @@ export default function ProvaFesta() {
           <button key={x} className="pulsante" onClick={() => { setR(x); setGiro((g) => g + 1); }}>{x}</button>
         ))}
       </div>
-      <Festa key={`${r}-${giro}`} me={me} lui={lui} risultato={r} seme={giro} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
+      <Festa key={`${r}-${giro}`} me={me} lui={lui} risultato={r} seme={giro} className="rounded-2xl border-[3px] border-black h-[17rem] sm:h-[26rem]" />
       <p className="text-center text-[1.5rem] font-bold">{scegliSottotitolo(r, r === "perso" ? lui.nome : me.nome, r === "perso" ? me.nome : lui.nome, giro)}</p>
     </main>
   );

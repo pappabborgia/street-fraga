@@ -11,6 +11,9 @@
   --giallo: #ffd23f;     /* con inchiostro: 13:1 */
   --blu-scelta: #1d3a8a; /* con bianco: 10:1 */
   --verde-giusto: #0b5d1e; /* con bianco: 7.9:1 */
+  --notte-chiara: #2d1f45; /* superfici secondarie sul fondo viola; con bianco: 14:1 */
+  --raggio: 1rem;          /* stesso raggio per pulsanti e riquadri */
+  --bordo: 3px;            /* stesso spessore per tutti i bordi */
   --rosso-sbaglio: #8a1c1c; /* con bianco: 9:1 */
 }
 
@@ -48,15 +51,14 @@ body {
 /* Pulsanti: alti almeno 72 px, bordo spesso, niente effetti al passaggio del mouse */
 .pulsante {
   min-height: 4.5rem;
-  border: 4px solid var(--inchiostro);
-  border-radius: 1rem;
+  border: var(--bordo) solid var(--inchiostro);
+  border-radius: var(--raggio);
   padding: 0.6rem 1.25rem;
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.2;
   color: var(--inchiostro);
   background: #ffffff;
-  box-shadow: 0 5px 0 var(--inchiostro);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,10 +67,13 @@ body {
   user-select: none;
   -webkit-user-select: none;
 }
-.pulsante:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--inchiostro); }
+.pulsante:active { transform: translateY(2px); filter: brightness(0.92); }
 .pulsante:focus-visible { outline: 5px solid #ffffff; outline-offset: 3px; }
 .pulsante[disabled] { opacity: 1; background: #d9d6cc; box-shadow: none; }
-.pulsante-giallo { background: var(--giallo); }
+.pulsante-giallo { background: var(--giallo); box-shadow: 0 5px 0 #000; }
+.pulsante-giallo:active { box-shadow: 0 2px 0 #000; }
+/* Pulsante secondario: chiaro da leggere, ma meno forte del giallo */
+.pulsante-scuro { background: var(--notte-chiara); color: #ffffff; border-color: #ffffff; }
 .pulsante-scelto { background: var(--blu-scelta); color: #ffffff; }
 .pulsante-giusto { background: var(--verde-giusto); color: #ffffff; }
 .pulsante-sbagliato { background: var(--rosso-sbaglio); color: #ffffff; }
@@ -76,9 +81,8 @@ body {
 .pannello {
   background: var(--carta);
   color: var(--inchiostro);
-  border: 4px solid var(--inchiostro);
-  border-radius: 1.25rem;
-  box-shadow: 0 6px 0 var(--inchiostro);
+  border: var(--bordo) solid var(--inchiostro);
+  border-radius: var(--raggio);
 }
 
 /* ---------------- Arena e lottatori ----------------
@@ -188,3 +192,12 @@ html.ridotto .pulsante:active { transform: none; }
 }
 html.ridotto .titolo-festa, html.ridotto .su-e-giu, html.ridotto .stordito { animation: dissolvenza 0.6s ease-out both !important; }
 html.ridotto .cuore { animation: none !important; opacity: 0; }
+
+/* Copertina integrata nella pagina: sfuma nel fondo viola, senza cornice */
+.copertina {
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+}
+@media (min-width: 768px) {
+  .copertina { -webkit-mask-image: none; mask-image: none; }
+}

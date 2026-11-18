@@ -41,7 +41,7 @@ export function Tastierino({ valore, onCambia }: { valore: string; onCambia: (v:
     <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
       <div className="flex justify-center gap-4" aria-label={`${valore.length} numeri su 4`} role="status">
         {[0, 1, 2, 3].map((i) => (
-          <span key={i} className="w-14 h-16 rounded-xl border-4 border-black bg-white text-[var(--inchiostro)] flex items-center justify-center text-[2rem] font-bold" aria-hidden="true">
+          <span key={i} className="w-14 h-16 rounded-xl border-[3px] border-black bg-white text-[var(--inchiostro)] flex items-center justify-center text-[2rem] font-bold" aria-hidden="true">
             {i < valore.length ? "●" : ""}
           </span>
         ))}
@@ -109,7 +109,7 @@ export function SchermataNome({ titoloRef, nome, onCambia, errore, onAvanti, nuo
       <label className="flex flex-col gap-2">
         <span className="testo-piccolo font-bold">{T.scriviNome}</span>
         <input ref={campo} value={nome} onChange={(e) => onCambia(e.target.value)} maxLength={30} autoComplete="off" autoCapitalize="words"
-          className="w-full min-h-[4.5rem] rounded-2xl border-4 border-black bg-white text-[var(--inchiostro)] px-4 text-[1.75rem] font-bold"
+          className="w-full min-h-[4.5rem] rounded-2xl border-[3px] border-black bg-white text-[var(--inchiostro)] px-4 text-[1.75rem] font-bold"
           onKeyDown={(e) => { if (e.key === "Enter") onAvanti(); }} />
       </label>
       {errore && <Avviso>{errore}</Avviso>}

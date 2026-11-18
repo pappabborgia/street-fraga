@@ -9,7 +9,7 @@ export default function ProvaSfondi() {
       {(Object.keys(NOMI_LUOGHI) as Luogo[]).map((l, i) => (
         <div key={l}>
           <p className="font-bold">{NOMI_LUOGHI[l]}</p>
-          <Arena luogo={l} giocatore={PERSONAGGI[i]} computer={PERSONAGGI[i + 5]} className="rounded-2xl border-4 border-black h-[15rem] sm:h-[20rem]" />
+          <Arena luogo={l} giocatore={PERSONAGGI[i]} computer={PERSONAGGI[i + 5]} className="rounded-2xl border-[3px] border-black h-[15rem] sm:h-[20rem]" />
         </div>
       ))}
     </main>

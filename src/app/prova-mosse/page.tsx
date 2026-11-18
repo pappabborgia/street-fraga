@@ -28,7 +28,7 @@ export default function ProvaMosse() {
               {azioni.map(({ titolo, a }) => (
                 <div key={titolo}>
                   <p className="font-bold">{titolo}</p>
-                  <Arena giocatore={p} computer={avv} azione={a} className="rounded-2xl border-4 border-black h-[13rem]" />
+                  <Arena giocatore={p} computer={avv} azione={a} className="rounded-2xl border-[3px] border-black h-[13rem]" />
                 </div>
               ))}
             </div>

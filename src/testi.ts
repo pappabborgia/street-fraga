@@ -161,8 +161,10 @@ export const T = {
   benvenuto: (nome: string) => `Benvenuto, ${nome}!`,
   bentornato: (nome: string) => `Bentornato, ${nome}!`,
   pronto: "Sei pronto a combattere?",
-  giochiCome: (nome: string) => `Giochi come: ${nome}`,
+  staiGiocandoCome: "Stai giocando come",
   giochiInProva: "Stai giocando in prova",
+  cambiaGiocatore: "Cambia giocatore",
+  cambia: "Cambia",
   esci: "Esci",
 
   // Torneo
