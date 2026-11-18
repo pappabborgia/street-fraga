@@ -28,7 +28,7 @@ import { SchermataParola } from "./Parola";
 import paroleDaRaccogliere from "../../content/parole-da-raccogliere.json";
 import {
   type Esito, type Sessione, SenzaRete, accedi, chiSono, dimenticaSessione, esciDalDb, nomeValido, nomiDelDispositivo,
-  parolaDaChiedere, registra, salvaPartita, salvaSessione, sessioneSalvata, vinciCoppa,
+  paroleDaConfermare, parolaDaChiedere, registra, salvaPartita, salvaSessione, sessioneSalvata, vinciCoppa,
 } from "@/gioco/conto";
 
 /** Il torneo: ottavi, quarti, semifinale e finale, ognuno in un luogo del paese. */
@@ -88,8 +88,9 @@ export default function Gioco() {
   // Raccolta del dialetto a fine partita: la parola da chiedere e dove andare dopo
   const [parola, setParola] = useState("");
   const [dopoParola, setDopoParola] = useState<Schermata[]>(["casa"]);
+  const daConfermare = useRef<string[]>([]);
   const chiediParola = (poi: Schermata[]) => {
-    setParola(parolaDaChiedere(paroleDaRaccogliere.parole.map((p) => p.italiano), rng.current));
+    setParola(parolaDaChiedere(paroleDaRaccogliere.parole.map((p) => p.italiano), daConfermare.current, rng.current));
     setDopoParola(poi);
     setStoria(["casa", "parola"]);
   };
@@ -103,6 +104,7 @@ export default function Gioco() {
     // letto dopo il primo disegno: sul server localStorage non esiste
     setImp(carica()); // eslint-disable-line react-hooks/set-state-in-effect
     setNomi(nomiDelDispositivo());
+    paroleDaConfermare().then((l) => { daConfermare.current = l ?? []; }).catch(() => {});
     const s = sessioneSalvata();
     if (s) {
       setSessione(s);

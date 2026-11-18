@@ -84,35 +84,49 @@ export function nomeValido(n: string): boolean {
 }
 
 // ---------- Vocabolario del dialetto raccolto dai giocatori ----------
+// Nessuna parola è accettata subito: ogni risposta è un voto. Una parola è "confermata"
+// quando almeno 5 persone dicono che è giusta e i sì sono almeno il triplo dei no.
 const CHIAVE_DA_INVIARE = "street-fraga-parole-da-inviare";
 const CHIAVE_CHIESTE = "street-fraga-parole-chieste";
 
-/** Salva una parola; se manca la rete la tiene nel telefono e la rimanda alla prossima occasione. */
-export async function proponiParola(token: string | null, italiano: string, dialetto: string): Promise<{ ok: boolean; raccolte?: number }> {
-  let coda: { italiano: string; dialetto: string }[] = [];
+export interface Proposta { dialetto: string; si: number; no: number; confermata: boolean }
+export const propostaParola = (italiano: string) => rpc<Proposta | null>("proposta_parola", { p_italiano: italiano });
+export const paroleDaConfermare = () => rpc<string[]>("parole_da_confermare", {});
+
+/** Registra un voto (o una parola nuova); se manca la rete lo tiene nel telefono e lo rimanda alla prossima occasione. */
+export async function votaParola(token: string | null, italiano: string, dialetto: string, giusto: boolean): Promise<{ ok: boolean; proposta?: Proposta | null }> {
+  type Voto = { italiano: string; dialetto: string; giusto: boolean };
+  let coda: Voto[] = [];
   try { coda = JSON.parse(localStorage.getItem(CHIAVE_DA_INVIARE) ?? "[]"); } catch {}
-  coda.push({ italiano, dialetto });
-  const rimaste: typeof coda = [];
-  let raccolte: number | undefined;
-  for (const p of coda) {
+  coda.push({ italiano, dialetto, giusto });
+  const rimaste: Voto[] = [];
+  let proposta: Proposta | null | undefined;
+  for (const v of coda) {
     try {
-      const r = await rpc<{ ok?: boolean; raccolte?: number }>("proponi_parola", { p_token: token, p_italiano: p.italiano, p_dialetto: p.dialetto });
-      if (r?.ok) raccolte = r.raccolte;
+      const r = await rpc<{ ok?: boolean; proposta?: Proposta | null }>("vota_parola", {
+        p_token: token, p_italiano: v.italiano, p_dialetto: v.dialetto, p_giusto: v.giusto ?? true,
+      });
+      if (r?.ok && v.italiano === italiano) proposta = r.proposta;
     } catch {
-      rimaste.push(p);
+      rimaste.push(v);
     }
   }
   try { localStorage.setItem(CHIAVE_DA_INVIARE, JSON.stringify(rimaste)); } catch {}
-  return { ok: rimaste.length === 0, raccolte };
+  return { ok: rimaste.length === 0, proposta };
 }
 
-/** Sceglie una parola da chiedere, diversa da quelle già chieste su questo dispositivo. */
-export function parolaDaChiedere(elenco: string[], casuale: () => number): string {
+/**
+ * Sceglie una parola da chiedere, diversa da quelle già chieste su questo dispositivo.
+ * Più spesso (6 volte su 10) una parola che ha già una proposta da confermare.
+ */
+export function parolaDaChiedere(elenco: string[], daConfermare: string[], casuale: () => number): string {
   let chieste: string[] = [];
   try { chieste = JSON.parse(localStorage.getItem(CHIAVE_CHIESTE) ?? "[]"); } catch {}
   let libere = elenco.filter((p) => !chieste.includes(p));
   if (libere.length === 0) { chieste = []; libere = elenco; }
-  const scelta = libere[Math.floor(casuale() * libere.length)];
+  const conProposta = libere.filter((p) => daConfermare.includes(p));
+  const fra = conProposta.length > 0 && casuale() < 0.6 ? conProposta : libere;
+  const scelta = fra[Math.floor(casuale() * fra.length)];
   try { localStorage.setItem(CHIAVE_CHIESTE, JSON.stringify([...chieste, scelta])); } catch {}
   return scelta;
 }
