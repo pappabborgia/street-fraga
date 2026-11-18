@@ -341,3 +341,18 @@ html.ridotto .urlo { animation: urlo 1.5s linear both; }
 }
 @media (min-width: 640px) { .urlo-testo { font-size: 1.5rem; } .punti-numero { font-size: 2.75rem; } }
 @media (max-width: 639px) { .punti-numero { font-size: 1.75rem; } }
+
+/* Schede della scelta del lottatore, stile sala giochi: bordo arancione, faccia su fondo blu, nome su fondo crema */
+.pulsante.scheda-lottatore {
+  background: #f6e7c8; color: #1a1a1a; border: 4px solid #e8641c; border-radius: 0.9rem;
+  box-shadow: 0 0 0 3px #7a2a08, inset 0 0 0 2px #ffb070;
+}
+.scheda-faccia {
+  display: block; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 0.6rem; border: 3px solid #1a1a1a;
+  background: radial-gradient(circle at 60% 40%, #3f6fe0, #1d3a9a 60%, #0f1f5c);
+}
+.scheda-nome {
+  display: flex; align-items: center; justify-content: center; min-height: 2.6em; padding: 0.15rem 0.25rem;
+  font-family: "Bungee", "Atkinson Hyperlegible", sans-serif; font-size: 1.25rem; line-height: 1.15; text-align: center;
+}
+.hud-ritratto { background: radial-gradient(circle at 60% 40%, #3f6fe0, #1d3a9a 60%, #0f1f5c); }

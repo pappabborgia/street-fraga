@@ -479,11 +479,11 @@ export default function Gioco() {
             <p>{T.sceltaAiuto}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {PERSONAGGI.map((p) => (
-                <Pulsante key={p.id} className="!p-2 flex-col !gap-1 !justify-start" onClick={() => { setMioId(p.id); vai("dettaglio"); }}>
-                  <span className="block w-full aspect-square rounded-xl bg-[#f3e2c0] border-2 border-black overflow-hidden">
+                <Pulsante key={p.id} className="scheda-lottatore !p-2 flex-col !gap-0 !justify-start" onClick={() => { setMioId(p.id); vai("dettaglio"); }}>
+                  <span className="scheda-faccia">
                     <Ritratto p={p} />
                   </span>
-                  <span className="testo-piccolo leading-tight">{p.nome}</span>
+                  <span className="scheda-nome">{p.nome}</span>
                 </Pulsante>
               ))}
             </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
 import type { Aspetto, Personaggio } from "@/gioco/personaggi";
+import { Volto } from "./Volto";
 
 const NERO = "#1a1a1a";
 
@@ -406,15 +407,12 @@ export function Lottatore({ p, verso = "destra", className = "" }: { p: Personag
   );
 }
 
-/** Solo la faccia, per la griglia di scelta. */
+/** Solo la faccia (disegno più curato, senza quadretti): griglia di scelta, barra dell'energia, torneo. */
 export function Ritratto({ p, verso = "destra" }: { p: Personaggio; verso?: "destra" | "sinistra" }) {
-  const id = `pixel-r-${useId().replace(/:/g, "")}`;
-  const [refSvg, scala] = useScala(120, 110);
   return (
-    <svg ref={refSvg} viewBox="50 10 120 110" className="w-full h-full" aria-hidden="true"
+    <svg viewBox="28 6 150 150" className="w-full h-full" aria-hidden="true"
       style={verso === "sinistra" ? { transform: "scaleX(-1)" } : undefined}>
-      <defs><FiltroPixel id={id} x={50} y={10} w={120} h={110} passo={2.5} scala={scala} /></defs>
-      <g filter={`url(#${id})`}><Testa a={p.aspetto} /></g>
+      <Volto a={p.aspetto} />
     </svg>
   );
 }
