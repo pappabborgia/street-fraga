@@ -7,4 +7,4 @@
 - **Disegni** (lottatori, chiesa, logo) — originali, in SVG, creati per questo gioco. La chiesa è disegnata in modo evocativo, ispirata a una foto di riferimento ("Ph Salvo Lupo") che non è inclusa nel gioco.
 - **Copertina** (`public/copertina.webp`) — immagine fornita dal gestore del gioco ("Street Fraga: Sfida in Piazza"), usata nella schermata iniziale. Da decidere con il gestore: la scritta in inglese "Arcade Fight" e lo stile del logo, simile a quello di un videogioco esistente.
 - **Copertina verticale** (`public/copertina-verticale.webp`) — versione alta della copertina fornita dal gestore per lo schermo del telefono (ritagliata sopra il pulsante GIOCA disegnato nella prova).
-- **Sfondi delle sfide** (`public/sfondi/*.webp`: chiesa, scuola, cappella, municipio, piazza) — immagini in stile videogioco fornite dal gestore, ridotte a 720 e 1280 px per farle leggere.
+- **Sfondi delle sfide** (`public/sfondi/*-pixel.png`: chiesa, scuola, cappella, municipio, piazza) — immagini fornite dal gestore, ridotte da noi a 320 px e 64 colori (aspetto a pixel grossi, circa 25 KB l'una).
