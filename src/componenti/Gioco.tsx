@@ -16,10 +16,9 @@ import { Arena, MOMENTO_COLPO, type Azione } from "./Arena";
 import { Lottatore, Ritratto } from "./Lottatore";
 import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
-import { Chiesa } from "./Chiesa";
 import { Festa, scegliSottotitolo, type Risultato } from "./Festa";
 import { FestaCoppa } from "./Coppa";
-import { type Luogo, NOMI_LUOGHI } from "./Sfondi";
+import { type Luogo, NOMI_LUOGHI, Sfondo } from "./Sfondi";
 import {
   SchermataBenvenuto, SchermataChiGioca, SchermataCodice, SchermataHaiNome, SchermataNome, SchermataNomePreso,
 } from "./Accesso";
@@ -492,7 +491,7 @@ export default function Gioco() {
             <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo">{me.nome}</h1>
             <div className="grid sm:grid-cols-2 gap-5 items-stretch">
               <div className="arena rounded-2xl border-[3px] border-black h-[17rem] sm:h-auto sm:min-h-[22rem]">
-                <Chiesa />
+                <Sfondo luogo="chiesa" />
                 <div className="absolute inset-x-0 bottom-2 h-[88%] flex justify-center">
                   <div className="h-full aspect-[210/300] dissolvenza"><Lottatore p={me} /></div>
                 </div>
