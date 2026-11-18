@@ -5,8 +5,19 @@ import "@fontsource/bungee/400.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  // indirizzo completo del sito: serve a WhatsApp e ai social per trovare l'immagine di anteprima
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITO ?? "https://street-fraga.vercel.app"),
   title: "Street Fraga",
   description: "Il picchiaduro a colpi di risposte, ambientato a Fragagnano.",
+  openGraph: {
+    title: "Street Fraga",
+    description: "Il picchiaduro a colpi di risposte, ambientato a Fragagnano.",
+    url: "/",
+    siteName: "Street Fraga",
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Street Fraga", description: "Il picchiaduro a colpi di risposte, ambientato a Fragagnano." },
 };
 
 export const viewport: Viewport = {
