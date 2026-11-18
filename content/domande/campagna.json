@@ -1,0 +1,514 @@
+[
+  {
+    "id": "CAM-001",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Da quale frutto si ricava l'olio d'oliva?",
+    "risposte": [
+      "Dall'uva",
+      "Dall'oliva",
+      "Dal fico"
+    ],
+    "corretta": 1,
+    "spiegazione": "Le olive si portano al frantoio, dove diventano olio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-002",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama il piccolo della pecora?",
+    "risposte": [
+      "Il vitello",
+      "Il puledro",
+      "L'agnello"
+    ],
+    "corretta": 2,
+    "spiegazione": "L'agnello riesce a camminare già poche ore dopo la nascita.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-003",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale animale fa il verso «chicchirichì»?",
+    "risposte": [
+      "Il gallo",
+      "L'anatra",
+      "Il tacchino"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il gallo canta spesso all'alba, ma anche durante il giorno.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-004",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi lavora il ferro con il fuoco e il martello?",
+    "risposte": [
+      "Il sarto",
+      "Il fabbro",
+      "Il calzolaio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il fabbro scalda il ferro nella forgia per piegarlo meglio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-005",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa si raccoglie durante la vendemmia?",
+    "risposte": [
+      "Le olive",
+      "Il grano",
+      "L'uva"
+    ],
+    "corretta": 2,
+    "spiegazione": "Dopo la vendemmia l'uva si pigia per fare il mosto.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-006",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In quale stagione maturano i pomodori nell'orto?",
+    "risposte": [
+      "In inverno",
+      "In estate",
+      "In primavera"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il pomodoro ama il caldo e tanto sole.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-007",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale di questi ortaggi cresce sotto terra?",
+    "risposte": [
+      "La carota",
+      "Il pomodoro",
+      "La zucchina"
+    ],
+    "corretta": 0,
+    "spiegazione": "Della carota mangiamo la radice, ricca di colore arancione.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-008",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa può comparire in cielo con pioggia e sole insieme?",
+    "risposte": [
+      "La luna piena",
+      "La nebbia",
+      "L'arcobaleno"
+    ],
+    "corretta": 2,
+    "spiegazione": "L'arcobaleno nasce dalla luce del sole dentro le gocce d'acqua.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-009",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi ripara le scarpe rotte?",
+    "risposte": [
+      "Il calzolaio",
+      "Il fornaio",
+      "Il barbiere"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il calzolaio rimette suole e tacchi alle scarpe consumate.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-010",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi porta le pecore al pascolo?",
+    "risposte": [
+      "Il pescatore",
+      "Il pastore",
+      "Il muratore"
+    ],
+    "corretta": 1,
+    "spiegazione": "Spesso il pastore si fa aiutare da un bravo cane.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-011",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa si coltiva soprattutto nelle campagne di Fragagnano?",
+    "risposte": [
+      "Riso e mais",
+      "Mele e pere",
+      "Vigne e ulivi"
+    ],
+    "corretta": 2,
+    "spiegazione": "Vigne e ulivi disegnano il paesaggio di queste campagne.",
+    "fatto_id": "E08",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-012",
+    "materia": "campagna",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano è noto per l'olio d'oliva e il vino Primitivo.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Olio e vino sono i grandi tesori di queste terre.",
+    "fatto_id": "E03",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-013",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama il luogo dove le olive diventano olio?",
+    "risposte": [
+      "Il forno",
+      "Il frantoio",
+      "La cantina"
+    ],
+    "corretta": 1,
+    "spiegazione": "Un tempo le grandi macine del frantoio giravano grazie agli animali.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-014",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama il succo dell'uva appena pigiata?",
+    "risposte": [
+      "Il mosto",
+      "L'aceto",
+      "La grappa"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il mosto, fermentando nelle botti, diventa vino.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-015",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Quale non c'entra con gli attrezzi del contadino?",
+    "risposte": [
+      "La zappa",
+      "Il forcone",
+      "Il ditale"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il ditale protegge il dito della sarta mentre cuce.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-016",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "L'ulivo resta verde tutto l'anno.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "L'ulivo è sempreverde e può vivere per centinaia di anni.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-017",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con quale cereale si fa la pasta secca?",
+    "risposte": [
+      "L'orzo",
+      "Il mais",
+      "Il grano duro"
+    ],
+    "corretta": 2,
+    "spiegazione": "In Italia la pasta secca si fa con semola di grano duro.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-018",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Quale non c'entra con gli ortaggi dell'orto?",
+    "risposte": [
+      "La melanzana",
+      "La mandorla",
+      "La zucchina"
+    ],
+    "corretta": 1,
+    "spiegazione": "La mandorla è il frutto del mandorlo, un albero.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-019",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama il taglio del grano maturo?",
+    "risposte": [
+      "La potatura",
+      "La vendemmia",
+      "La mietitura"
+    ],
+    "corretta": 2,
+    "spiegazione": "Un tempo si mieteva a mano, con la falce.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-020",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Con che cosa le api fanno il miele?",
+    "risposte": [
+      "Con il nettare",
+      "Con la resina",
+      "Con la rugiada"
+    ],
+    "corretta": 0,
+    "spiegazione": "Le api conservano il miele nelle cellette di cera.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-021",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Al Sud il grano si semina di solito in piena estate.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Al Sud il grano si semina in autunno e si raccoglie d'estate.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-022",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama il vento caldo che arriva dall'Africa?",
+    "risposte": [
+      "La tramontana",
+      "Lo scirocco",
+      "Il maestrale"
+    ],
+    "corretta": 1,
+    "spiegazione": "Lo scirocco soffia da sud-est e porta aria calda e umida.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-023",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Da dove viene il nome dell'uva Primitivo?",
+    "risposte": [
+      "Dagli acini piccoli",
+      "Dalla maturazione precoce",
+      "Dal colore scuro"
+    ],
+    "corretta": 1,
+    "spiegazione": "È tra le prime uve a maturare nella stagione.",
+    "fatto_id": "E05",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-024",
+    "materia": "campagna",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Fragagnano è nella zona del vino Primitivo di Manduria.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il Primitivo di Manduria è un vino rosso pugliese.",
+    "fatto_id": "E01",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-025",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quale albero fiorisce già a fine inverno?",
+    "risposte": [
+      "Il fico",
+      "L'ulivo",
+      "Il melograno",
+      "Il mandorlo"
+    ],
+    "corretta": 3,
+    "spiegazione": "Il mandorlo è tra i primi alberi da frutto a fiorire.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-026",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Chi mette i ferri agli zoccoli dei cavalli?",
+    "risposte": [
+      "Il bottaio",
+      "Il maniscalco",
+      "Il sellaio",
+      "Il vetraio"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il ferro protegge lo zoccolo del cavallo, come una scarpa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-027",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Per quanto tempo, almeno, affina il Primitivo di Manduria Riserva?",
+    "risposte": [
+      "6 mesi",
+      "12 mesi",
+      "24 mesi",
+      "48 mesi"
+    ],
+    "corretta": 2,
+    "spiegazione": "Almeno 9 di quei mesi li passa nel legno.",
+    "fatto_id": "E07",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-028",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Quanta uva Primitivo deve avere, almeno, il Primitivo di Manduria?",
+    "risposte": [
+      "Il 50%",
+      "Il 70%",
+      "Il 100%",
+      "L'85%"
+    ],
+    "corretta": 3,
+    "spiegazione": "Il resto può venire da altre uve, secondo le regole.",
+    "fatto_id": "E04",
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-029",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Come si chiama la separazione dei chicchi dalla paglia?",
+    "risposte": [
+      "La mietitura",
+      "La trebbiatura",
+      "La semina",
+      "L'aratura"
+    ],
+    "corretta": 1,
+    "spiegazione": "Un tempo si trebbiava sull'aia, poi arrivò la trebbiatrice.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "CAM-030",
+    "materia": "campagna",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Quale non c'entra con gli attrezzi del falegname?",
+    "risposte": [
+      "La pialla",
+      "La sega",
+      "La cazzuola",
+      "Lo scalpello"
+    ],
+    "corretta": 2,
+    "spiegazione": "La cazzuola serve al muratore per stendere la malta.",
+    "fatto_id": null,
+    "stato": "attiva"
+  }
+]

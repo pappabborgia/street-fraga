@@ -22,7 +22,7 @@ export const MOMENTO_COLPO: Record<Stile | "speciale", number> = {
 
 interface Misure { w: number; h: number }
 
-function useMisure<T extends HTMLElement>() {
+export function useMisure<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [m, setM] = useState<Misure>({ w: 360, h: 240 });
   useEffect(() => {

@@ -1,0 +1,1034 @@
+[
+  {
+    "id": "MEM-001",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa va in piazza. Compra pane, arance e ceci.",
+    "domanda": "Che cosa ha comprato Nonna Rosa?",
+    "risposte": [
+      "Pane, arance e ceci",
+      "Pane, mele e fave",
+      "Latte, arance e ceci"
+    ],
+    "corretta": 0,
+    "spiegazione": "Pane, arance e ceci: una spesa da vera nonna!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-002",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo va alla vigna. Porta un cesto, le forbici e l'acqua.",
+    "domanda": "Che cosa porta Zio Cosimo alla vigna?",
+    "risposte": [
+      "Secchio, zappa e vino",
+      "Cesto, forbici e acqua",
+      "Sedia, pane e cappello"
+    ],
+    "corretta": 1,
+    "spiegazione": "Cesto, forbici e acqua: pronto per lavorare tra le viti!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-003",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia ha un gatto bianco. Si chiama Fiocco.",
+    "domanda": "Che colore ha il gatto di Zia Lucia?",
+    "risposte": [
+      "Nero",
+      "Grigio",
+      "Bianco"
+    ],
+    "corretta": 2,
+    "spiegazione": "Bianco come la neve: proprio un bel Fiocco!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-004",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino esce di casa alle 8. Va in piazza Risorgimento.",
+    "domanda": "Dove va Nonno Pino?",
+    "risposte": [
+      "In piazza Risorgimento",
+      "Al Monte Santa Sofia",
+      "Alla chiesa del Carmine"
+    ],
+    "corretta": 0,
+    "spiegazione": "In piazza Risorgimento, a chiacchierare con gli amici!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-005",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito ripara una sedia. Usa un martello e 4 chiodi.",
+    "domanda": "Quanti chiodi usa Mastro Vito?",
+    "risposte": [
+      "2",
+      "6",
+      "4"
+    ],
+    "corretta": 2,
+    "spiegazione": "4 chiodi ben piantati: la sedia è come nuova!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-006",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa prepara il pranzo. Cucina pasta, polpette e peperoni.",
+    "domanda": "Che cosa cucina Nonna Rosa?",
+    "risposte": [
+      "Riso, pesce e patate",
+      "Pasta, polpette e peperoni",
+      "Minestra, uova e fave"
+    ],
+    "corretta": 1,
+    "spiegazione": "Pasta, polpette e peperoni: che profumo in cucina!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-007",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo ha un cane marrone. Il cane dorme sotto l'ulivo.",
+    "domanda": "Dove dorme il cane di Zio Cosimo?",
+    "risposte": [
+      "Sotto il tavolo",
+      "Vicino al pozzo",
+      "Sotto l'ulivo"
+    ],
+    "corretta": 2,
+    "spiegazione": "Sotto l'ulivo, al fresco: un cane che sa stare bene!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-008",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia va alla Chiesa Madre. Indossa un cappello azzurro.",
+    "domanda": "Di che colore è il cappello di Zia Lucia?",
+    "risposte": [
+      "Azzurro",
+      "Rosso",
+      "Giallo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Azzurro come il cielo: un cappello elegante!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-009",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino va in campagna. Porta pane, formaggio e olive.",
+    "domanda": "Che cosa porta Nonno Pino in campagna?",
+    "risposte": [
+      "Biscotti, latte e mele",
+      "Taralli, vino e fichi",
+      "Pane, formaggio e olive"
+    ],
+    "corretta": 2,
+    "spiegazione": "Pane, formaggio e olive: una merenda saporita!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-010",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa apre la porta. Entrano 2 nipoti con un mazzo di fiori.",
+    "domanda": "Quanti nipoti entrano in casa?",
+    "risposte": [
+      "3",
+      "2",
+      "5"
+    ],
+    "corretta": 1,
+    "spiegazione": "2 nipoti e un mazzo di fiori: che bella sorpresa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-011",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito dipinge il cancello di verde. Poi si riposa in giardino.",
+    "domanda": "Di che colore dipinge il cancello?",
+    "risposte": [
+      "Blu",
+      "Verde",
+      "Marrone"
+    ],
+    "corretta": 1,
+    "spiegazione": "Verde brillante: il cancello sembra nuovo!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-012",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia cammina in via Fiume. Incontra la sua amica Carmela.",
+    "domanda": "Chi incontra Zia Lucia in via Fiume?",
+    "risposte": [
+      "Carmela",
+      "Teresa",
+      "Angela"
+    ],
+    "corretta": 0,
+    "spiegazione": "Carmela! Che bello incontrare un'amica per strada.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-013",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino lavora nell'orto. Pianta pomodori, zucchine e melanzane.",
+    "domanda": "Che cosa pianta Nonno Pino?",
+    "risposte": [
+      "Cipolle, carote e patate",
+      "Fave, ceci e lenticchie",
+      "Pomodori, zucchine e melanzane"
+    ],
+    "corretta": 2,
+    "spiegazione": "Pomodori, zucchine e melanzane: l'estate sarà piena di verdure!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-014",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo va alla vigna in bicicletta. Torna a casa a piedi.",
+    "domanda": "Come va alla vigna Zio Cosimo?",
+    "risposte": [
+      "In macchina",
+      "In bicicletta",
+      "Con l'asino"
+    ],
+    "corretta": 1,
+    "spiegazione": "In bicicletta all'andata: una bella pedalata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-015",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Sul tavolo della cucina ci sono 5 arance. C'è anche un melone.",
+    "domanda": "Quante arance ci sono sul tavolo?",
+    "risposte": [
+      "5",
+      "3",
+      "7"
+    ],
+    "corretta": 0,
+    "spiegazione": "5 arance succose: una bella scorta di frutta!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-016",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito ha una giacca gialla. Ha anche un cappello nero.",
+    "domanda": "Di che colore è la giacca di Mastro Vito?",
+    "risposte": [
+      "Verde",
+      "Rossa",
+      "Gialla"
+    ],
+    "corretta": 2,
+    "spiegazione": "Gialla come il sole: Mastro Vito si vede da lontano!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-017",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia va al Palazzo Marchesale. Con lei c'è la nipote Anna.",
+    "domanda": "Con chi va Zia Lucia al Palazzo Marchesale?",
+    "risposte": [
+      "Con la sorella Maria",
+      "Con la nipote Anna",
+      "Con l'amica Teresa"
+    ],
+    "corretta": 1,
+    "spiegazione": "Con la nipote Anna: una bella passeggiata insieme!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-018",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino ha 3 galline e un gallo. Il gallo canta al mattino.",
+    "domanda": "Quante galline ha Nonno Pino?",
+    "risposte": [
+      "2",
+      "4",
+      "3"
+    ],
+    "corretta": 2,
+    "spiegazione": "3 galline e un gallo canterino: un pollaio allegro!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-019",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa mette in tavola una tovaglia rossa. Sopra mette un vaso di fiori.",
+    "domanda": "Di che colore è la tovaglia?",
+    "risposte": [
+      "Rossa",
+      "Bianca",
+      "Azzurra"
+    ],
+    "corretta": 0,
+    "spiegazione": "Rossa, con i fiori sopra: una tavola di festa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-020",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo sale sul Monte Santa Sofia. Porta con sé una mela.",
+    "domanda": "Che cosa porta Zio Cosimo?",
+    "risposte": [
+      "Una pera",
+      "Un panino",
+      "Una mela"
+    ],
+    "corretta": 2,
+    "spiegazione": "Una mela: la merenda giusta per la salita!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-021",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Alle 10 Zia Lucia beve il caffè. Alle 11 va in giardino.",
+    "domanda": "A che ora beve il caffè Zia Lucia?",
+    "risposte": [
+      "Alle 9",
+      "Alle 10",
+      "Alle 12"
+    ],
+    "corretta": 1,
+    "spiegazione": "Alle 10: una pausa caffè con il sorriso!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-022",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito prende la scala. Raccoglie i fichi dall'albero.",
+    "domanda": "Che frutti raccoglie Mastro Vito?",
+    "risposte": [
+      "I fichi",
+      "Le pere",
+      "Le mele"
+    ],
+    "corretta": 0,
+    "spiegazione": "I fichi, dolci come il miele!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-023",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino legge il giornale in piazza Regina Elena. Poi torna a casa.",
+    "domanda": "Dove legge il giornale Nonno Pino?",
+    "risposte": [
+      "In cucina",
+      "Sotto il portico",
+      "In piazza Regina Elena"
+    ],
+    "corretta": 2,
+    "spiegazione": "In piazza Regina Elena, con il sole e la compagnia!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-024",
+    "materia": "memoria",
+    "livello": 1,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo prima annaffia l'orto. Poi va in piazza Risorgimento.",
+    "domanda": "Che cosa fa per prima Zio Cosimo?",
+    "risposte": [
+      "Pota la vigna",
+      "Annaffia l'orto",
+      "Lava il cane"
+    ],
+    "corretta": 1,
+    "spiegazione": "Prima l'orto, poi la piazza: una mattina ben spesa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-025",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa compra latte, uova, farina e zucchero. Vuole fare una torta.",
+    "domanda": "Quale di queste cose ha comprato Nonna Rosa?",
+    "risposte": [
+      "Il burro",
+      "La farina",
+      "Il miele"
+    ],
+    "corretta": 1,
+    "spiegazione": "La farina, per una torta buonissima!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-026",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo va in campagna. Porta la zappa, il cappello, l'acqua e il pane.",
+    "domanda": "Quale di queste cose porta Zio Cosimo?",
+    "risposte": [
+      "Il cappello",
+      "La radio",
+      "L'ombrello"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il cappello, per ripararsi dal sole dei campi!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-027",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "A pranzo da Nonno Pino vengono Lucia, Vito, Anna e Carlo.",
+    "domanda": "Chi viene a pranzo da Nonno Pino?",
+    "risposte": [
+      "Teresa",
+      "Michele",
+      "Anna"
+    ],
+    "corretta": 2,
+    "spiegazione": "Anna, insieme a Lucia, Vito e Carlo: tavola piena!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-028",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia ha 4 vasi sul balcone. Sono rosso, giallo, blu e bianco.",
+    "domanda": "Quale di questi colori ha uno dei vasi?",
+    "risposte": [
+      "Verde",
+      "Giallo",
+      "Viola"
+    ],
+    "corretta": 1,
+    "spiegazione": "Giallo, insieme a rosso, blu e bianco: un balcone allegro!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-029",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito apre la cassetta degli attrezzi. Dentro ci sono chiodi, viti, un metro e la colla.",
+    "domanda": "Quale di queste cose c'è nella cassetta?",
+    "risposte": [
+      "La pinza",
+      "La sega",
+      "Il metro"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il metro: Mastro Vito misura tutto con precisione!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-030",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino esce di casa alle 9. Va in via Fiume e poi alla Chiesa Madre. Torna a casa alle 12.",
+    "domanda": "A che ora torna a casa Nonno Pino?",
+    "risposte": [
+      "Alle 12",
+      "Alle 10",
+      "Alle 13"
+    ],
+    "corretta": 0,
+    "spiegazione": "Alle 12, giusto in tempo per il pranzo!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-031",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia stende il bucato. Ci sono una tovaglia, 2 lenzuola e un grembiule.",
+    "domanda": "Quale di queste cose stende Zia Lucia?",
+    "risposte": [
+      "La coperta",
+      "Il grembiule",
+      "Il cuscino"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il grembiule, che sventola al sole come una bandiera!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-032",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo è nell'orto. Ci sono un gatto, un cane, una gallina e un coniglio.",
+    "domanda": "Quale animale c'è nell'orto?",
+    "risposte": [
+      "La capra",
+      "L'asino",
+      "Il coniglio"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il coniglio, che sgranocchia contento le foglie!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-033",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa va a fare la spesa. Compra pane, pesce, limoni e patate.",
+    "domanda": "Quante cose ha comprato Nonna Rosa?",
+    "risposte": [
+      "3",
+      "4",
+      "5"
+    ],
+    "corretta": 1,
+    "spiegazione": "4 cose: pane, pesce, limoni e patate. Cena pronta!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-034",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito imbianca la cucina. Usa una scala, un pennello, un secchio e uno straccio.",
+    "domanda": "Quale di queste cose usa Mastro Vito?",
+    "risposte": [
+      "Il pennello",
+      "La carriola",
+      "Il martello"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il pennello: la cucina diventa bianca e luminosa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-035",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo va nell'uliveto con Pino, Vito e Rocco. Raccolgono 6 cassette di olive.",
+    "domanda": "Quante cassette di olive raccolgono?",
+    "risposte": [
+      "4",
+      "6",
+      "8"
+    ],
+    "corretta": 1,
+    "spiegazione": "6 cassette: un bel raccolto, in buona compagnia!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-036",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia apparecchia la tavola. Piatti bianchi, bicchieri verdi, tovaglioli gialli e tovaglia blu.",
+    "domanda": "Di che colore sono i bicchieri?",
+    "risposte": [
+      "Rossi",
+      "Neri",
+      "Verdi"
+    ],
+    "corretta": 2,
+    "spiegazione": "Verdi, tra piatti bianchi e tovaglioli gialli: che tavola colorata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-037",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa prima fa il caffè, poi stende i panni. Dopo va alla chiesa del Carmine e poi in giardino.",
+    "domanda": "Che cosa fa per prima Nonna Rosa?",
+    "risposte": [
+      "Lava i piatti",
+      "Fa il caffè",
+      "Pulisce i vetri"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il caffè per prima cosa: la giornata comincia bene!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-038",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Guarda il tavolo della cucina. Ci sono un melone, 2 pere, 5 fichi e un limone.",
+    "domanda": "Quanti fichi ci sono sul tavolo?",
+    "risposte": [
+      "5",
+      "3",
+      "7"
+    ],
+    "corretta": 0,
+    "spiegazione": "5 fichi maturi, pronti per la merenda!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-039",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia va alla vigna. Porta una cesta, un fazzoletto, la borraccia e le forbici.",
+    "domanda": "Quale di queste cose porta Zia Lucia?",
+    "risposte": [
+      "La zappa",
+      "La borraccia",
+      "La sedia"
+    ],
+    "corretta": 1,
+    "spiegazione": "La borraccia, con l'acqua fresca per la giornata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-040",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito parte da piazza Risorgimento. Passa da corso Vittorio Emanuele e via Fiume. Arriva alla Chiesa Madre.",
+    "domanda": "Dove arriva Mastro Vito?",
+    "risposte": [
+      "Al Monte Santa Sofia",
+      "Al Palazzo Marchesale",
+      "Alla Chiesa Madre"
+    ],
+    "corretta": 2,
+    "spiegazione": "Alla Chiesa Madre, dopo una bella camminata per il paese!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-041",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa ha 4 vasi di fiori. Ci sono rose, gerani, viole e margherite.",
+    "domanda": "Quale di questi fiori ha Nonna Rosa?",
+    "risposte": [
+      "I tulipani",
+      "Le viole",
+      "I girasoli"
+    ],
+    "corretta": 1,
+    "spiegazione": "Le viole, insieme a rose, gerani e margherite: che profumo!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-042",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Domenica Zia Lucia invita a pranzo Maria, Franco, Teresa e Rocco.",
+    "domanda": "Chi viene a pranzo da Zia Lucia?",
+    "risposte": [
+      "Franco",
+      "Giorgio",
+      "Elena"
+    ],
+    "corretta": 0,
+    "spiegazione": "Franco, con Maria, Teresa e Rocco: una domenica in compagnia!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-043",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Alle 8 Zio Cosimo va nell'orto, alle 10 dal barbiere. Alle 12 pranza, alle 16 va alla vigna.",
+    "domanda": "A che ora va alla vigna Zio Cosimo?",
+    "risposte": [
+      "Alle 15",
+      "Alle 16",
+      "Alle 17"
+    ],
+    "corretta": 1,
+    "spiegazione": "Alle 16, quando il sole è meno forte!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-044",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonno Pino prepara lo zaino. Mette una mela, un panino, un libro e gli occhiali.",
+    "domanda": "Quale di queste cose c'è nello zaino?",
+    "risposte": [
+      "La radio",
+      "Il giornale",
+      "Il libro"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il libro, da leggere all'ombra di un albero!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-045",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia ha 4 gomitoli di lana. Sono rosso, verde, viola e arancione.",
+    "domanda": "Quale di questi colori ha un gomitolo?",
+    "risposte": [
+      "Viola",
+      "Celeste",
+      "Marrone"
+    ],
+    "corretta": 0,
+    "spiegazione": "Viola, perfetto per una sciarpa allegra!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-046",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito passeggia in campagna. Vede un falco, 2 lepri, una volpe e una farfalla.",
+    "domanda": "Quale animale vede Mastro Vito?",
+    "risposte": [
+      "Il cervo",
+      "La volpe",
+      "Il lupo"
+    ],
+    "corretta": 1,
+    "spiegazione": "La volpe, con la sua bella coda rossa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-047",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa fa la salsa. Usa pomodori, basilico, sale e olio.",
+    "domanda": "Quale di queste cose usa Nonna Rosa?",
+    "risposte": [
+      "Il pepe",
+      "La cipolla",
+      "Il basilico"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il basilico: profumo d'estate nella salsa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-048",
+    "materia": "memoria",
+    "livello": 2,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo e Nonno Pino giocano a carte in piazza Regina Elena. Fanno 4 partite e ridono tanto.",
+    "domanda": "Quante partite fanno a carte?",
+    "risposte": [
+      "4",
+      "2",
+      "6"
+    ],
+    "corretta": 0,
+    "spiegazione": "4 partite e tante risate: questo conta davvero!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-049",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa va a fare la spesa. Compra pane, olive, ceci, fichi e una zucca.",
+    "domanda": "Quante cose compra Nonna Rosa?",
+    "risposte": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "corretta": 2,
+    "spiegazione": "5 cose: pane, olive, ceci, fichi e zucca. Borsa piena!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-050",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo va in campagna. Porta zappa, secchio, corda, cappello e pane.",
+    "domanda": "Quale di queste cose porta Zio Cosimo in campagna?",
+    "risposte": [
+      "La scala",
+      "La corda",
+      "Il coltello",
+      "La radio"
+    ],
+    "corretta": 1,
+    "spiegazione": "La corda, sempre utile in campagna!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-051",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "A cena da Nonno Pino arrivano Nicola, Gina, Paolo, Rita e Sergio.",
+    "domanda": "Chi arriva a cena da Nonno Pino?",
+    "risposte": [
+      "Elena",
+      "Mario",
+      "Rita",
+      "Lina"
+    ],
+    "corretta": 2,
+    "spiegazione": "Rita, con Nicola, Gina, Paolo e Sergio: che bella tavolata!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-052",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito si sveglia presto. Prima beve il caffè e legge il giornale. Poi va in via Cesare Battisti e compra il pane.",
+    "domanda": "Che cosa fa Mastro Vito dopo il caffè?",
+    "risposte": [
+      "Guarda la televisione",
+      "Fa una passeggiata",
+      "Legge il giornale",
+      "Lava i piatti"
+    ],
+    "corretta": 2,
+    "spiegazione": "Legge il giornale, per sapere le novità del giorno!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-053",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia stende 5 asciugamani. Sono rosa, verde, giallo, blu e bianco.",
+    "domanda": "Quale di questi colori ha un asciugamano?",
+    "risposte": [
+      "Marrone",
+      "Viola",
+      "Grigio",
+      "Rosa"
+    ],
+    "corretta": 3,
+    "spiegazione": "Rosa, accanto al verde, giallo, blu e bianco: un arcobaleno!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-054",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "In cucina ci sono 6 uova, 2 limoni e 3 cipolle. Ci sono anche 4 peperoni e un melone.",
+    "domanda": "Quanti limoni ci sono in cucina?",
+    "risposte": [
+      "5",
+      "2",
+      "7",
+      "8"
+    ],
+    "corretta": 1,
+    "spiegazione": "2 limoni: giusti per una limonata fresca!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-055",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Nonna Rosa fa un giro per il paese. Va in piazza Risorgimento, poi in via Fiume. Dopo passa da corso Vittorio Emanuele, dalla Chiesa Madre e dall'orto.",
+    "domanda": "Quale di questi posti ha visitato Nonna Rosa?",
+    "risposte": [
+      "Monte Santa Sofia",
+      "Palazzo Marchesale",
+      "Via Fiume",
+      "Chiesa del Carmine"
+    ],
+    "corretta": 2,
+    "spiegazione": "Via Fiume, una delle tappe del suo bel giro!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-056",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zio Cosimo ha tanti animali in campagna. Ha un asino, un maiale, una capra, un'oca e un gatto.",
+    "domanda": "Quale animale ha Zio Cosimo?",
+    "risposte": [
+      "La pecora",
+      "Il cavallo",
+      "La mucca",
+      "L'oca"
+    ],
+    "corretta": 3,
+    "spiegazione": "L'oca, che fa la guardia meglio di un cane!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-057",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia va a fare la spesa. Compra un melone, 4 pere, 2 cavoli, 6 uova e 3 limoni.",
+    "domanda": "Quante pere compra Zia Lucia?",
+    "risposte": [
+      "4",
+      "5",
+      "7",
+      "9"
+    ],
+    "corretta": 0,
+    "spiegazione": "4 pere succose, buone a fine pasto!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-058",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Domenica Nonno Pino ha tanti impegni. Alle 9 va alla Chiesa Madre, alle 11 in piazza Regina Elena. Alle 13 pranza, alle 16 riposa, alle 18 va in giardino.",
+    "domanda": "A che ora pranza Nonno Pino?",
+    "risposte": [
+      "Alle 12",
+      "Alle 13",
+      "Alle 14",
+      "Alle 15"
+    ],
+    "corretta": 1,
+    "spiegazione": "Alle 13: il pranzo della domenica è una festa!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-059",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Zia Lucia apre la borsa. Dentro ci sono chiavi, fazzoletto, occhiali, caramelle e un pettine.",
+    "domanda": "Quale di queste cose c'è nella borsa?",
+    "risposte": [
+      "Il portafoglio",
+      "Il pettine",
+      "Il telefono",
+      "L'ombrello"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il pettine, per essere sempre in ordine!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "MEM-060",
+    "materia": "memoria",
+    "livello": 3,
+    "tipo": "memoria",
+    "stimolo": "Mastro Vito dipinge 5 sedie per il giardino. Le colora di rosso, blu, verde, giallo e bianco.",
+    "domanda": "Quale di questi colori usa Mastro Vito?",
+    "risposte": [
+      "Blu",
+      "Viola",
+      "Grigio",
+      "Rosa"
+    ],
+    "corretta": 0,
+    "spiegazione": "Blu, tra tanti altri colori: un giardino allegrissimo!",
+    "fatto_id": null,
+    "stato": "attiva"
+  }
+]

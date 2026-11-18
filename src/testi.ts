@@ -98,6 +98,30 @@ export const T = {
   esciNo: "No, continuo a giocare",
   esciSi: "Sì, esco",
 
+  // Festa di fine partita
+  titoloVinto: "Hai vinto!",
+  titoloPerso: "Hai perso!",
+  titoloPari: "Pareggio!",
+  sottotitoliVinto: [
+    "Tutta Fragagnano parla di te: pure il campanile ha suonato!",
+    "Più veloce di un tarallo che scappa dal sacchetto!",
+    "Stasera {perdente} offre il caffè a tutta la piazza!",
+    "La banda sta già provando la marcia in tuo onore!",
+    "Ti hanno visto esultare fino al Monte Santa Sofia!",
+  ],
+  sottotitoliPerso: [
+    "{vincitore} ha vinto, ma tu hai fatto sudare pure il campanile!",
+    "Hai perso la sfida, non il buonumore!",
+    "{vincitore} festeggia, ma la rivincita è già pronta in piazza!",
+    "Oggi è andata così: domani si rifà, con un caffè in più!",
+    "Anche i campioni ogni tanto inciampano su un tarallo!",
+  ],
+  sottotitoliPari: [
+    "Pari e patta: si divide anche l'ultima fetta!",
+    "Nessun vincitore, due campioni: la piazza applaude tutti e due!",
+  ],
+  saltaFesta: "Salta la festa",
+
   // Fine
   haiVinto: "Hai vinto!",
   haPerso: (nome: string) => `Questa volta vince ${nome}.`,

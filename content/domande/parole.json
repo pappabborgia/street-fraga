@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "PAR-001",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «caldo»?",
+    "risposte": [
+      "Asciutto",
+      "Freddo",
+      "Bollente"
+    ],
+    "corretta": 1,
+    "spiegazione": "Caldo e freddo sono contrari: d'estate cerchiamo l'ombra, d'inverno il camino!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-002",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Chi va piano va sano e va...»",
+    "risposte": [
+      "veloce",
+      "a casa",
+      "lontano"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il proverbio insegna che con calma e pazienza si arriva lontano.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-003",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Gattino» vuol dire gatto piccolo. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "La parte finale «-ino» rende le parole piccole e affettuose.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-004",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale di «uovo»?",
+    "risposte": [
+      "Gli uovi",
+      "Le uova",
+      "Le uove"
+    ],
+    "corretta": 1,
+    "spiegazione": "Uovo al plurale diventa femminile: l'uovo, le uova.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-005",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Forchetta",
+      "Cucchiaio",
+      "Cuscino"
+    ],
+    "corretta": 2,
+    "spiegazione": "Forchetta e cucchiaio stanno a tavola, il cuscino sta sul letto.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-006",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il femminile di «maestro»?",
+    "risposte": [
+      "Maestra",
+      "Maestressa",
+      "Maestrice"
+    ],
+    "corretta": 0,
+    "spiegazione": "Basta cambiare la o finale in a: maestro, maestra.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-007",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove si usa il mattarello?",
+    "risposte": [
+      "In giardino",
+      "In cucina",
+      "In bagno"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il mattarello serve a stendere la pasta per fare la sfoglia.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-008",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è un altro modo per dire «contento»?",
+    "risposte": [
+      "Stanco",
+      "Arrabbiato",
+      "Felice"
+    ],
+    "corretta": 2,
+    "spiegazione": "Contento e felice sono sinonimi: parole diverse, stesso significato.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-009",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il contrario di «alto» è «basso». Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Alto e basso sono una delle prime coppie di contrari che impariamo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-010",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Rosso di sera, bel tempo si...»",
+    "risposte": [
+      "vede",
+      "spera",
+      "aspetta"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il cielo rosso al tramonto annunciava ai contadini una bella giornata.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-011",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Mela",
+      "Pera",
+      "Sedia"
+    ],
+    "corretta": 2,
+    "spiegazione": "Mela e pera sono frutti; la sedia serve per sedersi.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-012",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «aperto»?",
+    "risposte": [
+      "Chiuso",
+      "Largo",
+      "Rotto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Aperto e chiuso: come una porta che accoglie o protegge.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-013",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Dove si mette la tovaglia?",
+    "risposte": [
+      "Sul letto",
+      "Sulla tavola",
+      "Sulla finestra"
+    ],
+    "corretta": 1,
+    "spiegazione": "La tovaglia apparecchiata è il primo invito a sedersi insieme.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-014",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Veloce» vuol dire lento. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Veloce vuol dire rapido: è proprio il contrario di lento.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-015",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale di «uomo»?",
+    "risposte": [
+      "Uomini",
+      "Uomi",
+      "Uome"
+    ],
+    "corretta": 0,
+    "spiegazione": "Uomo al plurale cambia parecchio e diventa uomini.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-016",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa si usa per scolare la pasta?",
+    "risposte": [
+      "Il mestolo",
+      "Lo scolapasta",
+      "La grattugia"
+    ],
+    "corretta": 1,
+    "spiegazione": "Lo scolapasta è pieno di buchi: l'acqua scende, la pasta resta.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-017",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il femminile di «re»?",
+    "risposte": [
+      "Reale",
+      "Reessa",
+      "Regina"
+    ],
+    "corretta": 2,
+    "spiegazione": "Re e regina: una delle coppie più famose delle fiabe.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-018",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «essere al settimo cielo»?",
+    "risposte": [
+      "Essere felicissimo",
+      "Volare in aereo",
+      "Abitare in alto"
+    ],
+    "corretta": 0,
+    "spiegazione": "È un modo allegro per dire che la gioia ti porta in alto.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-019",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il frigorifero serve a scaldare il cibo. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il frigorifero tiene il cibo al fresco: fa il contrario del forno.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-020",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Rosso",
+      "Verde",
+      "Tavolo"
+    ],
+    "corretta": 2,
+    "spiegazione": "Rosso e verde sono colori; il tavolo è un mobile.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-021",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «giorno»?",
+    "risposte": [
+      "Notte",
+      "Pranzo",
+      "Settimana"
+    ],
+    "corretta": 0,
+    "spiegazione": "Giorno e notte si danno il cambio, come due buoni amici.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-022",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Meglio tardi che...»",
+    "risposte": [
+      "presto",
+      "mai",
+      "domani"
+    ],
+    "corretta": 1,
+    "spiegazione": "Fare una cosa in ritardo è sempre meglio che rinunciare.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-023",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è un altro modo per dire «casa»?",
+    "risposte": [
+      "Strada",
+      "Giardino",
+      "Abitazione"
+    ],
+    "corretta": 2,
+    "spiegazione": "Abitazione viene da «abitare»: è il posto dove si vive.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-024",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "A cosa serve la caffettiera?",
+    "risposte": [
+      "A fare il caffè",
+      "A cuocere il pane",
+      "A lavare i piatti"
+    ],
+    "corretta": 0,
+    "spiegazione": "La caffettiera sul fuoco profuma tutta la casa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-025",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Grande» e «piccolo» sono contrari. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Grande e piccolo sono contrari, come pieno e vuoto.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-026",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale di «mano»?",
+    "risposte": [
+      "Le mane",
+      "I mani",
+      "Le mani"
+    ],
+    "corretta": 2,
+    "spiegazione": "Mano è femminile anche se finisce in o: la mano, le mani.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-027",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Pentola",
+      "Cane",
+      "Gatto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Cane e gatto sono animali; la pentola sta in cucina.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-028",
+    "materia": "parole",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa: «Tra il dire e il fare c'è di mezzo il...»",
+    "risposte": [
+      "monte",
+      "mare",
+      "fiume"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il proverbio ricorda che fare è più impegnativo che dire.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-029",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è un sinonimo di «coraggioso»?",
+    "risposte": [
+      "Audace",
+      "Pauroso",
+      "Timido"
+    ],
+    "corretta": 0,
+    "spiegazione": "Audace viene dal latino e vuol dire «che osa».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-030",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «L'erba del vicino è sempre più...»",
+    "risposte": [
+      "alta",
+      "verde",
+      "fresca"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il proverbio sorride di chi trova sempre migliori le cose degli altri.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-031",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «avere le mani bucate»?",
+    "risposte": [
+      "Lavorare troppo",
+      "Dormire troppo",
+      "Spendere troppo"
+    ],
+    "corretta": 2,
+    "spiegazione": "Chi ha le mani bucate lascia scappare i soldi come acqua.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-032",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il plurale di «bue» è «buoi». Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Bue fa buoi, come uomo fa uomini: plurali tutti speciali.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-033",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il femminile di «attore»?",
+    "risposte": [
+      "Attora",
+      "Attrice",
+      "Attoressa"
+    ],
+    "corretta": 1,
+    "spiegazione": "Come attore e attrice, anche pittore fa pittrice.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-034",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Mestolo",
+      "Schiumarola",
+      "Cacciavite"
+    ],
+    "corretta": 2,
+    "spiegazione": "Mestolo e schiumarola servono in cucina; il cacciavite serve per le viti.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-035",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «generoso»?",
+    "risposte": [
+      "Avaro",
+      "Gentile",
+      "Ricco"
+    ],
+    "corretta": 0,
+    "spiegazione": "Generoso viene dal latino e voleva dire «di nobile nascita».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-036",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Chi trova un amico trova un...»",
+    "risposte": [
+      "fratello",
+      "tesoro",
+      "sostegno"
+    ],
+    "corretta": 1,
+    "spiegazione": "Un vero amico vale più dell'oro: per questo è un tesoro.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-037",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «prendere un granchio»?",
+    "risposte": [
+      "Pescare bene",
+      "Arrabbiarsi",
+      "Sbagliarsi"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si dice che venga dal pescatore che, invece di un pesce, prendeva un granchio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-038",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Ingenuo» vuol dire furbo. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Ingenuo vuol dire semplice e fiducioso: il contrario di furbo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-039",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale di «paio»?",
+    "risposte": [
+      "I pai",
+      "Le paia",
+      "Le paie"
+    ],
+    "corretta": 1,
+    "spiegazione": "Paio al plurale diventa femminile: un paio, molte paia.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-040",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa sono le «stoviglie»?",
+    "risposte": [
+      "Vestiti e scarpe",
+      "Libri e quaderni",
+      "Piatti e bicchieri"
+    ],
+    "corretta": 2,
+    "spiegazione": "Stoviglie sono piatti, bicchieri, pentole: tutto quello che si lava dopo pranzo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-041",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Agosto",
+      "Lunedì",
+      "Giovedì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Lunedì e giovedì sono giorni della settimana; agosto è un mese.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-042",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è un sinonimo di «rapido»?",
+    "risposte": [
+      "Pigro",
+      "Svelto",
+      "Pesante"
+    ],
+    "corretta": 1,
+    "spiegazione": "Rapido e svelto vogliono dire la stessa cosa: veloce!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-043",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Paese che vai, usanza che...»",
+    "risposte": [
+      "lasci",
+      "porti",
+      "trovi"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ogni paese ha le sue belle abitudini, e il proverbio invita a rispettarle.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-044",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «costare un occhio della testa»?",
+    "risposte": [
+      "Costare moltissimo",
+      "Fare male agli occhi",
+      "Costare pochissimo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Gli occhi sono preziosi: per questo indicano un prezzo altissimo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-045",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il femminile di «dottore» è «dottora». Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si dice dottoressa, come professoressa e principessa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-046",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "A cosa serve la grattugia?",
+    "risposte": [
+      "A tagliare il pane",
+      "A girare il sugo",
+      "A grattare il formaggio"
+    ],
+    "corretta": 2,
+    "spiegazione": "Con la grattugia il formaggio cade a pioggia sulla pasta.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-047",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «sincero»?",
+    "risposte": [
+      "Bugiardo",
+      "Allegro",
+      "Educato"
+    ],
+    "corretta": 0,
+    "spiegazione": "Sincero viene dal latino e indica qualcosa di puro, senza miscugli.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-048",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Gioia",
+      "Tristezza",
+      "Allegria"
+    ],
+    "corretta": 1,
+    "spiegazione": "Gioia e allegria sono sinonimi; tristezza è il loro contrario.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-049",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «andare a gonfie vele»?",
+    "risposte": [
+      "Andare in barca",
+      "Andare di fretta",
+      "Andare benissimo"
+    ],
+    "corretta": 2,
+    "spiegazione": "Le vele gonfie di vento spingono la barca veloce e sicura.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-050",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il femminile di «gallo»?",
+    "risposte": [
+      "Gallina",
+      "Galla",
+      "Gallessa"
+    ],
+    "corretta": 0,
+    "spiegazione": "Gallo e gallina: lui canta all'alba, lei fa le uova.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-051",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Ottimista» è chi vede il lato bello delle cose. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Ottimista viene dal latino «optimus», che vuol dire «il migliore».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-052",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Il mattino ha l'oro in...»",
+    "risposte": [
+      "tasca",
+      "mano",
+      "bocca"
+    ],
+    "corretta": 2,
+    "spiegazione": "Chi si alza presto ha tutto il tempo per fare cose belle.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-053",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «essere una buona forchetta»?",
+    "risposte": [
+      "Mangiare volentieri",
+      "Cucinare bene",
+      "Apparecchiare la tavola"
+    ],
+    "corretta": 0,
+    "spiegazione": "Una buona forchetta apprezza la cucina e fa felice chi cucina.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-054",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è un sinonimo di «iniziare»?",
+    "risposte": [
+      "Finire",
+      "Cominciare",
+      "Fermare"
+    ],
+    "corretta": 1,
+    "spiegazione": "Iniziare e cominciare: due parole per dire che si parte.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-055",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Nonno",
+      "Zio",
+      "Vicino"
+    ],
+    "corretta": 2,
+    "spiegazione": "Nonno e zio sono parenti; il vicino abita accanto a noi.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-056",
+    "materia": "parole",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «rompere il ghiaccio»?",
+    "risposte": [
+      "Iniziare a parlare",
+      "Fare la granita",
+      "Lasciare la stanza"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo il primo saluto, l'imbarazzo si scioglie proprio come il ghiaccio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-057",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale di «capolavoro»?",
+    "risposte": [
+      "Capilavori",
+      "Capilavoro",
+      "Capolavori"
+    ],
+    "corretta": 2,
+    "spiegazione": "Capolavoro vuol dire il lavoro migliore di un artista.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-058",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «procrastinare»?",
+    "risposte": [
+      "Anticipare",
+      "Esagerare",
+      "Rimandare",
+      "Rinunciare"
+    ],
+    "corretta": 2,
+    "spiegazione": "Viene dal latino «cras», che vuol dire «domani».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-059",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il femminile di «eroe»?",
+    "risposte": [
+      "Eroessa",
+      "Eroina",
+      "Erora",
+      "Eroa"
+    ],
+    "corretta": 1,
+    "spiegazione": "Eroe viene dal greco: gli eroi erano i protagonisti dei poemi antichi.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-060",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «fare orecchie da mercante»?",
+    "risposte": [
+      "Fingere di non sentire",
+      "Ascoltare con attenzione",
+      "Contrattare sul prezzo",
+      "Parlare a voce alta"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il mercante furbo sentiva solo quello che gli conveniva!",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-061",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il contrario di «effimero»?",
+    "risposte": [
+      "Leggero",
+      "Veloce",
+      "Fragile",
+      "Duraturo"
+    ],
+    "corretta": 3,
+    "spiegazione": "Effimero viene dal greco e vuol dire «che dura un giorno».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-062",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Sporadico» vuol dire che succede raramente. Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Viene dal greco e vuol dire «sparso», come semi qua e là.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-063",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Colino",
+      "Cazzuola",
+      "Tegame",
+      "Mezzaluna"
+    ],
+    "corretta": 1,
+    "spiegazione": "La cazzuola è l'attrezzo del muratore; gli altri stanno in cucina.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-064",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «fare il bastian contrario»?",
+    "risposte": [
+      "Dire sempre il contrario",
+      "Cambiare spesso casa",
+      "Arrivare sempre tardi",
+      "Ridere di tutto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il bastian contrario va sempre controcorrente, a volte anche solo per gioco.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-065",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "«Arcobaleno» viene da «arco» e «baleno». Vero o falso?",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Baleno è il lampo: l'arcobaleno è un arco di luce nel cielo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-066",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Completa il proverbio: «Chi semina vento raccoglie...»",
+    "risposte": [
+      "pioggia",
+      "grandine",
+      "tempesta",
+      "nebbia"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il proverbio invita a seminare cose buone, per raccogliere cose buone.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-067",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «lapalissiano»?",
+    "risposte": [
+      "Nascosto",
+      "Evidente",
+      "Difficile",
+      "Antico"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si dice di una cosa così chiara che spiegarla fa sorridere.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-068",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Qual è il plurale maschile di «belga»?",
+    "risposte": [
+      "Belgi",
+      "Belghi",
+      "Belgii",
+      "Belga"
+    ],
+    "corretta": 0,
+    "spiegazione": "Al femminile plurale, invece, si dice «belghe».",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-069",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Cosa vuol dire «meticoloso»?",
+    "risposte": [
+      "Molto distratto",
+      "Molto timido",
+      "Molto veloce",
+      "Molto preciso"
+    ],
+    "corretta": 3,
+    "spiegazione": "Viene dal latino «metus», paura: la cura di chi teme di sbagliare.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "PAR-070",
+    "materia": "parole",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Ilare",
+      "Gioioso",
+      "Mesto",
+      "Lieto"
+    ],
+    "corretta": 2,
+    "spiegazione": "Mesto vuol dire triste; ilare, gioioso e lieto vogliono dire allegro.",
+    "fatto_id": null,
+    "stato": "attiva"
+  }
+]

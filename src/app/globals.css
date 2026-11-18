@@ -278,3 +278,95 @@ body {
 
 /* I titoli ricevono il fuoco solo per i lettori di schermo: niente cornice visibile */
 [tabindex="-1"]:focus { outline: none; }
+
+/* ---------------- Festa di fine partita ----------------
+ * Ogni scena dura al massimo 1,5 secondi; le scene si susseguono per circa 17 secondi.
+ */
+.festa-salto { animation: festa-salto 1.4s ease-in-out both; }
+@keyframes festa-salto {
+  0% { transform: translateY(0) rotate(0); }
+  20% { transform: translateY(5%) scale(1.05, 0.88); }
+  55% { transform: translateY(-40%) rotate(calc(var(--dir) * 360deg)); }
+  80% { transform: translateY(0) rotate(calc(var(--dir) * 360deg)) scale(1.05, 0.92); }
+  100% { transform: translateY(0) rotate(calc(var(--dir) * 360deg)); }
+}
+.festa-capriola { animation: festa-capriola 1.4s ease-in-out both; }
+@keyframes festa-capriola {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(10%) rotate(calc(var(--dir) * -360deg)) scale(0.85); }
+  100% { transform: translateY(0) rotate(calc(var(--dir) * -360deg)) scale(1); }
+}
+.festa-braccia .braccio-av, .festa-braccia .braccio-dietro { animation: braccia 1.4s ease-in-out both; transform-box: view-box; }
+.festa-braccia .braccio-dietro { transform-origin: 76px 124px; }
+.festa-braccia { animation: saltello 1.4s ease-in-out both; }
+@keyframes braccia {
+  0% { transform: none; }
+  30%, 70% { transform: rotate(-120deg); }
+  100% { transform: rotate(-120deg); }
+}
+@keyframes saltello {
+  0%, 50%, 100% { transform: translateY(0); }
+  25%, 75% { transform: translateY(-8%); }
+}
+.festa-lancia .braccio-av { animation: tiro 1.4s ease-in-out both; }
+.festa-gira { animation: festa-gira 1.4s ease-in-out both; transform-origin: 50% 95%; }
+@keyframes festa-gira {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-12deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-6deg); }
+  100% { transform: rotate(0); }
+}
+.festa-siede { animation: festa-siede 1s ease-in both; transform-origin: 50% 100%; }
+.festa-seduto { transform: translateY(14%) scaleY(0.82); transform-origin: 50% 100%; }
+@keyframes festa-siede {
+  from { transform: none; }
+  to { transform: translateY(14%) scaleY(0.82); }
+}
+.festa-rialza { animation: festa-rialza 1.2s ease-out both; transform-origin: 50% 100%; }
+@keyframes festa-rialza {
+  from { transform: translateY(14%) scaleY(0.82); }
+  to { transform: none; }
+}
+.festa-vicini { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)); }
+.festa-inchino { animation: festa-inchino 1.4s ease-in-out both; transform-origin: 50% 100%; }
+@keyframes festa-inchino {
+  0%, 100% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)) rotate(0); }
+  45%, 60% { transform: translateX(calc(var(--dir) * var(--spinta) * 0.45)) rotate(calc(var(--dir) * 22deg)); }
+}
+.stordito { animation: stordito 1.4s ease-in-out both; }
+@keyframes stordito {
+  from { transform: rotate(-10deg); opacity: 0; }
+  to { transform: rotate(10deg); opacity: 1; }
+}
+.coriandolo { width: 10px; height: 16px; border: 1px solid #1a1a1a; }
+.scintilla { border-radius: 50%; border: 2px solid #1a1a1a; animation: scintilla 1.3s ease-out both; }
+@keyframes scintilla {
+  0% { transform: translate(0, 0) scale(0.3); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(1); opacity: 0; }
+}
+.su-e-giu { animation: su-e-giu 1.4s ease-in-out both; z-index: 4; }
+@keyframes su-e-giu {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-30cqh) rotate(360deg); }
+  100% { transform: translateY(0) rotate(720deg); }
+}
+.cuore { color: #ce2b37; font-size: 2.5rem; -webkit-text-stroke: 2px #1a1a1a; animation: cuore 1.4s ease-out both; }
+@keyframes cuore {
+  from { transform: translateY(20px) scale(0.5); opacity: 0; }
+  40% { opacity: 1; }
+  to { transform: translateY(-50px) scale(1.1); opacity: 0; }
+}
+.titolo-festa { z-index: 8; animation: titolo-festa 0.9s cubic-bezier(.2,1.4,.5,1) both; }
+@keyframes titolo-festa {
+  from { transform: scale(0.3) rotate(-12deg); opacity: 0; }
+  to { transform: scale(1) rotate(-4deg); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .festa-salto, .festa-capriola, .festa-braccia, .festa-gira, .festa-siede, .festa-rialza, .festa-inchino,
+  .festa-braccia .braccio-av, .festa-braccia .braccio-dietro, .festa-lancia .braccio-av, .titolo-festa, .su-e-giu, .stordito {
+    animation: dissolvenza 0.6s ease-out both !important;
+  }
+  .scintilla, .cuore, .coriandolo { animation: none !important; opacity: 0; }
+}

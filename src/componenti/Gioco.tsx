@@ -17,6 +17,7 @@ import { Lottatore, Ritratto } from "./Lottatore";
 import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
 import { Chiesa } from "./Chiesa";
+import { Festa, scegliSottotitolo, type Risultato } from "./Festa";
 
 type Schermata = "casa" | "regole" | "impostazioni" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
@@ -618,14 +619,19 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
 
 function SchermataFine({ titoloRef, p, me, lui, ancora }: { titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; ancora: () => void }) {
   const v = vincitore(p.giocatore, p.computer);
-  const titolo = v === "giocatore" ? T.haiVinto : v === "pari" ? T.pareggio : T.haPerso(lui.nome);
+  const risultato: Risultato = v === "giocatore" ? "vinto" : v === "computer" ? "perso" : "pari";
+  const titolo = risultato === "vinto" ? T.titoloVinto : risultato === "perso" ? T.titoloPerso : T.titoloPari;
+  const seme = p.giocatore.punti + p.computer.energia + p.numero;
+  const sottotitolo = scegliSottotitolo(risultato, risultato === "perso" ? lui.nome : me.nome, risultato === "perso" ? me.nome : lui.nome, seme);
   return (
     <section className="flex flex-col gap-5 pt-4">
-      <Arena giocatore={me} computer={lui} stretta className="rounded-2xl border-4 border-black h-[15rem] sm:h-[22rem]" />
-      <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-center text-[var(--giallo)]">{titolo}</h1>
+      <Festa me={me} lui={lui} risultato={risultato} seme={seme} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
+      <div className="text-center">
+        <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-[var(--giallo)]">{titolo}</h1>
+        <p className="text-[1.5rem] font-bold mt-1">{sottotitolo}</p>
+      </div>
       <div className="pannello p-5 flex flex-col gap-2">
         <p className="font-bold">{T.stretta}</p>
-        {v !== "giocatore" && <p>{T.bravoComunque}</p>}
         <p className="text-[1.75rem] font-bold">★ {T.tuoiPunti(p.giocatore.punti)}</p>
         <p>{T.risposteGiuste(p.giocatore.giuste)}</p>
       </div>

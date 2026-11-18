@@ -285,6 +285,15 @@ class Suonatore {
   manca() { this.tono(500, 110, 0.6, "sine", 0.3, 0.5); }
   giusto() { this.tono(784, 784, 0.12, "square", 0.1); this.tono(1047, 1047, 0.2, "square", 0.1, 0.12); }
   sbagliato() { this.tono(392, 392, 0.15, "triangle", 0.2); this.tono(330, 330, 0.25, "triangle", 0.2, 0.15); }
+  /** Trombone comico: tre note che scendono, per chi perde (con affetto). */
+  trombone() {
+    [392, 370, 349].forEach((f, i) => this.tono(f, f * 0.98, 0.4, "sawtooth", 0.08, i * 0.45));
+    this.tono(330, 220, 1.2, "sawtooth", 0.08, 1.35);
+  }
+  /** Fuochi d'artificio: tre botti morbidi. */
+  fuochi() {
+    [0, 0.25, 0.5].forEach((r) => { this.tono(900, 300, 0.3, "sine", 0.1, r); this.botta(r + 0.25, 0.25); });
+  }
   vittoria() { [523, 659, 784, 659, 784, 1047].forEach((f, i) => this.tono(f, f, 0.18, "square", 0.1, i * 0.16)); }
 }
 

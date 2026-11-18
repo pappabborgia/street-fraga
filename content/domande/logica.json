@@ -1,0 +1,1021 @@
+[
+  {
+    "id": "LOG-001",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "2, 4, 6, 8. Che numero viene dopo?",
+    "risposte": [
+      "9",
+      "10",
+      "12"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si aggiunge sempre 2: dopo 8 viene 10.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-002",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Gennaio, febbraio, marzo. Che mese viene dopo?",
+    "risposte": [
+      "Aprile",
+      "Maggio",
+      "Giugno"
+    ],
+    "corretta": 0,
+    "spiegazione": "I mesi vanno in ordine: dopo marzo viene aprile.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-003",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Primavera, estate, autunno. Che stagione viene dopo?",
+    "risposte": [
+      "Estate",
+      "Primavera",
+      "Inverno"
+    ],
+    "corretta": 2,
+    "spiegazione": "Dopo l'autunno arriva l'inverno, la stagione più fredda.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-004",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "A, B, C, D. Che lettera viene dopo?",
+    "risposte": [
+      "F",
+      "E",
+      "G"
+    ],
+    "corretta": 1,
+    "spiegazione": "Le lettere vanno in ordine: dopo la D viene la E.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-005",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "10, 20, 30, 40. Che numero viene dopo?",
+    "risposte": [
+      "50",
+      "45",
+      "60"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si aggiunge sempre 10: dopo 40 viene 50.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-006",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "5, 4, 3, 2. Che numero viene dopo?",
+    "risposte": [
+      "0",
+      "3",
+      "1"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si toglie sempre 1: dopo 2 viene 1.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-007",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Lunedì, martedì, mercoledì. Che giorno viene dopo?",
+    "risposte": [
+      "Venerdì",
+      "Giovedì",
+      "Domenica"
+    ],
+    "corretta": 1,
+    "spiegazione": "I giorni vanno in ordine: dopo mercoledì viene giovedì.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-008",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Mela",
+      "Pera",
+      "Sedia"
+    ],
+    "corretta": 2,
+    "spiegazione": "Mela e pera sono frutti, la sedia è un mobile.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-009",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Martello",
+      "Cane",
+      "Gatto"
+    ],
+    "corretta": 0,
+    "spiegazione": "Cane e gatto sono animali, il martello è un attrezzo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-010",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Rosso",
+      "Tavolo",
+      "Verde"
+    ],
+    "corretta": 1,
+    "spiegazione": "Rosso e verde sono colori, il tavolo è un mobile.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-011",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Zappa",
+      "Pomodoro",
+      "Rastrello"
+    ],
+    "corretta": 1,
+    "spiegazione": "Zappa e rastrello sono attrezzi dell'orto, il pomodoro è un ortaggio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-012",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Scarpa",
+      "Pane",
+      "Formaggio"
+    ],
+    "corretta": 0,
+    "spiegazione": "Pane e formaggio si mangiano, la scarpa si indossa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-013",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Lunedì",
+      "Venerdì",
+      "Agosto"
+    ],
+    "corretta": 2,
+    "spiegazione": "Lunedì e venerdì sono giorni, agosto è un mese.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-014",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nonna Rosa ha 80 anni. Zio Cosimo ne ha 60. Chi è più giovane?",
+    "risposte": [
+      "Zio Cosimo",
+      "Nonna Rosa",
+      "Hanno la stessa età"
+    ],
+    "corretta": 0,
+    "spiegazione": "60 anni sono meno di 80: Zio Cosimo è più giovane.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-015",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Una cesta pesa 5 chili. Un'altra cesta pesa 3 chili. Quale pesa di più?",
+    "risposte": [
+      "Quella da 3 chili",
+      "Quella da 5 chili",
+      "Pesano uguale"
+    ],
+    "corretta": 1,
+    "spiegazione": "5 chili sono più di 3: pesa di più la prima cesta.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-016",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Zio Cosimo è più alto di Nonna Rosa. Chi è più basso?",
+    "risposte": [
+      "Zio Cosimo",
+      "Nonna Rosa",
+      "Sono alti uguale"
+    ],
+    "corretta": 1,
+    "spiegazione": "Se Zio Cosimo è più alto, Nonna Rosa è più bassa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-017",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Dopo dicembre viene gennaio.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "L'anno ricomincia: dopo dicembre torna gennaio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-018",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Il martello e la zappa sono attrezzi.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Il martello e la zappa sono attrezzi da lavoro.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-019",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Dopo l'estate viene la primavera.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Dopo l'estate viene l'autunno, poi l'inverno.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-020",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Se oggi è sabato, domani è domenica.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo il sabato viene sempre la domenica.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-021",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "3, 6, 9. Dopo viene 11.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si aggiunge sempre 3: dopo 9 viene 12.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-022",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Che cosa va insieme al cucchiaio?",
+    "risposte": [
+      "La zappa",
+      "La forchetta",
+      "Il cappello"
+    ],
+    "corretta": 1,
+    "spiegazione": "Cucchiaio e forchetta sono posate per mangiare.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-023",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "1, 3, 5, 7. Che numero viene dopo?",
+    "risposte": [
+      "8",
+      "10",
+      "9"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si aggiunge sempre 2: dopo 7 viene 9.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-024",
+    "materia": "logica",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nell'orto ci sono 4 galline e 2 gatti. Ci sono più galline o gatti?",
+    "risposte": [
+      "Più gatti",
+      "Più galline",
+      "Sono uguali"
+    ],
+    "corretta": 1,
+    "spiegazione": "4 è più di 2: ci sono più galline.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-025",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Lunedì, mercoledì, venerdì. Che giorno viene dopo?",
+    "risposte": [
+      "Domenica",
+      "Sabato",
+      "Giovedì"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si salta sempre un giorno: dopo venerdì viene domenica.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-026",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "5, 10, 15, 20. Che numero viene dopo?",
+    "risposte": [
+      "25",
+      "30",
+      "24"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si aggiunge sempre 5: dopo 20 viene 25.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-027",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Dicembre, novembre, ottobre. Che mese viene dopo?",
+    "risposte": [
+      "Gennaio",
+      "Settembre",
+      "Agosto"
+    ],
+    "corretta": 1,
+    "spiegazione": "I mesi vanno all'indietro: prima di ottobre c'è settembre.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-028",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "B, D, F. Che lettera viene dopo?",
+    "risposte": [
+      "G",
+      "H",
+      "I"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si salta sempre una lettera: dopo la F, saltando la G, viene la H.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-029",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "20, 18, 16, 14. Che numero viene dopo?",
+    "risposte": [
+      "13",
+      "12",
+      "10"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si toglie sempre 2: dopo 14 viene 12.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-030",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "3, 7, 11, 15. Che numero viene dopo?",
+    "risposte": [
+      "18",
+      "17",
+      "19"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si aggiunge sempre 4: dopo 15 viene 19.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-031",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Inverno, autunno, estate. Che stagione viene dopo?",
+    "risposte": [
+      "Primavera",
+      "Inverno",
+      "Autunno"
+    ],
+    "corretta": 0,
+    "spiegazione": "Le stagioni vanno all'indietro: prima dell'estate c'è la primavera.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-032",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "100, 90, 80, 70. Che numero viene dopo?",
+    "risposte": [
+      "65",
+      "60",
+      "50"
+    ],
+    "corretta": 1,
+    "spiegazione": "Si toglie sempre 10: dopo 70 viene 60.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-033",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Violino",
+      "Chitarra",
+      "Pentola"
+    ],
+    "corretta": 2,
+    "spiegazione": "Violino e chitarra sono strumenti musicali, la pentola serve in cucina.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-034",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Gatto",
+      "Aquila",
+      "Passero"
+    ],
+    "corretta": 0,
+    "spiegazione": "Aquila e passero sono uccelli, il gatto ha 4 zampe.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-035",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Roma",
+      "Spagna",
+      "Milano"
+    ],
+    "corretta": 1,
+    "spiegazione": "Roma e Milano sono città, la Spagna è una nazione.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-036",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Pentola",
+      "Padella",
+      "Ago"
+    ],
+    "corretta": 2,
+    "spiegazione": "Pentola e padella servono in cucina, l'ago serve per cucire.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-037",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Ape",
+      "Mucca",
+      "Farfalla"
+    ],
+    "corretta": 1,
+    "spiegazione": "Ape e farfalla sono piccoli insetti, la mucca è un grande animale.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-038",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nonna Rosa è più vecchia di Zio Cosimo. Zio Cosimo è più vecchio di Nina. Chi è il più giovane?",
+    "risposte": [
+      "Nina",
+      "Nonna Rosa",
+      "Zio Cosimo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Nina è più giovane di Zio Cosimo, che è più giovane di Nonna Rosa.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-039",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Zio Cosimo arriva prima di Nonna Rosa. Nonna Rosa arriva prima di Nino. Chi arriva per ultimo?",
+    "risposte": [
+      "Nonna Rosa",
+      "Nino",
+      "Zio Cosimo"
+    ],
+    "corretta": 1,
+    "spiegazione": "L'ordine è Zio Cosimo, poi Nonna Rosa, infine Nino.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-040",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Se piove, Nonna Rosa prende l'ombrello. Oggi piove. Che cosa prende Nonna Rosa?",
+    "risposte": [
+      "Il cappello",
+      "L'ombrello",
+      "Gli occhiali"
+    ],
+    "corretta": 1,
+    "spiegazione": "Oggi piove, quindi Nonna Rosa prende l'ombrello.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-041",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Zio Cosimo ha 3 galline. Nonna Rosa ne ha il doppio. Quante galline ha Nonna Rosa?",
+    "risposte": [
+      "5",
+      "9",
+      "6"
+    ],
+    "corretta": 2,
+    "spiegazione": "Il doppio di 3 è 6: 3 più 3.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-042",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Ci sono una mela, una zappa e una pera. Quali vanno insieme?",
+    "risposte": [
+      "Mela e pera",
+      "Mela e zappa",
+      "Zappa e pera"
+    ],
+    "corretta": 0,
+    "spiegazione": "Mela e pera sono frutti, la zappa è un attrezzo.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-043",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Se oggi è martedì, dopodomani è giovedì.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Dopo martedì viene mercoledì, e poi giovedì.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-044",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "4, 8, 12, 16. Dopo viene 20.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Si aggiunge sempre 4: dopo 16 viene 20.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-045",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Nino è più alto di Lia. Lia è più alta di Toni. Allora Toni è il più alto.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Il più alto è Nino, Toni è il più basso.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-046",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Se oggi è venerdì, ieri era sabato.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 1,
+    "spiegazione": "Prima del venerdì viene il giovedì.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-047",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Pensa a una formica, un gatto e un cavallo. Qual è il più piccolo?",
+    "risposte": [
+      "Il gatto",
+      "Il cavallo",
+      "La formica"
+    ],
+    "corretta": 2,
+    "spiegazione": "La formica è il più piccolo dei 3 animali.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-048",
+    "materia": "logica",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nonna Rosa ha più uova di Zio Cosimo. Zio Cosimo ha più uova di Nino. Chi ne ha di più?",
+    "risposte": [
+      "Nino",
+      "Zio Cosimo",
+      "Nonna Rosa"
+    ],
+    "corretta": 2,
+    "spiegazione": "Nonna Rosa ne ha più di Zio Cosimo, che ne ha più di Nino.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-049",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "3, 6, 12, 24. Che numero viene dopo?",
+    "risposte": [
+      "36",
+      "48",
+      "30",
+      "42"
+    ],
+    "corretta": 1,
+    "spiegazione": "Ogni numero è il doppio di quello prima: il doppio di 24 è 48.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-050",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "1, 4, 9, 16. Che numero viene dopo?",
+    "risposte": [
+      "20",
+      "24",
+      "25",
+      "36"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si aggiunge 3, poi 5, poi 7, poi 9: si arriva a 25.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-051",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "Gennaio, marzo, maggio, luglio. Che mese viene dopo?",
+    "risposte": [
+      "Agosto",
+      "Giugno",
+      "Ottobre",
+      "Settembre"
+    ],
+    "corretta": 3,
+    "spiegazione": "Si salta sempre un mese: dopo luglio, saltando agosto, viene settembre.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-052",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "2, 5, 8, 11. Che numero viene dopo?",
+    "risposte": [
+      "13",
+      "15",
+      "14",
+      "12"
+    ],
+    "corretta": 2,
+    "spiegazione": "Si aggiunge sempre 3: dopo 11 viene 14.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-053",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "sequenza",
+    "stimolo": null,
+    "domanda": "1, 1, 2, 3, 5, 8. Che numero viene dopo?",
+    "risposte": [
+      "13",
+      "11",
+      "16",
+      "10"
+    ],
+    "corretta": 0,
+    "spiegazione": "Ogni numero è la somma dei 2 prima: 5 più 8 fa 13.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-054",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Quercia",
+      "Ulivo",
+      "Pino",
+      "Rosa"
+    ],
+    "corretta": 3,
+    "spiegazione": "Quercia, ulivo e pino sono alberi, la rosa è un fiore.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-055",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Melanzana",
+      "Basilico",
+      "Prezzemolo",
+      "Rosmarino"
+    ],
+    "corretta": 0,
+    "spiegazione": "Basilico, prezzemolo e rosmarino sono erbe da cucina, la melanzana è un ortaggio.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-056",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "intruso",
+    "stimolo": null,
+    "domanda": "Trova la parola che non c'entra.",
+    "risposte": [
+      "Pecora",
+      "Capra",
+      "Lupo",
+      "Mucca"
+    ],
+    "corretta": 2,
+    "spiegazione": "Pecora, capra e mucca vivono nella fattoria, il lupo vive libero.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-057",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Lia è più alta di Toni. Nino è più basso di Toni. Chi è il più alto?",
+    "risposte": [
+      "Toni",
+      "Nino",
+      "Lia"
+    ],
+    "corretta": 2,
+    "spiegazione": "L'ordine è Lia, poi Toni, poi Nino: Lia è la più alta.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-058",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Nonna Rosa è nata prima di Zio Cosimo. Zia Nella è nata dopo Zio Cosimo. Chi è il più giovane?",
+    "risposte": [
+      "Zia Nella",
+      "Nonna Rosa",
+      "Zio Cosimo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Zia Nella è nata per ultima, quindi è la più giovane.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-059",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "Zio Cosimo va alla Chiesa Madre di lunedì. Va al Monte Santa Sofia 2 giorni dopo. Che giorno ci va?",
+    "risposte": [
+      "Martedì",
+      "Mercoledì",
+      "Giovedì",
+      "Venerdì"
+    ],
+    "corretta": 1,
+    "spiegazione": "2 giorni dopo lunedì viene mercoledì.",
+    "fatto_id": null,
+    "stato": "attiva"
+  },
+  {
+    "id": "LOG-060",
+    "materia": "logica",
+    "livello": 3,
+    "tipo": "vero_falso",
+    "stimolo": null,
+    "domanda": "Ogni gallina è un uccello. Bianca è una gallina. Allora Bianca è un uccello.",
+    "risposte": [
+      "Vero",
+      "Falso"
+    ],
+    "corretta": 0,
+    "spiegazione": "Bianca è una gallina, e ogni gallina è un uccello.",
+    "fatto_id": null,
+    "stato": "attiva"
+  }
+]
