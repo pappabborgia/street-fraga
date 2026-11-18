@@ -1,4 +1,4 @@
-import type { Domanda, Livello } from "./tipi";
+import type { Domanda, Livello, Materia } from "./tipi";
 import { type Rng, mescola } from "./rng";
 import { generaDomanda } from "./matematica";
 
@@ -154,10 +154,17 @@ export function prossimaDomanda(
   usate: Set<string>,
   livello: Livello,
   primaDellaPartita: boolean,
+  materia?: Materia,
 ): Domanda {
+  // Una materia richiesta (es. la domanda di dialetto) va bene a qualunque livello, preferendo quello giusto
+  if (materia) {
+    const della = mazzo.filter((d) => d.stato === "attiva" && d.materia === materia && !usate.has(d.id));
+    const stesso = della.filter((d) => d.livello === livello);
+    const scelta = (stesso.length ? stesso : della);
+    if (scelta.length) return mescolaRisposte(rng, scelta[Math.floor(rng() * scelta.length)]);
+  }
   const liv: Livello = primaDellaPartita ? 1 : livello;
-  const disponibili = mazzo.filter((d) => d.stato === "attiva" && d.livello === liv && !usate.has(d.id));
-  // Un po' di calcolo ogni tanto, anche se il mazzo ha ancora domande.
+  const disponibili = mazzo.filter((d) => d.stato === "attiva" && d.livello === liv && !usate.has(d.id) && d.materia !== "dialetto");
   const usaCalcolo = disponibili.length === 0;
   let d: Domanda;
   if (usaCalcolo) {

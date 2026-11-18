@@ -1,5 +1,5 @@
 {
-  "nota": "Quante domande servono per materia. Storia, geografia e feste hanno meno domande perché i fatti verificati non bastano (123 invece di 150): le 27 mancanti sono compensate con matematica (+9), logica (+9) e memoria (+9). Vedi docs/rapporto-domande.md.",
+  "nota": "Quante domande servono per materia. Storia, geografia e feste hanno meno domande perché i fatti verificati non bastano (123 invece di 150): le 27 mancanti sono compensate con matematica (+9), logica (+9) e memoria (+9). Vedi docs/rapporto-domande.md. La materia dialetto (34 parole salentine, almeno una domanda per partita) si aggiunge alle 500.",
   "materie": {
     "storia": {
       "prefisso": "STO",
@@ -45,7 +45,12 @@
       "prefisso": "CAM",
       "obiettivo": 30,
       "con_fonte": false
+    },
+    "dialetto": {
+      "prefisso": "DIA",
+      "obiettivo": 34,
+      "con_fonte": true
     }
   },
-  "totale": 500
+  "totale": 534
 }

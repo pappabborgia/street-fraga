@@ -1,6 +1,6 @@
 export type Materia =
   | "storia" | "geografia" | "feste" | "matematica" | "parole"
-  | "memoria" | "logica" | "tempo" | "campagna";
+  | "memoria" | "logica" | "tempo" | "campagna" | "dialetto";
 
 export type TipoDomanda = "scelta" | "vero_falso" | "memoria" | "sequenza" | "intruso";
 export type Livello = 1 | 2 | 3;

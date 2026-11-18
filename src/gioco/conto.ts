@@ -82,3 +82,37 @@ export function nomeValido(n: string): boolean {
   const t = n.trim().replace(/\s+/g, " ");
   return /^\p{L}[\p{L} ']*$/u.test(t) && t.replace(/[ ']/g, "").length >= 2 && t.replace(/[ ']/g, "").length <= 20;
 }
+
+// ---------- Vocabolario del dialetto raccolto dai giocatori ----------
+const CHIAVE_DA_INVIARE = "street-fraga-parole-da-inviare";
+const CHIAVE_CHIESTE = "street-fraga-parole-chieste";
+
+/** Salva una parola; se manca la rete la tiene nel telefono e la rimanda alla prossima occasione. */
+export async function proponiParola(token: string | null, italiano: string, dialetto: string): Promise<{ ok: boolean; raccolte?: number }> {
+  let coda: { italiano: string; dialetto: string }[] = [];
+  try { coda = JSON.parse(localStorage.getItem(CHIAVE_DA_INVIARE) ?? "[]"); } catch {}
+  coda.push({ italiano, dialetto });
+  const rimaste: typeof coda = [];
+  let raccolte: number | undefined;
+  for (const p of coda) {
+    try {
+      const r = await rpc<{ ok?: boolean; raccolte?: number }>("proponi_parola", { p_token: token, p_italiano: p.italiano, p_dialetto: p.dialetto });
+      if (r?.ok) raccolte = r.raccolte;
+    } catch {
+      rimaste.push(p);
+    }
+  }
+  try { localStorage.setItem(CHIAVE_DA_INVIARE, JSON.stringify(rimaste)); } catch {}
+  return { ok: rimaste.length === 0, raccolte };
+}
+
+/** Sceglie una parola da chiedere, diversa da quelle già chieste su questo dispositivo. */
+export function parolaDaChiedere(elenco: string[], casuale: () => number): string {
+  let chieste: string[] = [];
+  try { chieste = JSON.parse(localStorage.getItem(CHIAVE_CHIESTE) ?? "[]"); } catch {}
+  let libere = elenco.filter((p) => !chieste.includes(p));
+  if (libere.length === 0) { chieste = []; libere = elenco; }
+  const scelta = libere[Math.floor(casuale() * libere.length)];
+  try { localStorage.setItem(CHIAVE_CHIESTE, JSON.stringify([...chieste, scelta])); } catch {}
+  return scelta;
+}

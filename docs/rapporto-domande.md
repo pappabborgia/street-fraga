@@ -15,15 +15,16 @@ Generato da `scripts/rapporto.ts`.
 | logica | 60 | 69 | 28 | 27 | 14 | 69 | 0 |
 | tempo | 40 | 40 | 16 | 16 | 8 | 40 | 0 |
 | campagna | 30 | 30 | 12 | 12 | 6 | 30 | 0 |
-| **Totale** | 500 | **500** | | | | 488 | 12 |
+| dialetto | undefined | 34 | 12 | 15 | 7 | 34 | 0 |
+| **Totale** | 500 | **534** | | | | 522 | 12 |
 
 Storia, geografia e feste hanno meno domande del previsto perché i fatti verificati non bastano: la differenza è compensata con matematica, logica e memoria, come chiede il documento di progetto.
 
 ## Fatti
 
-- Fatti nella base: 99 (alta 56, media 30, bassa 13).
+- Fatti nella base: 133 (alta 56, media 64, bassa 13).
 - Fatti da verificare (non usati): G04, G09B, S01B, S07B, S11, S12, T02B.
-- Fatti usati da almeno una domanda: 86.
+- Fatti usati da almeno una domanda: 120.
 - Fatti utilizzabili ma non usati: G15, G17, S10, C10, E02, E06.
 
 ## Domande da rivedere

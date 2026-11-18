@@ -189,6 +189,19 @@ export const T = {
   nuovoTorneo: "Nuovo torneo",
   coppe: (n: number) => `${n} ${n === 1 ? "coppa" : "coppe"}`,
 
+  // Raccolta del dialetto (a fine partita)
+  dialettoEtichetta: "Aiutaci a salvare il dialetto",
+  comeSiDice: (parola: string) => `Come si dice «${parola}» in fragagnanese?`,
+  dialettoSpiegazione: "Questa domanda non dà punti. Serve a raccogliere le parole del dialetto di Fragagnano, così non andranno perse col tempo.",
+  dialettoSpiegazione2: "Ogni parola che scrivi entra nel vocabolario del paese.",
+  scriviComeSiDice: "Scrivi qui come si dice",
+  inviaParola: "Salva la parola",
+  nonLoSo: "Non lo so, vado avanti",
+  grazieParola: "Grazie! La parola è salvata.",
+  paroleRaccolte: (n: number) => `Parole raccolte finora: ${n}`,
+  parolaInAttesa: "Grazie! La parola è salvata nel telefono e verrà inviata appena c'è connessione.",
+  parolaVuota: "Scrivi la parola, oppure tocca «Non lo so».",
+
   // Classifica
   classifica: "Classifica",
   classificaTitolo: "Classifica del paese",

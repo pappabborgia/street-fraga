@@ -24,18 +24,22 @@ import {
   SchermataBenvenuto, SchermataChiGioca, SchermataCodice, SchermataHaiNome, SchermataNome, SchermataNomePreso,
 } from "./Accesso";
 import { SchermataClassifica } from "./Classifica";
+import { SchermataParola } from "./Parola";
+import paroleDaRaccogliere from "../../content/parole-da-raccogliere.json";
 import {
   type Esito, type Sessione, SenzaRete, accedi, chiSono, dimenticaSessione, esciDalDb, nomeValido, nomiDelDispositivo,
-  registra, salvaPartita, salvaSessione, sessioneSalvata, vinciCoppa,
+  parolaDaChiedere, registra, salvaPartita, salvaSessione, sessioneSalvata, vinciCoppa,
 } from "@/gioco/conto";
 
 /** Il torneo: ottavi, quarti, semifinale e finale, ognuno in un luogo del paese. */
+/** In quale domanda della partita arriva la domanda di dialetto. */
+const DOMANDA_DIALETTO = 5;
 const LUOGHI_TORNEO: Luogo[] = ["scuola", "cappella", "municipio", "chiesa"];
 interface Torneo { avversari: string[]; turno: number }
 import { applicaMovimenti } from "./movimento";
 
 type Schermata = "casa" | "regole" | "impostazioni" | "altro" | "classifica"
-  | "campione" | "accesso" | "haiNome" | "nome" | "codice" | "ripeti" | "nomePreso" | "benvenuto" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
+  | "campione" | "parola" | "accesso" | "haiNome" | "nome" | "codice" | "ripeti" | "nomePreso" | "benvenuto" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
 
 interface Partita {
@@ -81,6 +85,14 @@ export default function Gioco() {
   const [avversarioId, setAvversarioId] = useState<string>(PERSONAGGI[1].id);
   const [partita, setPartita] = useState<Partita | null>(null);
   const [torneo, setTorneo] = useState<Torneo | null>(null);
+  // Raccolta del dialetto a fine partita: la parola da chiedere e dove andare dopo
+  const [parola, setParola] = useState("");
+  const [dopoParola, setDopoParola] = useState<Schermata[]>(["casa"]);
+  const chiediParola = (poi: Schermata[]) => {
+    setParola(parolaDaChiedere(paroleDaRaccogliere.parole.map((p) => p.italiano), rng.current));
+    setDopoParola(poi);
+    setStoria(["casa", "parola"]);
+  };
   const [haVoce, setHaVoce] = useState(false);
   const rng = useRef(creaRng(1));
   const contatore = useRef(1);
@@ -155,7 +167,9 @@ export default function Gioco() {
   const lui = trovaPersonaggio(avversarioId);
 
   const nuovaDomanda = useCallback((p: Omit<Partita, "domanda" | "fase" | "scelta" | "inizio" | "tempoScelta">, prima: boolean): Partita => {
-    const d = prossimaDomanda(rng.current, MAZZO, new Set(p.usate), p.livello, prima);
+    // Almeno una domanda di dialetto in ogni partita: la quinta
+    const dialetto = p.numero === DOMANDA_DIALETTO && !p.usate.some((id) => id.startsWith("DIA-"));
+    const d = prossimaDomanda(rng.current, MAZZO, new Set(p.usate), p.livello, prima, dialetto ? "dialetto" : undefined);
     return { ...p, domanda: d, usate: [...p.usate, d.id], fase: d.stimolo ? "stimolo" : "domanda", scelta: null, inizio: Date.now(), tempoScelta: null };
   }, []);
 
@@ -552,13 +566,16 @@ export default function Gioco() {
           <SchermataFine titoloRef={titoloRef} p={partita} me={me} lui={lui} sessione={sessione} livello={livelloScelto}
             luogo={LUOGHI_TORNEO[torneo.turno]} turno={torneo.turno}
             avanti={() => {
-              if (torneo.turno >= 3) return setStoria(["casa", "campione"]);
+              if (torneo.turno >= 3) return chiediParola(["casa", "campione"]);
               const t = { ...torneo, turno: torneo.turno + 1 };
               setTorneo(t);
               setAvversarioId(t.avversari[t.turno]);
-              setStoria(["casa", "presentazione"]);
+              chiediParola(["casa", "presentazione"]);
             }}
-            riprova={() => setStoria(["casa", "presentazione"])} />
+            riprova={() => chiediParola(["casa", "presentazione"])} />
+        )}
+        {schermata === "parola" && (
+          <SchermataParola key={parola} titoloRef={titoloRef} parola={parola} token={sessione?.token ?? null} avanti={() => setStoria(dopoParola)} />
         )}
         {schermata === "campione" && torneo && (
           <SchermataCampione titoloRef={titoloRef} me={me} battuti={torneo.avversari.map(trovaPersonaggio)} sessione={sessione} livello={livelloScelto}

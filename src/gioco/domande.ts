@@ -9,10 +9,11 @@ import memoria from "../../content/domande/memoria.json";
 import logica from "../../content/domande/logica.json";
 import tempo from "../../content/domande/tempo.json";
 import campagna from "../../content/domande/campagna.json";
+import dialetto from "../../content/domande/dialetto.json";
 
 export const FATTI = fatti as Fatto[];
 export const TUTTE: Domanda[] = [
-  storia, geografia, feste, matematica, parole, memoria, logica, tempo, campagna,
+  storia, geografia, feste, matematica, parole, memoria, logica, tempo, campagna, dialetto,
 ].flat() as Domanda[];
 
 const affidabili = new Set(

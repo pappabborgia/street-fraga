@@ -1,0 +1,1021 @@
+{
+ "nota": "Parole italiane da chiedere ai giocatori: «Come si dice ... in fragagnanese?». Una per partita. Le risposte vanno nel database (tabella parole_raccolte).",
+ "parole": [
+  {
+   "argomento": "famiglia",
+   "italiano": "la nonna"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il nonno"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la mamma"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il papà"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il figlio"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la figlia"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il fratello"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la sorella"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "lo zio"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la zia"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il cugino"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la cugina"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il nipote"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la suocera"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il suocero"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la moglie"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il marito"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il fidanzato"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la fidanzata"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il bambino"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la bambina"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il ragazzo"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la ragazza"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il vecchio"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la vecchia"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il vicino di casa"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il compare"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la comare"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "il padrino"
+  },
+  {
+   "argomento": "famiglia",
+   "italiano": "la madrina"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la casa"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la cucina"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la camera da letto"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il letto"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la sedia"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il tavolo"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la finestra"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la porta"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il balcone"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la scala"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il tetto"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il pavimento"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il camino"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la stufa"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il cassetto"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "l'armadio"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "lo specchio"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la scopa"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il secchio"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la pentola"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la padella"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il piatto"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il bicchiere"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la forchetta"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il cucchiaio"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il coltello"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la tovaglia"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il mattarello"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "la lavatrice"
+  },
+  {
+   "argomento": "casa",
+   "italiano": "il cortile"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il pane"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'acqua"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il vino"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'olio"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il sale"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il pepe"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il formaggio"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la pasta"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "le orecchiette"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il sugo"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il pomodoro"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la cipolla"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'aglio"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il peperoncino"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la melanzana"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il peperone"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la zucchina"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "i ceci"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "le fave"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "i fagioli"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "le lenticchie"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il baccalà"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il polpo"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la carne"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "le uova"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il latte"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "lo zucchero"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la farina"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il tarallo"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la frisella"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la focaccia"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il dolce"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "le olive"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il fico"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'uva"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'arancia"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "il limone"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la mela"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "la pera"
+  },
+  {
+   "argomento": "cucina",
+   "italiano": "l'anguria"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la campagna"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "l'ulivo"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la vigna"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la vendemmia"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il frantoio"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la zappa"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la carriola"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il trattore"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il pozzo"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il muretto a secco"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la masseria"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il contadino"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "l'orto"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il seme"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la terra"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il sasso"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "l'erba"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il fiore"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "l'albero"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il ramo"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la foglia"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "la radice"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il fico d'India"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il mandorlo"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il fieno"
+  },
+  {
+   "argomento": "campagna",
+   "italiano": "il grano"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il cane"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il gatto"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "l'asino"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il cavallo"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la gallina"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il gallo"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il pulcino"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la pecora"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la capra"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il maiale"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la mucca"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il coniglio"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il topo"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la lucertola"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la formica"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la mosca"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la zanzara"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "l'ape"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la vespa"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la farfalla"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il serpente"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la lumaca"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il riccio"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "l'uccello"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il passero"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la civetta"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "la tortora"
+  },
+  {
+   "argomento": "animali",
+   "italiano": "il ragno"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la testa"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "i capelli"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la faccia"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "gli occhi"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "il naso"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la bocca"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "i denti"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "le orecchie"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "il collo"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la spalla"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "il braccio"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la mano"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "le dita"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la pancia"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la schiena"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "la gamba"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "il ginocchio"
+  },
+  {
+   "argomento": "corpo",
+   "italiano": "il piede"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il sole"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la pioggia"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il vento"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la nuvola"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il temporale"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la neve"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il caldo"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il freddo"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la mattina"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "il pomeriggio"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la sera"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la notte"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "oggi"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "ieri"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "domani"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "dopodomani"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "l'estate"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "l'inverno"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "la primavera"
+  },
+  {
+   "argomento": "tempo",
+   "italiano": "l'autunno"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il sarto"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "la sarta"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il falegname"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il fabbro"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il calzolaio"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il barbiere"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il fornaio"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il pescatore"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il medico"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il prete"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "la maestra"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il sindaco"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il carabiniere"
+  },
+  {
+   "argomento": "persone e mestieri",
+   "italiano": "il musicista della banda"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "le scarpe"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la giacca"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "il cappello"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "il fazzoletto"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "l'ombrello"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la borsa"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "i soldi"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la chiave"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la bicicletta"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "il motorino"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la macchina"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la strada"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la piazza"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la chiesa"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la festa"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "le luminarie"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "il fuoco"
+  },
+  {
+   "argomento": "cose di ogni giorno",
+   "italiano": "la candela"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "mangiare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "bere"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "dormire"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "lavorare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "camminare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "correre"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "parlare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "ridere"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "piangere"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "chiamare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "guardare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "ascoltare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "aspettare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "comprare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "cucinare"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "andare via"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "stai zitto"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "vieni qui"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "che cosa fai?"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "come stai?"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "buongiorno"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "buonanotte"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "grazie"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "andiamo"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "basta così"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "sbrigati"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "piano piano"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "che bello!"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "mamma mia!"
+  },
+  {
+   "argomento": "verbi e modi di dire",
+   "italiano": "ti voglio bene"
+  }
+ ]
+}

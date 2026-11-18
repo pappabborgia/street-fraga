@@ -64,7 +64,9 @@ Scrittura
 - Niente domande al negativo, niente doppie negazioni, niente "tutte le precedenti"/"nessuna". Niente trabocchetti.
 - Numeri in cifre. Date per intero ("13 giugno").
 - Spiegazione: una frase, massimo 15 parole, tono positivo, piccola curiosità.
-- Italiano corretto. Dialetto solo con parole presenti nella base di fatti (Fragnànu, funtanedda, li cartiddati).
+- Italiano corretto. Dialetto solo con parole presenti nella base di fatti (Fragnànu, funtanedda, li cartiddati, e le parole salentine D01-D34).
+- Dialetto (scelta del gestore): si usa il salentino del nord, la variante parlata a Fragagnano. Parole solo da fonti (fatti D..., fonte: voce "Dialetti salentini"), segnate "da confermare in paese". I nomi di personaggi e colpi sono adattati con le regole del salentino del nord: vanno confermati in paese.
+- Materia "dialetto": la 5ª domanda di ogni partita. A fine partita la schermata "Aiutaci a salvare il dialetto" chiede come si dice una parola (elenco in `content/parole-da-raccogliere.json`): non dà punti, le risposte vanno nella tabella `parole_raccolte`.
 - Risposte mescolate a ogni partita.
 
 Regole di verità

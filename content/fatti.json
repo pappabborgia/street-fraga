@@ -1079,5 +1079,345 @@
     "affidabilita": "alta",
     "consultato_il": "2026-11-18",
     "note": ""
+  },
+  {
+    "id": "D01",
+    "testo": "In salentino «cavaddu» vuol dire «cavallo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D02",
+    "testo": "In salentino «petra» vuol dire «pietra».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D03",
+    "testo": "In salentino «jaddu» vuol dire «gallo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D04",
+    "testo": "In salentino «jattu» vuol dire «gatto».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D05",
+    "testo": "In salentino «cranu» vuol dire «grano».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D06",
+    "testo": "In salentino «purpu» vuol dire «polpo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D07",
+    "testo": "In salentino «furnu» vuol dire «forno».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D08",
+    "testo": "In salentino «puzzu» vuol dire «pozzo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D09",
+    "testo": "In salentino «fiuru» vuol dire «fiore».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D10",
+    "testo": "In salentino «pete» vuol dire «piede».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D11",
+    "testo": "In salentino «sulu» vuol dire «solo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D12",
+    "testo": "In salentino «ucca» vuol dire «bocca».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D13",
+    "testo": "In salentino «ciucciu» vuol dire «asino».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D14",
+    "testo": "In salentino «mieru» vuol dire «vino».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D15",
+    "testo": "In salentino «utte» vuol dire «botte».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D16",
+    "testo": "In salentino «càuci» vuol dire «calci».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D17",
+    "testo": "In salentino «corpu» vuol dire «colpo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D18",
+    "testo": "In salentino «fierru» vuol dire «ferro».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D19",
+    "testo": "In salentino «cautu» vuol dire «caldo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D20",
+    "testo": "In salentino «capu» vuol dire «testa».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D21",
+    "testo": "In salentino «cota» vuol dire «coda».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D22",
+    "testo": "In salentino «pilu» vuol dire «pelo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D23",
+    "testo": "In salentino «mile» vuol dire «mele».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D24",
+    "testo": "In salentino «cattare» vuol dire «comprare».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D25",
+    "testo": "In salentino «mugghiere» vuol dire «moglie».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D26",
+    "testo": "In salentino «patrunu» vuol dire «padrone».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D27",
+    "testo": "In salentino «auceddu» vuol dire «uccello».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D28",
+    "testo": "In salentino «tùrtura» vuol dire «tortora».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D29",
+    "testo": "In salentino «urmu» vuol dire «olmo».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D30",
+    "testo": "In salentino «tampagnu» vuol dire «coperchio».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D31",
+    "testo": "In salentino «cucchiarinu» vuol dire «cucchiaino».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D32",
+    "testo": "In salentino «meju» vuol dire «meglio».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D33",
+    "testo": "In salentino «signurìa» vuol dire «lei, per rispetto».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
+  },
+  {
+    "id": "D34",
+    "testo": "In salentino «iabbu» vuol dire «prendere in giro».",
+    "fonti": [
+      "https://it.wikipedia.org/wiki/Dialetti_salentini"
+    ],
+    "affidabilita": "media",
+    "consultato_il": "2026-11-18",
+    "note": "Parola salentina (variante del nord): da confermare con qualcuno di Fragagnano."
   }
 ]

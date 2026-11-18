@@ -1,0 +1,586 @@
+[
+  {
+    "id": "DIA-001",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cavaddu»?",
+    "risposte": [
+      "Cavallo",
+      "Capello",
+      "Cavolo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Nel nord del Salento la doppia L diventa DD: cavallo, cavaddu.",
+    "fatto_id": "D01",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-002",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «petra»?",
+    "risposte": [
+      "Pentola",
+      "Pietra",
+      "Pera"
+    ],
+    "corretta": 1,
+    "spiegazione": "Petra è la pietra: con le pietre si fanno i muretti a secco!",
+    "fatto_id": "D02",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-003",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «jaddu»?",
+    "risposte": [
+      "Gatto",
+      "Giallo",
+      "Gallo"
+    ],
+    "corretta": 2,
+    "spiegazione": "Jaddu è il gallo che canta all'alba.",
+    "fatto_id": "D03",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-004",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «jattu»?",
+    "risposte": [
+      "Gallo",
+      "Gatto",
+      "Gioco"
+    ],
+    "corretta": 1,
+    "spiegazione": "Jattu è il gatto: la G di gatto diventa J.",
+    "fatto_id": "D04",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-005",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cranu»?",
+    "risposte": [
+      "Crudo",
+      "Granchio",
+      "Grano"
+    ],
+    "corretta": 2,
+    "spiegazione": "Cranu è il grano: c'è anche sullo stemma del paese!",
+    "fatto_id": "D05",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-006",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «purpu»?",
+    "risposte": [
+      "Porco",
+      "Polpo",
+      "Pulce"
+    ],
+    "corretta": 1,
+    "spiegazione": "Purpu è il polpo, buonissimo bollito.",
+    "fatto_id": "D06",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-007",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «furnu»?",
+    "risposte": [
+      "Fumo",
+      "Fiume",
+      "Forno"
+    ],
+    "corretta": 2,
+    "spiegazione": "Furnu è il forno: lì si cuociono pane e taralli.",
+    "fatto_id": "D07",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-008",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «puzzu»?",
+    "risposte": [
+      "Pozzo",
+      "Pozzanghera",
+      "Pezzo"
+    ],
+    "corretta": 0,
+    "spiegazione": "Puzzu è il pozzo, come quello della Madonna del Favore.",
+    "fatto_id": "D08",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-009",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «fiuru»?",
+    "risposte": [
+      "Fuoco",
+      "Fiore",
+      "Fiume"
+    ],
+    "corretta": 1,
+    "spiegazione": "Fiuru è il fiore: le parole maschili finiscono spesso in U.",
+    "fatto_id": "D09",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-010",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «pete»?",
+    "risposte": [
+      "Pentola",
+      "Piede",
+      "Pane"
+    ],
+    "corretta": 1,
+    "spiegazione": "Pete è il piede.",
+    "fatto_id": "D10",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-011",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «sulu»?",
+    "risposte": [
+      "Sole",
+      "Solo",
+      "Sale"
+    ],
+    "corretta": 1,
+    "spiegazione": "Sulu vuol dire solo, da solo.",
+    "fatto_id": "D11",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-012",
+    "materia": "dialetto",
+    "livello": 1,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «ucca»?",
+    "risposte": [
+      "Oca",
+      "Buca",
+      "Bocca"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ucca è la bocca: «ucca te furnu» è chi mangia tanto!",
+    "fatto_id": "D12",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-013",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «ciucciu»?",
+    "risposte": [
+      "Ciuccio",
+      "Cucciolo",
+      "Asino"
+    ],
+    "corretta": 2,
+    "spiegazione": "Ciucciu è l'asino, compagno fedele dei contadini.",
+    "fatto_id": "D13",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-014",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «mieru»?",
+    "risposte": [
+      "Miele",
+      "Vino",
+      "Mela"
+    ],
+    "corretta": 1,
+    "spiegazione": "Mieru è il vino, come il nostro Primitivo.",
+    "fatto_id": "D14",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-015",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «utte»?",
+    "risposte": [
+      "Botte",
+      "Orto",
+      "Uva"
+    ],
+    "corretta": 0,
+    "spiegazione": "La utte è la botte dove riposa il vino.",
+    "fatto_id": "D15",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-016",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «càuci»?",
+    "risposte": [
+      "Cuoco",
+      "Calci",
+      "Calce"
+    ],
+    "corretta": 1,
+    "spiegazione": "Càuci sono i calci: ce ne sono tanti in questo gioco!",
+    "fatto_id": "D16",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-017",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «corpu»?",
+    "risposte": [
+      "Corpo",
+      "Colpo",
+      "Corvo"
+    ],
+    "corretta": 1,
+    "spiegazione": "Corpu è il colpo: «nu corpu alla utte».",
+    "fatto_id": "D17",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-018",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «fierru»?",
+    "risposte": [
+      "Ferro",
+      "Fieno",
+      "Fiera"
+    ],
+    "corretta": 0,
+    "spiegazione": "«Batti lu fierru quannu è cautu»: batti il ferro finché è caldo.",
+    "fatto_id": "D18",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-019",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cautu»?",
+    "risposte": [
+      "Caduto",
+      "Caldo",
+      "Calzino"
+    ],
+    "corretta": 1,
+    "spiegazione": "Cautu vuol dire caldo, come le estati di Puglia.",
+    "fatto_id": "D19",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-020",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «capu»?",
+    "risposte": [
+      "Cappa",
+      "Testa",
+      "Campo"
+    ],
+    "corretta": 1,
+    "spiegazione": "La capu è la testa, e in dialetto è femminile!",
+    "fatto_id": "D20",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-021",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cota»?",
+    "risposte": [
+      "Coda",
+      "Costa",
+      "Cotta"
+    ],
+    "corretta": 0,
+    "spiegazione": "Cota è la coda: «la cuta è forte a scurciare».",
+    "fatto_id": "D21",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-022",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «pilu»?",
+    "risposte": [
+      "Pillola",
+      "Pelo",
+      "Pila"
+    ],
+    "corretta": 1,
+    "spiegazione": "Pilu è il pelo.",
+    "fatto_id": "D22",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-023",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «mile»?",
+    "risposte": [
+      "Mele",
+      "Miele",
+      "Melone"
+    ],
+    "corretta": 0,
+    "spiegazione": "«Aggiu cattatu doi mile»: ho comprato delle mele.",
+    "fatto_id": "D23",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-024",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cattare»?",
+    "risposte": [
+      "Cacciare",
+      "Comprare",
+      "Cantare"
+    ],
+    "corretta": 1,
+    "spiegazione": "Cattare vuol dire comprare: si dice ancora al mercato.",
+    "fatto_id": "D24",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-025",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «mugghiere»?",
+    "risposte": [
+      "Moglie",
+      "Mugnaio",
+      "Muggito"
+    ],
+    "corretta": 0,
+    "spiegazione": "Mugghiere è la moglie.",
+    "fatto_id": "D25",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-026",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «patrunu»?",
+    "risposte": [
+      "Patrono",
+      "Pattume",
+      "Padrone"
+    ],
+    "corretta": 2,
+    "spiegazione": "Patrunu è il padrone: «ttacca lu ciucciu a ddonca ole lu patrunu».",
+    "fatto_id": "D26",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-027",
+    "materia": "dialetto",
+    "livello": 2,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «auceddu»?",
+    "risposte": [
+      "Ucciso",
+      "Uccello",
+      "Aceto"
+    ],
+    "corretta": 1,
+    "spiegazione": "Auceddu è l'uccello che vola sugli ulivi.",
+    "fatto_id": "D27",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-028",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «tùrtura»?",
+    "risposte": [
+      "Torta",
+      "Tortora",
+      "Tortura"
+    ],
+    "corretta": 1,
+    "spiegazione": "La tùrtura è la tortora, uccello delle campagne.",
+    "fatto_id": "D28",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-029",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «urmu»?",
+    "risposte": [
+      "Orma",
+      "Olmo",
+      "Uomo",
+      "Urlo"
+    ],
+    "corretta": 1,
+    "spiegazione": "Un tempo gli affari si chiudevano in piazza, sotto l'urmu.",
+    "fatto_id": "D29",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-030",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «tampagnu»?",
+    "risposte": [
+      "Tamburo",
+      "Tappeto",
+      "Campagna",
+      "Coperchio"
+    ],
+    "corretta": 3,
+    "spiegazione": "Tampagnu è il coperchio della botte.",
+    "fatto_id": "D30",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-031",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «cucchiarinu»?",
+    "risposte": [
+      "Coniglio",
+      "Cuoco",
+      "Cucchiaino",
+      "Cucchiaio grande"
+    ],
+    "corretta": 2,
+    "spiegazione": "Cucchiarinu è il cucchiaino del caffè.",
+    "fatto_id": "D31",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-032",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «meju»?",
+    "risposte": [
+      "Meglio",
+      "Mio",
+      "Mezzo",
+      "Meno"
+    ],
+    "corretta": 0,
+    "spiegazione": "Meju vuol dire meglio: «li meju fiuri», i fiori migliori.",
+    "fatto_id": "D32",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-033",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «signurìa»?",
+    "risposte": [
+      "Signora anziana",
+      "Signoria del castello",
+      "Lei, per rispetto",
+      "Sigaro"
+    ],
+    "corretta": 2,
+    "spiegazione": "Con «signurìa» si dà del lei alle persone di riguardo.",
+    "fatto_id": "D33",
+    "stato": "attiva"
+  },
+  {
+    "id": "DIA-034",
+    "materia": "dialetto",
+    "livello": 3,
+    "tipo": "scelta",
+    "stimolo": null,
+    "domanda": "In dialetto salentino, che cosa vuol dire «iabbu»?",
+    "risposte": [
+      "Gabbia",
+      "Prendere in giro",
+      "Giacca",
+      "Abbaiare"
+    ],
+    "corretta": 1,
+    "spiegazione": "«Te lu iabbu nu nci mueri»: chi prende in giro, poi ci capita.",
+    "fatto_id": "D34",
+    "stato": "attiva"
+  }
+]
