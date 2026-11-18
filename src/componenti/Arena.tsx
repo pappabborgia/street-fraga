@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import type { Oggetto, Personaggio, Speciale, Stile } from "@/gioco/personaggi";
-import { Chiesa } from "./Chiesa";
+import { type Luogo, Sfondo } from "./Sfondi";
 import { Lottatore } from "./Lottatore";
 import { Fiamma, SvgOggetto } from "./Oggetti";
 import { Animato, anima, braccio, corpo, type NomeMossa } from "./movimento";
@@ -49,10 +49,10 @@ export function geometria(w: number, h: number, altezza = 0.82, aria = 0.08) {
 }
 
 export function Arena({
-  giocatore, computer, azione = null, ko = null, stretta = false, className = "",
+  giocatore, computer, azione = null, ko = null, stretta = false, className = "", luogo = "chiesa",
 }: {
   giocatore: Personaggio; computer: Personaggio; azione?: Azione | null;
-  ko?: Lato | null; stretta?: boolean; className?: string;
+  ko?: Lato | null; stretta?: boolean; className?: string; luogo?: Luogo;
 }) {
   const [ref, { w, h }] = useMisure<HTMLDivElement>();
   const g = geometria(w, h);
@@ -100,7 +100,7 @@ export function Arena({
 
   return (
     <div ref={ref} className={`arena ${className}`}>
-      <Chiesa />
+      <Sfondo luogo={luogo} />
       {azione?.tipo === "speciale" && attaccante && (
         <div key={`buio-${azione.chiave}`} className="effetto inset-0 buio" aria-hidden="true" />
       )}

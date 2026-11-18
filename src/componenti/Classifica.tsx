@@ -32,6 +32,7 @@ export function SchermataClassifica({ titoloRef, sessione }: { titoloRef: React.
         <div className="pannello p-5">
           <p className="font-bold">★ {T.iTuoiProgressi}</p>
           <p className="text-[1.5rem] font-bold">{T.progressi(profilo.punti, profilo.vittorie, profilo.giorni)}</p>
+          {profilo.coppe > 0 && <p className="text-[1.5rem] font-bold">{T.tueCoppe(profilo.coppe)}</p>}
         </div>
       )}
       <div className="grid grid-cols-2 gap-4">
@@ -54,7 +55,7 @@ export function SchermataClassifica({ titoloRef, sessione }: { titoloRef: React.
                 <div className="flex-1 min-w-0">
                   <p className="font-bold text-[1.5rem] break-words">{T.riga(i + 1, r.nome)}</p>
                   {io && <p className="font-bold">★ {T.tu}</p>}
-                  <p>{T.puntiVittorie(r.punti, r.vittorie)}</p>
+                  <p>{T.puntiVittorie(r.punti, r.vittorie)}{r.coppe > 0 && <> · <span aria-hidden="true">🏆</span> {T.coppe(r.coppe)}</>}</p>
                 </div>
               </li>
             );

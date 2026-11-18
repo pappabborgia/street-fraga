@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Personaggio } from "@/gioco/personaggi";
 import { audio } from "@/gioco/audio";
 import { T } from "@/testi";
-import { Chiesa } from "./Chiesa";
+import { type Luogo, Sfondo } from "./Sfondi";
 import { Lottatore } from "./Lottatore";
 import { SvgOggetto } from "./Oggetti";
 import { geometria, useMisure } from "./Arena";
@@ -15,7 +15,7 @@ import { Animato, anima, braccio, corpo, type NomeMossa } from "./movimento";
  */
 export const DURATA_SCENA = 1550;
 const SCENE = 11;
-const COLORI = ["#009246", "#f4f5f0", "#ce2b37", "#ffd23f", "#2b7bd6"];
+export const COLORI = ["#009246", "#f4f5f0", "#ce2b37", "#ffd23f", "#2b7bd6"];
 
 export type Risultato = "vinto" | "perso" | "pari";
 
@@ -24,8 +24,8 @@ export function scegliSottotitolo(r: Risultato, vincitore: string, perdente: str
   return elenco[seme % elenco.length].replace("{vincitore}", vincitore).replace("{perdente}", perdente);
 }
 
-export function Festa({ me, lui, risultato, className = "" }: {
-  me: Personaggio; lui: Personaggio; risultato: Risultato; seme: number; className?: string;
+export function Festa({ me, lui, risultato, className = "", luogo = "chiesa" }: {
+  me: Personaggio; lui: Personaggio; risultato: Risultato; seme: number; className?: string; luogo?: Luogo;
 }) {
   const [scena, setScena] = useState(0);
   const [ref, { w, h }] = useMisure<HTMLDivElement>();
@@ -71,7 +71,7 @@ export function Festa({ me, lui, risultato, className = "" }: {
 
   return (
     <div ref={ref} className={`arena ${className}`} aria-hidden="true">
-      <Chiesa />
+      <Sfondo luogo={luogo} />
       {/* Fuochi d'artificio */}
       {(scena === 3 || scena === 5 || scena === 10) && (
         <div key={`fuochi-${scena}`}>
@@ -121,7 +121,7 @@ export function Festa({ me, lui, risultato, className = "" }: {
   );
 }
 
-function Stordito() {
+export function Stordito() {
   return (
     <div className="absolute left-[20%] right-[10%] top-[-6%] flex justify-center gap-1 stordito fumetto text-[1.5rem] text-[#ffd23f]" style={{ WebkitTextStroke: "2px #1a1a1a" }}>
       <span>★</span><span>★</span><span>★</span>
@@ -129,7 +129,7 @@ function Stordito() {
   );
 }
 
-function Fuoco({ x, y, ritardo, colore }: { x: number; y: number; ritardo: number; colore: string }) {
+export function Fuoco({ x, y, ritardo, colore }: { x: number; y: number; ritardo: number; colore: string }) {
   const raggi = useMemo(() => Array.from({ length: 12 }, (_, i) => (i / 12) * Math.PI * 2), []);
   return (
     <>
@@ -146,7 +146,7 @@ function Fuoco({ x, y, ritardo, colore }: { x: number; y: number; ritardo: numbe
   );
 }
 
-function Coriandoli({ w, h, seme, taralli }: { w: number; h: number; seme: number; taralli: boolean }) {
+export function Coriandoli({ w, h, seme, taralli }: { w: number; h: number; seme: number; taralli: boolean }) {
   const pezzi = useMemo(() => Array.from({ length: 28 }, (_, i) => {
     const r = ((i * 9301 + seme * 49297) % 233280) / 233280;
     return { x: r * w, y: h * (0.55 + ((i * 7) % 40) / 100), ritardo: (i % 7) * 0.08, colore: COLORI[i % COLORI.length], giro: (i % 2 ? 1 : -1) * (180 + (i % 4) * 90) };

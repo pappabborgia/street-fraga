@@ -53,6 +53,52 @@ const SERENATA: Nota[] = [
 ];
 const SERENATA_BASSO = ["G2", "G2", "D2", "D2", "G2", "D2"]; // 4/4 = 16 sedicesimi
 
+// ---------- Sinfonia n. 40 (K. 550), inizio ----------
+const SINFONIA40: Nota[] = [
+  ["Eb5", 2], ["D5", 2], ["D5", 4], ["Eb5", 2], ["D5", 2], ["D5", 4],
+  ["Eb5", 2], ["D5", 2], ["D5", 4], ["Bb5", 8],
+  ["Bb5", 2], ["A5", 2], ["G5", 4], ["G5", 2], ["F5", 2], ["Eb5", 4],
+  ["Eb5", 2], ["D5", 2], ["C5", 4], ["C5", 8],
+  ["D5", 2], ["C5", 2], ["C5", 4], ["D5", 2], ["C5", 2], ["C5", 4],
+  ["D5", 2], ["C5", 2], ["C5", 4], ["A5", 8],
+  ["A5", 2], ["G5", 2], ["F#5", 4], ["F#5", 2], ["Eb5", 2], ["D5", 4],
+  ["D5", 2], ["C5", 2], ["Bb4", 4], ["Bb4", 4], ["R", 4],
+];
+const SINFONIA40_BASSO = ["G2", "G2", "G2", "G2", "D2", "D2", "D2", "G2", "D2", "D2", "D2", "D2", "D2", "D2", "G2", "G2"]; // 2/4
+
+// ---------- Sonata facile (K. 545), inizio ----------
+const SONATA545: Nota[] = [
+  ["C5", 8], ["E5", 4], ["G5", 4],
+  ["B4", 6], ["C5", 1], ["D5", 1], ["C5", 8],
+  ["A5", 8], ["G5", 4], ["C6", 4],
+  ["G5", 2], ["F5", 2], ["F5", 2], ["E5", 2], ["E5", 8],
+  ["A4", 2], ["B4", 2], ["C5", 2], ["D5", 2], ["E5", 2], ["F5", 2], ["G5", 2], ["A5", 2],
+  ["G5", 2], ["F5", 2], ["E5", 2], ["D5", 2], ["C5", 8],
+];
+const SONATA545_BASSO = ["C3", "G2", "F2", "C3", "F2", "G2"]; // 4/4
+
+// ---------- Le nozze di Figaro (K. 492), ouverture, inizio ----------
+const FIGARO: Nota[] = [
+  ["D5", 1], ["C#5", 1], ["D5", 1], ["E5", 1], ["D5", 1], ["C#5", 1], ["D5", 1], ["E5", 1],
+  ["D5", 1], ["C#5", 1], ["B4", 1], ["C#5", 1], ["D5", 1], ["E5", 1], ["F#5", 1], ["G5", 1],
+  ["A5", 4], ["A5", 4], ["F#5", 4], ["D5", 4],
+  ["E5", 1], ["D5", 1], ["E5", 1], ["F#5", 1], ["E5", 1], ["D5", 1], ["E5", 1], ["F#5", 1],
+  ["E5", 1], ["D5", 1], ["C#5", 1], ["D5", 1], ["E5", 1], ["F#5", 1], ["G5", 1], ["A5", 1],
+  ["B5", 4], ["A5", 4], ["F#5", 4], ["D5", 4],
+];
+const FIGARO_BASSO = ["D2", "D2", "D2", "A2", "A2", "D2"]; // 4/4 a sedicesimi: 16 per battuta
+
+// ---------- "Ah, vous dirai-je, maman" (K. 265), per la festa della coppa ----------
+const AH_VOUS: Nota[] = [
+  ["C5", 2], ["C5", 2], ["G5", 2], ["G5", 2], ["A5", 2], ["A5", 2], ["G5", 4],
+  ["F5", 2], ["F5", 2], ["E5", 2], ["E5", 2], ["D5", 2], ["D5", 2], ["C5", 4],
+  ["G5", 2], ["G5", 2], ["F5", 2], ["F5", 2], ["E5", 2], ["E5", 2], ["D5", 4],
+  ["G5", 2], ["G5", 2], ["F5", 2], ["F5", 2], ["E5", 2], ["E5", 2], ["D5", 4],
+  ["C5", 2], ["C5", 2], ["G5", 2], ["G5", 2], ["A5", 2], ["A5", 2], ["G5", 4],
+  ["F5", 2], ["F5", 2], ["E5", 2], ["E5", 2], ["D5", 2], ["D5", 2], ["C5", 4],
+];
+const AH_VOUS_BASSO = ["C3", "F2", "C3", "G2", "C3", "G2", "C3", "G2", "C3", "F2", "C3", "C3"]; // 2/4
+
 interface Evento { t: number; f: number; d: number; voce: "melodia" | "basso" | "colpo" }
 
 function componi(melodia: Nota[], basso: string[], battuta: number, attacco: number): { eventi: Evento[]; durata: number } {
@@ -88,7 +134,14 @@ const BRANI = {
     const s = componi(SERENATA, SERENATA_BASSO, 16, 0);
     return { ...s, sedicesimo: 0.13 };
   })(),
+  sinfonia: (() => ({ ...componi(SINFONIA40, SINFONIA40_BASSO, 8, 0), sedicesimo: 0.1 }))(),
+  sonata: (() => ({ ...componi(SONATA545, SONATA545_BASSO, 16, 0), sedicesimo: 0.12 }))(),
+  figaro: (() => ({ ...componi(FIGARO, FIGARO_BASSO, 16, 0), sedicesimo: 0.085 }))(),
+  coppa: (() => ({ ...componi(AH_VOUS, AH_VOUS_BASSO, 8, 0), sedicesimo: 0.1 }))(),
 };
+
+/** Musiche dei turni del torneo: ognuno ha la sua. */
+export const BRANI_TORNEO: Brano[] = ["lotta", "sinfonia", "sonata", "figaro"];
 
 export type Brano = keyof typeof BRANI;
 

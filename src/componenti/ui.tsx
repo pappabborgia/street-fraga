@@ -34,19 +34,25 @@ export function Pulsante({ variante = "bianco", className = "", onClick, childre
   );
 }
 
-/** Barra in alto: "Indietro" a sinistra e "Casa" a destra, sempre nello stesso posto. */
-export function BarraFissa({ onIndietro, onCasa, musica }: { onIndietro: () => void; onCasa: () => void; musica: boolean }) {
+/** Barra in alto: "Indietro" a sinistra, la musica al centro, "Casa" a destra, sempre nello stesso posto. */
+export function BarraFissa({ onIndietro, onCasa, musica, onMusica }: {
+  onIndietro: () => void; onCasa: () => void; musica: boolean; onMusica: () => void;
+}) {
   return (
-    <nav className="sticky top-0 z-30 bg-[var(--notte)] border-b-4 border-black px-3 py-2" aria-label={T.navigazione}>
-      <div className="mx-auto max-w-5xl flex items-center justify-between gap-4">
-        <Pulsante onClick={onIndietro} className="min-w-[8.5rem]">
+    <nav className="sticky top-0 z-30 bg-[var(--notte)] border-b-4 border-black px-2 py-2" aria-label={T.navigazione}>
+      <div className="mx-auto max-w-5xl flex items-center justify-between gap-3">
+        <Pulsante onClick={onIndietro} className="!px-3">
           <span aria-hidden="true">←</span> {T.indietro}
         </Pulsante>
-        <p className="testo-piccolo text-center font-bold" aria-live="polite">
-          <span aria-hidden="true">{musica ? "♪" : ""}</span>
-          <span className="sr-only">{musica ? T.musicaInCorso : T.musicaSpenta}</span>
-        </p>
-        <Pulsante onClick={onCasa} className="min-w-[7.5rem]">
+        <Pulsante onClick={onMusica} className="!px-2 !gap-0 flex-col !leading-none min-w-[4.5rem]" aria-pressed={musica}
+          aria-label={musica ? T.musicaTogli : T.musicaMetti}>
+          <span aria-hidden="true" className="text-[1.75rem] relative">
+            ♪
+            {!musica && <span className="absolute inset-0 flex items-center justify-center text-[2rem] text-[#8a1c1c]">⁄</span>}
+          </span>
+          <span className="testo-piccolo">{musica ? T.si : T.no}</span>
+        </Pulsante>
+        <Pulsante onClick={onCasa} className="!px-3">
           <span aria-hidden="true">⌂</span> {T.casa}
         </Pulsante>
       </div>

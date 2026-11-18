@@ -1,12 +1,12 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { T } from "@/testi";
-import { audio } from "@/gioco/audio";
+import { BRANI_TORNEO, audio } from "@/gioco/audio";
 import { leggi, voceItaliana, zitto } from "@/gioco/voce";
 import { type Impostazioni, PREDEFINITE, SCALA, carica, salva } from "@/gioco/impostazioni";
 import { PERSONAGGI, type Personaggio, specialeDi, trovaPersonaggio } from "@/gioco/personaggi";
 import { MAZZO } from "@/gioco/domande";
-import { creaRng, scegli } from "@/gioco/rng";
+import { creaRng, mescola } from "@/gioco/rng";
 import type { Domanda, Livello } from "@/gioco/tipi";
 import {
   BRAVURA_COMPUTER, DOMANDE_PER_GIOCATORE, SECONDI_PER_RISPOSTA, colpoPerTempo, ENERGIA_INIZIALE, type Combattente, type EsitoColpo,
@@ -18,18 +18,24 @@ import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
 import { Chiesa } from "./Chiesa";
 import { Festa, scegliSottotitolo, type Risultato } from "./Festa";
+import { FestaCoppa } from "./Coppa";
+import { type Luogo, NOMI_LUOGHI } from "./Sfondi";
 import {
   SchermataBenvenuto, SchermataChiGioca, SchermataCodice, SchermataHaiNome, SchermataNome, SchermataNomePreso,
 } from "./Accesso";
 import { SchermataClassifica } from "./Classifica";
 import {
   type Esito, type Sessione, SenzaRete, accedi, chiSono, dimenticaSessione, esciDalDb, nomeValido, nomiDelDispositivo,
-  registra, salvaPartita, salvaSessione, sessioneSalvata,
+  registra, salvaPartita, salvaSessione, sessioneSalvata, vinciCoppa,
 } from "@/gioco/conto";
+
+/** Il torneo: ottavi, quarti, semifinale e finale, ognuno in un luogo del paese. */
+const LUOGHI_TORNEO: Luogo[] = ["scuola", "cappella", "municipio", "chiesa"];
+interface Torneo { avversari: string[]; turno: number }
 import { applicaMovimenti } from "./movimento";
 
 type Schermata = "casa" | "regole" | "impostazioni" | "altro" | "classifica"
-  | "accesso" | "haiNome" | "nome" | "codice" | "ripeti" | "nomePreso" | "benvenuto" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
+  | "campione" | "accesso" | "haiNome" | "nome" | "codice" | "ripeti" | "nomePreso" | "benvenuto" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
 
 interface Partita {
@@ -72,6 +78,7 @@ export default function Gioco() {
   const [benvenuto, setBenvenuto] = useState("");
   const [avversarioId, setAvversarioId] = useState<string>(PERSONAGGI[1].id);
   const [partita, setPartita] = useState<Partita | null>(null);
+  const [torneo, setTorneo] = useState<Torneo | null>(null);
   const [haVoce, setHaVoce] = useState(false);
   const rng = useRef(creaRng(1));
   const contatore = useRef(1);
@@ -111,7 +118,8 @@ export default function Gioco() {
   }, []);
 
   // Musica: Serenata nei menu, Rondò alla turca nel combattimento
-  const brano = schermata === "lotta" || schermata === "fine" || schermata === "esci" ? "lotta" : "menu";
+  const inTorneo = ["presentazione", "lotta", "fine", "esci"].includes(schermata);
+  const brano = schermata === "campione" ? "coppa" : inTorneo ? BRANI_TORNEO[(torneo?.turno ?? 0) % BRANI_TORNEO.length] : "menu";
   useEffect(() => { if (audio.pronto) audio.suona(brano); }, [brano]);
   const primoTocco = () => {
     if (!audio.pronto) {
@@ -331,7 +339,7 @@ export default function Gioco() {
   // ---------------- Disegno ----------------
   return (
     <div onPointerDownCapture={primoTocco} className="min-h-dvh flex flex-col">
-      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica && audio.pronto} />
+      <BarraFissa onIndietro={indietro} onCasa={casa} musica={imp.musica} onMusica={() => cambia({ musica: !imp.musica })} />
       <main className="flex-1 w-full mx-auto max-w-5xl px-4 pb-10">
         {schermata === "casa" && (
           <SchermataCasa titoloRef={titoloRef} sessione={sessione} inProva={inProva}
@@ -480,21 +488,40 @@ export default function Gioco() {
               </div>
             </div>
             <Pulsante variante="giallo" className="w-full" onClick={() => {
-              const altri = PERSONAGGI.filter((p) => p.id !== mioId);
-              setAvversarioId(scegli(rng.current, altri).id);
+              const avversari = mescola(rng.current, PERSONAGGI.filter((p) => p.id !== mioId)).slice(0, 4).map((p) => p.id);
+              setTorneo({ avversari, turno: 0 });
+              setAvversarioId(avversari[0]);
               vai("presentazione");
             }}>
               {T.sceglieQuesto(me.nome)}
             </Pulsante>
           </section>
         )}
-        {schermata === "presentazione" && (
+        {schermata === "presentazione" && torneo && (
           <section className="pt-6 flex flex-col gap-5">
-            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-center">
-              {me.nome} <span className="fumetto text-[var(--giallo)] block my-1">{T.contro}</span> {lui.nome}
-            </h1>
-            <Arena giocatore={me} computer={lui} className="rounded-2xl border-4 border-black h-[15rem] sm:h-[22rem]" />
-            <p className="text-center">{T.arena} · {T.livelli[livelloScelto]} · {conTempo ? T.conTempo : T.senzaTempo}</p>
+            <p className="fumetto text-center text-[var(--giallo)] text-[1.5rem]">{T.torneo}</p>
+            <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-center">{T.turni[torneo.turno]}</h1>
+            <ol className="grid grid-cols-2 sm:grid-cols-4 gap-3" aria-label={T.torneo}>
+              {T.turni.map((t, i) => {
+                const avv = trovaPersonaggio(torneo.avversari[i]);
+                const stato = i < torneo.turno ? T.turnoVinto : i === torneo.turno ? T.turnoOra : T.turnoDopo;
+                return (
+                  <li key={t} className={`pannello p-2 flex flex-col items-center text-center gap-1 ${i === torneo.turno ? "!bg-[var(--giallo)]" : ""}`}>
+                    <span className="testo-piccolo font-bold leading-tight">{t}</span>
+                    <span className="block w-16 h-16 rounded-xl border-2 border-black bg-[#f3e2c0] overflow-hidden fumetto text-[2.5rem] leading-[4rem] text-center text-[var(--inchiostro)]">
+                      {i <= torneo.turno ? <Ritratto p={avv} /> : "?"}
+                    </span>
+                    <span className="testo-piccolo leading-tight">{i <= torneo.turno ? avv.nome : "?"}</span>
+                    <span className="testo-piccolo font-bold">{i < torneo.turno ? "✓ " : i === torneo.turno ? "▶ " : ""}{stato}</span>
+                  </li>
+                );
+              })}
+            </ol>
+            <p className="text-center text-[1.5rem] font-bold">
+              {me.nome} <span className="fumetto text-[var(--giallo)]">{T.contro}</span> {lui.nome}
+            </p>
+            <Arena luogo={LUOGHI_TORNEO[torneo.turno]} giocatore={me} computer={lui} className="rounded-2xl border-4 border-black h-[15rem] sm:h-[22rem]" />
+            <p className="text-center">{NOMI_LUOGHI[LUOGHI_TORNEO[torneo.turno]]} · {T.livelli[livelloScelto]} · {conTempo ? T.conTempo : T.senzaTempo}</p>
             <Pulsante variante="giallo" className="w-full fumetto !text-[1.75rem]" onClick={iniziaPartita}>{T.combatti}</Pulsante>
           </section>
         )}
@@ -509,7 +536,7 @@ export default function Gioco() {
         {schermata === "lotta" && partita && (
           <SchermataLotta
             titoloRef={titoloRef} p={partita} me={me} lui={lui} imp={imp} haVoce={haVoce}
-            conTempo={conTempo} onScaduto={tempoScaduto}
+            conTempo={conTempo} onScaduto={tempoScaduto} luogo={LUOGHI_TORNEO[torneo?.turno ?? 0]}
             scegli={(i) => (imp.dueTocchi ? setPartita({ ...partita, scelta: i }) : rispondi(i))}
             conferma={() => partita.scelta !== null && rispondi(partita.scelta)}
             memorizzato={() => setPartita({ ...partita, fase: "domanda" })}
@@ -518,12 +545,21 @@ export default function Gioco() {
             avantiSpareggio={dopoSpareggio}
           />
         )}
-        {schermata === "fine" && partita && (
-          <SchermataFine titoloRef={titoloRef} p={partita} me={me} lui={lui} sessione={sessione} livello={livelloScelto} ancora={() => {
-            const altri = PERSONAGGI.filter((x) => x.id !== mioId);
-            setAvversarioId(scegli(rng.current, altri).id);
-            setStoria(["casa", "presentazione"]);
-          }} />
+        {schermata === "fine" && partita && torneo && (
+          <SchermataFine titoloRef={titoloRef} p={partita} me={me} lui={lui} sessione={sessione} livello={livelloScelto}
+            luogo={LUOGHI_TORNEO[torneo.turno]} turno={torneo.turno}
+            avanti={() => {
+              if (torneo.turno >= 3) return setStoria(["casa", "campione"]);
+              const t = { ...torneo, turno: torneo.turno + 1 };
+              setTorneo(t);
+              setAvversarioId(t.avversari[t.turno]);
+              setStoria(["casa", "presentazione"]);
+            }}
+            riprova={() => setStoria(["casa", "presentazione"])} />
+        )}
+        {schermata === "campione" && torneo && (
+          <SchermataCampione titoloRef={titoloRef} me={me} battuti={torneo.avversari.map(trovaPersonaggio)} sessione={sessione} livello={livelloScelto}
+            nuovo={() => { setTorneo(null); setStoria(["casa", "scelta"]); }} />
         )}
       </main>
     </div>
@@ -650,9 +686,9 @@ function Hud({ p, me, lui }: { p: Partita; me: Personaggio; lui: Personaggio }) 
   );
 }
 
-function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScaduto, scegli, conferma, memorizzato, avantiEsito, avantiComputer, avantiSpareggio }: {
+function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScaduto, luogo, scegli, conferma, memorizzato, avantiEsito, avantiComputer, avantiSpareggio }: {
   titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; imp: Impostazioni; haVoce: boolean;
-  conTempo: boolean; onScaduto: () => void;
+  conTempo: boolean; onScaduto: () => void; luogo: Luogo;
   scegli: (i: number) => void; conferma: () => void; memorizzato: () => void;
   avantiEsito: () => void; avantiComputer: () => void; avantiSpareggio: () => void;
 }) {
@@ -682,7 +718,7 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
   return (
     <section className="flex flex-col gap-4">
       <Hud p={p} me={me} lui={lui} />
-      <Arena giocatore={me} computer={lui} azione={p.azione}
+      <Arena luogo={luogo} giocatore={me} computer={lui} azione={p.azione}
         ko={p.fase === "esito" || p.fase === "computer" ? ko : null}
         className={`rounded-2xl border-4 border-black ${inDomanda ? "h-[9rem] sm:h-[15rem]" : "h-[15rem] sm:h-[22rem]"}`} />
       <div className="flex justify-between testo-piccolo font-bold">
@@ -788,8 +824,9 @@ function SchermataLotta({ titoloRef, p, me, lui, imp, haVoce, conTempo, onScadut
   );
 }
 
-function SchermataFine({ titoloRef, p, me, lui, ancora, sessione, livello }: {
-  titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; ancora: () => void; sessione: Sessione | null; livello: Livello;
+function SchermataFine({ titoloRef, p, me, lui, sessione, livello, luogo, turno, avanti, riprova }: {
+  titoloRef: RefTitolo; p: Partita; me: Personaggio; lui: Personaggio; sessione: Sessione | null; livello: Livello;
+  luogo: Luogo; turno: number; avanti: () => void; riprova: () => void;
 }) {
   const v = vincitore(p.giocatore, p.computer);
   const risultato: Risultato = v === "giocatore" ? "vinto" : v === "computer" ? "perso" : "pari";
@@ -807,7 +844,7 @@ function SchermataFine({ titoloRef, p, me, lui, ancora, sessione, livello }: {
   }, [sessione, p, me, lui, livello, risultato]);
   return (
     <section className="flex flex-col gap-5 pt-4">
-      <Festa me={me} lui={lui} risultato={risultato} seme={seme} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
+      <Festa me={me} lui={lui} risultato={risultato} seme={seme} luogo={luogo} className="rounded-2xl border-4 border-black h-[17rem] sm:h-[26rem]" />
       <div className="text-center">
         <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-[var(--giallo)]">{titolo}</h1>
         <p className="text-[1.5rem] font-bold mt-1">{sottotitolo}</p>
@@ -820,7 +857,46 @@ function SchermataFine({ titoloRef, p, me, lui, ancora, sessione, livello }: {
         {sessione && salvataggio === "ok" && <p className="font-bold">✓ {T.puntiSalvati}</p>}
         {sessione && salvataggio === "errore" && <p className="font-bold">⚠ {T.puntiNonSalvatiRete}</p>}
       </div>
-      <Pulsante variante="giallo" className="w-full" onClick={ancora}>{T.giocaAncora}</Pulsante>
+      {risultato === "vinto" ? (
+        <>
+          {turno < 3 && <p className="text-center text-[1.5rem] font-bold">{T.passiAl(T.turni[turno + 1])}</p>}
+          <Pulsante variante="giallo" className="w-full fumetto !text-[1.5rem]" onClick={avanti}>
+            {turno < 3 ? T.prossimaSfida(T.turni[turno + 1]) : <><span aria-hidden="true">🏆</span> {T.ritiraCoppa}</>}
+          </Pulsante>
+        </>
+      ) : (
+        <Pulsante variante="giallo" className="w-full" onClick={riprova}>{T.riprovaSfida}</Pulsante>
+      )}
+    </section>
+  );
+}
+
+function SchermataCampione({ titoloRef, me, battuti, sessione, livello, nuovo }: {
+  titoloRef: RefTitolo; me: Personaggio; battuti: Personaggio[]; sessione: Sessione | null; livello: Livello; nuovo: () => void;
+}) {
+  const [coppe, setCoppe] = useState<number | null>(null);
+  const [errore, setErrore] = useState(false);
+  const registrata = useRef(false);
+  useEffect(() => {
+    if (!sessione || registrata.current) return;
+    registrata.current = true;
+    vinciCoppa(sessione.token, livello, me.id)
+      .then((r) => (r?.ok ? setCoppe(r.coppe ?? 1) : setErrore(true)))
+      .catch(() => setErrore(true));
+  }, [sessione, livello, me]);
+  return (
+    <section className="flex flex-col gap-5 pt-4">
+      <FestaCoppa me={me} battuti={battuti} className="rounded-2xl border-4 border-black h-[19rem] sm:h-[28rem]" />
+      <div className="text-center">
+        <h1 ref={titoloRef} tabIndex={-1} className="testo-titolo text-[var(--giallo)]">🏆 {T.campioneTitolo}</h1>
+        <p className="text-[1.5rem] font-bold mt-1">{T.campioneSottotitolo(me.nome)}</p>
+      </div>
+      <div className="pannello p-5 font-bold">
+        {!sessione && <p>{T.coppaInProva}</p>}
+        {sessione && coppe !== null && <p>✓ {T.coppaRegistrata(coppe)}</p>}
+        {sessione && errore && <p>⚠ {T.coppaNonSalvata}</p>}
+      </div>
+      <Pulsante variante="giallo" className="w-full" onClick={nuovo}>{T.nuovoTorneo}</Pulsante>
     </section>
   );
 }

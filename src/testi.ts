@@ -165,6 +165,26 @@ export const T = {
   giochiInProva: "Stai giocando in prova",
   esci: "Esci",
 
+  // Torneo
+  torneo: "La Disfida di Fragnànu",
+  torneoSottotitolo: "4 sfide per vincere la coppa!",
+  turni: ["Ottavi di finale", "Quarti di finale", "Semifinale", "Finale"],
+  turnoVinto: "Vinto",
+  turnoOra: "Ora",
+  turnoDopo: "Dopo",
+  prossimaSfida: (t: string) => `Avanti: ${t}`,
+  passiAl: (t: string) => `Bravo! Passi alla ${t.toLowerCase()}.`,
+  riprovaSfida: "Riprova questa sfida",
+  ritiraCoppa: "Ritira la coppa!",
+  campione: "Campione!",
+  campioneTitolo: "Hai vinto la Disfida di Fragnànu!",
+  campioneSottotitolo: (nome: string) => `${nome} alza la coppa in piazza: tutto il paese fa festa!`,
+  coppaRegistrata: (n: number) => `La coppa è registrata nel tuo profilo. Coppe vinte: ${n}`,
+  coppaInProva: "In prova la coppa non viene registrata.",
+  coppaNonSalvata: "Non sono riuscito a registrare la coppa: manca la connessione.",
+  nuovoTorneo: "Nuovo torneo",
+  coppe: (n: number) => `${n} ${n === 1 ? "coppa" : "coppe"}`,
+
   // Classifica
   classifica: "Classifica",
   classificaTitolo: "Classifica del paese",
@@ -177,6 +197,7 @@ export const T = {
   tu: "Tu",
   iTuoiProgressi: "I tuoi progressi",
   progressi: (p: number, v: number, g: number) => `${p} punti · ${v} ${v === 1 ? "vittoria" : "vittorie"} · ${g} ${g === 1 ? "giorno" : "giorni"} di gioco`,
+  tueCoppe: (n: number) => `🏆 Coppe vinte: ${n}`,
   altro: "Altro",
   puntiSalvati: "Punti salvati nella classifica!",
   puntiNonSalvatiProva: "In prova i punti non vengono salvati.",
@@ -219,5 +240,7 @@ export const T = {
 
   // Musica (si vede sempre quando suona)
   musicaInCorso: "Musica: Mozart",
+  musicaTogli: "Musica accesa: tocca per spegnerla",
+  musicaMetti: "Musica spenta: tocca per accenderla",
   musicaSpenta: "Musica spenta",
 } as const;

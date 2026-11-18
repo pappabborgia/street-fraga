@@ -41,9 +41,11 @@ export const salvaPartita = (token: string, p: { punti: number; vinta: boolean; 
   rpc<{ ok?: boolean; errore?: string }>("salva_partita", {
     p_token: token, p_punti: p.punti, p_vinta: p.vinta, p_personaggio: p.personaggio, p_avversario: p.avversario, p_livello: p.livello,
   });
-export interface RigaClassifica { nome: string; punti: number; vittorie: number; partite: number }
+export interface RigaClassifica { nome: string; punti: number; vittorie: number; partite: number; coppe: number }
 export const classifica = (periodo: "settimana" | "sempre") => rpc<RigaClassifica[]>("classifica", { p_periodo: periodo });
-export interface Profilo { nome: string; punti: number; vittorie: number; partite: number; giorni: number }
+export interface Profilo { nome: string; punti: number; vittorie: number; partite: number; giorni: number; coppe: number }
+export const vinciCoppa = (token: string, livello: number, personaggio: string) =>
+  rpc<{ ok?: boolean; coppe?: number; errore?: string }>("vinci_coppa", { p_token: token, p_livello: livello, p_personaggio: personaggio });
 export const ilMioProfilo = (token: string) => rpc<Profilo | null>("il_mio_profilo", { p_token: token });
 
 // ---------- Sul dispositivo ----------
