@@ -18,6 +18,7 @@ import { SvgOggetto } from "./Oggetti";
 import { BarraFissa, Pulsante } from "./ui";
 import { Chiesa } from "./Chiesa";
 import { Festa, scegliSottotitolo, type Risultato } from "./Festa";
+import { applicaMovimenti } from "./movimento";
 
 type Schermata = "casa" | "regole" | "impostazioni" | "livello" | "tempo" | "scelta" | "dettaglio" | "presentazione" | "lotta" | "fine" | "esci";
 type Fase = "stimolo" | "domanda" | "esito" | "computer" | "spareggio";
@@ -63,6 +64,7 @@ export default function Gioco() {
   useEffect(() => {
     document.documentElement.style.setProperty("--scala-testo", SCALA[imp.testo]);
     audio.suoniAttivi = imp.suoni;
+    applicaMovimenti(imp.movimenti);
     if (audio.musicaAttiva !== imp.musica) audio.impostaMusica(imp.musica);
   }, [imp]);
   const cambia = (parziale: Partial<Impostazioni>) => {
@@ -439,6 +441,12 @@ function SchermataImpostazioni({ titoloRef, imp, cambia, haVoce, fine }: {
       titolo: T.leggiSempre, spiegazione: T.leggiSempreSpiegazione,
       opzioni: [{ testo: T.si, attiva: imp.leggiSempre, fai: () => cambia({ leggiSempre: true }) }, { testo: T.no, attiva: !imp.leggiSempre, fai: () => cambia({ leggiSempre: false }) }],
     }] : []),
+    {
+      titolo: T.movimenti, spiegazione: T.movimentiSpiegazione,
+      opzioni: ([["telefono", T.movimentiTelefono], ["completi", T.movimentiCompleti], ["ridotti", T.movimentiRidotti]] as const).map(([v, t]) => ({
+        testo: t, attiva: imp.movimenti === v, fai: () => cambia({ movimenti: v }),
+      })),
+    },
     {
       titolo: T.suoni, spiegazione: T.suoniSpiegazione,
       opzioni: [{ testo: T.si, attiva: imp.suoni, fai: () => cambia({ suoni: true }) }, { testo: T.no, attiva: !imp.suoni, fai: () => cambia({ suoni: false }) }],

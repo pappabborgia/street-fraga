@@ -6,6 +6,7 @@ export interface Impostazioni {
   leggiSempre: boolean;
   suoni: boolean;
   musica: boolean;
+  movimenti: "telefono" | "completi" | "ridotti";
 }
 
 export const PREDEFINITE: Impostazioni = {
@@ -14,6 +15,7 @@ export const PREDEFINITE: Impostazioni = {
   leggiSempre: false,
   suoni: true,
   musica: true,
+  movimenti: "telefono",
 };
 
 export const SCALA: Record<Grandezza, string> = {

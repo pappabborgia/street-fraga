@@ -149,14 +149,12 @@ body {
 @keyframes dissolvenza { from { opacity: 0; } to { opacity: 1; } }
 
 /* Chi preferisce meno movimento: solo dissolvenze, niente spostamenti né rotazioni */
-@media (prefers-reduced-motion: reduce) {
-  .scoppio, .striscione {
-    animation: dissolvenza 0.6s ease-out both !important;
-  }
-  .aura svg, .scia svg, .fiammata svg, .stellina, .buio { animation: none !important; opacity: 0; }
-    .cerchio { animation: none; opacity: 0.5; }
-  .pulsante:active { transform: none; }
-}
+/* Movimenti ridotti: la classe "ridotto" su <html> la mette il gioco, seguendo il telefono
+   ("riduci movimento") oppure la scelta fatta nelle Impostazioni. */
+html.ridotto .scoppio, html.ridotto .striscione { animation: dissolvenza 0.6s ease-out both !important; }
+html.ridotto .aura svg, html.ridotto .scia svg, html.ridotto .fiammata svg, html.ridotto .stellina, html.ridotto .buio { animation: none !important; opacity: 0; }
+html.ridotto .cerchio { animation: none; opacity: 0.5; }
+html.ridotto .pulsante:active { transform: none; }
 
 /* I titoli ricevono il fuoco solo per i lettori di schermo: niente cornice visibile */
 [tabindex="-1"]:focus { outline: none; }
@@ -188,9 +186,5 @@ body {
   from { transform: scale(0.3) rotate(-12deg); opacity: 0; }
   to { transform: scale(1) rotate(-4deg); opacity: 1; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .titolo-festa, .su-e-giu, .stordito {
-    animation: dissolvenza 0.6s ease-out both !important;
-  }
-  .cuore { animation: none !important; opacity: 0; }
-}
+html.ridotto .titolo-festa, html.ridotto .su-e-giu, html.ridotto .stordito { animation: dissolvenza 0.6s ease-out both !important; }
+html.ridotto .cuore { animation: none !important; opacity: 0; }

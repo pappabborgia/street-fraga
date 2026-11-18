@@ -8,16 +8,31 @@
  */
 import { useEffect, useRef } from "react";
 
-export function riduciMovimento(): boolean {
+export type SceltaMovimenti = "telefono" | "completi" | "ridotti";
+
+export function telefonoChiedeMenoMovimento(): boolean {
   return typeof window !== "undefined" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+}
+
+/** Applica la scelta: mette o toglie la classe "ridotto" su <html>. */
+export function applicaMovimenti(scelta: SceltaMovimenti) {
+  if (typeof document === "undefined") return;
+  const ridotto = scelta === "ridotti" || (scelta === "telefono" && telefonoChiedeMenoMovimento());
+  document.documentElement.classList.toggle("ridotto", ridotto);
+}
+
+export function riduciMovimento(): boolean {
+  return typeof document !== "undefined" && document.documentElement.classList.contains("ridotto");
 }
 
 export interface Animazione { kf: Keyframe[]; durata: number; ritardo?: number; easing?: string }
 
-export function anima(el: Element | null | undefined, a: Animazione | null): Animation | null {
+/** Con i movimenti ridotti i lottatori restano fermi e sempre visibili; gli effetti compaiono con una dissolvenza. */
+export function anima(el: Element | null | undefined, a: Animazione | null, effetto = false): Animation | null {
   if (!el || !a || typeof (el as HTMLElement).animate !== "function") return null;
   if (riduciMovimento()) {
-    return (el as HTMLElement).animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: a.ritardo ?? 0, fill: "both" });
+    if (!effetto) return null;
+    return (el as HTMLElement).animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: "forwards" });
   }
   return (el as HTMLElement).animate(a.kf, { duration: a.durata, delay: a.ritardo ?? 0, easing: a.easing ?? "ease-in-out", fill: "both" });
 }
@@ -76,7 +91,7 @@ export function Animato({ a, className = "", style, children }: {
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const x = anima(ref.current, a);
+    const x = anima(ref.current, a, true);
     return () => x?.cancel();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
